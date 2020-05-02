@@ -1,0 +1,131 @@
+*{
+	 margin: 0;
+	 padding: 0;
+}
+body{
+	 background: #222;
+	 font-family: "Myriad Pro", "Trebuchet MS", Helvetica, sans-serif;
+	 font-size: 12px;
+	 color: #fff;
+}
+P{line-height:24px}
+h2.title_name {
+     font-family: normal Georgia,'Times New Roman',Times,serif;
+	 font-weight: normal;
+     font-size: 4em;
+	 margin: 0;
+     padding: 50px 0 20px 0;
+     text-align: center;
+}
+h2.title_name span {
+	 font-family: normal Georgia,'Times New Roman',Times,serif;
+     color: #f9f66d;
+     font-size: 0.9em;
+}
+h2.title_name small {
+     color: #AAAAAA;
+     display: block;
+     font-family: normal Verdana,Arial,Helvetica,sans-serif;
+     font-size: 0.2em;
+     letter-spacing: 1.0em;
+     text-transform: uppercase;
+	 padding-top: 5px;
+}
+/******** MENU ********/
+.menuWrapper{
+	width: 797px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    line-height: 1.45em;
+    position: relative;
+    margin: 20px auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+ul.menu{
+	width: 797px;
+    list-style: none;
+	overflow: hidden;
+}
+ul.menu > li{
+	width: 265px;
+    height: 542px;
+    float: left;
+    border-right: 1px solid #444;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+ul.menu > li.last{
+    border:none;
+}
+.bg1{
+    background-image: url(../images/1.jpg);
+}
+.bg2{
+    background-image: url(../images/2.jpg);
+}
+.bg3{
+    background-image: url(../images/3.jpg);
+}
+ul.menu > li > a{
+	width: 265px;
+    float: left;
+    margin-top: 450px;
+    text-align: center;
+    line-height: 50px;
+    color: #ddd;
+    background-color: #333;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+	font-weight: bold;
+}
+ul.menu > li ul{
+	width: 100%;
+    height: 110px;
+    list-style: none;
+    float: left;
+    margin-top: -180px;
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+ul.menu > li ul li{
+    display: none;
+}
+ul.menu > li ul.sub1{
+    background-image: url(../images/bg1sub.png);
+}
+ul.menu > li ul.sub2{
+    background-image: url(../images/bg2sub.png);
+}
+ul.menu > li ul.sub3{
+    background-image: url(../images/bg3sub.png);
+}
+ul.menu > li ul li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+ul.menu > li ul.sub1 li{
+    display: block;
+}
+ul.menu > li ul li a:hover{
+	color: #BBB;
+    text-decoration: underline;
+}
+
+/*定义文字样式*/
+A {FONT-SIZE: 12px; COLOR: #FFF;}
+A:link {COLOR: #FFF; TEXT-DECORATION: none;}
+A:visited {COLOR: #FFF; TEXT-DECORATION: none;}
+A:hover {COLOR: #FFF; TEXT-DECORATION:underline;}
+A:active {COLOR: #FFF; TEXT-DECORATION: none;}
+
+/*  懒人图库 http://www.lanrentuku.com/  */
