@@ -16,7 +16,9 @@ b.actions
   count() first() take()
 5.rdd.persist()	//持久化到内存,也可以持久化到磁盘,为了重用.
 
-  伪集合操作
+```
+``` java
+  // 伪集合操作
 
   1.rdd1 = tom tom tomas tomasLee
     rdd2 = tomas tomasLee jerry bob
@@ -156,7 +158,13 @@ b.actions
   rdd.variance()		//方差
   rdd.SampleVariance()//标准差
   rdd.stdev()			//偏差
-  spark运行时框架
+
+  ```
+
+##  spark运行时框架
+
+  ```
+ 
   1.分布式模式下,使用master/slave主从模式。
     中央协调器 + 分布式的worker node
     spark(app) === hadoop(job) === storm(topology)
