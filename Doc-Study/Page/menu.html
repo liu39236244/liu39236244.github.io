@@ -1,155 +1,200 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>我的笔记连接</title>
-<style type="text/css">
-*{margin: 0;padding: 0}
-body{font-size: 12px;font-family: "宋体","微软雅黑";}
-ul,li{list-style: none;text-align: center}
-a:link,a:visited{text-decoration: none;}
-.list{width: 210px;border-bottom:solid 1px #316a91;margin:0px 0px 0px 0px;}
-.list ul li{background-color:#467ca2; border:solid 1px #316a91; border-bottom:0;}
-.list ul li a{padding-left: 10px;color: #fff; font-size:12px; display: block; font-weight:bold; height:36px;line-height: 36px;position: relative;
-}
-.list ul li .inactive{ background:url(../images/off.png) no-repeat 184px center;}
-.list ul li .inactives{background:url(../images/on.png) no-repeat 184px center;} 
-.list ul li ul{display: none;}
-.list ul li ul li { border-left:0; border-right:0; background-color:#6196bb; border-color:#467ca2;}
-.list ul li ul li ul{display: none;}
-.list ul li ul li a{ padding-left:0px;}
-.list ul li ul li ul li { background-color:#d6e6f1; border-color:#6196bb; }
-.last{ background-color:#d6e6f1; border-color:#6196bb; }
-.list ul li ul li ul li a{ color:#316a91; padding-left:30px;}
-</style>
-<script type="text/javascript" src="../JS/left.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function() {
-	$('.inactive').click(function(){
-		if($(this).siblings('ul').css('display')=='none'){
-			$(this).parent('li').siblings('li').removeClass('inactives');
-			$(this).addClass('inactives');
-			$(this).siblings('ul').slideDown(100).children('li');
-			if($(this).parents('li').siblings('li').children('ul').css('display')=='block'){
-				$(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
-				$(this).parents('li').siblings('li').children('ul').slideUp(100);
-			}
-		}else{
-			//控制自身变成+号
-			$(this).removeClass('inactives');
-			//控制自身菜单下子菜单隐藏
-			$(this).siblings('ul').slideUp(100);
-			//控制自身子菜单变成+号
-			$(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
-			//控制自身菜单下子菜单隐藏
-			$(this).siblings('ul').children('li').children('ul').slideUp(100);
-			//控制同级菜单只保持一个是展开的（-号显示）
-			$(this).siblings('ul').children('li').children('a').removeClass('inactives');
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>我的笔记连接</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0
 		}
-	})
-});
-</script>
+
+		body {
+			font-size: 12px;
+			font-family: "宋体", "微软雅黑";
+		}
+
+		ul,
+		li {
+			list-style: none;
+			text-align: center
+		}
+
+		a:link,
+		a:visited {
+			text-decoration: none;
+		}
+
+		.list {
+			width: 210px;
+			border-bottom: solid 1px #316a91;
+			margin: 0px 0px 0px 0px;
+		}
+
+		.list ul li {
+			background-color: #467ca2;
+			border: solid 1px #316a91;
+			border-bottom: 0;
+		}
+
+		.list ul li a {
+			padding-left: 10px;
+			color: #fff;
+			font-size: 12px;
+			display: block;
+			font-weight: bold;
+			height: 36px;
+			line-height: 36px;
+			position: relative;
+		}
+
+		.list ul li .inactive {
+			background: url(../images/off.png) no-repeat 184px center;
+		}
+
+		.list ul li .inactives {
+			background: url(../images/on.png) no-repeat 184px center;
+		}
+
+		.list ul li ul {
+			display: none;
+		}
+
+		.list ul li ul li {
+			border-left: 0;
+			border-right: 0;
+			background-color: #6196bb;
+			border-color: #467ca2;
+		}
+
+		.list ul li ul li ul {
+			display: none;
+		}
+
+		.list ul li ul li a {
+			padding-left: 0px;
+		}
+
+		.list ul li ul li ul li {
+			background-color: #d6e6f1;
+			border-color: #6196bb;
+		}
+
+		.last {
+			background-color: #d6e6f1;
+			border-color: #6196bb;
+		}
+
+		.list ul li ul li ul li a {
+			color: #316a91;
+			padding-left: 30px;
+		}
+	</style>
+	<script type="text/javascript" src="../JS/left.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.inactive').click(function () {
+				if ($(this).siblings('ul').css('display') == 'none') {
+					$(this).parent('li').siblings('li').removeClass('inactives');
+					$(this).addClass('inactives');
+					$(this).siblings('ul').slideDown(100).children('li');
+					if ($(this).parents('li').siblings('li').children('ul').css('display') == 'block') {
+						$(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
+						$(this).parents('li').siblings('li').children('ul').slideUp(100);
+					}
+				} else {
+					//控制自身变成+号
+					$(this).removeClass('inactives');
+					//控制自身菜单下子菜单隐藏
+					$(this).siblings('ul').slideUp(100);
+					//控制自身子菜单变成+号
+					$(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
+					//控制自身菜单下子菜单隐藏
+					$(this).siblings('ul').children('li').children('ul').slideUp(100);
+					//控制同级菜单只保持一个是展开的（-号显示）
+					$(this).siblings('ul').children('li').children('a').removeClass('inactives');
+				}
+			})
+		});
+	</script>
 
 </head>
+
 <body>
-<div class="list">
-	<ul class="yiji">
-		<li><a href="#">我的学习记录</a></li>
-		<li><a href="#" class="inactive">大数据自学</a>
-			<ul style="display: none">
-				<li><a href="#" class="inactive active">java阶段</a>
-					<ul>java1-10 学习
-						<li><a href="./MyRemmber/MyStudy/java1-10.html" target="main">java 1-10 基础笔记</a></li>
-						<li><a href="./MyRemmber/MyStudy/javaM1-10.html" target="main">java1-10 记录面试题</a></li>
-						
-					</ul>
-					<ul>java11-18 学习
-						<li><a href="./MyRemmber/MyStudy/java11-18.html" target="main">java 11-18 基本知识笔记</a></li>
-						<li><a href="./MyRemmber/MyStudy/javaM11-18.html" target="main">java11-18 记录面试题</a></li>
-					</ul>
-					<ul>java18-23Map-Io学习
-						<li><a href="./MyRemmber/MyStudy/java18-23.html" target="main">java 18-23 Map_IO 笔记</a></li>
-						
-					</ul>
-					<ul>java23-24线程学习
-						<li><a href="./MyRemmber/MyStudy/java23-24.html" target="main">java 23-24 线程笔记</a></li>
-					</ul>
+	<div class="list">
+		<ul class="yiji">
+			<li><a href="#">我的学习记录</a></li>
+			<li><a href="#" class="inactive">大数据自学</a>
+				<ul style="display: none">
+					<li><a href="#" class="inactive active">java阶段</a>
+						<ul>java1-10 学习
+							<li><a href="./MyRemmber/MyStudy/java1-10.html" target="main">java 1-10 基础笔记</a></li>
+							<li><a href="./MyRemmber/MyStudy/javaM1-10.html" target="main">java1-10 记录面试题</a></li>
+
+						</ul>
+						<ul>java11-18 学习
+							<li><a href="./MyRemmber/MyStudy/java11-18.html" target="main">java 11-18 基本知识笔记</a></li>
+							<li><a href="./MyRemmber/MyStudy/javaM11-18.html" target="main">java11-18 记录面试题</a></li>
+						</ul>
+						<ul>java18-23Map-Io学习
+							<li><a href="./MyRemmber/MyStudy/java18-23.html" target="main">java 18-23 Map_IO 笔记</a></li>
+
+						</ul>
+						<ul>java23-24线程学习
+							<li><a href="./MyRemmber/MyStudy/java23-24.html" target="main">java 23-24 线程笔记</a></li>
+						</ul>
 						<ul>java25-26UI-套接字学习
-						<li><a href="./MyRemmber/MyStudy/java25-26.html" target="main">java 25-26UI-套接字笔记</a></li>
-					</ul>
-					</ul>
+							<li><a href="./MyRemmber/MyStudy/java25-26.html" target="main">java 25-26UI-套接字笔记</a></li>
+						</ul>
+
 						<ul>java27-28 反射学习
-						<li><a href="./MyRemmber/MyStudy/java27-28.html" target="main">java 27-28 反射学习笔记</a></li>
-					</ul>
-					
-					</ul>
+							<li><a href="./MyRemmber/MyStudy/java27-28.html" target="main">java 27-28 反射学习笔记</a></li>
+						</ul>
 						<ul>java28-N java web 开发学习2
-						<li><a href="./MyRemmber/MyStudy/java28-N.html" target="main">java 28-N web struts 学习</a></li>
-					</ul>
-				</li> 
-				<li><a href="#" class="inactive active">linux阶段</a>
-					<ul>
-						<li><a href="./MyRemmber/MyStudy/linux1-2Days.html" target="main">linux 1-2 day</a></li>
-						<li><a href="./MyRemmber/MyStudy/linux3-13Days.html" target="main">linux 3-13 day</a></li>
-						<li><a href="./MyRemmber/MyStudy/linux13-25Days.html" target="main">linux 13-25 day</a></li>
-					</ul>
-				</li> 
-				<li><a href="#" class="inactive active">spark阶段</a>
-					<ul>
-						<li><a href="./MyRemmber/MyStudy/Spark1-12.html" target="main">spark 1-12 学习</a></li>
-						<li><a href="./MyRemmber/MyStudy/spark12-N.html" target="main">spark 12-最后 学习</a></li>
+							<li><a href="./MyRemmber/MyStudy/java28-N.html" target="main">java 28-N web struts 学习</a>
+							</li>
+						</ul>
 
-					</ul>
-				</li> 
+				</ul>
 
-				<li><a href="#" class="inactive active">Spark 文档</a>
-					<ul>
-						<li><a href="./MyRemmber/MyTeacher/Spark/Spark基础.html" target="main">Spark 基础</a></li>
-						<li><a href="./MyRemmber/MyTeacher/Spark/SparkRDD.html" target="main">Spark RDD</a></li>
-						<li><a href="./MyRemmber/MyTeacher/Spark/SparkSQL.html" target="main">Spark SQL</a></li>
-					</ul>
-				</li> 
-			</ul>
-		</li>
+			</li>
+			<li><a href="#" class="inactive active">linux阶段</a>
+				<ul>
+					<li><a href="./MyRemmber/MyStudy/linux1-2Days.html" target="main">linux 1-2 day</a></li>
+					<li><a href="./MyRemmber/MyStudy/linux3-13Days.html" target="main">linux 3-13 day</a></li>
+					<li><a href="./MyRemmber/MyStudy/linux13-25Days.html" target="main">linux 13-25 day</a></li>
+				</ul>
+			</li>
+			<li><a href="#" class="inactive active">spark阶段</a>
+				<ul>
+					<li><a href="./MyRemmber/MyStudy/Spark1-12.html" target="main">spark 1-12 学习</a></li>
+					<li><a href="./MyRemmber/MyStudy/spark12-N.html" target="main">spark 12-最后 学习</a></li>
 
+				</ul>
+			</li>
 
-		<li><a href="#" class="inactive active">樱桃树笔记</a>
-			<ul>
-				<li><a href="#" class="inactive active">樱桃树记录-1</a>
-					<ul>
-						<li><a href="./MyRemmber/MyCherryTree/index.html"  target="_blank">总复习</a></li>
-					</ul>
-				</li> 
-			</ul>
-		</li>
+			<li><a href="#" class="inactive active">Spark 文档</a>
+				<ul>
+					<li><a href="./MyRemmber/MyTeacher/Spark/Spark基础.html" target="main">Spark 基础</a></li>
+					<li><a href="./MyRemmber/MyTeacher/Spark/SparkRDD.html" target="main">Spark RDD</a></li>
+					<li><a href="./MyRemmber/MyTeacher/Spark/SparkSQL.html" target="main">Spark SQL</a></li>
+				</ul>
+			</li>
 
-		<li><a href="#" class="inactive active">MyAmWiKi</a>
-			<ul style="display: none">
-				<li><a href="#" class="inactive active">MyAmWiki-1</a>
-					<ul>
-						<li><a href="./MyRemmber/MyAmWiKi/index.html" target="main">MyAmWiKi——index</a></li>
-					</ul>
-				</li> 
-			</ul>
-		</li>
-<!-- 
-		<li><a href="#" class="inactive">other</a>
-			<ul style="display: none">
-				<li><a href="#" class="inactive active">other</a>
-					<ul>
-						<li><a href="ShowCustomers.jsp" target="main">other</a></li>
-					</ul>
-				</li> 
-			</ul>
-		</li>
-		 -->
-
+			<li><a href="#" class="inactive active">樱桃树笔记</a>
+				<ul>
+					<li><a href="#" class="inactive active">樱桃树记录-1</a>
+						<ul>
+							<li><a href="./MyRemmber/MyCherryTree/index.html" target="_blank">总复习</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
 		
-	</ul>
-</div>
-
-
+	</div>
 </body>
+
 </html>
