@@ -104,51 +104,51 @@
         }
       }
     });
-  </script>
-
-  <script type="text/javascript">
 
     jQuery(document).ready(function () {
 
-      var qcloud = {};
+        var qcloud = {};
 
-      $('[_t_nav]').hover(function () {
+        $('[_t_nav]').hover(function () {
 
-        var _nav = $(this).attr('_t_nav');
+          var _nav = $(this).attr('_t_nav');
 
-        clearTimeout(qcloud[_nav + '_timer']);
+          clearTimeout(qcloud[_nav + '_timer']);
 
-        qcloud[_nav + '_timer'] = setTimeout(function () {
+          qcloud[_nav + '_timer'] = setTimeout(function () {
 
-          $('[_t_nav]').each(function () {
+            $('[_t_nav]').each(function () {
 
-            $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
+              $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
 
-          });
+            });
 
-          $('#' + _nav).stop(true, true).slideDown(200);
+            $('#' + _nav).stop(true, true).slideDown(200);
 
-        }, 150);
+          }, 150);
 
-      }, function () {
+        }, function () {
 
-        var _nav = $(this).attr('_t_nav');
+          var _nav = $(this).attr('_t_nav');
 
-        clearTimeout(qcloud[_nav + '_timer']);
+          clearTimeout(qcloud[_nav + '_timer']);
 
-        qcloud[_nav + '_timer'] = setTimeout(function () {
+          qcloud[_nav + '_timer'] = setTimeout(function () {
 
-          $('[_t_nav]').removeClass('nav-up-selected');
+            $('[_t_nav]').removeClass('nav-up-selected');
 
-          $('#' + _nav).stop(true, true).slideUp(200);
+            $('#' + _nav).stop(true, true).slideUp(200);
 
-        }, 150);
+          }, 150);
+
+        });
 
       });
 
-    });
 
   </script>
+
+
 
   <!--[if lte IE 6]>
      <link rel="stylesheet" href="css/styleIE6.css" type="text/css" media="screen"/>
@@ -182,6 +182,7 @@
     <div class="navigation-down">
       <div id="WIKI" class="nav-down-menu menu-1" style="display: none;" _t_nav="WIKI">
         <div class="navigation-down-inner">
+
           <dl style="margin-left: 100px;">
             <dt>大数据</dt>
             <dd> <a hotrep="hp.header.WIKI.compute1" href="./Wiki-Study/Study-Wiki-Hadoop/index.html">Hadoop</a> </dd>
@@ -189,6 +190,10 @@
             <!-- <dd> <a hotrep="hp.header.WIKI.compute3" href="./Wiki-Study/Study-Wiki-Scala/index.html">Scala</a> </dd> -->
             <dd> <a hotrep="hp.header.WIKI.compute4" href="./Wiki-Study/Study-Wiki-Hive/index.html">Hive</a> </dd>
             <!-- <dd> <a hotrep="hp.header.WIKI.compute5" href="./Wiki-Study/Study-Wiki-Python/index.html">Python</a> </dd> -->
+          </dl>
+          <dl>
+            <dt>java</dt>
+            <dd> <a hotrep="hp.header.WIKI.java1" href="./Wiki-Study/Study-Wiki-Java/index.html">Java 开发</a> </dd>
           </dl>
           <dl>
             <dt>运维相关</dt>
@@ -234,7 +239,7 @@
   <div id="menuWrapper" class="menuWrapper bg1">
     <ul class="menu" id="menu">
       <li class="bg1" style="background-position:0 0;">
-        <a id="bg1" href="#">Home</a>
+        <a id="bg1" href="#">留白1</a>
         <ul class="sub sub1" style="background-position:0 0;">
           <li><a href=#" target="_blank">留白</a></li>
           <li><a href=#" target="_blank">留白</a></li>
@@ -242,7 +247,7 @@
         </ul>
       </li>
       <li class="bg1" style="background-position:-266px 0px;">
-        <a id="bg2" href="#">About Me</a>
+        <a id="bg2" href="#">留白2</a>
         <ul class="sub sub2" style="background-position:-266px 0;">
           <li><a href=#" target="_blank">留白</a></li>
           <li><a href=#" target="_blank">留白</a></li>
@@ -250,7 +255,7 @@
         </ul>
       </li>
       <li class="last bg1" style="background-position:-532px 0px;">
-        <a id="bg3" href="#">Contact</a>
+        <a id="bg3" href="#">留白3</a>
         <ul class="sub sub3" style="background-position:-266px 0;">
           <li><a href=#" target="_blank">留白</a></li>
           <li><a href=#" target="_blank">留白</a></li>

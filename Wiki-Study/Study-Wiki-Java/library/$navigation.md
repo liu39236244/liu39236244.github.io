@@ -10,6 +10,7 @@
     - [集合操作](?file=001-学习Java/02-Java 基础点/04-集合操作 "集合操作")
     - [反射的总结](?file=001-学习Java/02-Java 基础点/05-反射的总结 "反射的总结")
     - [注解](?file=001-学习Java/02-Java 基础点/06-注解 "注解")
+    - [单例模式](?file=001-学习Java/02-Java 基础点/07-单例模式 "单例模式")
 - **Java 开发中一些类的总结**
     - **java 与python**
         - [java调用python](?file=001-学习Java/04-Java 开发中一些类的总结/01-java 与python/01-java调用python "java调用python")
@@ -39,12 +40,17 @@
 - **文件工具类总结**
     - **文件操作工具类**
         - [Fileutils](?file=001-学习Java/05-文件工具类总结/01-文件操作工具类/01-Fileutils "Fileutils")
+    - **树形数据工具类**
+        - [树形工具类](?file=001-学习Java/05-文件工具类总结/02-树形数据工具类/01-树形工具类 "树形工具类")
+        - [java 建树工具类-1](?file=001-学习Java/05-文件工具类总结/02-树形数据工具类/02-java 建树工具类-1 "java 建树工具类-1")
 - **异常处理**
     - [java中异常](?file=001-学习Java/06-异常处理/01-java中异常 "java中异常")
     - [java中自定义异常](?file=001-学习Java/06-异常处理/02-java中自定义异常 "java中自定义异常")
 - **java 文件操作**
     - **java 文件上传下载**
         - [Springboot+axios +formdata 上传下载文件](?file=001-学习Java/08-java 文件操作/02-java 文件上传下载/02-Springboot+axios +formdata 上传下载文件 "Springboot+axios +formdata 上传下载文件")
+- **java 开发之设计模式**
+    - [设计模式](?file=001-学习Java/09-java 开发之设计模式/02-设计模式 "设计模式")
 
 ##### java 性能记录
 - **java 中集合遍历性能问题**
@@ -58,6 +64,13 @@
         - [记录](?file=003-java进阶知识/01-登录验证/02-webgate单点登录/01-记录 "记录")
         - [单点登录记录](?file=003-java进阶知识/01-登录验证/02-webgate单点登录/02-单点登录记录 "单点登录记录")
         - [单点登录实战记录](?file=003-java进阶知识/01-登录验证/02-webgate单点登录/03-单点登录实战记录 "单点登录实战记录")
+- **对接相关技术**
+    - **webService**
+        - [webService基础](?file=003-java进阶知识/02-对接相关技术/01-webService/01-webService基础 "webService基础")
+    - **webService 案例.md**
+        - [oracle 集成的ldap 访问webservice 对接案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/01-oracle 集成的ldap 访问webservice 对接案例 "oracle 集成的ldap 访问webservice 对接案例")
+        - [cxf 基本服务端与客户端案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/02-cxf 基本服务端与客户端案例 "cxf 基本服务端与客户端案例")
+        - [axis 1 介入springboot springcloud](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/03-axis 1 介入springboot springcloud "axis 1 介入springboot springcloud")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
