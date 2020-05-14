@@ -263,6 +263,9 @@ import 'vue-orgchart/dist/style.min.css'
 
 ```
 
+* 1.4 最终结果图
+
+![最终组织架构树图](assets/001/05/07/02-1589342034591.png)
 
 
 
