@@ -71,9 +71,16 @@
     - **工作记录**
 - **Vant总结**
     - [Vant工作记录](?file=002-Vant 移动端组件/02-Vant总结/01-Vant工作记录 "Vant工作记录")
+    - [vant 问题总结以及解决](?file=002-Vant 移动端组件/02-Vant总结/03-vant 问题总结以及解决 "vant 问题总结以及解决")
 
 ##### bootstraptable UI组件
 - **BootstrapTable 学习**
 - **BootStrapTable 工作总结**
     - **BootstrapTable  Table 相关**
         - [ Table 的使用总结](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/01- Table 的使用总结 " Table 的使用总结")
+- **bootStraptable 验证相关**
+    - [bootstraptable 表单验证](?file=003-bootstraptable UI组件/04-bootStraptable 验证相关/01-bootstraptable 表单验证 "bootstraptable 表单验证")
+
+##### js 相关总结
+- ** 前端工具类**
+    - [ 验证工具](?file=004-js 相关总结/01- 前端工具类/01- 验证工具 " 验证工具")

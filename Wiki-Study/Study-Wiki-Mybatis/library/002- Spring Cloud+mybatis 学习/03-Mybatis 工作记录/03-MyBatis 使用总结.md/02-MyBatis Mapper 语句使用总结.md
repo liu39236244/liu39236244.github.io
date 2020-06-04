@@ -106,3 +106,36 @@ select 1 from dual
     </insert>
 </mapper>
 ```
+
+
+### 修改带有level 的树形数据并且修改部分数据子父级，以后执行的更新sql
+
+
+* mysql数据表
+
+```sql
+UPDATE se_depart  SET LEVEL = ( SELECT LEVEL + 1 FROM se_depart D2 WHERE D2.id = se_depart.parent_id AND se_depart.status= 1 AND D2.status= 1 ) 
+WHERE
+	se_depart.parent_id != '-1'
+	AND se_depart.status= 1
+```
+
+
+* oracel 数据表
+```sql
+
+  <update id="formartDic">
+      UPDATE USER_SYSTEM_DICTIONARY
+      SET "LEVEL" = 1
+      WHERE PARENT_CODE IS NULL
+  </update>
+
+
+  <!--对所有字典进行重新排序-->
+  <update id="resortDic">
+     UPDATE USER_SYSTEM_DICTIONARY D1
+    SET "LEVEL" = (SELECT "LEVEL" + 1 FROM USER_SYSTEM_DICTIONARY D2 WHERE D2.DICTIONARY_CODE = D1.PARENT_CODE AND D1.IS_DELETE='0' AND D2.IS_DELETE='0')
+    WHERE D1.PARENT_CODE IS NOT NULL AND D1.IS_DELETE='0'
+  </update>
+
+```

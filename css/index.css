@@ -33,7 +33,7 @@ h2.title_name small {
 }
 /******** MENU ********/
 .menuWrapper{
-	width: 797px;
+    width: 797px;
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
@@ -121,11 +121,11 @@ ul.menu > li ul li a:hover{
     text-decoration: underline;
 }
 
-/*¶¨ÒåÎÄ×ÖÑùÊ½*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
 A {FONT-SIZE: 12px; COLOR: #FFF;}
 A:link {COLOR: #FFF; TEXT-DECORATION: none;}
 A:visited {COLOR: #FFF; TEXT-DECORATION: none;}
 A:hover {COLOR: #FFF; TEXT-DECORATION:underline;}
 A:active {COLOR: #FFF; TEXT-DECORATION: none;}
 
-/*  ÀÁÈËÍ¼¿â http://www.lanrentuku.com/  */
+/*  ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ http://www.lanrentuku.com/  */
