@@ -122,6 +122,7 @@ WHERE
 
 
 * oracel 数据表
+
 ```sql
 
   <update id="formartDic">
@@ -137,5 +138,115 @@ WHERE
     SET "LEVEL" = (SELECT "LEVEL" + 1 FROM USER_SYSTEM_DICTIONARY D2 WHERE D2.DICTIONARY_CODE = D1.PARENT_CODE AND D1.IS_DELETE='0' AND D2.IS_DELETE='0')
     WHERE D1.PARENT_CODE IS NOT NULL AND D1.IS_DELETE='0'
   </update>
+
+```
+
+
+
+## _parameters 使用
+
+
+在用自动生成工具生成的mybatis代码中，总是能看到这样的情况，如下：
+
+```xml
+
+<select id="selectByExample" resultMap="BaseResultMap" parameterType="com.juhehl.kapu.pojo.TbCardExample" >  
+    select  
+    <if test="distinct" >  
+      distinct  
+    </if>  
+    <include refid="Base_Column_List" />  
+    from tb_card  
+    <if test="_parameter != null" >  
+      <include refid="Example_Where_Clause" />  
+    </if>  
+    <if test="orderByClause != null" >  
+      order by ${orderByClause}  
+    </if>  
+  </select>  
+
+```
+
+可以看到有个<if test="_parameter != null" >，如果只有一个参数，那么_parameter 就代表该参数，如果有多个参数，那么_parameter 可以get(0)得到第一个参数。
+
+
+
+* 1.简单数据类型,此时#{id,jdbcType=INTEGER}中id可以取任意名字如#{a,jdbcType=INTEGER},如果需要if test则一定使用<if test="_parameter != null">,此处一定使用_parameter != null而不是id != null
+
+```xml
+
+
+<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="Java.lang.Integer" >
+ select 
+ <include refid="Base_Column_List" />
+ from base.tb_user
+<if test="_parameter != null">
+ where id = #{id,jdbcType=INTEGER}
+</if>
+</select>
+```
+
+
+*  其他
+
+```sql
+
+测试user对象<if test="_parameter != null">,测试user对象属性<if test="name != null">或者<if test="#{name} != null">
+int insert(User user);
+<insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+insert into tb_user (name, sex) values (#{name,jdbcType=CHAR}, #{sex,jdbcType=CHAR})
+
+ 3. 二个对象数据类型
+List<User> select(User user,Page page),此时if test一定要<if test='_parameter.get("0").name != null'>(通过parameter.get(0)得到第一个参数即user);where语句where name = #{0.name,jdbcType=CHAR}(通过0.name确保第一个参数user的name属性值)
+
+不用0,1也可以取名List<User> select(@param(user)User user,@param(page)Page page)
+
+
+ 4. 集合类型,此时collection="list"会默认找到参数的那个集合idlist(collection="list"这是默认写法,入参为数组Integer[] idarr,则用collection="array")
+User selectUserInList(List<Interger> idlist);
+<select id="selectUserInList" resultType="User">
+SELECT * FROM USER  WHERE ID in
+ <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+#{item}
+ </foreach>
+</select>
+
+ 5. 对象类型中的集合属性,此时collection="oredCriteria"会找到入参example这个非集合对象的oredCriteria属性,此属性是一个集合
+List<User> selectByExample(UserExample example);
+<where>
+<foreach collection="oredCriteria" item="criteria" separator="or" >
+<if test="criteria.valid" >
+
+
+ 6. map类型(分页查询教师信息)
+public List<Teacher> findTeacherByPage(Map<String, Object> map); 
+Map<String, Object> params = new HashMap<String, Object>(); 
+//以name字段升序排序，params.put("sort", "name"); params.put("dir", "asc");
+//查询结果从第0条开始，查询2条记录 params.put("start", 0);  params.put("limit", 2);  
+//查询职称为教授或副教授的教师  params.put("title", "%教授"); 
+此时入参map的key相当于一个object的属性名,value相当于属性值
+<select id="findTeacherByPage"resultMap="supervisorResultMap" parameterType="java.util.Map">
+select * from teacher where title like #{title}           
+        order by ${sort} ${dir} limit #{start},#{limit} 
+</select> 
+
+ 7.批量插入
+<insert id="addRoleModule" parameterType="java.util.List">
+INSERT INTO T_P_ROLE_MODULE (ROLE_ID, MODULE_ID)
+<foreach collection="list" item="item" index="index" separator=" UNION ALL "> 
+SELECT #{item.roleId}, #{item.moduleId} FROM DUAL
+</foreach>
+</insert>
+
+  8.MyBatis+MySQL 返回插入的主键ID
+在mapper中指定keyProperty属性，示例如下：
+我们在insert中指定了keyProperty="userId"和useGeneratedKeys="true",其中userId代表插入的User对象的主键属性。
+System.out.println("插入前主键为："+user.getUserId());
+userDao.insertAndGetId(user);//插入操作
+System.out.println("插入前主键为："+user.getUserId());  
+
+    <insert id="insertAndGetId" useGeneratedKeys="true" keyProperty="userId" parameterType="com.chenzhou.mybatis.User">  
+ insert into user(userName,password,comment) values(#{userName},#{password},#{comment})  
+    </insert>
 
 ```

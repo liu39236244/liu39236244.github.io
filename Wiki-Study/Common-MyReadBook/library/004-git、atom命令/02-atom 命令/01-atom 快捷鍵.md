@@ -37,7 +37,13 @@ ctrl+shift+f 全局搜索：注意焦點需要选中目录结构树中的结构
 
 ### all 总结 1)
 
+
 ---
+
+
+
+---
+<html>
 
 <div class="show-content-free">
 
@@ -145,8 +151,13 @@ ctrl+shift+f 全局搜索：注意焦點需要选中目录结构树中的结构
 </tbody>
 </table>
 
+</html>
+
 ## 目录树操作
 
+--- 
+
+<html>
 <table>
 <thead>
 <tr>
@@ -227,7 +238,11 @@ ctrl+shift+f 全局搜索：注意焦點需要选中目录结构树中的结构
 </tbody>
 </table>
 
+</html>
+
+
 ## 分屏操作
+
 
 <table>
 <thead>
@@ -302,6 +317,7 @@ ctrl+shift+f 全局搜索：注意焦點需要选中目录结构树中的结构
 ## 选取
 
 > 大部分和导航一致，只不过加上shift
+
 <table>
 <thead>
 <tr>
@@ -657,6 +673,8 @@ ctrl+shift+f 全局搜索：注意焦點需要选中目录结构树中的结构
 
 ## git操作
 
+
+<html>
 <table>
 <thead>
 <tr>
@@ -709,8 +727,7 @@ ctrl+shift+f 全局搜索：注意焦點需要选中目录结构树中的结构
 </table>
 </div>
 
----
-
+</html>
 
 
 ### all  总结-2）
