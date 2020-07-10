@@ -252,3 +252,20 @@ System.out.println("插入前主键为："+user.getUserId());
 ```
 
 
+
+
+# 不为空添加条件判断
+
+
+```xml
+<if test="lockTime != null ">
+                <choose>
+                    <when test="lockTime == 1 ">
+                        LOCK_TIME = sysdate,
+                    </when>
+                    <otherwise>
+                        LOCK_TIME = lockTime,
+                    </otherwise>
+                </choose>
+            </if>
+```

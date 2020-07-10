@@ -10,6 +10,8 @@
     - [工具总结](?file=000-Common/01-每日记录/05-工具总结 "工具总结")
     - [每日错误总结](?file=000-Common/01-每日记录/06-每日错误总结 "每日错误总结")
 - **视频学习记录**
+    - **Common视频学习地址记录**
+        - [视频在线](?file=000-Common/02-视频学习记录/00-Common视频学习地址记录/01-视频在线 "视频在线")
     - **动脑学院视频**
         - [readme](?file=000-Common/02-视频学习记录/01-动脑学院视频/00-readme "readme")
         - **2019.12.26 90分钟读懂springboot**
@@ -40,6 +42,7 @@
 ##### git、atom命令
 - **git 使用过的命令**
     - [git 命令](?file=004-git、atom命令/01-git 使用过的命令/01-git 命令 "git 命令")
+    - [git 设置用户名账号](?file=004-git、atom命令/01-git 使用过的命令/02-git 设置用户名账号 "git 设置用户名账号")
 - **atom 命令**
     - [atom 快捷鍵](?file=004-git、atom命令/02-atom 命令/01-atom 快捷鍵 "atom 快捷鍵")
     - [atom问题解决](?file=004-git、atom命令/02-atom 命令/02-atom问题解决 "atom问题解决")
@@ -165,6 +168,10 @@
         - [mysql 存储过程基础](?file=007-sql 相关/03-mysql相关/14-mysql 存储过程/01-mysql 存储过程基础 "mysql 存储过程基础")
     - **mysql横竖表数据转换**
         - [mysql横竖表转换](?file=007-sql 相关/03-mysql相关/15-mysql横竖表数据转换/01-mysql横竖表转换 "mysql横竖表转换")
+    - **mysql 字符串长度存储问题**
+        - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
+    - **字符串操作**
+        - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
 - **Postgresql相关**
     - [postgresql介绍](?file=007-sql 相关/04-Postgresql相关/01-postgresql介绍 "postgresql介绍")
     - [postgresql 安装卸载](?file=007-sql 相关/04-Postgresql相关/02-postgresql 安装卸载 "postgresql 安装卸载")
