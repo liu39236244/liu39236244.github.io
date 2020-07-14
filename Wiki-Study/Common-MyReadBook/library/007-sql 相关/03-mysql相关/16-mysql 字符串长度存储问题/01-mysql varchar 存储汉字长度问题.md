@@ -67,3 +67,8 @@ VALUES (3, '123456789012345678901');
 [Err] 1406 - Data too long for column'string' at row 1
 
 ```
+
+## 博客总结
+
+
+博客原文地址1:https://blog.csdn.net/yaoyutian/article/details/80244101
