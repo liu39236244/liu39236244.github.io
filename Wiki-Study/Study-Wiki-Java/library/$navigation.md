@@ -14,6 +14,11 @@
     - **Java 集合操作**
         - [Collection 集合](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/01-Collection 集合 "Collection 集合")
         - [集合遍历删除](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/02-集合遍历删除 "集合遍历删除")
+    - **java 小数百分比记录**
+        - [小数百分比转化](?file=001-学习Java/02-Java 基础点/09-java 小数百分比记录/01-小数百分比转化 "小数百分比转化")
+    - **java 自定义排序**
+        - [java 自定义排序公用](?file=001-学习Java/02-Java 基础点/10-java 自定义排序/01-java 自定义排序公用 "java 自定义排序公用")
+        - [java 中 comparator ](?file=001-学习Java/02-Java 基础点/10-java 自定义排序/02-java 中 comparator  "java 中 comparator ")
 - **Java 开发中一些类的总结**
     - **java 与python**
         - [java调用python](?file=001-学习Java/04-Java 开发中一些类的总结/01-java 与python/01-java调用python "java调用python")
@@ -21,6 +26,7 @@
         - [Java 集合基本操作](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/01-Java 集合基本操作 "Java 集合基本操作")
         - [Java 集合操作问题](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/02-Java 集合操作问题 "Java 集合操作问题")
         - [Collectors 对象使用](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/04-Collectors 对象使用 "Collectors 对象使用")
+        - [集合数组互相转换](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/05-集合数组互相转换 "集合数组互相转换")
     - **json数据操作**
         - [Json 对象的操作](?file=001-学习Java/04-Java 开发中一些类的总结/04-json数据操作/01-Json 对象的操作 "Json 对象的操作")
     - **java Thread线程通信**
@@ -88,8 +94,22 @@
         - [oracle 集成的ldap 访问webservice 对接案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/01-oracle 集成的ldap 访问webservice 对接案例 "oracle 集成的ldap 访问webservice 对接案例")
         - [cxf 基本服务端与客户端案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/02-cxf 基本服务端与客户端案例 "cxf 基本服务端与客户端案例")
         - [axis 1 介入springboot springcloud](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/03-axis 1 介入springboot springcloud "axis 1 介入springboot springcloud")
+    - **java 调用php 接口获取数据**
+        - [调用PostMethod方式调用php接口记录](?file=003-java进阶知识/02-对接相关技术/03-java 调用php 接口获取数据/01-调用PostMethod方式调用php接口记录 "调用PostMethod方式调用php接口记录")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
     - **java 1.8 新特性**
         - [java 1.8 流式操作](?file=004-Java 新特性/01-JAVA 1.8 新特性/01-java 1.8 新特性/01-java 1.8 流式操作 "java 1.8 流式操作")
+        - [ 零散使用记录](?file=004-Java 新特性/01-JAVA 1.8 新特性/01-java 1.8 新特性/02- 零散使用记录 " 零散使用记录")
+
+##### java 后端之maven
+- **maven学习记录**
+- **maven 临时记录**
+    - **maven 临时记录**
+        - [maven jar 打包与配置文件分离](?file=005-java 后端之maven/02-maven 临时记录/001-maven 临时记录/01-maven jar 打包与配置文件分离 "maven jar 打包与配置文件分离")
+
+##### java 项目脚本
+- ** javaWeb项目 jar启动脚本**
+    - [ win 启动 脚本-关闭](?file=006-java 项目脚本/01- javaWeb项目 jar启动脚本/01- win 启动 脚本-关闭 " win 启动 脚本-关闭")
+    - [linux shell spring cloud ](?file=006-java 项目脚本/01- javaWeb项目 jar启动脚本/02-linux shell spring cloud  "linux shell spring cloud ")
