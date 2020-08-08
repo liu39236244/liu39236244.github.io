@@ -90,10 +90,10 @@
 - **对接相关技术**
     - **webService**
         - [webService基础](?file=003-java进阶知识/02-对接相关技术/01-webService/01-webService基础 "webService基础")
-    - **webService 案例.md**
-        - [oracle 集成的ldap 访问webservice 对接案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/01-oracle 集成的ldap 访问webservice 对接案例 "oracle 集成的ldap 访问webservice 对接案例")
-        - [cxf 基本服务端与客户端案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/02-cxf 基本服务端与客户端案例 "cxf 基本服务端与客户端案例")
-        - [axis 1 介入springboot springcloud](?file=003-java进阶知识/02-对接相关技术/02-webService 案例.md/03-axis 1 介入springboot springcloud "axis 1 介入springboot springcloud")
+    - **webService 案例**
+        - [oracle 集成的ldap 访问webservice 对接案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例/01-oracle 集成的ldap 访问webservice 对接案例 "oracle 集成的ldap 访问webservice 对接案例")
+        - [cxf 基本服务端与客户端案例](?file=003-java进阶知识/02-对接相关技术/02-webService 案例/02-cxf 基本服务端与客户端案例 "cxf 基本服务端与客户端案例")
+        - [axis 1 介入springboot springcloud](?file=003-java进阶知识/02-对接相关技术/02-webService 案例/03-axis 1 介入springboot springcloud "axis 1 介入springboot springcloud")
     - **java 调用php 接口获取数据**
         - [调用PostMethod方式调用php接口记录](?file=003-java进阶知识/02-对接相关技术/03-java 调用php 接口获取数据/01-调用PostMethod方式调用php接口记录 "调用PostMethod方式调用php接口记录")
 
@@ -113,3 +113,7 @@
 - ** javaWeb项目 jar启动脚本**
     - [ win 启动 脚本-关闭](?file=006-java 项目脚本/01- javaWeb项目 jar启动脚本/01- win 启动 脚本-关闭 " win 启动 脚本-关闭")
     - [linux shell spring cloud ](?file=006-java 项目脚本/01- javaWeb项目 jar启动脚本/02-linux shell spring cloud  "linux shell spring cloud ")
+
+##### java 后台测试
+- **java spirngboot 项目添加测试类**
+    - [java springboot 项目添加测试类](?file=007-java 后台测试/01-java spirngboot 项目添加测试类/01-java springboot 项目添加测试类 "java springboot 项目添加测试类")
