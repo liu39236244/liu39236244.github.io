@@ -104,7 +104,6 @@
         - [ 零散使用记录](?file=004-Java 新特性/01-JAVA 1.8 新特性/01-java 1.8 新特性/02- 零散使用记录 " 零散使用记录")
 
 ##### java 后端之maven
-- **maven学习记录**
 - **maven 临时记录**
     - **maven 临时记录**
         - [maven jar 打包与配置文件分离](?file=005-java 后端之maven/02-maven 临时记录/001-maven 临时记录/01-maven jar 打包与配置文件分离 "maven jar 打包与配置文件分离")
