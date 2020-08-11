@@ -14,6 +14,8 @@
     - **Java 集合操作**
         - [Collection 集合](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/01-Collection 集合 "Collection 集合")
         - [集合遍历删除](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/02-集合遍历删除 "集合遍历删除")
+        - **遍历过程中删除数据**
+            - [ ArrrayList_Jsonarray遍历删除](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/03-遍历过程中删除数据/01- ArrrayList_Jsonarray遍历删除 " ArrrayList_Jsonarray遍历删除")
     - **java 小数百分比记录**
         - [小数百分比转化](?file=001-学习Java/02-Java 基础点/09-java 小数百分比记录/01-小数百分比转化 "小数百分比转化")
     - **java 自定义排序**
@@ -102,8 +104,12 @@
     - **java 1.8 新特性**
         - [java 1.8 流式操作](?file=004-Java 新特性/01-JAVA 1.8 新特性/01-java 1.8 新特性/01-java 1.8 流式操作 "java 1.8 流式操作")
         - [ 零散使用记录](?file=004-Java 新特性/01-JAVA 1.8 新特性/01-java 1.8 新特性/02- 零散使用记录 " 零散使用记录")
+    - **菜鸟教程1.8新特性**
+        - [java新特性介绍](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/01-java新特性介绍 "java新特性介绍")
+        - [ Lambda 表达式](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/02- Lambda 表达式 " Lambda 表达式")
 
 ##### java 后端之maven
+- **maven学习记录**
 - **maven 临时记录**
     - **maven 临时记录**
         - [maven jar 打包与配置文件分离](?file=005-java 后端之maven/02-maven 临时记录/001-maven 临时记录/01-maven jar 打包与配置文件分离 "maven jar 打包与配置文件分离")
