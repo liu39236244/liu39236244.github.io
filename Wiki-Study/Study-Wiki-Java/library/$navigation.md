@@ -107,6 +107,13 @@
     - **菜鸟教程1.8新特性**
         - [java新特性介绍](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/01-java新特性介绍 "java新特性介绍")
         - [ Lambda 表达式](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/02- Lambda 表达式 " Lambda 表达式")
+        - [Java 8 方法引用](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/03-Java 8 方法引用 "Java 8 方法引用")
+        - [函数式接口](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/04-函数式接口 "函数式接口")
+        - [默认方法](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/05-默认方法 "默认方法")
+        - [ stream的使用](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/06- stream的使用 " stream的使用")
+        - [Optional 类](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/07-Optional 类 "Optional 类")
+        - [Nashorn, JavaScript 引擎](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/08-Nashorn, JavaScript 引擎 "Nashorn, JavaScript 引擎")
+        - [新的日期时间API](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/09-新的日期时间API "新的日期时间API")
 
 ##### java 后端之maven
 - **maven学习记录**
