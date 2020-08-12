@@ -1,30 +1,6 @@
 
 #### [备忘录](?file=home-备忘录)
 
-##### Common
-- **每日记录**
-    - [每日问题](?file=000-Common/01-每日记录/01-每日问题 "每日问题")
-    - [每日总结](?file=000-Common/01-每日记录/02-每日总结 "每日总结")
-    - [待看、带学](?file=000-Common/01-每日记录/03-待看、带学 "待看、带学")
-    - [每日一读](?file=000-Common/01-每日记录/04-每日一读 "每日一读")
-    - [工具总结](?file=000-Common/01-每日记录/05-工具总结 "工具总结")
-    - [每日错误总结](?file=000-Common/01-每日记录/06-每日错误总结 "每日错误总结")
-- **视频学习记录**
-    - **Common视频学习地址记录**
-        - [视频在线](?file=000-Common/02-视频学习记录/00-Common视频学习地址记录/01-视频在线 "视频在线")
-    - **动脑学院视频**
-        - [readme](?file=000-Common/02-视频学习记录/01-动脑学院视频/00-readme "readme")
-        - **2019.12.26 90分钟读懂springboot**
-            - [spring boot记录](?file=000-Common/02-视频学习记录/01-动脑学院视频/01-2019.12.26 90分钟读懂springboot/01-spring boot记录 "spring boot记录")
-- **在线工具总结**
-    - [vps 供应商](?file=000-Common/03-在线工具总结/00-vps 供应商 "vps 供应商")
-    - [检测ip工具](?file=000-Common/03-在线工具总结/01-检测ip工具 "检测ip工具")
-- **暂时工作记录**
-    - [echarts bar 数据格式](?file=000-Common/05-暂时工作记录/01-echarts bar 数据格式 "echarts bar 数据格式")
-- **生活记录**
-    - **音乐记录**
-        - [ 音乐记录](?file=000-Common/06-生活记录/01-音乐记录/01- 音乐记录 " 音乐记录")
-
 ##### 《好好说话》
 - **好好说话阅读感想**
     - [好好说话](?file=001-《好好说话》/01-好好说话阅读感想/01-好好说话 "好好说话")
@@ -172,6 +148,9 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
+    - **sql语句入坑总结**
+        - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
 - **Postgresql相关**
     - [postgresql介绍](?file=007-sql 相关/04-Postgresql相关/01-postgresql介绍 "postgresql介绍")
     - [postgresql 安装卸载](?file=007-sql 相关/04-Postgresql相关/02-postgresql 安装卸载 "postgresql 安装卸载")
