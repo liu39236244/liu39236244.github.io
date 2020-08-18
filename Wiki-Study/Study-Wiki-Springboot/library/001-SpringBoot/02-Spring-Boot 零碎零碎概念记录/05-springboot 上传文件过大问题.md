@@ -7,7 +7,7 @@
 
 > 最终可用的
 
-在yml配置文件中添加配置
+在yml配置文件中添加配置，能解决前端formData 中文件过大导致无法进入后端接口问题
 
 ```
   servlet:
@@ -15,6 +15,7 @@
       max-file-size: 20MB
       max-request-size: 30MB
 ```
+
 如下配置
 
 ```yml
