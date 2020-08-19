@@ -49,3 +49,5 @@ objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
 cant map controlName method ，
 
 解决方案：只需要把control 中的 路径设置不一样就行 了
+
+
