@@ -148,6 +148,9 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
+    - **sql语句入坑总结**
+        - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
 - **Postgresql相关**
     - [postgresql介绍](?file=007-sql 相关/04-Postgresql相关/01-postgresql介绍 "postgresql介绍")
     - [postgresql 安装卸载](?file=007-sql 相关/04-Postgresql相关/02-postgresql 安装卸载 "postgresql 安装卸载")

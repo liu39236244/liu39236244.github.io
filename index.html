@@ -8,12 +8,13 @@
 
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type="text/css" href="css/menuTop.css" />
+  <link rel="stylesheet" type="text/css" href="css/audio.css" />
   <!-- The JavaScript -->
   <script type="text/javascript" src="js/jquery.pack.js"></script>
   <script type="text/javascript" src="js/jquery.bgpos.js"></script>
 
 
-  <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  <script src="./js/jquery-1.7.2.min.js" type="text/javascript"></script>
   <script type="text/javascript">
     $(function () {
       /* position of the <li> that is currently shown */
@@ -103,6 +104,27 @@
           $('#bg3').parent().stop().animate({ backgroundPosition: "(-532px 0)" }, 200);
         }
       }
+
+      //播放完毕
+      $('#mp3Btn').on('ended', function () {
+        
+        $('.mp3Box').css({ 'background': 'url(./images/audio-img/犬夜叉1.jpg) no-repeat center bottom', 'background-size': 'cover' });
+      });
+      //播放器控制
+      var audio = document.getElementById('mp3Btn');
+      audio.volume = 0.3;
+      $('.mp3Box').click(function () {
+        
+        event.stopPropagation();//防止冒泡
+        if (audio.paused) { //如果当前是暂停状态
+          $('.mp3Box').css({ 'background': 'url(./images/播放.jpg) no-repeat center bottom', 'background-size': 'cover' });
+          audio.play(); //播放
+        } else {//当前是播放状态
+          $('.mp3Box').css({ 'background': 'url(./images/暂停.jpg) no-repeat center bottom', 'background-size': 'cover' });
+          audio.pause(); //暂停
+        }
+      });
+
     });
 
     jQuery(document).ready(function () {
@@ -146,6 +168,7 @@
       });
 
 
+
   </script>
 
 
@@ -174,6 +197,9 @@
             </li>
             <li class="" _t_nav="document">
               <h2> <a href="#">文档</a> </h2>
+            </li>
+            <li class="" _t_nav="setting">
+              <h2> <a href="#">设置</a> </h2>
             </li>
           </ul>
         </div>
@@ -231,6 +257,35 @@
           </dl>
         </div>
       </div>
+      <div id="setting" class="nav-down-menu menu-4 menu-1" style="display: none;" _t_nav="setting">
+        <div class="navigation-down-inner">
+          <!-- <dl style="margin-left:auto;">
+
+              <audio src="./audio/bgAudio/犬夜叉.mp3" controls="controls">
+              </audio>
+          </dl> -->
+          <dl style="margin-left:auto;">
+          
+          <div class="btn-audio clear">
+            <img src="./images/audio-img/犬夜叉2.jpg" alt="" class="lf" style="width: 5.2rem;">
+            <div class="lf">
+              <p style="font-size: 1.2rem; color: #333;margin: 1rem 0 0.3rem 1.2rem;">跨越时空的思念</p>
+              <p style="font-size: 1rem; color: #888; margin: 0 0 0 1.2rem">犬夜叉- 跨越时空的思念</p>
+            </div>
+            <img src="./images/audio-img/犬夜叉2.jpg" alt="" style="width: 1rem;position: absolute;bottom: 0.5rem;right: 0.5rem;">
+            <div class="mp3Box">
+              <audio id="mp3Btn">
+                <!-- type="audio/mpeg" -->
+                <source src="./audio/bgAudio/犬夜叉.mp3"  type="audio/mpeg" />
+              </audio>
+            </div>
+          </div>
+          </dl>
+
+        
+       
+        </div>
+      </div>
 
     </div>
   </div>
@@ -271,3 +326,4 @@
 </body>
 
 </html>
+

@@ -146,6 +146,44 @@ addTypeName: function(typeId) {
             })
           }
         })
+
+
+// 如果多个参数的话可以下面方式
+
+this.axios
+        .get(
+          this.baseUrl + '/synthesize/messageSreenManage/getMessageScreenListGet',{
+            params:{
+              xxpname: this.xxpname,
+              limit: this.pageSize,
+              page: pageNo,
+              xxtype: 2
+            }
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            showLoading: true
+          }
+        )
+        .then(res => {
+          if (res.data.code == 1) {
+            console.log(" get请求返回值",res.data)
+          }
+
+
+后台
+ @GetMapping(value = "/getMessageScreenListGet", produces = "application/json;charset=UTF-8")
+    public RestMessage <Map> getMessageScreenListGet(
+            @RequestParam(value="xxpname" ,required=false) String xxpname,
+            @RequestParam(value="limit") Integer limit,
+            @RequestParam("page") Integer page,
+            @RequestParam("xxtype") String xxtype
+    )
+
+
+
 ```
 
 
