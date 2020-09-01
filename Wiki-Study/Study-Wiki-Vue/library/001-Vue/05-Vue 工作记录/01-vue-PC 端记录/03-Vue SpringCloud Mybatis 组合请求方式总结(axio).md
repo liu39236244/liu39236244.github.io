@@ -471,6 +471,73 @@ deleteRole: function() {
 
 ```
 
+
+### 批量删除案例3 封装对象传参
+
+
+* 有两种传参，第一种是地址栏，还有一种是封装对象
+
+
+```
+vue中axios 的delete和post,put在传值上有点区别;
+post和put有三个参数，url,data和config，所以在使用这两个时，可以写成axios.post(api,{id:1}),axios.put(api,{id:1}),但是delete只有两个参数：url和config，data在config中，所以需要写成 axios.delete(api,{data:{id:1}})
+
+如果是服务端将参数当作Java对象来封装接收则 参数格式为：{data: param}
+var param={id:1,name:'zhangsan'}
+this.$axios.delete("/ehrReferralObjPro", {data: param}).then(function(response) {
+  }
+
+如果服务端将参数当做url 参数 接收，则格式为：{params: param}，这样发送的url将变为http:www.XXX.com?a=…&b=…
+var param={id:1,name:'zhangsan'}
+this.$axios.delete("/ehrReferralObjPro", {params: param}).then(function(response) {
+  }
+
+axios 数组传值时，我传到后台的是两个字符串数组，但是将参数当成url参数接收时，如果是正常传值，将数组作为一个请求参数传值时，后台接口接收不到匹配的参数，百度之后使用JSON.stringify(),但是使用以后，后台多了一对双引号，最后把后台改成对象封装接收参数，使用的第一种。
+```
+
+* 前台
+```js
+// 将已关联过得文件进行删除
+        // needDeleteFileIds
+        this.$axios.delete(`mongodb/deleteMongodFileByIds`,{data:this.needDeleteFileIds })
+          .then(res => {
+
+            console.log("删除对应数据", res.data);
+            if (res.data.code == 1) {
+                console.log("删除关联数据 文件 成功")
+            }
+          });
+
+      },
+```
+
+
+* 后台
+
+```java
+
+@DeleteMapping(value = "/deleteMongodFileByIds", produces = "application/json;charset=UTF-8")
+    @Override
+    public RestMessage deleteMongodFileByIds(@RequestBody List<String> ids) {
+        try {
+            if (!CollectionUtils.isEmpty(ids)) {
+                ids.forEach(id ->{
+                    // 删除mongodb
+                    mongoDbUtil.deleteByFileId(id);
+
+                    // 删除附件fileinfo 表
+                    fileinfoservice.delFiles(id);
+                });
+            }
+            return new RestMessage();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new RestMessage(RespCodeAndMsg.FAIL);
+        }
+    }
+
+```
+
 * mybatis 底层 批量删除
 
 ```xml

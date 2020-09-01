@@ -133,6 +133,36 @@ return {
   },//添加学生的正则
 ```
 
+
+* 手动触发某一项验证
+
+
+```
+ <el-form label-width="12rem" ref="form" :model="sbkc" :rules="rules">
+ </el-form>
+
+rules: { //用于验证是否必填
+     
+    // 数字
+    KCGL_BS: [
+    { required: true, message: "不能为空", trigger: "change" },
+    { type: "number", message: "请输入数字", trigger: "change" }
+    ],
+    // 附件
+    KCGL_PDFFWLJ: [
+    { validator: courseFileValidator, trigger: "change",required:true }
+    ]
+
+},
+
+
+ 单独验证某一项，使用
+
+  this.$refs.form.validateField("KCGL_PDFFWLJ")
+
+```
+
+
 * 自己修改版本
 
 添加验证表单：

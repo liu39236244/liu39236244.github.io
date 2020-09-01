@@ -124,3 +124,23 @@ public class SpringRollBackUtil {
 }
 
 ```
+
+
+
+# 事务回滚总结博主3 
+
+* 原文博客：
+[@Transactional回滚问题（try catch、嵌套）](https://www.cnblogs.com/pjjlt/p/10926398.html)
+
+
+博主测试以及总结都挺好这里摘抄一下最终用总结
+
+```
+结论
+结论一：对于@Transactional可以保证RuntimeException错误的回滚，如果想保证非RuntimeException错误的回滚，需要加上rollbackFor = Exception.class 参数。
+结论二：try catch只是对异常是否可以被@Transactional 感知 到有影响。如果错误抛到切面可以感知到的地步，那就可以起作用。
+结论三：由于REQUIRED属性，“两个事务”其实是一个事务，处理能力看报错时刻，是否添加了处理非RuntimeException的能力。
+```
+
+
+
