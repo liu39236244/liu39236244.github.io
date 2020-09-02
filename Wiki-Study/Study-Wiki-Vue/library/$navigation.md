@@ -1,6 +1,11 @@
 
 #### [首页](?file=home-首页)
 
+##### vue 公共记录
+- **vue公共记录**
+- **vue项目公共记录**
+    - [项目记录](?file=000-vue 公共记录/02-vue项目公共记录/01-项目记录 "项目记录")
+
 ##### Vue
 - **Vue基础**
     - [VueCommon](?file=001-Vue/01-Vue基础/00-VueCommon "VueCommon")
@@ -20,11 +25,13 @@
     - [vue 解决了哪些问题 ](?file=001-Vue/03-Vue学习/05-vue 解决了哪些问题  "vue 解决了哪些问题 ")
     - **Vuex**
         - [vuex 中store使用](?file=001-Vue/03-Vue学习/06-Vuex/01-vuex 中store使用 "vuex 中store使用")
+        - [Vuex 中零碎总结](?file=001-Vue/03-Vue学习/06-Vuex/02-Vuex 中零碎总结 "Vuex 中零碎总结")
     - **vue父子属性方法调用**
         - [vue中通信-$emit 的使用](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/02-vue中通信-$emit 的使用 "vue中通信-$emit 的使用")
         - [vue中通信-prop 的使用](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/04-vue中通信-prop 的使用 "vue中通信-prop 的使用")
         - [vue中通信-$ref 的使用](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/05-vue中通信-$ref 的使用 "vue中通信-$ref 的使用")
         - [vue 中 options获取子父组件传值](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/06-vue 中 options获取子父组件传值 "vue 中 options获取子父组件传值")
+        - [路由传值](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/07-路由传值 "路由传值")
     - **vue 中控制函数执行顺序先后问题**
         - [Promise.resolve 方法解决](?file=001-Vue/03-Vue学习/08-vue 中控制函数执行顺序先后问题/01-Promise.resolve 方法解决 "Promise.resolve 方法解决")
     - **vue 中组织架构图**
@@ -36,6 +43,10 @@
         - [Heidht charts 组织架构图](?file=001-Vue/03-Vue学习/09-vue 中组织架构图/06-Heidht charts 组织架构图 "Heidht charts 组织架构图")
         - [问题总结](?file=001-Vue/03-Vue学习/09-vue 中组织架构图/07-问题总结 "问题总结")
         - [拖拽组件](?file=001-Vue/03-Vue学习/09-vue 中组织架构图/08-拖拽组件 "拖拽组件")
+    - **eslint相关**
+        - [ 去除eslint 相关](?file=001-Vue/03-Vue学习/10-eslint相关/01- 去除eslint 相关 " 去除eslint 相关")
+    - **EventBus**
+        - [EventBus 的使用](?file=001-Vue/03-Vue学习/11-EventBus/01-EventBus 的使用 "EventBus 的使用")
 - **Vue 工作记录**
     - **工作错误记录**
         - [vue前端项目报错](?file=001-Vue/05-Vue 工作记录/00-工作错误记录/01-vue前端项目报错 "vue前端项目报错")
@@ -78,9 +89,19 @@
 - **BootStrapTable 工作总结**
     - **BootstrapTable  Table 相关**
         - [ Table 的使用总结](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/01- Table 的使用总结 " Table 的使用总结")
+        - [ 设置每列点击函数](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/02- 设置每列点击函数 " 设置每列点击函数")
 - **bootStraptable 验证相关**
     - [bootstraptable 表单验证](?file=003-bootstraptable UI组件/04-bootStraptable 验证相关/01-bootstraptable 表单验证 "bootstraptable 表单验证")
 
 ##### js 相关总结
 - ** 前端工具类**
     - [ 验证工具](?file=004-js 相关总结/01- 前端工具类/01- 验证工具 " 验证工具")
+- **数据类型转换**
+    - [数据类型js 中转换](?file=004-js 相关总结/02-数据类型转换/01-数据类型js 中转换 "数据类型js 中转换")
+- **js中数组的相关操作**
+    - [数组的基本使用](?file=004-js 相关总结/03-js中数组的相关操作/01-数组的基本使用 "数组的基本使用")
+    - [数组中取出相同的值](?file=004-js 相关总结/03-js中数组的相关操作/02-数组中取出相同的值 "数组中取出相同的值")
+    - [js中数组去差值](?file=004-js 相关总结/03-js中数组的相关操作/03-js中数组去差值 "js中数组去差值")
+
+##### TypeScript
+- **TypeScript学习记录**

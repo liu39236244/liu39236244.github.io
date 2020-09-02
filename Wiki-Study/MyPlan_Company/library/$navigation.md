@@ -25,6 +25,8 @@
     - **生活记录**
         - **音乐记录**
             - [ 音乐记录](?file=000-Common/01-EverythingRecord/06-生活记录/01-音乐记录/01- 音乐记录 " 音乐记录")
+    - **md 特效总结**
+        - [md 特效文件总结](?file=000-Common/01-EverythingRecord/07-md 特效总结/01-md 特效文件总结 "md 特效文件总结")
 
 ##### Company
 - **Common**

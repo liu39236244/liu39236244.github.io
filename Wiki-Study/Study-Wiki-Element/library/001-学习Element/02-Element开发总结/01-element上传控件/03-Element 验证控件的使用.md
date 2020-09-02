@@ -133,6 +133,36 @@ return {
   },//添加学生的正则
 ```
 
+
+* 手动触发某一项验证
+
+
+```
+ <el-form label-width="12rem" ref="form" :model="sbkc" :rules="rules">
+ </el-form>
+
+rules: { //用于验证是否必填
+     
+    // 数字
+    KCGL_BS: [
+    { required: true, message: "不能为空", trigger: "change" },
+    { type: "number", message: "请输入数字", trigger: "change" }
+    ],
+    // 附件
+    KCGL_PDFFWLJ: [
+    { validator: courseFileValidator, trigger: "change",required:true }
+    ]
+
+},
+
+
+ 单独验证某一项，使用
+
+  this.$refs.form.validateField("KCGL_PDFFWLJ")
+
+```
+
+
 * 自己修改版本
 
 添加验证表单：
@@ -412,4 +442,53 @@ export default {
             }
         }
     }
+```
+
+
+## 简单使用
+
+简单验证非空与数字
+
+
+```html
+
+```
+
+```js
+
+<el-form label-width="12rem" ref="form" :model="kcdy" :rules="rules">
+            <el-row>
+                <el-col :span="12">
+                    <el-form-item label="名称" prop="test_rule">
+                        <el-input v-model.number ="kcdy.test"/> // 如果数字的则要添加.number 
+                    </el-form-item>
+                </el-col>
+            </el-row>
+<el-form>
+
+
+KCDYB_JWXKCZJ_: 这个可以与form 绑定的属性名不一样
+
+rules: { //用于验证是否必填
+          test_rule: [ // test_rule 这个名字随意
+            { required: true, message: "不能为空", trigger: "change" },
+            { type: "number", message: "输入数字", trigger: "" }
+          ],
+}
+
+kcdy: {
+        test: "" // 
+}
+
+methods:{
+    submit_method(){
+        this.$refs.form.validate((valid) => {
+            if (valid) {
+                console.log("通过验证", true);
+            }else{
+                 console.log("没有通过验证", fales);
+            }
+    }
+}
+
 ```
