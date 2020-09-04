@@ -1,4 +1,4 @@
-# pc 端页面 新增相关
+# pc tab 相关
 
 ## 新创建tab 
 
@@ -40,7 +40,7 @@ addTab:function(obj,num){//添加新的页签
 ```
 
 
-``vue
+```js
 //主页面展示 
 <ul class="nav nav-tabs" style="float: left;width: 100%;padding: 0 10px;background: #f8fbff;">
       <li :class="{active:isIndex}">
@@ -58,3 +58,55 @@ addTab:function(obj,num){//添加新的页签
 
 
 ```
+
+
+## elment tab 切换使用
+
+
+* 参考博主：https://www.cnblogs.com/wangweizhang/p/10251758.html
+
+
+
+### 案例
+
+> 1 主界面
+
+```js
+<template>
+    <div class="tabZujian">
+        <el-tabs v-model="activeName">
+            <el-tab-pane label="tab1" name="first" :key="'first'">
+                <child1></child1>
+            </el-tab-pane>
+    
+            <el-tab-pane label="tab2" name="second" :key="'second'">
+                <child2></child2>    
+            </el-tab-pane>
+        </el-tabs>
+        
+    </div>
+</template>
+
+<script>
+import tabZujianChild1 from '@/tabComponents/tabZujianChild1'
+import tabZujianChild2 from '@/tabComponents/tabZujianChild2'
+export default {
+    name: 'tabZujian',
+    components:{
+        child1:tabZujianChild1,
+        child2:tabZujianChild2
+    },
+    data() {
+        return {
+            //默认第一个选项卡
+            activeName: "first",
+        }
+    },
+    mounted(){
+        
+    }
+}
+</script>
+```
+
+* 子页面引入其他vue 即可
