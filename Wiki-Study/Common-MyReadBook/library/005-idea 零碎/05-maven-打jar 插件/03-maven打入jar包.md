@@ -23,5 +23,5 @@ mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\jar\dove-upms-api
 
 太仓
 
-mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\sendMsg_jdk1.6-130203.jar -DgroupId=com.jqt -DartifactId=sendMsg_jdk1.6 -Dversion=130203 -Dpackaging=jar
+mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\sendMsg_jdk1.6-130203.jar -DgroupId=com.qxt -DartifactId=sendMsg_jdk1.6 -Dversion=130203 -Dpackaging=jar
 
