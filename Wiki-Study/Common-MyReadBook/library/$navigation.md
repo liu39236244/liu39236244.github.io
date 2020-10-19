@@ -122,15 +122,16 @@
 - **PD相关**
     - [PW相关操作](?file=007-sql 相关/01-PD相关/01-PW相关操作 "PW相关操作")
     - [oracel 驱动问题](?file=007-sql 相关/01-PD相关/02-oracel 驱动问题 "oracel 驱动问题")
-- **oracel相关**
+- **oracle相关**
     - **Sql 查询语句**
-        - [oracel 模糊查询](?file=007-sql 相关/02-oracel相关/01-Sql 查询语句/01-oracel 模糊查询 "oracel 模糊查询")
-        - [oracel基础](?file=007-sql 相关/02-oracel相关/01-Sql 查询语句/02-oracel基础 "oracel基础")
-        - [oracel数据类型对应的存储长度](?file=007-sql 相关/02-oracel相关/01-Sql 查询语句/03-oracel数据类型对应的存储长度 "oracel数据类型对应的存储长度")
-        - [Oracel中几种数值类型的区别](?file=007-sql 相关/02-oracel相关/01-Sql 查询语句/04-Oracel中几种数值类型的区别 "Oracel中几种数值类型的区别")
-        - [oracel case 语句使用](?file=007-sql 相关/02-oracel相关/01-Sql 查询语句/05-oracel case 语句使用 "oracel case 语句使用")
-    - **oracel 函数**
-        - [oracel instr 函数使用](?file=007-sql 相关/02-oracel相关/02-oracel 函数/01-oracel instr 函数使用 "oracel instr 函数使用")
+        - [oracel 模糊查询](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/01-oracel 模糊查询 "oracel 模糊查询")
+        - [oracel基础](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/02-oracel基础 "oracel基础")
+        - [oracel数据类型对应的存储长度](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/03-oracel数据类型对应的存储长度 "oracel数据类型对应的存储长度")
+        - [Oracel中几种数值类型的区别](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/04-Oracel中几种数值类型的区别 "Oracel中几种数值类型的区别")
+        - [oracel case 语句使用](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/05-oracel case 语句使用 "oracel case 语句使用")
+    - **oracle 函数**
+        - [oracel instr 函数使用](?file=007-sql 相关/02-oracle相关/02-oracle 函数/01-oracel instr 函数使用 "oracel instr 函数使用")
+        - [ decode 函数](?file=007-sql 相关/02-oracle相关/02-oracle 函数/02- decode 函数 " decode 函数")
 - **mysql相关**
     - [mysql 公用](?file=007-sql 相关/03-mysql相关/00-mysql 公用 "mysql 公用")
     - [mysql 学习](?file=007-sql 相关/03-mysql相关/01-mysql 学习 "mysql 学习")
@@ -320,3 +321,7 @@
     - [生活-音乐](?file=030-生活记录/01-生活/01-生活-音乐 "生活-音乐")
 - **日语学习**
     - [日语学习](?file=030-生活记录/04-日语学习/02-日语学习 "日语学习")
+
+##### 工具使用
+- **PostMan测试工具使用**
+    - [postman 使用](?file=32-工具使用/01-PostMan测试工具使用/01-postman 使用 "postman 使用")
