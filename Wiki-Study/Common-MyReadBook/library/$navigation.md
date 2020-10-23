@@ -53,6 +53,8 @@
     - [&#40;shade-plugins&#41;解决spark 依赖冲突](?file=005-idea 零碎/05-maven-打jar 插件/02-&#40;shade-plugins&#41;解决spark 依赖冲突 "&#40;shade-plugins&#41;解决spark 依赖冲突")
     - [maven打入jar包](?file=005-idea 零碎/05-maven-打jar 插件/03-maven打入jar包 "maven打入jar包")
     - [spark jar 依赖](?file=005-idea 零碎/05-maven-打jar 插件/04-spark jar 依赖 "spark jar 依赖")
+- **设置maven 仓库**
+    - [maven 配置仓库](?file=005-idea 零碎/06-设置maven 仓库/01-maven 配置仓库 "maven 配置仓库")
 
 ##### 项目吸取
 - **相关数据**
@@ -124,6 +126,7 @@
     - [oracel 驱动问题](?file=007-sql 相关/01-PD相关/02-oracel 驱动问题 "oracel 驱动问题")
 - **oracle相关**
     - **Sql 查询语句**
+        - [oracle 基础语句](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/00-oracle 基础语句 "oracle 基础语句")
         - [oracel 模糊查询](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/01-oracel 模糊查询 "oracel 模糊查询")
         - [oracel基础](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/02-oracel基础 "oracel基础")
         - [oracel数据类型对应的存储长度](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/03-oracel数据类型对应的存储长度 "oracel数据类型对应的存储长度")
@@ -154,6 +157,7 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
     - **sql语句入坑总结**
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
 - **Postgresql相关**
@@ -219,6 +223,7 @@
     - [sparkStreaming 操作](?file=011-ws Company Study/04-算子总结/04-sparkStreaming 操作 "sparkStreaming 操作")
 - **数据库**
     - [mysql](?file=011-ws Company Study/05-数据库/01-mysql "mysql")
+- **数据加载**
 
 ##### 开发中的设计模式
 - **设计模式**
@@ -262,6 +267,9 @@
 - **service 服务器常见问题**
     - [服务器tomcat 80 问题](?file=019-MyService 服务器总结/01-service 服务器常见问题/01-服务器tomcat 80 问题 "服务器tomcat 80 问题")
 
+##### 零碎记录
+- **零碎记录之-搜索技巧**
+
 ##### JS的记录
 - **Js Jquery**
     - [js chrom 谷歌调试](?file=021-JS的记录/01-Js Jquery/01-js chrom 谷歌调试 "js chrom 谷歌调试")
@@ -278,6 +286,7 @@
     - [js中数组的清空操作](?file=021-JS的记录/06-js中数组的操作/02-js中数组的清空操作 "js中数组的清空操作")
 
 ##### Html css 记录
+- **Html 基础**
 - **css样式记录**
     - [ div 定位 Absolute（绝对定位）与relative（相对定位）](?file=022-Html css 记录/02-css样式记录/03- div 定位 Absolute（绝对定位）与relative（相对定位） " div 定位 Absolute（绝对定位）与relative（相对定位）")
 
@@ -293,6 +302,7 @@
     - **amWiki**
         - [amwiki 搭建](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
         - [博客搭建参考](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
+- **服务器选择**
 - **github教程**
     - [github教程](?file=027-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
 
@@ -317,3 +327,7 @@
     - **梦子老师日语课程**
         - [孟子老师课程](?file=030-生活记录/04-日语学习/03-梦子老师日语课程/03-孟子老师课程 "孟子老师课程")
         - [梦子老师日语](?file=030-生活记录/04-日语学习/03-梦子老师日语课程/04-梦子老师日语 "梦子老师日语")
+
+##### 工具使用
+- **PostMan测试工具使用**
+    - [postman 使用](?file=32-工具使用/01-PostMan测试工具使用/01-postman 使用 "postman 使用")
