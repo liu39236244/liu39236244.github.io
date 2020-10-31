@@ -2,6 +2,9 @@
 
 ## 总结
 
+
+
+
 ### 基本语法：
 
 使用
@@ -314,6 +317,97 @@ id             case
 1                  1
 2                  1
 ```
+
+
+## 我的案例
+
+分组统计；
+
+
+### 根据人员类别，
+用于统计图使用，横坐标人员类别，纵坐标为出入动作的两中数据。
+total 也可以用作排序，从小到大展示总人数最多的前n个企业也是可以的
+
+
+```xml
+<select id="inOutTypeUserCount" resultType="java.util.Map">
+    SELECT
+      USER_TYPE,
+      sum( CASE WHEN IS_IN_OUT = 1 THEN 1 ELSE 0 END ) IN_COUNT,
+      sum( CASE WHEN IS_IN_OUT = 0 THEN 1 ELSE 0 END ) OUT_COUNT
+    FROM
+      USER_INOUT_RECORD
+    <where>
+      1=1
+      <if test="startTime != null  " >
+        and <![CDATA[CREATE_TIME >= #{startTime}]]>
+      </if>
+      <if test="endTime != null  " >
+        and <![CDATA[CREATE_TIME <= #{endTime}]]>
+      </if>
+    </where>
+    GROUP BY
+      USER_TYPE
+
+  </select>
+
+```
+* 结果：
+
+![](assets/007/02/01/05-1603704954728.png)
+
+适用于统计图：
+
+![](assets/007/02/01/05-1603705180359.png)
+
+
+### 案例2 
+
+
+```xml
+<select id="enterPriseUserCountByInOut" resultType="java.util.Map">
+
+    SELECT
+    t.* ,
+    t.ENTER_USER + t.OUT_USER TOTAL_COUNT
+    FROM
+    (
+    SELECT
+    UNIT_NAME,
+    sum( CASE WHEN USER_TYPE = 0 THEN 1 ELSE 0 END ) ENTER_USER,
+    sum( CASE WHEN USER_TYPE = 1 THEN 1 ELSE 0 END ) OUT_USER
+    FROM
+    USER_INOUT_RECORD
+    <where>
+      1=1
+      <if test="isInOut != null and isInOut !='' " >
+        and IS_IN_OUT = #{isInOut}
+      </if>
+      <if test="startTime != null  " >
+        and <![CDATA[CREATE_TIME >= #{startTime}]]>
+      </if>
+      <if test="endTime != null  " >
+        and <![CDATA[CREATE_TIME <= #{endTime}]]>
+      </if>
+    </where>
+    GROUP BY
+    UNIT_NAME
+    ) t
+    ORDER BY
+    TOTAL_COUNT DESC
+
+
+  </select>
+```
+* 数据
+
+
+![](assets/007/02/01/05-1603705012230.png)
+
+
+适用于
+
+![](assets/007/02/01/05-1603705218487.png)
 
 
 ## 博主

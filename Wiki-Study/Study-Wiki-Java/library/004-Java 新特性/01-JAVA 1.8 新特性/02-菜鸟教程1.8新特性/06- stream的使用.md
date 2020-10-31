@@ -218,6 +218,46 @@ System.out.println("所有数之和 : " + stats.getSum());
 System.out.println("平均数 : " + stats.getAverage());
 ```
 
+### stream生成 list set map
+
+原文地址：https://www.cnblogs.com/agilestyle/p/12812686.html
+
+#### List
+```
+@Test
+public void listInitTest() {
+    List<Integer> list = Stream.of(1, 2, 3, 4, 5, 6).collect(Collectors.toList());
+
+    // [1, 2, 3, 4, 5, 6]
+    System.out.println(list);
+}
+```
+
+
+#### Set
+```
+@Test
+public void setInitTest() {
+    Set<Integer> set = Stream.of(1, 1, 2, 2, 3, 3).collect(Collectors.toSet());
+
+    // [1, 2, 3]
+    System.out.println(set);
+}
+```
+
+#### Map
+```
+@Test
+public void mapInitTest() {
+    Map<Integer, String> map = Stream.of(new Object[][]{
+            {1, "hello"},
+            {2, "world"},
+    }).collect(Collectors.toMap(data -> (Integer) data[0], data -> (String) data[1]));
+
+    // {1=hello, 2=world}
+    System.out.println(map);
+}
+```
 
 ## Stream 完整实例
 
@@ -465,3 +505,6 @@ Squares List: [9, 4, 49, 25]
 1706423674
 空字符串的数量为: 2
 ```
+
+
+
