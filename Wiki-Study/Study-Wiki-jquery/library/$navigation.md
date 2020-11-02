@@ -12,12 +12,15 @@
         - [js 菜鸟教程](?file=001-js/01-js 基础/01-js 基础学习地址总结/02-js 菜鸟教程 "js 菜鸟教程")
     - **js中数组操作**
         - [js中数组](?file=001-js/01-js 基础/02-js中数组操作/01-js中数组 "js中数组")
-        - [js中数组中的对象id拼接字符串](?file=001-js/01-js 基础/02-js中数组操作/02-js中数组中的对象id拼接字符串 "js中数组中的对象id拼接字符串")
+        - [js数组操作](?file=001-js/01-js 基础/02-js中数组操作/02-js数组操作 "js数组操作")
     - **js中操作对象**
         - [js 中遍历对象属性](?file=001-js/01-js 基础/03-js中操作对象/01-js 中遍历对象属性 "js 中遍历对象属性")
 - **js 课程笔记**
     - **极客学院-js面向对象精讲系列**
         - [面向对象精讲](?file=001-js/02-js 课程笔记/01-极客学院-js面向对象精讲系列/01-面向对象精讲 "面向对象精讲")
+- **js 工具类**
+    - [js时间工具类](?file=001-js/03-js 工具类/01-js时间工具类 "js时间工具类")
+    - [小数计算工具类](?file=001-js/03-js 工具类/02-小数计算工具类 "小数计算工具类")
 
 ##### 学习jquery
 - **jquery 常用总结**
@@ -46,6 +49,8 @@
         - [bootStrap boottimePicker ](?file=004-bootstraptable/01-bootstraptable总记录/02-bootStraptable datetime插件使用/02-bootStrap boottimePicker  "bootStrap boottimePicker ")
     - **bootstrap 获取表格数据**
         - [bootstrap获取表格数据](?file=004-bootstraptable/01-bootstraptable总记录/03-bootstrap 获取表格数据/02-bootstrap获取表格数据 "bootstrap获取表格数据")
+    - **bootstraptable treeview树使用**
+        - [treeview 的使用](?file=004-bootstraptable/01-bootstraptable总记录/04-bootstraptable treeview树使用/01-treeview 的使用 "treeview 的使用")
 
 ##### treeview
 - **TreeView 记录**
@@ -71,6 +76,12 @@
 ##### zTree
 - **zTree 记录**
     - [Ztree Demo记录](?file=009-zTree/02-zTree 记录/01-Ztree Demo记录 "Ztree Demo记录")
+
+##### js组件.md
+- **音频组件.md**
+    - [音频组件](?file=010-js组件.md/01-音频组件.md/01-音频组件 "音频组件")
+- **文件组件**
+    - [文件上传组件](?file=010-js组件.md/02-文件组件/01-文件上传组件 "文件上传组件")
 
 ##### AngularJS记录
 

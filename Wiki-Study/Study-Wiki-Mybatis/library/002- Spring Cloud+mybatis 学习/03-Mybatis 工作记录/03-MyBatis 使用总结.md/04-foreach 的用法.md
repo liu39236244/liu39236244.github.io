@@ -33,3 +33,14 @@
     </select>
 
 ```
+
+见过一下方式：
+
+```xml
+ <if test="ids != null">
+                and a.ID in
+                <foreach close=")" collection="ids" item="oid" open="(" separator=",">
+                    '${oid}'
+                </foreach>
+            </if>
+```

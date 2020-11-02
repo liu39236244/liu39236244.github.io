@@ -1,6 +1,5 @@
 # StringUtils 工具类
 
-# StringUtils 工具类
 
 ```Java
 package cn.netcommander.rasengine.utils;
