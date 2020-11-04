@@ -102,6 +102,9 @@
         - [axis 1 介入springboot springcloud](?file=003-java进阶知识/02-对接相关技术/02-webService 案例/03-axis 1 介入springboot springcloud "axis 1 介入springboot springcloud")
     - **java 调用php 接口获取数据**
         - [调用PostMethod方式调用php接口记录](?file=003-java进阶知识/02-对接相关技术/03-java 调用php 接口获取数据/01-调用PostMethod方式调用php接口记录 "调用PostMethod方式调用php接口记录")
+    - **java 发送Http请求.md**
+        - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
+        - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
     - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
@@ -131,6 +134,7 @@
     - **jdk 1.8 新特性案例总结**
         - [jdk1.8 新特性去重自定义对象](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/01-jdk1.8 新特性去重自定义对象 "jdk1.8 新特性去重自定义对象")
         - [数组初始化](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/02-数组初始化 "数组初始化")
+        - [自定义一二三四中文排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/03-自定义一二三四中文排序 "自定义一二三四中文排序")
 
 ##### java 后端之maven
 - **maven学习记录**
