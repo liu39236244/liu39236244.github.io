@@ -78,8 +78,12 @@
         - [radixSort基数排序](?file=001-学习Java/10-十大经典排序算法/01-hustcc 总结的算法/10-radixSort基数排序 "radixSort基数排序")
         - [时间复杂度_空间复杂度](?file=001-学习Java/10-十大经典排序算法/01-hustcc 总结的算法/11-时间复杂度_空间复杂度 "时间复杂度_空间复杂度")
 - **Java线程**
-    - [线程基础](?file=001-学习Java/11-Java线程/01-线程基础 "线程基础")
-    - [java 线程调用总结](?file=001-学习Java/11-Java线程/02-java 线程调用总结 "java 线程调用总结")
+    - **线程基础**
+        - [线程基础](?file=001-学习Java/11-Java线程/01-线程基础/01-线程基础 "线程基础")
+    - **线程调用**
+        - [java 线程调用总结](?file=001-学习Java/11-Java线程/02-线程调用/02-java 线程调用总结 "java 线程调用总结")
+    - **线程通信**
+        - [线程通信](?file=001-学习Java/11-Java线程/03-线程通信/01-线程通信 "线程通信")
 
 ##### java 性能记录
 - **java 中集合遍历性能问题**
@@ -132,9 +136,12 @@
         - [Nashorn, JavaScript 引擎](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/08-Nashorn, JavaScript 引擎 "Nashorn, JavaScript 引擎")
         - [新的日期时间API](?file=004-Java 新特性/01-JAVA 1.8 新特性/02-菜鸟教程1.8新特性/09-新的日期时间API "新的日期时间API")
     - **jdk 1.8 新特性案例总结**
+        - [公用](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/00-公用 "公用")
         - [jdk1.8 新特性去重自定义对象](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/01-jdk1.8 新特性去重自定义对象 "jdk1.8 新特性去重自定义对象")
         - [数组初始化](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/02-数组初始化 "数组初始化")
         - [自定义一二三四中文排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/03-自定义一二三四中文排序 "自定义一二三四中文排序")
+        - [ list 普通多列复杂排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list 普通多列复杂排序 " list 普通多列复杂排序")
+        - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
 
 ##### java 后端之maven
 - **maven学习记录**
@@ -150,3 +157,10 @@
 ##### java 后台测试
 - **java spirngboot 项目添加测试类**
     - [java springboot 项目添加测试类](?file=007-java 后台测试/01-java spirngboot 项目添加测试类/01-java springboot 项目添加测试类 "java springboot 项目添加测试类")
+
+##### spring问题总结.md
+- [spring cloud 启动报错](?file=008-spring问题总结.md/01-spring cloud 启动报错 "spring cloud 启动报错")
+
+##### java 框架
+- **SpringCloud 问题**
+    - [spring Cloud 添加日志切面](?file=009-java 框架/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
