@@ -7,6 +7,8 @@
 * 原博主：https://blog.csdn.net/kang_jie/article/details/106627814?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf
 
 
+
+
 ```java
 package com.szdp.dp_government.config;
 
@@ -163,6 +165,9 @@ User(name=b, age=2, gameLevel=4, birthday=Wed Nov 11 10:59:14 CST 2020, createTi
 
 
 ## 自定义对象时间排序2 
+
+
+> 切记。如果分页的话还是得老老实实用sql 的多级排序，你比如我想要查询每天不同企业出入人员统计，假设总共有11各企业，分页是10条，然后这样只能对已经分页了的数据进行二级排序，假设第二页的那个企业我想要排在第一页，但是呢没有被分页查到怎么办？ 所以 还是会有这个问题的切记
 
 ```java
 public List<PeopleKkInOutCountDto> getPeopleKkInOutList(PeopleKkInOutCountDto peopleKkInOutCountDto) {
