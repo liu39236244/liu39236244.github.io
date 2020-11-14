@@ -164,3 +164,4 @@
 ##### java 框架
 - **SpringCloud 问题**
     - [spring Cloud 添加日志切面](?file=009-java 框架/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
+    - [spring添加日志切面简单版](?file=009-java 框架/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
