@@ -1,6 +1,13 @@
 # list 使用1.8新特性进行自定义对象多列复杂排序
 
 
+
+
+
+
+
+
+
 ## 自然排序，三列
 
 
@@ -212,4 +219,228 @@ public List<PeopleKkInOutCountDto> getPeopleKkInOutList(PeopleKkInOutCountDto pe
         return peopleKkList;
 
     }
+```
+
+## 2 List set Map 的流排序 
+
+
+
+原文：[Java8排序stream.sorted()](https://blog.csdn.net/qq_34996727/article/details/94472999)
+
+
+
+1.sorted()方法的语法示例。 
+
+1.1sorted()：它使用自然顺序对流的元素进行排序。元素类必须实现Comparable接口。 
+
+
+```java
+// 按自然升序对集合进行排序
+list.stream().sorted() .stream().sorted();
+
+// 自然序降序使用Comparator提供reverseOrder()方法
+list.stream().sorted(Comparator.reverseOrder()) .stream().sorted(Comparator.reverseOrder());
+
+```
+
+
+
+1.2 sorted(Comparator<? super T> comparator):这里我们创建一个Comparator使用lambda表达式的实例。我们可以按升序和降序对流元素进行排序。 
+
+```java
+// 使用Comparator来对列表进行自定义升序。 
+list.stream().sorted(Comparator.comparing(Student::getAge)) .stream().sorted(Comparator.comparing(Student::getAge));
+
+
+// 使用Comparator提供reversed()方法来对列表进行自定义降序。 。 
+
+list.stream().sorted(Comparator.comparing(Student::getAge).reversed()) .stream().sorted(Comparator.comparing(Student::getAge).reversed());
+
+```
+
+
+### 2.2 使用List 排序
+
+> 1 实体类
+
+
+```java
+
+
+package com.stream.demo;
+ 
+public class Student implements Comparable<Student> {
+	private int id;
+	private String name;
+	private int age;
+ 
+	public Student(int id, String name, int age) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+ 
+	public int getId() {
+		return id;
+	}
+ 
+	public String getName() {
+		return name;
+	}
+ 
+	public int getAge() {
+		return age;
+	}
+ 
+	@Override
+	public int compareTo(Student ob) {
+		return name.compareTo(ob.getName());
+	}
+ 
+	@Override
+	public boolean equals(final Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		final Student std = (Student) obj;
+		if (this == std) {
+			return true;
+		} else {
+			return (this.name.equals(std.name) && (this.age == std.age));
+		}
+	}
+ 
+	@Override
+	public int hashCode() {
+		int hashno = 7;
+		hashno = 13 * hashno + (name == null ? 0 : name.hashCode());
+		return hashno;
+	}
+}
+
+```
+
+*  List 
+
+```java
+
+package com.stream.demo;
+ 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+ 
+public class StreamListDemo {
+	public static void main(String[] args) {
+		List<Student> list = new ArrayList<>();
+		list.add(new Student(1, "Mahesh", 12));
+		list.add(new Student(2, "Suresh", 15));
+		list.add(new Student(3, "Nilesh", 10));
+ 
+		System.out.println("---Natural Sorting by Name---");
+		List<Student> slist = list.stream().sorted().collect(Collectors.toList());
+		slist.forEach(e -> System.out.println("Id:" + e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+ 
+		System.out.println("---Natural Sorting by Name in reverse order---");
+		slist = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		slist.forEach(e -> System.out.println("Id:" + e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+ 
+		System.out.println("---Sorting using Comparator by Age---");
+		slist = list.stream().sorted(Comparator.comparing(Student::getAge)).collect(Collectors.toList());
+		slist.forEach(e -> System.out.println("Id:" + e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+ 
+		System.out.println("---Sorting using Comparator by Age with reverse order---");
+		slist = list.stream().sorted(Comparator.comparing(Student::getAge).reversed()).collect(Collectors.toList());
+		slist.forEach(e -> System.out.println("Id:" + e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+	}
+}
+
+```
+
+
+```
+
+---Natural Sorting by Name---
+Id:1, Name: Mahesh, Age:12
+Id:3, Name: Nilesh, Age:10
+Id:2, Name: Suresh, Age:15
+---Natural Sorting by Name in reverse order---
+Id:2, Name: Suresh, Age:15
+Id:3, Name: Nilesh, Age:10
+Id:1, Name: Mahesh, Age:12
+---Sorting using Comparator by Age---
+Id:3, Name: Nilesh, Age:10
+Id:1, Name: Mahesh, Age:12
+Id:2, Name: Suresh, Age:15
+---Sorting using Comparator by Age with reverse order---
+Id:2, Name: Suresh, Age:15
+Id:1, Name: Mahesh, Age:12
+Id:3, Name: Nilesh, Age:10
+```
+
+
+* 3 Set 
+
+
+```java
+package com.stream.demo;
+ 
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+ 
+public class StreamSetDemo {
+	public static void main(String[] args) {
+		Set<Student> set = new HashSet<>();
+		set.add(new Student(1, "Mahesh", 12));
+		set.add(new Student(2, "Suresh", 15));
+		set.add(new Student(3, "Nilesh", 10));
+ 
+		System.out.println("---Natural Sorting by Name---");
+		System.out.println("---Natural Sorting by Name---");
+		set.stream().sorted().forEach(e -> System.out.println("Id:"
+						+ e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+ 
+		System.out.println("---Natural Sorting by Name in reverse order---");
+		set.stream().sorted(Comparator.reverseOrder()).forEach(e -> System.out.println("Id:"
+						+ e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+ 
+		System.out.println("---Sorting using Comparator by Age---");
+		set.stream().sorted(Comparator.comparing(Student::getAge))
+						.forEach(e -> System.out.println("Id:" + e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+ 
+		System.out.println("---Sorting using Comparator by Age in reverse order---");
+		set.stream().sorted(Comparator.comparing(Student::getAge).reversed())
+						.forEach(e -> System.out.println("Id:" + e.getId() + ", Name: " + e.getName() + ", Age:" + e.getAge()));
+	}
+}
+```
+
+* 4 使用 Map 排序
+
+```java
+
+package com.stream.demo;
+ 
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+ 
+public class StreamMapDemo {
+	public static void main(String[] args) {
+		Map<Integer, String> map = new HashMap<>();
+		map.put(15, "Mahesh");
+		map.put(10, "Suresh");
+		map.put(30, "Nilesh");
+ 
+		System.out.println("---Sort by Map Value---");
+		map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue))
+						.forEach(e -> System.out.println("Key: "+ e.getKey() +", Value: "+ e.getValue()));
+ 
+		System.out.println("---Sort by Map Key---");System.out.println("---Sort by Map Key---");
+		map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey))
+						.forEach(e -> System.out.println("Key: "+ e.getKey() +", Value: "+ e.getValue()));
+	}
+}
 ```
