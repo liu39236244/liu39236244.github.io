@@ -17,6 +17,10 @@
             - [readme](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/00-readme "readme")
             - **2019.12.26 90分钟读懂springboot**
                 - [spring boot记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/01-2019.12.26 90分钟读懂springboot/01-spring boot记录 "spring boot记录")
+        - **尚硅谷SpringCloud**
+            - **课程记录**
+                - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-尚硅谷SpringCloud/01-课程记录/01- 记录 " 记录")
+            - **SpringCloud学习笔记**
     - **在线工具总结**
         - [vps 供应商](?file=000-Common/01-EverythingRecord/03-在线工具总结/00-vps 供应商 "vps 供应商")
         - [检测ip工具](?file=000-Common/01-EverythingRecord/03-在线工具总结/01-检测ip工具 "检测ip工具")

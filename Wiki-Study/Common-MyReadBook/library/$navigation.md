@@ -125,6 +125,8 @@
     - [PW相关操作](?file=007-sql 相关/01-PD相关/01-PW相关操作 "PW相关操作")
     - [oracel 驱动问题](?file=007-sql 相关/01-PD相关/02-oracel 驱动问题 "oracel 驱动问题")
 - **oracle相关**
+    - **oracle 公用.md**
+        - [设置连接数](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/01-设置连接数 "设置连接数")
     - **Sql 查询语句**
         - [oracle 基础语句](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/00-oracle 基础语句 "oracle 基础语句")
         - [oracel 模糊查询](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/01-oracel 模糊查询 "oracel 模糊查询")
@@ -158,6 +160,7 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
     - **sql语句入坑总结**
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
 - **Postgresql相关**
@@ -223,6 +226,7 @@
     - [sparkStreaming 操作](?file=011-ws Company Study/04-算子总结/04-sparkStreaming 操作 "sparkStreaming 操作")
 - **数据库**
     - [mysql](?file=011-ws Company Study/05-数据库/01-mysql "mysql")
+- **数据加载**
 
 ##### 开发中的设计模式
 - **设计模式**
@@ -266,6 +270,9 @@
 - **service 服务器常见问题**
     - [服务器tomcat 80 问题](?file=019-MyService 服务器总结/01-service 服务器常见问题/01-服务器tomcat 80 问题 "服务器tomcat 80 问题")
 
+##### 零碎记录
+- **零碎记录之-搜索技巧**
+
 ##### JS的记录
 - **Js Jquery**
     - [js chrom 谷歌调试](?file=021-JS的记录/01-Js Jquery/01-js chrom 谷歌调试 "js chrom 谷歌调试")
@@ -282,6 +289,7 @@
     - [js中数组的清空操作](?file=021-JS的记录/06-js中数组的操作/02-js中数组的清空操作 "js中数组的清空操作")
 
 ##### Html css 记录
+- **Html 基础**
 - **css样式记录**
     - [ div 定位 Absolute（绝对定位）与relative（相对定位）](?file=022-Html css 记录/02-css样式记录/03- div 定位 Absolute（绝对定位）与relative（相对定位） " div 定位 Absolute（绝对定位）与relative（相对定位）")
 
@@ -297,6 +305,7 @@
     - **amWiki**
         - [amwiki 搭建](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
         - [博客搭建参考](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
+- **服务器选择**
 - **github教程**
     - [github教程](?file=027-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
 
@@ -314,8 +323,8 @@
         - [临时总结](?file=029-视频剪辑/03-AU学习/01-au 的学习/03-临时总结 "临时总结")
 
 ##### 生活记录
-- **生活**
-    - [生活-音乐](?file=030-生活记录/01-生活/01-生活-音乐 "生活-音乐")
+- **音乐**
+    - [生活-音乐](?file=030-生活记录/01-音乐/01-生活-音乐 "生活-音乐")
 - **PS学习**
     - **ps学习**
         - [阿伟ps教学](?file=030-生活记录/03-PS学习/01-ps学习/01-阿伟ps教学 "阿伟ps教学")
@@ -337,7 +346,9 @@
 - **书籍**
     - **每日书籍**
         - [你要对得起你所受的苦](?file=030-生活记录/06-书籍/01-每日书籍/01-你要对得起你所受的苦 "你要对得起你所受的苦")
+- **打字**
+    - [五笔打字](?file=030-生活记录/07-打字/01-五笔打字 "五笔打字")
 
 ##### 工具使用
 - **PostMan测试工具使用**
-    - [postman 使用](?file=32-工具使用/01-PostMan测试工具使用/01-postman 使用 "postman 使用")
+    - [postman 使用](?file=032-工具使用/01-PostMan测试工具使用/01-postman 使用 "postman 使用")
