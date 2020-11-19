@@ -84,10 +84,6 @@ class Employee {
 ```
 
 
-
-
-
-
 ## 自然排序，三列
 
 
@@ -539,3 +535,51 @@ employees.forEach(System.out::println);
 Collections.sort(employees, Comparator.nullsLast(Comparator.comparing(Employee::getName)));
 
 ```
+
+
+
+## 集合排序字符串案例总结
+
+
+```java
+ private static void sortCompire() {
+//        List<String> collect = Stream.of("apple", "mango", "banana", "fruit").collect(Collectors.toList());
+        List<String> collect = Stream.of("apple", "mango", "aa", "banana", "fruit").collect(Collectors.toList());
+        System.out.println("原list-------");
+        System.out.println(collect);
+        // 字母正序
+        System.out.println("Collections 字母正序-------");
+        Collections.sort(collect);
+        System.out.println(collect);
+
+        System.out.println("Collections 字母逆序-------");
+        Collections.sort(collect,Comparator.reverseOrder());
+        System.out.println(collect);
+
+        // 字母倒序
+        System.out.println("List 字母倒序-------");
+        collect.sort((k, v) -> {
+            return v.compareTo(k);
+        });
+        System.out.println(collect);
+
+        System.out.println("List 字母正序-------");
+        collect.sort((k, v) -> {
+            return k.compareTo(v);
+        });
+        System.out.println(collect);
+
+        System.out.println("List,Compartor 字母逆序----------");
+        collect.sort(Comparator.reverseOrder());
+        System.out.println(collect);
+
+        System.out.println("List,Compartor  字母正序----------");
+        collect.sort(Comparator.comparing(String::new));
+
+        System.out.println(collect);
+
+    }
+
+```
+
+
