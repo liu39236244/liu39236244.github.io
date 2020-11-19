@@ -144,7 +144,7 @@
         - [jdk1.8 新特性去重自定义对象](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/01-jdk1.8 新特性去重自定义对象 "jdk1.8 新特性去重自定义对象")
         - [数组初始化](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/02-数组初始化 "数组初始化")
         - [自定义一二三四中文排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/03-自定义一二三四中文排序 "自定义一二三四中文排序")
-        - [ list-Stream 二级复杂排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list-Stream 二级复杂排序 " list-Stream 二级复杂排序")
+        - [ list-Stream以及Comparator 二级排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list-Stream以及Comparator 二级排序 " list-Stream以及Comparator 二级排序")
         - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
 
 ##### java 后端之maven
@@ -169,3 +169,7 @@
 - **SpringCloud 问题**
     - [spring Cloud 添加日志切面](?file=009-java 框架/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
     - [spring添加日志切面简单版](?file=009-java 框架/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
+
+##### Java 面试题
+- **Java 面试题总结**
+    - [临时面试归纳](?file=010-Java 面试题/01-Java 面试题总结/01-临时面试归纳 "临时面试归纳")
