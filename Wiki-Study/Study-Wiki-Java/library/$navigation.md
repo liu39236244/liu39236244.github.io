@@ -114,11 +114,15 @@
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
-    - ** Map**
+    - [Collection集合](?file=003-java进阶知识/04- java 集合进阶/01-Collection集合 "Collection集合")
+    - [List 遍历过程的删除操作](?file=003-java进阶知识/04- java 集合进阶/02-List 遍历过程的删除操作 "List 遍历过程的删除操作")
 - **Map**
     - **HashMap**
         - [hashMap讲解](?file=003-java进阶知识/05-Map/02-HashMap/01-hashMap讲解 "hashMap讲解")
         - [HashMap 临时记录](?file=003-java进阶知识/05-Map/02-HashMap/02-HashMap 临时记录 "HashMap 临时记录")
+- ** java 开发额外组件**
+    - ** 开源项目**
+        - [java 开发中开源项目了解](?file=003-java进阶知识/06- java 开发额外组件/01- 开源项目/01-java 开发中开源项目了解 "java 开发中开源项目了解")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -140,7 +144,7 @@
         - [jdk1.8 新特性去重自定义对象](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/01-jdk1.8 新特性去重自定义对象 "jdk1.8 新特性去重自定义对象")
         - [数组初始化](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/02-数组初始化 "数组初始化")
         - [自定义一二三四中文排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/03-自定义一二三四中文排序 "自定义一二三四中文排序")
-        - [ list 普通多列复杂排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list 普通多列复杂排序 " list 普通多列复杂排序")
+        - [ list-Stream以及Comparator 二级排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list-Stream以及Comparator 二级排序 " list-Stream以及Comparator 二级排序")
         - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
 
 ##### java 后端之maven
@@ -165,3 +169,7 @@
 - **SpringCloud 问题**
     - [spring Cloud 添加日志切面](?file=009-java 框架/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
     - [spring添加日志切面简单版](?file=009-java 框架/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
+
+##### Java 面试题
+- **Java 面试题总结**
+    - [临时面试归纳](?file=010-Java 面试题/01-Java 面试题总结/01-临时面试归纳 "临时面试归纳")

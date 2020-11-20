@@ -3,6 +3,8 @@
 
 # spring boot 介绍
 
+* 地址：https://dx.dongnaoedu.com/detail/v_5e039c25d1f42_hhfPk2kr/3?fromH5=true 
+
 ## 1 springboot 简单介绍
 
 ![](assets/000/02/01/01/01-1587173178062.png)
@@ -98,7 +100,6 @@ spring 中 配置bean 并且对bean 进行管理 ，其实spring中有xml配置 
 ## 4 探究starter 秘密之一
 
 ![](assets/000/02/01/01/01-1587177434990.png)
-
 
 * 4.1 autoConfiguration 
 

@@ -112,6 +112,32 @@ public class BubbleSort implements IArraySort {
 }
 ```
 
+比较字符串案例
+
+```java
+private static void strCompire() {
+        String[] strs = new String[]{"apple", "mango", "banana", "fruit"};
+        for (int i = 0; i < strs.length -1; i++) {
+            String minStr = strs[i];
+            for(int  j= i+1 ;j< strs.length- 1;j++){
+                String strCompire = strs[j];
+                int i1 = minStr.compareTo(strCompire);
+                if(i1 > 0 ){
+                    String current = "";
+                    current = strs[j];
+                    strs[j] = strs[i];
+                    strs[i] = current;
+                }
+            }
+        }
+        List<String> strings = Arrays.asList(strs);
+        //  [apple, banana, mango, fruit]
+        System.out.println(strings);
+
+    }
+```
+
+
 ## 9. PHP 代码实现
 
 ```php
