@@ -2,8 +2,11 @@
 #### [备忘录](?file=home-备忘录)
 
 ##### 公用
-- [md文档写法说明](?file=00-公用/01-md文档写法说明 "md文档写法说明")
-- [颜色列表](?file=00-公用/02-颜色列表 "颜色列表")
+- **vscode  md 文档插件**
+    - [vscode md 插件 ](?file=00-公用/01-vscode  md 文档插件/01-vscode md 插件  "vscode md 插件 ")
+- **md文档写法说明**
+    - [md文档写法说明](?file=00-公用/02-md文档写法说明/01-md文档写法说明 "md文档写法说明")
+    - [颜色列表](?file=00-公用/02-md文档写法说明/02-颜色列表 "颜色列表")
 
 ##### 《好好说话》
 - **好好说话阅读感想**
@@ -39,6 +42,7 @@
     - [idea快捷键总](?file=005-idea 零碎/01-idea快捷/01-idea快捷键总 "idea快捷键总")
     - [idea 中指定编译版本](?file=005-idea 零碎/01-idea快捷/04-idea 中指定编译版本 "idea 中指定编译版本")
     - [idea中的插件](?file=005-idea 零碎/01-idea快捷/05-idea中的插件 "idea中的插件")
+    - [idea 生成javadoc 文档](?file=005-idea 零碎/01-idea快捷/06-idea 生成javadoc 文档 "idea 生成javadoc 文档")
 - **idea 零散操作**
     - [idea创建文件夹不分层解决](?file=005-idea 零碎/02-idea 零散操作/01-idea创建文件夹不分层解决 "idea创建文件夹不分层解决")
     - [idea 零散操作](?file=005-idea 零碎/02-idea 零散操作/02-idea 零散操作 "idea 零散操作")
@@ -160,9 +164,10 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
-    - **mysql 长度问题**
     - **sql语句入坑总结**
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
+    - **系统操作语句**
+        - [添加用户给予权限](?file=007-sql 相关/03-mysql相关/20-系统操作语句/01-添加用户给予权限 "添加用户给予权限")
 - **Postgresql相关**
     - [postgresql介绍](?file=007-sql 相关/04-Postgresql相关/01-postgresql介绍 "postgresql介绍")
     - [postgresql 安装卸载](?file=007-sql 相关/04-Postgresql相关/02-postgresql 安装卸载 "postgresql 安装卸载")
@@ -226,7 +231,6 @@
     - [sparkStreaming 操作](?file=011-ws Company Study/04-算子总结/04-sparkStreaming 操作 "sparkStreaming 操作")
 - **数据库**
     - [mysql](?file=011-ws Company Study/05-数据库/01-mysql "mysql")
-- **数据加载**
 
 ##### 开发中的设计模式
 - **设计模式**
@@ -260,6 +264,14 @@
 ##### 日常软件总结
 - **win日常软件总结**
     - [win日常软件使用](?file=017-日常软件总结/01-win日常软件总结/01-win日常软件使用 "win日常软件使用")
+- **项目相关**
+    - **公用**
+        - **项目实时**
+            - [项目实时](?file=017-日常软件总结/02-项目相关/00-公用/01-项目实时/01-项目实时 "项目实时")
+        - **项目代码生成器**
+            - [代码生成器](?file=017-日常软件总结/02-项目相关/00-公用/02-项目代码生成器/01-代码生成器 "代码生成器")
+    - **互联网web项目相关**
+        - [ java web 项目验收文档](?file=017-日常软件总结/02-项目相关/01-互联网web项目相关/01- java web 项目验收文档 " java web 项目验收文档")
 
 ##### sbt 的使用与学习
 - **sbt 的使用**
@@ -271,7 +283,8 @@
     - [服务器tomcat 80 问题](?file=019-MyService 服务器总结/01-service 服务器常见问题/01-服务器tomcat 80 问题 "服务器tomcat 80 问题")
 
 ##### 零碎记录
-- **零碎记录之-搜索技巧**
+- **计算机端口问题**
+    - [端口定义范围](?file=020-零碎记录/02-计算机端口问题/01-端口定义范围 "端口定义范围")
 
 ##### JS的记录
 - **Js Jquery**
@@ -289,7 +302,6 @@
     - [js中数组的清空操作](?file=021-JS的记录/06-js中数组的操作/02-js中数组的清空操作 "js中数组的清空操作")
 
 ##### Html css 记录
-- **Html 基础**
 - **css样式记录**
     - [ div 定位 Absolute（绝对定位）与relative（相对定位）](?file=022-Html css 记录/02-css样式记录/03- div 定位 Absolute（绝对定位）与relative（相对定位） " div 定位 Absolute（绝对定位）与relative（相对定位）")
 
@@ -305,7 +317,6 @@
     - **amWiki**
         - [amwiki 搭建](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
         - [博客搭建参考](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
-- **服务器选择**
 - **github教程**
     - [github教程](?file=027-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
 
@@ -346,6 +357,7 @@
 - **书籍**
     - **每日书籍**
         - [你要对得起你所受的苦](?file=030-生活记录/06-书籍/01-每日书籍/01-你要对得起你所受的苦 "你要对得起你所受的苦")
+        - [你要对得起你所受的苦总结文摘](?file=030-生活记录/06-书籍/01-每日书籍/02-你要对得起你所受的苦总结文摘 "你要对得起你所受的苦总结文摘")
 - **打字**
     - [五笔打字](?file=030-生活记录/07-打字/01-五笔打字 "五笔打字")
 
