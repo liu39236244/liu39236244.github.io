@@ -5,6 +5,7 @@
 - **vue公共记录**
 - **vue项目公共记录**
     - [项目记录](?file=000-vue 公共记录/02-vue项目公共记录/01-项目记录 "项目记录")
+    - [vue页面 style 样式编译报错](?file=000-vue 公共记录/02-vue项目公共记录/02-vue页面 style 样式编译报错 "vue页面 style 样式编译报错")
 
 ##### Vue
 - **Vue基础**
@@ -21,7 +22,9 @@
     - [vue app 端记录](?file=001-Vue/03-Vue学习/02-vue app 端记录 "vue app 端记录")
     - [vue 官网api中文文档](?file=001-Vue/03-Vue学习/03-vue 官网api中文文档 "vue 官网api中文文档")
     - **router**
+        - [router 路由知识点](?file=001-Vue/03-Vue学习/04-router/03-router 路由知识点 "router 路由知识点")
         - [vue Router 作用](?file=001-Vue/03-Vue学习/04-router/04-vue Router 作用 "vue Router 作用")
+        - [Router零散记录](?file=001-Vue/03-Vue学习/04-router/05-Router零散记录 "Router零散记录")
     - [vue 解决了哪些问题 ](?file=001-Vue/03-Vue学习/05-vue 解决了哪些问题  "vue 解决了哪些问题 ")
     - **Vuex**
         - [vuex 中store使用](?file=001-Vue/03-Vue学习/06-Vuex/01-vuex 中store使用 "vuex 中store使用")
@@ -34,6 +37,7 @@
         - [路由传值](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/07-路由传值 "路由传值")
     - **vue 中控制函数执行顺序先后问题**
         - [Promise.resolve 方法解决](?file=001-Vue/03-Vue学习/08-vue 中控制函数执行顺序先后问题/01-Promise.resolve 方法解决 "Promise.resolve 方法解决")
+        - [elment-验证中使用同步](?file=001-Vue/03-Vue学习/08-vue 中控制函数执行顺序先后问题/02-elment-验证中使用同步 "elment-验证中使用同步")
     - **vue 中组织架构图**
         - [vue 中组织架构图组件](?file=001-Vue/03-Vue学习/09-vue 中组织架构图/01-vue 中组织架构图组件 "vue 中组织架构图组件")
         - [流程图](?file=001-Vue/03-Vue学习/09-vue 中组织架构图/02-流程图 "流程图")
@@ -90,6 +94,7 @@
     - **BootstrapTable  Table 相关**
         - [ Table 的使用总结](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/01- Table 的使用总结 " Table 的使用总结")
         - [ 设置每列点击函数](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/02- 设置每列点击函数 " 设置每列点击函数")
+        - [时间的设置](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/03-时间的设置 "时间的设置")
 - **bootStraptable 验证相关**
     - [bootstraptable 表单验证](?file=003-bootstraptable UI组件/04-bootStraptable 验证相关/01-bootstraptable 表单验证 "bootstraptable 表单验证")
 
