@@ -110,7 +110,6 @@
         - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
         - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
-    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -148,7 +147,6 @@
         - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
 
 ##### java 后端之maven
-- **maven学习记录**
 - **maven 临时记录**
     - **maven 临时记录**
         - [maven jar 打包与配置文件分离](?file=005-java 后端之maven/02-maven 临时记录/001-maven 临时记录/01-maven jar 打包与配置文件分离 "maven jar 打包与配置文件分离")
@@ -173,3 +171,8 @@
 ##### Java 面试题
 - **Java 面试题总结**
     - [临时面试归纳](?file=010-Java 面试题/01-Java 面试题总结/01-临时面试归纳 "临时面试归纳")
+- **问题记录**
+    - **鲁班课程分布式微服务94**
+        - [spirng 高并发94](?file=010-Java 面试题/02-问题记录/01-鲁班课程分布式微服务94/01-spirng 高并发94 "spirng 高并发94")
+    - **java 进阶知识点**
+        - [ 鲁班课程记录](?file=010-Java 面试题/02-问题记录/02-java 进阶知识点/01- 鲁班课程记录 " 鲁班课程记录")
