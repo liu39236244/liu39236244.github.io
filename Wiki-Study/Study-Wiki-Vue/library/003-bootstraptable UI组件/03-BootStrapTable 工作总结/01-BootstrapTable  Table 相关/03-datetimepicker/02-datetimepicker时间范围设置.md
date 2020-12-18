@@ -1,4 +1,4 @@
-# bootstraptable 时间框设置
+# bootstraptable datetimepicker 时间框设置
 
 
 ## 设置时间，并且设置开始结束时间范围
@@ -35,3 +35,5 @@ dateDefind() {
 			});
     },
 ```
+
+
