@@ -13,11 +13,15 @@
         - [图片展示总结](?file=001-学习Element/02-Element开发总结/03-图片展示el-image 组件/03-图片展示总结 "图片展示总结")
     - **elment 引用三方 icon 库**
         - [引用 阿里icon](?file=001-学习Element/02-Element开发总结/04-elment 引用三方 icon 库/01-引用 阿里icon "引用 阿里icon")
-    - **el table表格组件**
-        - [el table 设置点击事件以及数据字段](?file=001-学习Element/02-Element开发总结/05-el table表格组件/01-el table 设置点击事件以及数据字段 "el table 设置点击事件以及数据字段")
-        - [el-table修改行内数据颜色](?file=001-学习Element/02-Element开发总结/05-el table表格组件/02-el-table修改行内数据颜色 "el-table修改行内数据颜色")
+    - **elTable表格组件**
+        - [el table 设置点击事件以及数据字段](?file=001-学习Element/02-Element开发总结/05-elTable表格组件/01-el table 设置点击事件以及数据字段 "el table 设置点击事件以及数据字段")
+        - [el-table修改行内数据颜色](?file=001-学习Element/02-Element开发总结/05-elTable表格组件/02-el-table修改行内数据颜色 "el-table修改行内数据颜色")
     - **Dialog**
-        - [dialog使用](?file=001-学习Element/02-Element开发总结/06-Dialog/01-dialog使用 "dialog使用")
+        - **dialog使用**
+            - [dialog使用](?file=001-学习Element/02-Element开发总结/06-Dialog/01-dialog使用/01-dialog使用 "dialog使用")
+        - **Dialog 弹框三方修改**
+            - [修改dialog 为可拖拽双击放大](?file=001-学习Element/02-Element开发总结/06-Dialog/02-Dialog 弹框三方修改/01-修改dialog 为可拖拽双击放大 "修改dialog 为可拖拽双击放大")
+            - [修改dialog 弹框距离top为可设定](?file=001-学习Element/02-Element开发总结/06-Dialog/02-Dialog 弹框三方修改/02-修改dialog 弹框距离top为可设定 "修改dialog 弹框距离top为可设定")
     - **input**
         - [input 控制](?file=001-学习Element/02-Element开发总结/07-input/01-input 控制 "input 控制")
     - **Compoent组件**
@@ -27,3 +31,4 @@
     - **Elment Tree**
         - **Elment Tree 获取父节点问题**
             - [Elment 修改源码获取选中节点父节点id](?file=001-学习Element/02-Element开发总结/10-Elment Tree/01-Elment Tree 获取父节点问题/01-Elment 修改源码获取选中节点父节点id "Elment 修改源码获取选中节点父节点id")
+            - [获取当前节点所有父节点](?file=001-学习Element/02-Element开发总结/10-Elment Tree/01-Elment Tree 获取父节点问题/02-获取当前节点所有父节点 "获取当前节点所有父节点")

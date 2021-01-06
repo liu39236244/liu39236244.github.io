@@ -6,7 +6,7 @@
     - **每日记录**
         - [每日问题](?file=000-Common/01-EverythingRecord/01-每日记录/01-每日问题 "每日问题")
         - [每日总结](?file=000-Common/01-EverythingRecord/01-每日记录/02-每日总结 "每日总结")
-        - [待看、带学](?file=000-Common/01-EverythingRecord/01-每日记录/03-待看、带学 "待看、带学")
+        - [待看待学](?file=000-Common/01-EverythingRecord/01-每日记录/03-待看待学 "待看待学")
         - [每日一读](?file=000-Common/01-EverythingRecord/01-每日记录/04-每日一读 "每日一读")
         - [工具总结](?file=000-Common/01-EverythingRecord/01-每日记录/05-工具总结 "工具总结")
         - [每日错误总结](?file=000-Common/01-EverythingRecord/01-每日记录/06-每日错误总结 "每日错误总结")

@@ -443,6 +443,34 @@ export default {
         }
     }
 ```
+#### 案例2
+
+邮箱验证
+
+```js
+ruleForm: {
+        email: '',
+        mobile: '',
+      },
+      rules: {    
+        email: [
+          { required: true, message: '请输入邮箱地址', trigger: 'blur' },
+          {
+            type: 'email',
+            message: '请输入正确的邮箱地址',
+            trigger: ['blur', 'change'],
+          },
+        ],
+        mobile: [
+          { required: true, message: '请输入手机号', trigger: 'blur' },
+          {
+           pattern: /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/,
+            message: '请输入正确的手机号码或者座机号',
+          },
+        ],
+      },
+```
+
 
 
 ## 简单使用
@@ -492,3 +520,5 @@ methods:{
 }
 
 ```
+
+
