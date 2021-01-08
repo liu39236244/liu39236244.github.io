@@ -4,6 +4,48 @@
 
 ##  使用
 
+
+### 添加一个属性即可(原生dialog属性)
+
+> 1 dialog 组建中 style 计算属性
+
+```js
+ style() {
+        let style = {};
+        if (!this.fullscreen) {
+          style.marginTop = this.top;
+          if (this.width) {
+            style.width = this.width;
+          }
+        }
+        return style;
+      }
+```
+
+> 2 使用，添加top属性 
+
+```
+<el-dialog
+            top="2vh"
+            v-el-drag-dialog
+            :close-on-click-modal="false"
+            v-if="guideDialogFlag"
+            :visible.sync="guideDialogFlag"
+            width="95%"
+            height="800px"
+            class="popHei bigBox" ref="popHei"
+            :append-to-body="true"
+            title="使用手册"
+    >
+      <guide></guide>
+    </el-dialog>
+```
+
+> 3 效果图
+
+![](assets/001/02/06/02/02-1609897580578.png)
+
+### 复杂方式(刚开始找到这种方式以为dialog没有自带的设置顶部距离的，)
 >1  vue中利用自定义指令修改elementUI对话框到顶部的距离
 
 ```
