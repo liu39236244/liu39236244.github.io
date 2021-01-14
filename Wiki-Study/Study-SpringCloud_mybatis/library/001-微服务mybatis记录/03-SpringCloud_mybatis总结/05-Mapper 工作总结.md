@@ -187,7 +187,33 @@ this.axios.post(this.baseUrl + '/danger/dangerinfo/selectDangerinfoPagenation', 
         </foreach>
 
     </update>
+
 ```
+
+### 字符串比较
+
+
+```
+范例二：
+
+mybatis 映射文件中，if标签判断字符串相等，两种方式：
+因为mybatis映射文件，是使用的ognl表达式，所以在判断字符串isComplete变量是否是字符串Y的时候
+
+<if test="isComplete=='Y'.toString()">
+
+或者使用下面的写法
+
+<if test = 'isComplete== "Y"'>
+
+注意：不能使用以下方式
+
+<if test="isComplete=='Y'">
+  and 1=1
+</if>
+
+因为mybatis会把'Y'解析为字符，java是强类型语言，所以不能这样写。
+```
+
 
 * in 语句
 ```xml
@@ -242,3 +268,5 @@ this.axios.post(this.baseUrl + '/danger/dangerinfo/selectDangerinfoPagenation', 
     </if>
   </select>
 ```
+
+

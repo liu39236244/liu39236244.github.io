@@ -44,6 +44,29 @@ insert into student values("5","小明6",6);
 
 ## 用户权限
 
+创建用户，并允许本地登录，且允许连接某个数据库，给权限
+
+```sql
+
+-- 允许root 本地链接
+update user set host = '%' where user ='root';
+flush privileges;
+
+
+SELECT * FROM USER
+
+CREATE USER 'zhonghe'@'%' IDENTIFIED BY 'zhonghe';
+
+GRANT SELECT,INSERT,DELETE,UPDATE ON zhonghe.* TO zhonghe@'%';
+-- Grant all privileges on zhonghe.* to zhonge@'%';
+-- GRANT SELECT, INSERT,DELETE,UPDATE ON zhonghe.* TO 'zhonghe'@'%';
+flush privileges;    
+
+
+```
+
+
+
 ### 博主
 > 1-[用户对表的权限的控制](https://www.cnblogs.com/Richardzhu/p/3318595.html)
 > 2-[用户权限](https://blog.csdn.net/misakaqunianxiatian/article/details/48523797)
