@@ -5,4 +5,8 @@
 地址：https://ke.qq.com/user/index/index.html#/plan/cid=2738425&term_id=103295405
 
 下载到本地 
-01-
+昨晚Redis课程回放资料链接：https://pan.baidu.com/s/15ydQRcbK_b3uMAc00pmMzQ 
+提取码：rftl 
+
+
+

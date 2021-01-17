@@ -20,9 +20,11 @@
         - **尚硅谷SpringCloud**
             - **课程记录**
                 - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-尚硅谷SpringCloud/01-课程记录/01- 记录 " 记录")
-            - **SpringCloud学习笔记**
         - **尚硅谷springboot视频**
             - [SpringBoot记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/03-尚硅谷springboot视频/01-SpringBoot记录 "SpringBoot记录")
+        - **Redis双11高并发架构与源码深度解剖**
+            - [04_Redis 公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/04-Redis双11高并发架构与源码深度解剖/01-04_Redis 公用 "04_Redis 公用")
+            - [Redis](?file=000-Common/01-EverythingRecord/02-视频学习记录/04-Redis双11高并发架构与源码深度解剖/02-Redis "Redis")
     - **在线工具总结**
         - [vps 供应商](?file=000-Common/01-EverythingRecord/03-在线工具总结/00-vps 供应商 "vps 供应商")
         - [检测ip工具](?file=000-Common/01-EverythingRecord/03-在线工具总结/01-检测ip工具 "检测ip工具")
@@ -35,7 +37,6 @@
         - [md 特效文件总结](?file=000-Common/01-EverythingRecord/07-md 特效总结/01-md 特效文件总结 "md 特效文件总结")
 
 ##### Company
-- **Common**
 - **CompanyPlan**
     - [CompanyPlan](?file=001-Company/01-CompanyPlan/01-CompanyPlan "CompanyPlan")
 - **Items_Common_Java**
