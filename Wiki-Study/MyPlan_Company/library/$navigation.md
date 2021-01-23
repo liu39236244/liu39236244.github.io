@@ -43,6 +43,9 @@
             - **mysql 优化innodb**
                 - [mysql图灵优化](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/01-mysql 优化innodb/01-mysql图灵优化 "mysql图灵优化")
                 - [高并发如何使mysql高效运行（1）](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/01-mysql 优化innodb/02-高并发如何使mysql高效运行（1） "高并发如何使mysql高效运行（1）")
+                - [高并发如何使mysql高效运行（2）](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/01-mysql 优化innodb/03-高并发如何使mysql高效运行（2） "高并发如何使mysql高效运行（2）")
+            - **mysql讲解索引**
+                - [mysql 针对索引讲解&#40;1&#41;](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/02-mysql讲解索引/01-mysql 针对索引讲解&#40;1&#41; "mysql 针对索引讲解&#40;1&#41;")
     - **在线工具总结**
         - [vps 供应商](?file=000-Common/01-EverythingRecord/03-在线工具总结/00-vps 供应商 "vps 供应商")
         - [检测ip工具](?file=000-Common/01-EverythingRecord/03-在线工具总结/01-检测ip工具 "检测ip工具")
