@@ -51,6 +51,9 @@
         - [ 去除eslint 相关](?file=001-Vue/03-Vue学习/10-eslint相关/01- 去除eslint 相关 " 去除eslint 相关")
     - **EventBus**
         - [EventBus 的使用](?file=001-Vue/03-Vue学习/11-EventBus/01-EventBus 的使用 "EventBus 的使用")
+    - **vue中过滤器的使用**
+        - [过滤器介绍](?file=001-Vue/03-Vue学习/12-vue中过滤器的使用/01-过滤器介绍 "过滤器介绍")
+        - [全局引入filter ](?file=001-Vue/03-Vue学习/12-vue中过滤器的使用/02-全局引入filter  "全局引入filter ")
 - **Vue 工作记录**
     - **工作错误记录**
         - [vue前端项目报错](?file=001-Vue/05-Vue 工作记录/00-工作错误记录/01-vue前端项目报错 "vue前端项目报错")
@@ -71,6 +74,8 @@
         - [app 弹出框传值与获取](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/07-app 弹出框传值与获取 "app 弹出框传值与获取")
     - **vue 中扩展组件**
         - [富文本Ueditor](?file=001-Vue/05-Vue 工作记录/03-vue 中扩展组件/02-富文本Ueditor "富文本Ueditor")
+        - **vue 中引入可选可选链式语法**
+            - [vue 中引入可选链式](?file=001-Vue/05-Vue 工作记录/03-vue 中扩展组件/03-vue 中引入可选可选链式语法/01-vue 中引入可选链式 "vue 中引入可选链式")
     - [Vue 项目使用记录](?file=001-Vue/05-Vue 工作记录/04-Vue 项目使用记录 "Vue 项目使用记录")
     - ** 同步问题**
         - [promise 的使用](?file=001-Vue/05-Vue 工作记录/05- 同步问题/01-promise 的使用 "promise 的使用")
@@ -94,7 +99,9 @@
     - **BootstrapTable  Table 相关**
         - [ Table 的使用总结](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/01- Table 的使用总结 " Table 的使用总结")
         - [ 设置每列点击函数](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/02- 设置每列点击函数 " 设置每列点击函数")
-        - [时间的设置](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/03-时间的设置 "时间的设置")
+        - **datetimepicker**
+            - [datetimepicker使用](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/03-datetimepicker/01-datetimepicker使用 "datetimepicker使用")
+            - [datetimepicker时间范围设置](?file=003-bootstraptable UI组件/03-BootStrapTable 工作总结/01-BootstrapTable  Table 相关/03-datetimepicker/02-datetimepicker时间范围设置 "datetimepicker时间范围设置")
 - **bootStraptable 验证相关**
     - [bootstraptable 表单验证](?file=003-bootstraptable UI组件/04-bootStraptable 验证相关/01-bootstraptable 表单验证 "bootstraptable 表单验证")
 
@@ -107,6 +114,10 @@
     - [数组的基本使用](?file=004-js 相关总结/03-js中数组的相关操作/01-数组的基本使用 "数组的基本使用")
     - [数组中取出相同的值](?file=004-js 相关总结/03-js中数组的相关操作/02-数组中取出相同的值 "数组中取出相同的值")
     - [js中数组去差值](?file=004-js 相关总结/03-js中数组的相关操作/03-js中数组去差值 "js中数组去差值")
+- **前端分页**
+    - [js分页数据](?file=004-js 相关总结/04-前端分页/01-js分页数据 "js分页数据")
 
 ##### TypeScript
 - **TypeScript学习记录**
+
+##### ES6 语法
