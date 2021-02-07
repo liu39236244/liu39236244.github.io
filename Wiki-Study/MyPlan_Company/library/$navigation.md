@@ -14,10 +14,14 @@
         - **Common视频学习地址记录**
             - [视频在线](?file=000-Common/01-EverythingRecord/02-视频学习记录/00-Common视频学习地址记录/01-视频在线 "视频在线")
             - [阿里 p6 p7 知识结构图](?file=000-Common/01-EverythingRecord/02-视频学习记录/00-Common视频学习地址记录/02-阿里 p6 p7 知识结构图 "阿里 p6 p7 知识结构图")
+            - [p7架构](?file=000-Common/01-EverythingRecord/02-视频学习记录/00-Common视频学习地址记录/03-p7架构 "p7架构")
         - **动脑学院视频**
             - [readme](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/00-readme "readme")
             - **2019.12.26 90分钟读懂springboot**
                 - [spring boot记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/01-2019.12.26 90分钟读懂springboot/01-spring boot记录 "spring boot记录")
+            - **hash由浅入深-jam-分布式锁**
+                - [公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/02-hash由浅入深-jam-分布式锁/00-公用 "公用")
+                - [ 笔记记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/02-hash由浅入深-jam-分布式锁/01- 笔记记录 " 笔记记录")
         - **尚硅谷SpringCloud**
             - **课程记录**
                 - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-尚硅谷SpringCloud/01-课程记录/01- 记录 " 记录")
@@ -39,13 +43,24 @@
             - ** 前端分享瞄bilibli**
                 - [webPack 分享瞄公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/05-webPack 学习/01- 前端分享瞄bilibli/01-webPack 分享瞄公用 "webPack 分享瞄公用")
                 - [webpack 01](?file=000-Common/01-EverythingRecord/02-视频学习记录/05-webPack 学习/01- 前端分享瞄bilibli/02-webpack 01 "webpack 01")
-        - **mysql**
-            - **mysql 优化innodb**
-                - [mysql图灵优化](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/01-mysql 优化innodb/01-mysql图灵优化 "mysql图灵优化")
-                - [高并发如何使mysql高效运行（1）](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/01-mysql 优化innodb/02-高并发如何使mysql高效运行（1） "高并发如何使mysql高效运行（1）")
-                - [高并发如何使mysql高效运行（2）](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/01-mysql 优化innodb/03-高并发如何使mysql高效运行（2） "高并发如何使mysql高效运行（2）")
-            - **mysql讲解索引**
-                - [mysql 针对索引讲解&#40;1&#41;](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-mysql/02-mysql讲解索引/01-mysql 针对索引讲解&#40;1&#41; "mysql 针对索引讲解&#40;1&#41;")
+        - **数据库视频学习**
+            - **图灵学院-mysql以及优化**
+                - [公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-数据库视频学习/01-图灵学院-mysql以及优化/01-公用 "公用")
+                - **mysql**
+                    - **mysql 优化innodb**
+                        - [mysql图灵优化](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-数据库视频学习/01-图灵学院-mysql以及优化/06-mysql/01-mysql 优化innodb/01-mysql图灵优化 "mysql图灵优化")
+                        - [高并发如何使mysql高效运行（1）](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-数据库视频学习/01-图灵学院-mysql以及优化/06-mysql/01-mysql 优化innodb/02-高并发如何使mysql高效运行（1） "高并发如何使mysql高效运行（1）")
+                        - [高并发如何使mysql高效运行（2）](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-数据库视频学习/01-图灵学院-mysql以及优化/06-mysql/01-mysql 优化innodb/03-高并发如何使mysql高效运行（2） "高并发如何使mysql高效运行（2）")
+                    - **mysql讲解索引**
+                        - [mysql 针对索引讲解&#40;1&#41;](?file=000-Common/01-EverythingRecord/02-视频学习记录/06-数据库视频学习/01-图灵学院-mysql以及优化/06-mysql/02-mysql讲解索引/01-mysql 针对索引讲解&#40;1&#41; "mysql 针对索引讲解&#40;1&#41;")
+        - **零散知识点**
+            - **hashMap**
+                - **monkey对hashmap讲解**
+                    - [公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/100-零散知识点/01-hashMap/01-monkey对hashmap讲解/00-公用 "公用")
+                    - [hashMap讲解](?file=000-Common/01-EverythingRecord/02-视频学习记录/100-零散知识点/01-hashMap/01-monkey对hashmap讲解/01-hashMap讲解 "hashMap讲解")
+            - **jvm性能调优**
+                - **诸葛老师图灵**
+                    - [jvm调优](?file=000-Common/01-EverythingRecord/02-视频学习记录/100-零散知识点/02-jvm性能调优/01-诸葛老师图灵/01-jvm调优 "jvm调优")
     - **在线工具总结**
         - [vps 供应商](?file=000-Common/01-EverythingRecord/03-在线工具总结/00-vps 供应商 "vps 供应商")
         - [检测ip工具](?file=000-Common/01-EverythingRecord/03-在线工具总结/01-检测ip工具 "检测ip工具")
