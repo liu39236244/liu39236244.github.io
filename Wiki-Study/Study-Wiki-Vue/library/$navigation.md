@@ -18,6 +18,7 @@
         - [vue 项目特定文件解释](?file=001-Vue/03-Vue学习/00-common公共/02-vue 项目特定文件解释 "vue 项目特定文件解释")
         - [vueAxios 与 axios 区别](?file=001-Vue/03-Vue学习/00-common公共/03-vueAxios 与 axios 区别 "vueAxios 与 axios 区别")
         - [vue 导入第三方js 库](?file=001-Vue/03-Vue学习/00-common公共/04-vue 导入第三方js 库 "vue 导入第三方js 库")
+        - [vue中props设置默认值](?file=001-Vue/03-Vue学习/00-common公共/05-vue中props设置默认值 "vue中props设置默认值")
     - [Vue学习记录](?file=001-Vue/03-Vue学习/01-Vue学习记录 "Vue学习记录")
     - [vue app 端记录](?file=001-Vue/03-Vue学习/02-vue app 端记录 "vue app 端记录")
     - [vue 官网api中文文档](?file=001-Vue/03-Vue学习/03-vue 官网api中文文档 "vue 官网api中文文档")
@@ -66,6 +67,7 @@
         - [vue中子 父 函数调用](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/07-vue中子 父 函数调用 "vue中子 父 函数调用")
         - [页面的tab 相关](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/08-页面的tab 相关 "页面的tab 相关")
         - [Vue 组件传值](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/09-Vue 组件传值 "Vue 组件传值")
+        - [vue中监听按键](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/10-vue中监听按键 "vue中监听按键")
     - **Vue app端记录**
         - [Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41;](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/03-Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41; "Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41;")
         - [验证表单数据van](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/04-验证表单数据van "验证表单数据van")
@@ -73,9 +75,13 @@
         - [vant 点击弹出下拉框](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/06-vant 点击弹出下拉框 "vant 点击弹出下拉框")
         - [app 弹出框传值与获取](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/07-app 弹出框传值与获取 "app 弹出框传值与获取")
     - **vue 中扩展组件**
-        - [富文本Ueditor](?file=001-Vue/05-Vue 工作记录/03-vue 中扩展组件/02-富文本Ueditor "富文本Ueditor")
+        - **富文本**
+            - [富文本Ueditor](?file=001-Vue/05-Vue 工作记录/03-vue 中扩展组件/02-富文本/02-富文本Ueditor "富文本Ueditor")
         - **vue 中引入可选可选链式语法**
             - [vue 中引入可选链式](?file=001-Vue/05-Vue 工作记录/03-vue 中扩展组件/03-vue 中引入可选可选链式语法/01-vue 中引入可选链式 "vue 中引入可选链式")
+        - **PDF 插件**
+            - **vue-pdf 插件**
+                - [vue-pdf插件](?file=001-Vue/05-Vue 工作记录/03-vue 中扩展组件/05-PDF 插件/01-vue-pdf 插件/01-vue-pdf插件 "vue-pdf插件")
     - [Vue 项目使用记录](?file=001-Vue/05-Vue 工作记录/04-Vue 项目使用记录 "Vue 项目使用记录")
     - ** 同步问题**
         - [promise 的使用](?file=001-Vue/05-Vue 工作记录/05- 同步问题/01-promise 的使用 "promise 的使用")
