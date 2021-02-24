@@ -7,8 +7,9 @@
 - **md文档写法说明**
     - [md文档写法说明](?file=00-公用/02-md文档写法说明/01-md文档写法说明 "md文档写法说明")
     - [颜色列表](?file=00-公用/02-md文档写法说明/02-颜色列表 "颜色列表")
-- [颜色列表](?file=00-公用/02-颜色列表 "颜色列表")
 - [md文档写法说明](?file=00-公用/03-md文档写法说明 "md文档写法说明")
+- **迷之问题记录**
+    - [变量书写顺序问题导致vue变量清空无效](?file=00-公用/04-迷之问题记录/01-变量书写顺序问题导致vue变量清空无效 "变量书写顺序问题导致vue变量清空无效")
 
 ##### 《好好说话》
 - **好好说话阅读感想**
@@ -146,7 +147,8 @@
         - [oracel instr 函数使用](?file=007-sql 相关/02-oracle相关/02-oracle 函数/01-oracel instr 函数使用 "oracel instr 函数使用")
         - [ decode 函数](?file=007-sql 相关/02-oracle相关/02-oracle 函数/02- decode 函数 " decode 函数")
 - **mysql相关**
-    - [mysql 公用](?file=007-sql 相关/03-mysql相关/00-mysql 公用 "mysql 公用")
+    - **mysql公用**
+        - [mysql 公用](?file=007-sql 相关/03-mysql相关/00-mysql公用/00-mysql 公用 "mysql 公用")
     - [mysql 学习](?file=007-sql 相关/03-mysql相关/01-mysql 学习 "mysql 学习")
     - [mysql 权限管理](?file=007-sql 相关/03-mysql相关/02-mysql 权限管理 "mysql 权限管理")
     - [mysql 建表語句mysql中engine=innodb和engine=myisam](?file=007-sql 相关/03-mysql相关/03-mysql 建表語句mysql中engine=innodb和engine=myisam "mysql 建表語句mysql中engine=innodb和engine=myisam")
@@ -156,6 +158,13 @@
     - [mysql 问题总结](?file=007-sql 相关/03-mysql相关/08-mysql 问题总结 "mysql 问题总结")
     - [mysql忘记密码](?file=007-sql 相关/03-mysql相关/09-mysql忘记密码 "mysql忘记密码")
     - [mysql 分组查询并且限制条数](?file=007-sql 相关/03-mysql相关/10-mysql 分组查询并且限制条数 "mysql 分组查询并且限制条数")
+    - **mysql知识点总结**
+        - **mysql索引底层结构B+**
+            - [ mySQL 底层索引数据结构介绍](?file=007-sql 相关/03-mysql相关/100-mysql知识点总结/01-mysql索引底层结构B+/01- mySQL 底层索引数据结构介绍 " mySQL 底层索引数据结构介绍")
+            - [mysql底层为什么不用B-Tree 而是 b+ 呢](?file=007-sql 相关/03-mysql相关/100-mysql知识点总结/01-mysql索引底层结构B+/02-mysql底层为什么不用B-Tree 而是 b+ 呢 "mysql底层为什么不用B-Tree 而是 b+ 呢")
+        - **mysql的覆盖索引**
+            - [mysql 覆盖索引](?file=007-sql 相关/03-mysql相关/100-mysql知识点总结/02-mysql的覆盖索引/01-mysql 覆盖索引 "mysql 覆盖索引")
+            - [博主介绍](?file=007-sql 相关/03-mysql相关/100-mysql知识点总结/02-mysql的覆盖索引/02-博主介绍 "博主介绍")
     - [mysql 与 mybatis 中字符转换](?file=007-sql 相关/03-mysql相关/11-mysql 与 mybatis 中字符转换 "mysql 与 mybatis 中字符转换")
     - [mysql函数表达式](?file=007-sql 相关/03-mysql相关/12-mysql函数表达式 "mysql函数表达式")
     - [mysql 中 排序null 值问题](?file=007-sql 相关/03-mysql相关/13-mysql 中 排序null 值问题 "mysql 中 排序null 值问题")
@@ -167,6 +176,7 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
     - **sql语句入坑总结**
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
     - **系统操作语句**
@@ -234,6 +244,7 @@
     - [sparkStreaming 操作](?file=011-ws Company Study/04-算子总结/04-sparkStreaming 操作 "sparkStreaming 操作")
 - **数据库**
     - [mysql](?file=011-ws Company Study/05-数据库/01-mysql "mysql")
+- **数据加载**
 
 ##### 开发中的设计模式
 - **设计模式**
@@ -302,12 +313,12 @@
     - [js中JSON处理](?file=021-JS的记录/010-js 中JSON操作/01-js中JSON处理 "js中JSON处理")
 - **js 时间函数记录**
     - [js 时间转换](?file=021-JS的记录/02-js 时间函数记录/02-js 时间转换 "js 时间转换")
-- **js 过滤**
-    - [filter ](?file=021-JS的记录/04-js 过滤/02-filter  "filter ")
 - **js中String的操作**
     - [字符串中包含其他字符串](?file=021-JS的记录/05-js中String的操作/02-字符串中包含其他字符串 "字符串中包含其他字符串")
     - [js 判断一个字符串是否是数字](?file=021-JS的记录/05-js中String的操作/03-js 判断一个字符串是否是数字 "js 判断一个字符串是否是数字")
 - **js中数组的操作**
+    - [数组操作](?file=021-JS的记录/06-js中数组的操作/00-数组操作 "数组操作")
+    - [filter ](?file=021-JS的记录/06-js中数组的操作/01-filter  "filter ")
     - [js中数组的清空操作](?file=021-JS的记录/06-js中数组的操作/02-js中数组的清空操作 "js中数组的清空操作")
 - **session cookie 以及Storage 的使用**
     - **SessionStorage**
@@ -319,6 +330,7 @@
         - [公用](?file=021-JS的记录/08-ES6 语法/01-ES 6 语法学习记录/00-公用 "公用")
 
 ##### Html css 记录
+- **Html 基础**
 - **css样式记录**
     - [ div 定位 Absolute（绝对定位）与relative（相对定位）](?file=022-Html css 记录/02-css样式记录/03- div 定位 Absolute（绝对定位）与relative（相对定位） " div 定位 Absolute（绝对定位）与relative（相对定位）")
 
@@ -326,25 +338,33 @@
 - **SpringDataJpaCommon**
     - [注解](?file=026-SpringDataJpa/01-SpringDataJpaCommon/01-注解 "注解")
 
-##### blog 博客搭建.md
-- **blog 选择**
-    - **Hexo**
-        - [Hexo 搭建静态博客](?file=027-blog 博客搭建.md/01-blog 选择/01-Hexo/01-Hexo 搭建静态博客 "Hexo 搭建静态博客")
-        - [Hexo 从零搭建](?file=027-blog 博客搭建.md/01-blog 选择/01-Hexo/02-Hexo 从零搭建 "Hexo 从零搭建")
-    - **amWiki**
-        - [amwiki 搭建](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
-        - [博客搭建参考](?file=027-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
-- **github教程**
-    - [github教程](?file=027-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
-
 ##### 版本控制器相关
 - **SVN 总结**
     - **svn win**
         - [svn win本地服务端部署](?file=028-版本控制器相关/01-SVN 总结/01-svn win/01-svn win本地服务端部署 "svn win本地服务端部署")
 
-##### 工具使用
-- **PostMan测试工具使用**
-    - [postman 使用](?file=032-工具使用/01-PostMan测试工具使用/01-postman 使用 "postman 使用")
+##### 服务器相关
+- **前端部署服务器**
+    - **Tomcat**
+        - **tomcat 热部署**
+            - [Tomcat热部署](?file=029-服务器相关/01-前端部署服务器/001-Tomcat/01-tomcat 热部署/01-Tomcat热部署 "Tomcat热部署")
+
+##### 生活记录
+- **音乐**
+    - **歌曲乐谱**
+        - **菊次郎的夏天**
+            - [ summer 菊次郎的夏天](?file=030-生活记录/01-音乐/01-歌曲乐谱/01-菊次郎的夏天/01- summer 菊次郎的夏天 " summer 菊次郎的夏天")
+    - **电子琴学习**
+        - [电子琴指法](?file=030-生活记录/01-音乐/02-电子琴学习/01-电子琴指法 "电子琴指法")
+    - **新韵电子琴教程**
+        - [ 认识键盘和基础知识](?file=030-生活记录/01-音乐/03-新韵电子琴教程/01- 认识键盘和基础知识 " 认识键盘和基础知识")
+- **书籍**
+    - **每日书籍**
+        - **你要对得起你所受的苦**
+            - [你要对得起你所受的苦](?file=030-生活记录/06-书籍/01-每日书籍/01-你要对得起你所受的苦/01-你要对得起你所受的苦 "你要对得起你所受的苦")
+            - [你要对得起你所受的苦总结文摘](?file=030-生活记录/06-书籍/01-每日书籍/01-你要对得起你所受的苦/02-你要对得起你所受的苦总结文摘 "你要对得起你所受的苦总结文摘")
+        - **超级沟通心理学**
+            - [超级沟通心理学](?file=030-生活记录/06-书籍/01-每日书籍/02-超级沟通心理学/01-超级沟通心理学 "超级沟通心理学")
 
 ##### 视频剪辑
 - **PR学习**
@@ -356,11 +376,6 @@
 
 ##### 生活记录
 - **音乐**
-    - [生活-音乐](?file=030-生活记录/01-音乐/01-生活-音乐 "生活-音乐")
-    - **电子琴学习**
-        - [电子琴指法](?file=030-生活记录/01-音乐/02-电子琴学习/01-电子琴指法 "电子琴指法")
-    - **新韵电子琴教程**
-        - [ 认识键盘和基础知识](?file=030-生活记录/01-音乐/03-新韵电子琴教程/01- 认识键盘和基础知识 " 认识键盘和基础知识")
     - [生活-音乐](?file=10002-生活记录/01-音乐/01-生活-音乐 "生活-音乐")
 - **PS学习**
     - **ps学习**
@@ -382,12 +397,23 @@
         - [ 静脉血栓](?file=10002-生活记录/05-医术/01-高血压/01- 静脉血栓 " 静脉血栓")
 - **书籍**
     - **每日书籍**
-        - **你要对得起你所受的苦**
-            - [你要对得起你所受的苦](?file=030-生活记录/06-书籍/01-每日书籍/01-你要对得起你所受的苦/01-你要对得起你所受的苦 "你要对得起你所受的苦")
-            - [你要对得起你所受的苦总结文摘](?file=030-生活记录/06-书籍/01-每日书籍/01-你要对得起你所受的苦/02-你要对得起你所受的苦总结文摘 "你要对得起你所受的苦总结文摘")
-        - **超级沟通心理学**
-            - [超级沟通心理学](?file=030-生活记录/06-书籍/01-每日书籍/02-超级沟通心理学/01-超级沟通心理学 "超级沟通心理学")
         - [你要对得起你所受的苦](?file=10002-生活记录/06-书籍/01-每日书籍/01-你要对得起你所受的苦 "你要对得起你所受的苦")
         - [你要对得起你所受的苦总结文摘](?file=10002-生活记录/06-书籍/01-每日书籍/02-你要对得起你所受的苦总结文摘 "你要对得起你所受的苦总结文摘")
 - **打字**
     - [五笔打字](?file=10002-生活记录/07-打字/01-五笔打字 "五笔打字")
+
+##### 工具使用
+- **PostMan测试工具使用**
+    - [postman 使用](?file=10003-工具使用/01-PostMan测试工具使用/01-postman 使用 "postman 使用")
+
+##### blog 博客搭建.md
+- **blog 选择**
+    - **Hexo**
+        - [Hexo 搭建静态博客](?file=10004-blog 博客搭建.md/01-blog 选择/01-Hexo/01-Hexo 搭建静态博客 "Hexo 搭建静态博客")
+        - [Hexo 从零搭建](?file=10004-blog 博客搭建.md/01-blog 选择/01-Hexo/02-Hexo 从零搭建 "Hexo 从零搭建")
+    - **amWiki**
+        - [amwiki 搭建](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
+        - [博客搭建参考](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
+- **服务器选择**
+- **github教程**
+    - [github教程](?file=10004-blog 博客搭建.md/03-github教程/01-github教程 "github教程")

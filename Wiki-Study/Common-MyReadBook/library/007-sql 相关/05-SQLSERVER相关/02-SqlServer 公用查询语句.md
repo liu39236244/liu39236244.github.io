@@ -46,6 +46,53 @@
 dateadd(yyyy, -5 ,#{investigatedate,jdbcType=TIMESTAMP}))
 ```
 
+### 对时间进行对比函数 
+
+
+DATEDIFF(d,getdate(),credential_enddate)
+
+使用如下 SELECT 语句：
+
+SELECT DATEDIFF(day,'2008-12-29','2008-12-30') AS DiffDate
+结果：
+
+DiffDate
+1
+
+
+例子 2
+使用如下 SELECT 语句：
+
+SELECT DATEDIFF(day,'2008-12-30','2008-12-29') AS DiffDate
+结果：
+
+DiffDate
+-1
+
+
+```xml
+<!-- 查询所有用户信息 -->
+    <select id="listAll" resultMap="BaseResultMap1" parameterType="com.sjzx.api.model.user.dto.SeUserDto">
+        select
+        <include refid="Base_Column_List"/>,
+        (select name from tb_dic_item where id=a.job_title) as jobTitleName,
+        (select name from tb_dic_item where id=a.level) as levelName,
+        (select name from tb_dic_item where id=a.current_state) as currentStateName,
+        (select name from tb_dic_item where id=a.administrative_code) as administrativeCodeName,
+        (select name from tb_dic_item where id=a.province) as provinceName,
+        case
+        when (CONVERT(varchar(10),getdate(),121) &gt; CONVERT(varchar(10),credential_enddate,121)) then 0
+        when (DATEDIFF(d,getdate(),credential_enddate) &lt; 30) then 1
+        when (CONVERT(varchar(10),getdate(),121) &lt;= CONVERT(varchar(10),credential_enddate,121)) then 2
+        end as certState
+        from se_user a
+        <where>
+            <include refid="common_if_zj"/>
+        </where>
+        order by a.state asc,a.createtime desc
+    </select>
+```
+
 
 ## 统计函数
 
@@ -79,3 +126,16 @@ count(列名)只包括列名那一列，在统计结果的时候，会忽略列�
 ```
 
 
+
+
+## 排序
+
+### order by null 排序问题
+
+> 1.SQL server排序时如何将NULL排在最后面
+
+```sql
+select UserInfoID,User_No,User_Names 
+from UserInfo 
+order by case when User_NO is null then 1 else 0 end asc,User_NO asc 
+```
