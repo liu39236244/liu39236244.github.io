@@ -27,6 +27,8 @@
             - [修改dialog 弹框距离top为可设定](?file=001-学习Element/02-Element开发总结/06-Dialog/02-Dialog 弹框三方修改/02-修改dialog 弹框距离top为可设定 "修改dialog 弹框距离top为可设定")
         - **elDialog 样式控制**
             - [eldialog中elbody 样式修改](?file=001-学习Element/02-Element开发总结/06-Dialog/03-elDialog 样式控制/02-eldialog中elbody 样式修改 "eldialog中elbody 样式修改")
+        - **dialog 弹框对应键位关闭问题**
+            - [dialog 点击esc、enter 关闭弹框问题](?file=001-学习Element/02-Element开发总结/06-Dialog/04-dialog 弹框对应键位关闭问题/01-dialog 点击esc、enter 关闭弹框问题 "dialog 点击esc、enter 关闭弹框问题")
     - **input**
         - [input 控制](?file=001-学习Element/02-Element开发总结/07-input/01-input 控制 "input 控制")
     - **Compoent组件**
