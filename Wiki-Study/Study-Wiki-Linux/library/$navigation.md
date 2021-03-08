@@ -45,6 +45,7 @@
     - [Linux开机启动命令](?file=005-linux 知识点总结/01-linux 命令参数/026-Linux开机启动命令 "Linux开机启动命令")
     - [swap 分区的使用](?file=005-linux 知识点总结/01-linux 命令参数/027-swap 分区的使用 "swap 分区的使用")
     - [linux 防火墙相关](?file=005-linux 知识点总结/01-linux 命令参数/028-linux 防火墙相关 "linux 防火墙相关")
+    - [linux编辑nano vim 区别](?file=005-linux 知识点总结/01-linux 命令参数/029-linux编辑nano vim 区别 "linux编辑nano vim 区别")
     - [文件压缩相关](?file=005-linux 知识点总结/01-linux 命令参数/03-文件压缩相关 "文件压缩相关")
     - [linux-标准输入与输出](?file=005-linux 知识点总结/01-linux 命令参数/04-linux-标准输入与输出 "linux-标准输入与输出")
     - [linux $符号](?file=005-linux 知识点总结/01-linux 命令参数/05-linux $符号 "linux $符号")
