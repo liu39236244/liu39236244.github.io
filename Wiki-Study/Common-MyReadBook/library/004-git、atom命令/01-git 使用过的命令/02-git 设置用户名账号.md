@@ -8,9 +8,9 @@
 ```
 查看git用户名和邮箱地址命令：
 
-$ git configuser.name
+$ git config user.name
 
-$ git configuser.email
+$ git config user.email
 
 修改用户名和邮箱地址：
 

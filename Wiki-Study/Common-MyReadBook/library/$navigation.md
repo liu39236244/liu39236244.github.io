@@ -29,6 +29,8 @@
 - **git 使用过的命令**
     - [git 命令](?file=004-git、atom命令/01-git 使用过的命令/01-git 命令 "git 命令")
     - [git 设置用户名账号](?file=004-git、atom命令/01-git 使用过的命令/02-git 设置用户名账号 "git 设置用户名账号")
+    - [git 分支查看与切换](?file=004-git、atom命令/01-git 使用过的命令/03-git 分支查看与切换 "git 分支查看与切换")
+    - [git Tortoise](?file=004-git、atom命令/01-git 使用过的命令/04-git Tortoise "git Tortoise")
 - **atom 命令**
     - [atom 快捷鍵](?file=004-git、atom命令/02-atom 命令/01-atom 快捷鍵 "atom 快捷鍵")
     - [atom问题解决](?file=004-git、atom命令/02-atom 命令/02-atom问题解决 "atom问题解决")
@@ -181,6 +183,8 @@
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
     - **系统操作语句**
         - [添加用户给予权限](?file=007-sql 相关/03-mysql相关/20-系统操作语句/01-添加用户给予权限 "添加用户给予权限")
+    - **mysql-sql语句**
+        - [mysql 分组函数语句](?file=007-sql 相关/03-mysql相关/200-mysql-sql语句/01-mysql 分组函数语句 "mysql 分组函数语句")
 - **Postgresql相关**
     - [postgresql介绍](?file=007-sql 相关/04-Postgresql相关/01-postgresql介绍 "postgresql介绍")
     - [postgresql 安装卸载](?file=007-sql 相关/04-Postgresql相关/02-postgresql 安装卸载 "postgresql 安装卸载")
@@ -321,6 +325,7 @@
     - [filter ](?file=021-JS的记录/06-js中数组的操作/01-filter  "filter ")
     - [js中数组的清空操作](?file=021-JS的记录/06-js中数组的操作/02-js中数组的清空操作 "js中数组的清空操作")
     - [数组中判断是否包含某个值](?file=021-JS的记录/06-js中数组的操作/03-数组中判断是否包含某个值 "数组中判断是否包含某个值")
+    - [js中求两个数组之间的不同集合](?file=021-JS的记录/06-js中数组的操作/04-js中求两个数组之间的不同集合 "js中求两个数组之间的不同集合")
 - **session cookie 以及Storage 的使用**
     - **SessionStorage**
         - [LocalStorage 区别](?file=021-JS的记录/07-session cookie 以及Storage 的使用/01-SessionStorage/01-LocalStorage 区别 "LocalStorage 区别")
