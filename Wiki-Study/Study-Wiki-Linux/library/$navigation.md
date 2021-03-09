@@ -1,13 +1,25 @@
 
 #### [首页](?file=home-首页)
 
-##### 学习Linux
+##### linux系统了解
+- **虚拟机安装linux**
+    - [ win10 虚拟机安装centos](?file=001-linux系统了解/01-虚拟机安装linux/01- win10 虚拟机安装centos " win10 虚拟机安装centos")
+    - [ 虚拟机网络配置](?file=001-linux系统了解/01-虚拟机安装linux/02- 虚拟机网络配置 " 虚拟机网络配置")
+- **linux -权限用户**
+    - **linux马哥用户权限专题**
+        - [公用部分](?file=001-linux系统了解/02-linux -权限用户/01-linux马哥用户权限专题/01-公用部分 "公用部分")
+        - [io重定向以及管道高级进阶](?file=001-linux系统了解/02-linux -权限用户/01-linux马哥用户权限专题/02-io重定向以及管道高级进阶 "io重定向以及管道高级进阶")
+        - [用户组-权限](?file=001-linux系统了解/02-linux -权限用户/01-linux马哥用户权限专题/03-用户组-权限 "用户组-权限")
 
 ##### Linux之shell编程学习
 - **shell编程从入门到精通**
     - [Shell start](?file=002-Linux之shell编程学习/01-shell编程从入门到精通/01-Shell start "Shell start")
     - [问题总结](?file=002-Linux之shell编程学习/01-shell编程从入门到精通/02-问题总结 "问题总结")
     - [shell脚本总结](?file=002-Linux之shell编程学习/01-shell编程从入门到精通/03-shell脚本总结 "shell脚本总结")
+- **linux问题总结**
+    - [linux密码忘了怎么办](?file=002-Linux之shell编程学习/100-linux问题总结/02-linux密码忘了怎么办 "linux密码忘了怎么办")
+- **案例**
+    - [linux 随机数随机生成文件名](?file=002-Linux之shell编程学习/101-案例/01-linux 随机数随机生成文件名 "linux 随机数随机生成文件名")
 
 ##### awk学习
 - **awk 公用**
@@ -33,6 +45,7 @@
     - [Linux开机启动命令](?file=005-linux 知识点总结/01-linux 命令参数/026-Linux开机启动命令 "Linux开机启动命令")
     - [swap 分区的使用](?file=005-linux 知识点总结/01-linux 命令参数/027-swap 分区的使用 "swap 分区的使用")
     - [linux 防火墙相关](?file=005-linux 知识点总结/01-linux 命令参数/028-linux 防火墙相关 "linux 防火墙相关")
+    - [linux编辑nano vim 区别](?file=005-linux 知识点总结/01-linux 命令参数/029-linux编辑nano vim 区别 "linux编辑nano vim 区别")
     - [文件压缩相关](?file=005-linux 知识点总结/01-linux 命令参数/03-文件压缩相关 "文件压缩相关")
     - [linux-标准输入与输出](?file=005-linux 知识点总结/01-linux 命令参数/04-linux-标准输入与输出 "linux-标准输入与输出")
     - [linux $符号](?file=005-linux 知识点总结/01-linux 命令参数/05-linux $符号 "linux $符号")
@@ -57,7 +70,6 @@
     - [lnux-ssh命令详解](?file=005-linux 知识点总结/05-语法总结/08-lnux-ssh命令详解 "lnux-ssh命令详解")
 
 ##### v2ray
-- **v2ray Common**
 - **v2ray 总结**
     - [v2ray 公用总结](?file=006-v2ray/01-v2ray 总结/00-v2ray 公用总结 "v2ray 公用总结")
     - [v2ray 介绍安装](?file=006-v2ray/01-v2ray 总结/01-v2ray 介绍安装 "v2ray 介绍安装")
@@ -66,4 +78,9 @@
 - **Docker笔记**
     - **docker-菜鸟教程**
         - [Docker 笔记](?file=007-docker/01-Docker笔记/001-docker-菜鸟教程/01-Docker 笔记 "Docker 笔记")
-- **Docker-**
+
+##### 项目部署
+- **win 服务部署**
+    - ** 模块记录**
+        - [win中 端口占用问题](?file=008-项目部署/01-win 服务部署/01- 模块记录/02-win中 端口占用问题 "win中 端口占用问题")
+        - [nginx 部署前端项目记录](?file=008-项目部署/01-win 服务部署/01- 模块记录/03-nginx 部署前端项目记录 "nginx 部署前端项目记录")
