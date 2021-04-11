@@ -75,4 +75,3 @@
 ##### spark 总结部分
 - [spark 总结](?file=100-spark 总结部分/01-spark 总结 "spark 总结")
 - [other 笔记总结](?file=100-spark 总结部分/03-other 笔记总结 "other 笔记总结")
-- [spark有问题文件](?file=100-spark 总结部分/04-spark有问题文件 "spark有问题文件")

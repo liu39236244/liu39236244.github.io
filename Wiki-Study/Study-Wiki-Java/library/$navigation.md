@@ -16,11 +16,18 @@
         - [集合遍历删除](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/02-集合遍历删除 "集合遍历删除")
         - **遍历过程中删除数据**
             - [ ArrrayList_Jsonarray遍历删除](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/03-遍历过程中删除数据/01- ArrrayList_Jsonarray遍历删除 " ArrrayList_Jsonarray遍历删除")
-    - **java 小数百分比记录**
-        - [小数百分比转化](?file=001-学习Java/02-Java 基础点/09-java 小数百分比记录/01-小数百分比转化 "小数百分比转化")
+        - **集合的交并补差**
+            - [集合的交并补差](?file=001-学习Java/02-Java 基础点/08-Java 集合操作/04-集合的交并补差/01-集合的交并补差 "集合的交并补差")
+    - **java 基本数据类型**
+        - [小数百分比转化](?file=001-学习Java/02-Java 基础点/09-java 基本数据类型/01-小数百分比转化 "小数百分比转化")
+        - [Integer问题](?file=001-学习Java/02-Java 基础点/09-java 基本数据类型/02-Integer问题 "Integer问题")
     - **java 自定义排序**
         - [java 自定义排序公用](?file=001-学习Java/02-Java 基础点/10-java 自定义排序/01-java 自定义排序公用 "java 自定义排序公用")
         - [java 中 comparator ](?file=001-学习Java/02-Java 基础点/10-java 自定义排序/02-java 中 comparator  "java 中 comparator ")
+    - **java中Bigdecimal**
+        - [bigDicamal 进位使用](?file=001-学习Java/02-Java 基础点/13-java中Bigdecimal/01-bigDicamal 进位使用 "bigDicamal 进位使用")
+    - **小数问题**
+        - [js、java 中四舍五入取整](?file=001-学习Java/02-Java 基础点/14-小数问题/01-js、java 中四舍五入取整 "js、java 中四舍五入取整")
 - **Java 开发中一些类的总结**
     - **java 与python**
         - [java调用python](?file=001-学习Java/04-Java 开发中一些类的总结/01-java 与python/01-java调用python "java调用python")
@@ -29,12 +36,16 @@
         - [Java 集合操作问题](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/02-Java 集合操作问题 "Java 集合操作问题")
         - [Collectors 对象使用](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/04-Collectors 对象使用 "Collectors 对象使用")
         - [集合数组互相转换](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/05-集合数组互相转换 "集合数组互相转换")
+        - [集合获取指定范围内的集合操作](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/06-集合获取指定范围内的集合操作 "集合获取指定范围内的集合操作")
     - **json数据操作**
         - [Json 对象的操作](?file=001-学习Java/04-Java 开发中一些类的总结/04-json数据操作/01-Json 对象的操作 "Json 对象的操作")
-    - **java Thread线程通信**
-        - [线程基本知识](?file=001-学习Java/04-Java 开发中一些类的总结/05-java Thread线程通信/01-线程基本知识 "线程基本知识")
-        - [线程创建与使用](?file=001-学习Java/04-Java 开发中一些类的总结/05-java Thread线程通信/02-线程创建与使用 "线程创建与使用")
-        - [线程之前通信](?file=001-学习Java/04-Java 开发中一些类的总结/05-java Thread线程通信/04-线程之前通信 "线程之前通信")
+    - **java线程**
+        - **线程简单介绍**
+            - [线程基本知识](?file=001-学习Java/04-Java 开发中一些类的总结/05-java线程/01-线程简单介绍/01-线程基本知识 "线程基本知识")
+            - [线程创建与使用](?file=001-学习Java/04-Java 开发中一些类的总结/05-java线程/01-线程简单介绍/02-线程创建与使用 "线程创建与使用")
+            - [线程之前通信](?file=001-学习Java/04-Java 开发中一些类的总结/05-java线程/01-线程简单介绍/04-线程之前通信 "线程之前通信")
+        - **线程池**
+            - [线程池的使用](?file=001-学习Java/04-Java 开发中一些类的总结/05-java线程/02-线程池/01-线程池的使用 "线程池的使用")
     - **web Socket**
         - [webSocket 介绍](?file=001-学习Java/04-Java 开发中一些类的总结/06-web Socket/01-webSocket 介绍 "webSocket 介绍")
         - [WebSocket 通讯原理](?file=001-学习Java/04-Java 开发中一些类的总结/06-web Socket/02-WebSocket 通讯原理 "WebSocket 通讯原理")
@@ -87,6 +98,10 @@
 - **泛型**
     - **泛型记录**
         - [泛型上下限问题](?file=001-学习Java/12-泛型/01-泛型记录/03-泛型上下限问题 "泛型上下限问题")
+- **布隆过滤器**
+    - [公用](?file=001-学习Java/14-布隆过滤器/00-公用 "公用")
+    - [介绍](?file=001-学习Java/14-布隆过滤器/01-介绍 "介绍")
+    - [java布隆过滤器实现](?file=001-学习Java/14-布隆过滤器/03-java布隆过滤器实现 "java布隆过滤器实现")
 
 ##### java 性能记录
 - **java 中集合遍历性能问题**
@@ -125,6 +140,11 @@
 - ** java 开发额外组件**
     - ** 开源项目**
         - [java 开发中开源项目了解](?file=003-java进阶知识/06- java 开发额外组件/01- 开源项目/01-java 开发中开源项目了解 "java 开发中开源项目了解")
+- **java 发送http请求**
+    - [java API 发送http请求](?file=003-java进阶知识/07-java 发送http请求/01-java API 发送http请求 "java API 发送http请求")
+    - **java Http请求**
+        - [http请求公用](?file=003-java进阶知识/07-java 发送http请求/02-java Http请求/00-http请求公用 "http请求公用")
+        - [http请求工具类](?file=003-java进阶知识/07-java 发送http请求/02-java Http请求/01-http请求工具类 "http请求工具类")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -150,6 +170,9 @@
         - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
 
 ##### java 后端之maven
+- **maven学习记录**
+    - [maven 介绍](?file=005-java 后端之maven/01-maven学习记录/01-maven 介绍 "maven 介绍")
+    - [maven 远程仓库地址](?file=005-java 后端之maven/01-maven学习记录/02-maven 远程仓库地址 "maven 远程仓库地址")
 - **maven 临时记录**
     - **maven 临时记录**
         - [maven jar 打包与配置文件分离](?file=005-java 后端之maven/02-maven 临时记录/001-maven 临时记录/01-maven jar 打包与配置文件分离 "maven jar 打包与配置文件分离")
@@ -170,12 +193,24 @@
 - **SpringCloud 问题**
     - [spring Cloud 添加日志切面](?file=009-java 框架/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
     - [spring添加日志切面简单版](?file=009-java 框架/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
+- **框架中问题总结**
+    - [框架中yml配置总结](?file=009-java 框架/02-框架中问题总结/01-框架中yml配置总结 "框架中yml配置总结")
+
+##### java-JVM
+- **jvm 公共**
+- **jvm调优**
+    - **jvm 前置知识基础**
+        - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
 
 ##### Java 面试题
 - **Java 面试题总结**
-    - [临时面试归纳](?file=010-Java 面试题/01-Java 面试题总结/01-临时面试归纳 "临时面试归纳")
+    - **java面试相关**
+        - [java-hashMap 操作](?file=100-Java 面试题/01-Java 面试题总结/01-java面试相关/01-java-hashMap 操作 "java-hashMap 操作")
+    - **sql数据库**
+        - [ 数据库中的内联外联自然连接](?file=100-Java 面试题/01-Java 面试题总结/02-sql数据库/01- 数据库中的内联外联自然连接 " 数据库中的内联外联自然连接")
+    - [临时面试归纳](?file=100-Java 面试题/01-Java 面试题总结/03-临时面试归纳 "临时面试归纳")
 - **问题记录**
     - **鲁班课程分布式微服务94**
-        - [spirng 高并发94](?file=010-Java 面试题/02-问题记录/01-鲁班课程分布式微服务94/01-spirng 高并发94 "spirng 高并发94")
+        - [spirng 高并发94](?file=100-Java 面试题/02-问题记录/01-鲁班课程分布式微服务94/01-spirng 高并发94 "spirng 高并发94")
     - **java 进阶知识点**
-        - [ 鲁班课程记录](?file=010-Java 面试题/02-问题记录/02-java 进阶知识点/01- 鲁班课程记录 " 鲁班课程记录")
+        - [ 鲁班课程记录](?file=100-Java 面试题/02-问题记录/02-java 进阶知识点/01- 鲁班课程记录 " 鲁班课程记录")
