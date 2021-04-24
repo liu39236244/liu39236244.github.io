@@ -81,7 +81,8 @@
         - **docker**
             - **docker-雷哥视频**
                 - [第一节 介绍概念](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/01-docker-雷哥视频/01-第一节 介绍概念 "第一节 介绍概念")
-                - [第二节](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/01-docker-雷哥视频/02-第二节 "第二节")
+                - [第二节 和虚拟技术比较](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/01-docker-雷哥视频/02-第二节 和虚拟技术比较 "第二节 和虚拟技术比较")
+                - [第三节docker下载安装](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/01-docker-雷哥视频/03-第三节docker下载安装 "第三节docker下载安装")
     - **在线工具总结**
         - [vps 供应商](?file=000-Common/01-EverythingRecord/03-在线工具总结/00-vps 供应商 "vps 供应商")
         - [检测ip工具](?file=000-Common/01-EverythingRecord/03-在线工具总结/01-检测ip工具 "检测ip工具")
