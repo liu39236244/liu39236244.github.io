@@ -68,6 +68,7 @@
         - [页面的tab 相关](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/08-页面的tab 相关 "页面的tab 相关")
         - [Vue 组件传值](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/09-Vue 组件传值 "Vue 组件传值")
         - [vue中监听按键](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/10-vue中监听按键 "vue中监听按键")
+        - [vue中定时器](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/11-vue中定时器 "vue中定时器")
     - **Vue app端记录**
         - [Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41;](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/03-Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41; "Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41;")
         - [验证表单数据van](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/04-验证表单数据van "验证表单数据van")
@@ -91,6 +92,8 @@
     - **组织架构图整合Vue使用**
         - [ 模块介绍](?file=001-Vue/05-Vue 工作记录/07-组织架构图整合Vue使用/01- 模块介绍 " 模块介绍")
         - [ vue-orgchart 组件总结使用](?file=001-Vue/05-Vue 工作记录/07-组织架构图整合Vue使用/02- vue-orgchart 组件总结使用 " vue-orgchart 组件总结使用")
+- **vue待整理笔记的**
+    - [vue笔记](?file=001-Vue/06-vue待整理笔记的/01-vue笔记 "vue笔记")
 
 ##### Vant 移动端组件
 - **Vant基础**
