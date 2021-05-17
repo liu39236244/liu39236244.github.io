@@ -159,6 +159,17 @@ public class OpLog {
 
 ```
 
+
+使用案例
+
+
+```java
+    @DeleteMapping(value = "/deleteDeparts", produces = "application/json;charset=UTF-8")
+    @OperationLog(operationType = OperationType.DELETE,operationBu="短信记录",operationContent="删除短信记录")
+    @Override
+    public RestMessage <Integer> deleteGovernmentMessage( @RequestParam("ids") String ids ) {}
+```
+
 > 3 重点：将切面类注入到本服务中
 
 * 1 通过configuration 中加入一个bean 
