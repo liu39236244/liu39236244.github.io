@@ -10,6 +10,19 @@
         - [每日一读](?file=000-Common/01-EverythingRecord/01-每日记录/04-每日一读 "每日一读")
         - [工具总结](?file=000-Common/01-EverythingRecord/01-每日记录/05-工具总结 "工具总结")
         - [每日错误总结](?file=000-Common/01-EverythingRecord/01-每日记录/06-每日错误总结 "每日错误总结")
+        - **每日在读**
+            - **读取jdk源码**
+                - [读取jdk源码公用记录](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/01-读取jdk源码/01-读取jdk源码公用记录 "读取jdk源码公用记录")
+            - **spring-boot**
+                - **springBoot 常用注解**
+                    - [记录](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/02-spring-boot/01-springBoot 常用注解/01-记录 "记录")
+            - **大数据相关**
+                - **大数据可视化模板**
+                    - [大数据可视化的几个模板](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/03-大数据相关/01-大数据可视化模板/01-大数据可视化的几个模板 "大数据可视化的几个模板")
+                - **ai环保**
+                    - [ai环保](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/03-大数据相关/02-ai环保/01-ai环保 "ai环保")
+                - **Elasticsearch**
+                    - [elasticsearch 案例](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/03-大数据相关/03-Elasticsearch/01-elasticsearch 案例 "elasticsearch 案例")
         - [程序生涯记录](?file=000-Common/01-EverythingRecord/01-每日记录/100-程序生涯记录 "程序生涯记录")
     - **视频学习记录**
         - **Common视频学习地址记录**
@@ -25,6 +38,7 @@
         - **尚硅谷SpringCloud**
             - **课程记录**
                 - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-尚硅谷SpringCloud/01-课程记录/01- 记录 " 记录")
+            - **SpringCloud学习笔记**
         - **尚硅谷springboot视频**
             - [SpringBoot记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/03-尚硅谷springboot视频/01-SpringBoot记录 "SpringBoot记录")
         - **Redis双11高并发架构与源码深度解剖**
@@ -95,6 +109,7 @@
         - [md 特效文件总结](?file=000-Common/01-EverythingRecord/07-md 特效总结/01-md 特效文件总结 "md 特效文件总结")
 
 ##### Company
+- **Common**
 - **CompanyPlan**
     - [CompanyPlan](?file=001-Company/01-CompanyPlan/01-CompanyPlan "CompanyPlan")
 - **Items_Common_Java**
