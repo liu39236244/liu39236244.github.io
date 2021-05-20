@@ -74,6 +74,8 @@
 - **java 文件操作**
     - **java 文件上传下载**
         - [Springboot+axios +formdata 上传下载文件](?file=001-学习Java/08-java 文件操作/02-java 文件上传下载/02-Springboot+axios +formdata 上传下载文件 "Springboot+axios +formdata 上传下载文件")
+    - **java 中下载服务器上文件**
+        - [springcloud 中controller 下载服务器上文件](?file=001-学习Java/08-java 文件操作/03-java 中下载服务器上文件/01-springcloud 中controller 下载服务器上文件 "springcloud 中controller 下载服务器上文件")
 - **java 开发之设计模式**
     - [设计模式](?file=001-学习Java/09-java 开发之设计模式/02-设计模式 "设计模式")
 - **十大经典排序算法**
@@ -191,13 +193,23 @@
 
 ##### spring问题总结.md
 - [spring cloud 启动报错](?file=008-spring问题总结.md/01-spring cloud 启动报错 "spring cloud 启动报错")
+- **spring四种数据库连接池**
+    - [基础四种常见连接池](?file=008-spring问题总结.md/02-spring四种数据库连接池/01-基础四种常见连接池 "基础四种常见连接池")
+    - [常用的数据库连接池](?file=008-spring问题总结.md/02-spring四种数据库连接池/02-常用的数据库连接池 "常用的数据库连接池")
 
-##### java 框架
-- **SpringCloud 问题**
-    - [spring Cloud 添加日志切面](?file=009-java 框架/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
-    - [spring添加日志切面简单版](?file=009-java 框架/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
-- **框架中问题总结**
-    - [框架中yml配置总结](?file=009-java 框架/02-框架中问题总结/01-框架中yml配置总结 "框架中yml配置总结")
+##### java 框架学习
+- **基础框架Spring**
+    - **传智14版Spring**
+        - [Spring介绍](?file=009-java 框架学习/01-基础框架Spring/01-传智14版Spring/01-Spring介绍 "Spring介绍")
+- **基础框架Hibernate**
+    - **传智14学习**
+        - [Hibernate笔记](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/01-Hibernate笔记 "Hibernate笔记")
+- **框架问题**
+    - **SpringCloud 问题**
+        - [spring Cloud 添加日志切面](?file=009-java 框架学习/100-框架问题/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
+        - [spring添加日志切面简单版](?file=009-java 框架学习/100-框架问题/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
+    - **框架中问题总结**
+        - [框架中yml配置总结](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/01-框架中yml配置总结 "框架中yml配置总结")
 
 ##### java-JVM
 - **jvm 公共**
@@ -210,9 +222,9 @@
     - **深入理解java虚拟机第三版**
         - [公用](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/00-公用 "公用")
         - [走进java](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/01-走进java "走进java")
+        - [名词解析](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/010-名词解析 "名词解析")
         - [自动内存管理](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/02-自动内存管理 "自动内存管理")
         - [垃圾收集器与内存分配策略](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/03-垃圾收集器与内存分配策略 "垃圾收集器与内存分配策略")
-        - [名词解析](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/100-名词解析 "名词解析")
 
 ##### Java 知识点
 - **Java 面试题总结**
