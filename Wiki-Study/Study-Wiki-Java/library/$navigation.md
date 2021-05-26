@@ -28,6 +28,8 @@
         - [bigDicamal 进位使用](?file=001-学习Java/02-Java 基础点/13-java中Bigdecimal/01-bigDicamal 进位使用 "bigDicamal 进位使用")
     - **小数问题**
         - [js、java 中四舍五入取整](?file=001-学习Java/02-Java 基础点/14-小数问题/01-js、java 中四舍五入取整 "js、java 中四舍五入取整")
+    - **java-Replace替换问题**
+        - [Replace替换问题](?file=001-学习Java/02-Java 基础点/15-java-Replace替换问题/01-Replace替换问题 "Replace替换问题")
 - **Java 开发中一些类的总结**
     - **java 与python**
         - [java调用python](?file=001-学习Java/04-Java 开发中一些类的总结/01-java 与python/01-java调用python "java调用python")
@@ -37,6 +39,11 @@
         - [Collectors 对象使用](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/04-Collectors 对象使用 "Collectors 对象使用")
         - [集合数组互相转换](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/05-集合数组互相转换 "集合数组互相转换")
         - [集合获取指定范围内的集合操作](?file=001-学习Java/04-Java 开发中一些类的总结/02-java集合操作/06-集合获取指定范围内的集合操作 "集合获取指定范围内的集合操作")
+    - **java备份数据库**
+        - **java 执行命令行方式**
+            - [win下java 使用cmd 命令形式备份mysql](?file=001-学习Java/04-Java 开发中一些类的总结/03-java备份数据库/01-java 执行命令行方式/01-win下java 使用cmd 命令形式备份mysql "win下java 使用cmd 命令形式备份mysql")
+        - **jdbc方式备份与还原数据库**
+            - [jdbc方式备份还原数据库](?file=001-学习Java/04-Java 开发中一些类的总结/03-java备份数据库/02-jdbc方式备份与还原数据库/01-jdbc方式备份还原数据库 "jdbc方式备份还原数据库")
     - **json数据操作**
         - [Json 对象的操作](?file=001-学习Java/04-Java 开发中一些类的总结/04-json数据操作/01-Json 对象的操作 "Json 对象的操作")
     - **java线程**
@@ -204,12 +211,19 @@
 - **基础框架Hibernate**
     - **传智14学习**
         - [Hibernate笔记](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/01-Hibernate笔记 "Hibernate笔记")
+- **myBatis**
+    - **myBatis问题记录**
+        - [mybatis中自增字段](?file=009-java 框架学习/03-myBatis/02-myBatis问题记录/01-mybatis中自增字段 "mybatis中自增字段")
+- **tkMybatis**
+    - **tk与数据库字段问题**
+        - [自增字段设置](?file=009-java 框架学习/10-tkMybatis/02-tk与数据库字段问题/01-自增字段设置 "自增字段设置")
 - **框架问题**
     - **SpringCloud 问题**
         - [spring Cloud 添加日志切面](?file=009-java 框架学习/100-框架问题/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
         - [spring添加日志切面简单版](?file=009-java 框架学习/100-框架问题/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
     - **框架中问题总结**
         - [框架中yml配置总结](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/01-框架中yml配置总结 "框架中yml配置总结")
+        - [springboot中引入数据库链接池](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/02-springboot中引入数据库链接池 "springboot中引入数据库链接池")
 
 ##### java-JVM
 - **jvm 公共**
