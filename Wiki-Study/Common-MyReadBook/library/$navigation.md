@@ -64,6 +64,8 @@
     - [spark jar 依赖](?file=005-idea 零碎/05-maven-打jar 插件/04-spark jar 依赖 "spark jar 依赖")
 - **设置maven 仓库**
     - [maven 配置仓库](?file=005-idea 零碎/06-设置maven 仓库/01-maven 配置仓库 "maven 配置仓库")
+- **idea插件**
+    - [插件记录](?file=005-idea 零碎/07-idea插件/01-插件记录 "插件记录")
 
 ##### 项目吸取
 - **相关数据**
@@ -130,12 +132,15 @@
     - **数据库函数**
         - **字符串匹配.md**
             - [数据库字符串匹配函数](?file=007-sql 相关/00-Command公用/01-数据库函数/01-字符串匹配.md/01-数据库字符串匹配函数 "数据库字符串匹配函数")
+    - **sql 工具类**
+        - [jdbc 直接执行sql文件](?file=007-sql 相关/00-Command公用/02-sql 工具类/01-jdbc 直接执行sql文件 "jdbc 直接执行sql文件")
 - **PD相关**
     - [PW相关操作](?file=007-sql 相关/01-PD相关/01-PW相关操作 "PW相关操作")
     - [oracel 驱动问题](?file=007-sql 相关/01-PD相关/02-oracel 驱动问题 "oracel 驱动问题")
 - **oracle相关**
     - **oracle 公用.md**
         - [设置连接数](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/01-设置连接数 "设置连接数")
+        - [创建oracle 表命名空间](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/02-创建oracle 表命名空间 "创建oracle 表命名空间")
     - **Sql 查询语句**
         - [oracle 基础语句](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/00-oracle 基础语句 "oracle 基础语句")
         - [oracel 模糊查询](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/01-oracel 模糊查询 "oracel 模糊查询")
@@ -151,6 +156,10 @@
 - **mysql相关**
     - **mysql公用**
         - [mysql 公用](?file=007-sql 相关/03-mysql相关/00-mysql公用/00-mysql 公用 "mysql 公用")
+        - [mysql备份相关](?file=007-sql 相关/03-mysql相关/00-mysql公用/02-mysql备份相关 "mysql备份相关")
+        - [代码实现mysql备份](?file=007-sql 相关/03-mysql相关/00-mysql公用/10-代码实现mysql备份 "代码实现mysql备份")
+        - [jdbc工具类](?file=007-sql 相关/03-mysql相关/00-mysql公用/11-jdbc工具类 "jdbc工具类")
+        - [mysql查看对应数据库表占用空间](?file=007-sql 相关/03-mysql相关/00-mysql公用/15-mysql查看对应数据库表占用空间 "mysql查看对应数据库表占用空间")
     - [mysql 学习](?file=007-sql 相关/03-mysql相关/01-mysql 学习 "mysql 学习")
     - [mysql 权限管理](?file=007-sql 相关/03-mysql相关/02-mysql 权限管理 "mysql 权限管理")
     - [mysql 建表語句mysql中engine=innodb和engine=myisam](?file=007-sql 相关/03-mysql相关/03-mysql 建表語句mysql中engine=innodb和engine=myisam "mysql 建表語句mysql中engine=innodb和engine=myisam")
@@ -184,6 +193,9 @@
         - [添加用户给予权限](?file=007-sql 相关/03-mysql相关/20-系统操作语句/01-添加用户给予权限 "添加用户给予权限")
     - **mysql-sql语句**
         - [mysql 分组函数语句](?file=007-sql 相关/03-mysql相关/200-mysql-sql语句/01-mysql 分组函数语句 "mysql 分组函数语句")
+    - **mysql在框架中配置问题**
+        - **mysql-springcloud 中不同版本配置**
+            - [mysql yml-逆向工程配置](?file=007-sql 相关/03-mysql相关/300-mysql在框架中配置问题/01-mysql-springcloud 中不同版本配置/01-mysql yml-逆向工程配置 "mysql yml-逆向工程配置")
 - **Postgresql相关**
     - [postgresql介绍](?file=007-sql 相关/04-Postgresql相关/01-postgresql介绍 "postgresql介绍")
     - [postgresql 安装卸载](?file=007-sql 相关/04-Postgresql相关/02-postgresql 安装卸载 "postgresql 安装卸载")
@@ -393,10 +405,13 @@
         - [日语零散单词记录](?file=10002-生活记录/04-日语学习/03-梦子老师日语课程/100-日语零散单词记录 "日语零散单词记录")
         - [语句](?file=10002-生活记录/04-日语学习/03-梦子老师日语课程/101-语句 "语句")
         - [梦子老师日语](?file=10002-生活记录/04-日语学习/03-梦子老师日语课程/102-梦子老师日语 "梦子老师日语")
+        - [自我想象短文](?file=10002-生活记录/04-日语学习/03-梦子老师日语课程/103-自我想象短文 "自我想象短文")
     - **日语歌曲学习**
         - [数码宝贝-片头](?file=10002-生活记录/04-日语学习/04-日语歌曲学习/01-数码宝贝-片头 "数码宝贝-片头")
         - [说日语的喵星人](?file=10002-生活记录/04-日语学习/04-日语歌曲学习/02-说日语的喵星人 "说日语的喵星人")
         - [另外教唱](?file=10002-生活记录/04-日语学习/04-日语歌曲学习/03-另外教唱 "另外教唱")
+        - [brave heart  数码宝贝进化曲](?file=10002-生活记录/04-日语学习/04-日语歌曲学习/04-brave heart  数码宝贝进化曲 "brave heart  数码宝贝进化曲")
+    - **日语零散记录**
 - **医术**
     - **高血压**
         - [ 静脉血栓](?file=10002-生活记录/05-医术/01-高血压/01- 静脉血栓 " 静脉血栓")
