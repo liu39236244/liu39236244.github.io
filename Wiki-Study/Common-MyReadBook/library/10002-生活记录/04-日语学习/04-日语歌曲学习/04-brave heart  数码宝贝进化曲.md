@@ -1,0 +1,152 @@
+# 数码宝贝 
+
+## 原词
+
+
+b 站教学 
+
+```
+无论是谁：谁（だれ）も (da re mo )
+
+力量：ちから  (qi ka ri)
+
+雨伞：かさ（傘） (ka sa )
+
+冷：冷（つめ）　[tsu me] 
+
+雨：あめ [a me ]
+
+下雨：下雨  あめ が   ふる[a me  ga  fu ru]
+
+光芒：光（ひかり）[hi  ka ri ]
+
+```
+
+
+```
+    ni  ge da  li(ri) , o  ki  la  me   ru ko to  wa(ha),  da  （le）re  mo 
+逃（に） げ  た  り,     あ  き  ら  め   る    コ ト   は .   谁（だれ）    も
+ 不论是谁， 都有想去逃避的时候
+
+     i   xi(shi)  yu      a ri  ba de  ki  ru ka ra          a lu  ki  ci zi  ke yu u 
+一瞬（いっし      ゅ   ん）あ れ ば  で  き  る  か ら       歩（ある）き続（つづ）けよう
+只要在那一刻发挥出潜藏的那种力量，便可以清除前路上的障碍
+
+ki mi    ni shi ka de   ki na i ko to ga  a ru  a o     i  ho shi  ni 
+君（きみ）に し  か で   き  ない コ ト  が あ る 青（あお）い星（ほし）に
+一定有些什么事情是你才做到的  是这个蓝色星球
+
+
+he  ka  ri  ga  na ku  se  nu     yu u ni
+光（ひかり） が  な  く せ  ぬ     よ う  に
+可以继续闪耀着光芒
+
+
+tsu ka  me !    e  ga  i ta  yu me  o 
+つ  か  め!   描（えが）い た梦（ゆめ）を
+抓紧着 你所拥有的梦想
+
+
+
+ma mo ri !      da-i-ji   na  to-mo  o 
+ま も  れ! 大事（だいじ） な友（とも）を
+守护者   ！  你重要的朋友
+
+
+ta ku   ma  shi i      ji  bo-n   ni    na re ru sa
+た く   ま   し  い自分（じ ぶ ん）に     な れ  る さ
+使自己变得更坚强
+
+
+
+shi     ra na i pa  u a ga    ya do  ru  ha a to   ni hi    ga tsu i ta ra
+知（し）ら  な い パ ワーが  宿（やど）る   ハート    に 火(ひ) が つ  い た  ら
+潜在的未知力量  像火焰那般被点燃
+
+do n na  ne-ga  i  mo    u so  ji-ya na i
+どん な 愿（ねが）いも 嘘（うそ）じゃ   な い
+是真的   你的所有愿望
+
+
+ki <tsu:不发音>  do  ka na u ka ri
+き っ           と  か  なう か  ら…show me your brave heart
+你一定可以实现，把你勇敢的心展示给我
+
+
+--- 下面是第二段
+
+  ha   re no   hi    ba ka ri ji-ya na i ka ri  ta ma ni 
+晴（は）れ の 日（ひ）ば  か り じゃ  な い か ら  た  ま  に
+天气不会天天都是晴天
+
+tsu me    ta  i    a  me  mo fu    re ke ru  do   ka sa     hi ro ge yu u
+冷（つめ） た  い 雨（あめ）も振（ふ）る け れ  ど  伞(かさ)    ひ ろ げ  よ う
+所以当寒冷的雨降下时  边张开雨伞
+
+   i    ki   ka ta  ni    qi zu    na n  ka  na i  ke do  da ka ra    ji yu u 
+生（い）き方（か た）に  地図（ちず）な  ん  か な  い け ど だ  か  ら 自由（じゆう）
+生活是没有地图可以指引的  所以我们拥有自由
+
+
+do ko  he  da-tsu te yu    ke  ru    ki mi mo
+ど こ  へ  だっ   て 行（ゆ）け  る 君（きみ）も
+随心所欲  尽管往前任何地方
+
+
+ha shi re !  ka  ze   yo  ri    ka ya  ko
+は し  れ!   风（かぜ）よ  り 速（かや） く
+冲刺！      比风还要快的速度
+
+me za se !   so -ra   yo ri     do -o  ko
+め ざ せ !   空（そら）よ り  远 （とお）く
+去吧！！    比天空还要远的地方
+
+
+  a ta ra  shi i   ji -bo- n   ni   a   e  ru  sa   
+新（あたら）し  い 自分（じぶん）に逢（あ）え る  さ
+碰见了一个全新的自己
+
+   shi  ra na i        yu  u ki  ga  ne mu  , ru  ha a to ni  ki    ga tsu i  ta  ra
+知（し）ら  な い   勇気（ゆうき） が眠（ね む）, る   ハー ト  に気（き）が  つ  い た  ら
+潜在着未知的勇气， 像一股气息那般囤积着
+
+   mu ne  no   na ka  no do shi-ya  fu  ru   ri mo
+胸（むね）の  中（なか）の ど し  ゃ  降（ふる）り  も
+从胸中涌出的不安，
+
+ki tsu to  ya    mu  ka ra 
+きっ   と 止（や）む  か  ら …show me your brave heart
+一定会停止
+
+
+tsu ka me !    ma bo  shi i     a  su  wo
+つ  か  め!  眩（まぶ）し   い 明日（あす）を
+ 抓紧着  眩目的明日
+
+ma mo  re !  a  i    su  ru   hi  to  wo 
+ま  も  れ! 爱（あい） す  る  人（ひと）を、
+守护者 所爱的人
+
+
+ta ku ma shi i      ji  bo n   ni ，  na re ru sa 
+た く ま  し  い 自分（じぶん）  に ，  な れ  るさ
+是自己变得坚强 
+
+
+ko wa se !      yo wa ki    na  ki mi  wo
+こ わ  せ!   弱気（よわき）  な君（きみ）を
+放下那 软弱的你
+
+
+ku zu se ! bu tsu ka ru   ka  be  wo 
+く ず  せ! ぶ  つ  か る  壁（かべ）を
+打破那 封闭着的墙壁
+
+
+a  tsu   i      ko  do  u    bu ki   ni na ru  ka ra
+热（あつ）い  鼓动（こどう） 武器（ぶき）に な る  か  ら
+将心中灼热的鼓动 便成为武器
+
+believe in your heart
+```
+
