@@ -758,7 +758,7 @@ public class App_ddl {
 > 1 类
 
 ```java
-// 复合主键类
+// 复合主键类- 注意一定要实现可序列化接口
 public class CompositeKeys implements Serializable{
 	private String userName;
 	private String address;
