@@ -32,8 +32,8 @@ b 站教学
 一瞬（いっし      ゅ   ん）あ れ ば  で  き  る  か ら       歩（ある）き続（つづ）けよう
 只要在那一刻发挥出潜藏的那种力量，便可以清除前路上的障碍
 
-ki mi    ni shi ka de   ki na i ko to ga  a ru  a o     i  ho shi  ni 
-君（きみ）に し  か で   き  ない コ ト  が あ る 青（あお）い星（ほし）に
+ki mi    ni shi ka de   ki na i ko to ga  a ru     a o     i  ho shi  ni 
+君（きみ）に し  か で   き  ない コ ト  が あ る   青（あお）い星（ほし）に
 一定有些什么事情是你才做到的  是这个蓝色星球
 
 
@@ -53,13 +53,13 @@ ma mo ri !      da-i-ji   na  to-mo  o
 守护者   ！  你重要的朋友
 
 
-ta ku   ma  shi i      ji  bo-n   ni    na re ru sa
+ta ku   ma  shi i      ji  bo-n   ni     na re ru sa
 た く   ま   し  い自分（じ ぶ ん）に     な れ  る さ
 使自己变得更坚强
 
 
 
-shi     ra na i pa  u a ga    ya do  ru  ha a to   ni hi    ga tsu i ta ra
+shi     ra na i pa  u a ga    ya do  ru    ha a to   ni hi    ga tsu i ta ra
 知（し）ら  な い パ ワーが  宿（やど）る   ハート    に 火(ひ) が つ  い た  ら
 潜在的未知力量  像火焰那般被点燃
 
