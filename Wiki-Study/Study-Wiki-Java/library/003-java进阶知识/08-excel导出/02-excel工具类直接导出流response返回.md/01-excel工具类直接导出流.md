@@ -978,6 +978,9 @@ public class EquipmentDataExcel {
 
 ### 3 接口
 
+
+* 前端接口可以
+
 ```java
 
     // 我的导出这里有个时间转换的参数，需要在同层中的controller中加入这个 initbinder
