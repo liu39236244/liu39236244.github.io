@@ -69,6 +69,9 @@
     - **java反射相关**
         - **反射中获取父类泛型参数**
             - [java 中获取父类泛型参数](?file=001-学习Java/04-Java 开发中一些类的总结/12-java反射相关/05-反射中获取父类泛型参数/01-java 中获取父类泛型参数 "java 中获取父类泛型参数")
+    - **Controller请求相关**
+        - **始终请求以及传参**
+            - [Get请求问题](?file=001-学习Java/04-Java 开发中一些类的总结/20-Controller请求相关/01-始终请求以及传参/1-Get请求问题 "Get请求问题")
 - **文件工具类总结**
     - **文件操作工具类**
         - [Fileutils](?file=001-学习Java/05-文件工具类总结/01-文件操作工具类/01-Fileutils "Fileutils")
@@ -140,6 +143,7 @@
         - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
         - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
+    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -157,6 +161,15 @@
     - **java Http请求**
         - [http请求公用](?file=003-java进阶知识/07-java 发送http请求/02-java Http请求/00-http请求公用 "http请求公用")
         - [http请求工具类](?file=003-java进阶知识/07-java 发送http请求/02-java Http请求/01-http请求工具类 "http请求工具类")
+- **excel导出**
+    - [excel导出](?file=003-java进阶知识/08-excel导出/01-excel导出 "excel导出")
+    - **excel工具类直接导出流response返回.md**
+        - [excel工具类直接导出流](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/01-excel工具类直接导出流 "excel工具类直接导出流")
+        - [easyExcel阿里的导出包](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/02-easyExcel阿里的导出包 "easyExcel阿里的导出包")
+        - [easyExcel 注解直接返回excel](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/03-easyExcel 注解直接返回excel "easyExcel 注解直接返回excel")
+        - [临时记录](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/100-临时记录 "临时记录")
+    - **excel 导入**
+        - [excel 导入](?file=003-java进阶知识/08-excel导出/03-excel 导入/01-excel 导入 "excel 导入")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -208,26 +221,32 @@
 - **基础框架Spring**
     - **传智14版Spring**
         - [Spring介绍](?file=009-java 框架学习/01-基础框架Spring/01-传智14版Spring/01-Spring介绍 "Spring介绍")
+    - **Spring中ioc中单例多例**
+        - [测试Controller-Service中单例多例](?file=009-java 框架学习/01-基础框架Spring/100-Spring中ioc中单例多例/01-测试Controller-Service中单例多例 "测试Controller-Service中单例多例")
 - **基础框架Hibernate**
     - **传智14学习**
         - [Hibernate笔记](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/01-Hibernate笔记 "Hibernate笔记")
         - [关联映射](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/02-关联映射 "关联映射")
 - **myBatis**
+    - **myBatis学习**
     - **myBatis问题记录**
         - [mybatis中自增字段](?file=009-java 框架学习/03-myBatis/02-myBatis问题记录/01-mybatis中自增字段 "mybatis中自增字段")
 - **tkMybatis**
     - **tk与数据库字段问题**
         - [自增字段设置](?file=009-java 框架学习/10-tkMybatis/02-tk与数据库字段问题/01-自增字段设置 "自增字段设置")
 - **框架问题**
-    - **SpringCloud 问题**
-        - [spring Cloud 添加日志切面](?file=009-java 框架学习/100-框架问题/01-SpringCloud 问题/01-spring Cloud 添加日志切面 "spring Cloud 添加日志切面")
-        - [spring添加日志切面简单版](?file=009-java 框架学习/100-框架问题/01-SpringCloud 问题/02-spring添加日志切面简单版 "spring添加日志切面简单版")
+    - **切面类相关**
+        - [ 添加日志切面](?file=009-java 框架学习/100-框架问题/01-切面类相关/01- 添加日志切面 " 添加日志切面")
+        - [spring添加日志切面简单版](?file=009-java 框架学习/100-框架问题/01-切面类相关/02-spring添加日志切面简单版 "spring添加日志切面简单版")
+        - [添加日志切面有注入Service](?file=009-java 框架学习/100-框架问题/01-切面类相关/03-添加日志切面有注入Service "添加日志切面有注入Service")
+        - [项目启动执行自定义逻辑](?file=009-java 框架学习/100-框架问题/01-切面类相关/04-项目启动执行自定义逻辑 "项目启动执行自定义逻辑")
+        - [切面相关注解](?file=009-java 框架学习/100-框架问题/01-切面类相关/100-切面相关注解 "切面相关注解")
     - **框架中问题总结**
         - [框架中yml配置总结](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/01-框架中yml配置总结 "框架中yml配置总结")
         - [springboot中引入数据库链接池](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/02-springboot中引入数据库链接池 "springboot中引入数据库链接池")
+        - [springboot项目中初始化事件](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/03-springboot项目中初始化事件 "springboot项目中初始化事件")
 
 ##### java-JVM
-- **jvm 公共**
 - **jvm调优**
     - **jvm 前置知识基础**
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
@@ -253,3 +272,9 @@
         - [spirng 高并发94](?file=100-Java 知识点/02-问题记录/01-鲁班课程分布式微服务94/01-spirng 高并发94 "spirng 高并发94")
     - **java 进阶知识点**
         - [ 鲁班课程记录](?file=100-Java 知识点/02-问题记录/02-java 进阶知识点/01- 鲁班课程记录 " 鲁班课程记录")
+
+##### 测试相关
+- **压力测试工具**
+    - **jmeter**
+        - [jmeter介绍](?file=101-测试相关/01-压力测试工具/01-jmeter/01-jmeter介绍 "jmeter介绍")
+        - [jmeter使用](?file=101-测试相关/01-压力测试工具/01-jmeter/02-jmeter使用 "jmeter使用")
