@@ -212,6 +212,7 @@
     - **传智14学习**
         - [Hibernate笔记](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/01-Hibernate笔记 "Hibernate笔记")
         - [关联映射](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/02-关联映射 "关联映射")
+        - [对象状态-懒加载-缓存](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/03-对象状态-懒加载-缓存 "对象状态-懒加载-缓存")
 - **myBatis**
     - **myBatis问题记录**
         - [mybatis中自增字段](?file=009-java 框架学习/03-myBatis/02-myBatis问题记录/01-mybatis中自增字段 "mybatis中自增字段")
