@@ -254,7 +254,7 @@ System.out.println("插入前主键为："+user.getUserId());
 
 
 
-# 不为空添加条件判断
+## 不为空添加条件判断
 
 
 ```xml
@@ -268,4 +268,60 @@ System.out.println("插入前主键为："+user.getUserId());
                     </otherwise>
                 </choose>
             </if>
+```
+
+
+## 时间日、月、时间范围 SQL mapper 写法
+
+```xml
+<select id="getHistoryRecordByEquipments"
+            resultType="com.graphsafe.xsn.model.humiture.vo.HumitureEquipmentDataVo">
+
+        SELECT
+        #{organizationName} as organizationName,
+        #{devname} as devname,
+        #{name} as name,
+        #{nodeTypeName} as nodeTypeName,
+        t1.ID id,
+        t1.NODE_ID nodeId,
+        t1.DEVID devid,
+        t1.DEVCODE devcode,
+        t1.HUMIDITY humidity,
+        t1.TEMPERATURE temperature,
+        t1.VOLTAGE voltage,
+        t1.CREATE_TIME createTime,
+        t1.HUMIDITY_WARNING humidityWarning,
+        t1.TEMPERATURE_WARNING temperatureWarning,
+        t1.VOLTAGE_WARNING voltageWarning,
+        t1.STATUS status
+        FROM
+        ${tableName} t1
+
+        <where>
+            <if test="temperatureWarning != null and temperatureWarning !=''">
+                AND t1.TEMPERATURE_WARNING= #{temperatureWarning}
+            </if>
+            <if test="humidityWarning != null and humidityWarning !=''">
+                AND t1.HUMIDITY_WARNING= #{humidityWarning}
+            </if>
+            <if test="devId != null and devId != ''">
+                AND t1.DEVID = #{devId}
+            </if>
+            <if test="nodeId != null and nodeId != ''">
+                AND t1.NODE_ID = #{nodeId}
+            </if>
+            <if test="dateType != null and dateType == 'datePicker'.toString()">
+                AND CONVERT(varchar(10), t1.CREATE_TIME, 23) = #{paramTime}
+            </if>
+            <if test="dateType != null and dateType == 'monthPicker'.toString()">
+                AND LEFT(CONVERT(varchar(20),t1.CREATE_TIME,23),7) = #{paramTime}
+            </if>
+            <if test="dateType != null and dateType == 'userPicker'.toString()">
+               AND t1.CREATE_TIME  >=  #{startTime} AND t1.CREATE_TIME <= #{endTime}
+            </if>
+        </where>
+        ORDER BY t1.CREATE_TIME ${order}
+
+
+    </select>
 ```
