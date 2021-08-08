@@ -23,3 +23,15 @@ List<Integer> list = Stream.of(1, 2, 3).collect(Collectors.toList());
 使用Lists，不过要求JDK版本在9以上，如下：
 List<Integer> list = Lists.of(1,2,3);
 ```
+
+
+## List 的转换
+
+
+### List 对象只取出来单个id
+
+
+```java
+  //原始数据id集合
+ List<String> oldIdList = oldList.stream().map(HumitureAlarmRule::getId).collect(Collectors.toList());
+```

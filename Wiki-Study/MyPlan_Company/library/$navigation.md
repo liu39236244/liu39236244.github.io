@@ -23,6 +23,9 @@
                     - [ai环保](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/03-大数据相关/02-ai环保/01-ai环保 "ai环保")
                 - **Elasticsearch**
                     - [elasticsearch 案例](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/03-大数据相关/03-Elasticsearch/01-elasticsearch 案例 "elasticsearch 案例")
+            - **运维相关**
+                - **K8s**
+                    - [k8s相关](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/04-运维相关/03-K8s/01-k8s相关 "k8s相关")
         - [程序生涯记录](?file=000-Common/01-EverythingRecord/01-每日记录/100-程序生涯记录 "程序生涯记录")
     - **视频学习记录**
         - **Common视频学习地址记录**

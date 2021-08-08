@@ -21,6 +21,9 @@
 
 > 3 测试
 
+
+* 测试1 
+
 ```java
 package com.szdp.dp_synthesize;
 
@@ -53,6 +56,36 @@ public class test {
     }
 }
 
+
+```
+
+
+* 测试2
+
+```java
+/**
+ * @author : shenyabo
+ * @date : Created in 2021-05-26 16:39
+ * @description :
+ * @modified By :
+ * @version: : v1.0
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = ZlEduApplication.class)
+public class test {
+
+    @Autowired
+    private XzExamScoreService xzExamScoreService;
+    @Test
+    public void addExamData(){
+        XzExamScore test = new XzExamScore();
+        test.setExamineTime(new Date());
+        test.setLlkhScore(1.0f);
+        test.setUserId("123123123");
+        xzExamScoreService.addSelective(test);
+        System.out.println(test.getId());
+    }
+}
 
 ```
 

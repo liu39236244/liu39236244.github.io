@@ -12,6 +12,8 @@ list转map在Java8中stream的应用
 
 其中第一个参数就是可以，第二个参数就是value的值。
 
+
+* 1 list <Object>  转为 Map<Obejct,Object>
 ```java
 
 
@@ -19,6 +21,8 @@ public Map<Long, String> getIdNameMap(List<Account> accounts) {
 return accounts.stream().collect(Collectors.toMap(Account::getId, Account::getUsername));
 }
 
+
+* List<Map<Object,Object>> 转为 Map<Obejct,Object>
 // 这里如果集合对象中数据为Map 的写法
 
 ArrayList<Map<String, Object>> kkBaseinfoList = (ArrayList<Map<String, Object>>) data.get("rows");
@@ -57,9 +61,108 @@ return accounts.stream().collect(Collectors.toMap(Account::getUsername, Function
 
 ```
 
-> 4. 用groupingBy 或者 partitioningBy进行分组
+> 4. Stream.generate 
+
+
+
+
+流generate(Supplier s)返回无限顺序无序流，其中每个元素由提供的供应商生成。这适用于生成恒定流，随机元素流等。
+
+用法:
+
+```java
+static <T> Stream<T> generate(Supplier<T> s)
+
+// Where, Stream is an interface and T
+// is the type of stream elements.
+// s is the Supplier of generated 
+// elements and the return value is
+// a new infinite sequential
+// unordered Stream.
+// 示例1:生成随机整数流。
+
+
+// Java code for Stream.generate() 
+// to generate an infinite sequential 
+// unordered stream 
+import java.util.*; 
+import java.util.stream.Stream; 
+  
+class GFG { 
+      
+    // Driver code 
+    public static void main(String[] args) { 
+      
+    // using Stream.generate() method  
+    // to generate 5 random Integer values 
+    
+    Stream.generate(new Random()::nextInt) 
+    .limit(5).forEach(System.out::println);  
+
+
+    // 或者
+    Stream<Integer> stream = Stream.generate(() -> new Random().nextInt(10));
+    stream.forEach(e -> System.out.println(e)); 
+    } 
+}
+```
+输出：
+
+```java
+697197501
+50139200
+321540264
+1042847655
+-770409472
+```
+
+
+示例2:生成随机Double的流。
+
+```java
+// Java code for Stream.generate() 
+// to generate an infinite sequential 
+// unordered stream 
+import java.util.*; 
+import java.util.stream.Stream; 
+  
+class GFG { 
+      
+    // Driver code 
+    public static void main(String[] args) { 
+      
+    // using Stream.generate() method  
+    // to generate 8 random Double values 
+    Stream.generate(new Random()::nextDouble) 
+    .limit(8).forEach(System.out::println);  
+    } 
+}
+```
+
+
+输出：
+
+```java
+0.5390254520295368
+0.8477297185718798
+0.23703352435894398
+0.09156832989674057
+0.9671295321757734
+0.9989670394813547
+0.8909416330715489
+0.08177639888829968
+```
+
+
+> 5. 用groupingBy 或者 partitioningBy进行分组
+
+
+
 
 根据一个字段或者属性分组也可以直接用groupingBy方法，很方便。
+
+
+* PersonSupplier是一个返回Person对象的方法
 
 ```java
 
