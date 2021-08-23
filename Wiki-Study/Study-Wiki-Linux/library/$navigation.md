@@ -71,6 +71,7 @@
     - [lnux-ssh命令详解](?file=005-linux 知识点总结/05-语法总结/08-lnux-ssh命令详解 "lnux-ssh命令详解")
 
 ##### v2ray
+- **v2ray Common**
 - **v2ray 总结**
     - [v2ray 公用总结](?file=006-v2ray/01-v2ray 总结/00-v2ray 公用总结 "v2ray 公用总结")
     - [v2ray 介绍安装](?file=006-v2ray/01-v2ray 总结/01-v2ray 介绍安装 "v2ray 介绍安装")
@@ -79,9 +80,11 @@
 - **Docker笔记**
     - **docker-菜鸟教程**
         - [Docker 笔记](?file=007-docker/01-Docker笔记/001-docker-菜鸟教程/01-Docker 笔记 "Docker 笔记")
+- **Docker-**
 
 ##### 项目部署
 - **win 服务部署**
     - ** 模块记录**
         - [win中 端口占用问题](?file=008-项目部署/01-win 服务部署/01- 模块记录/02-win中 端口占用问题 "win中 端口占用问题")
         - [nginx 部署前端项目记录](?file=008-项目部署/01-win 服务部署/01- 模块记录/03-nginx 部署前端项目记录 "nginx 部署前端项目记录")
+- **linux部署**
