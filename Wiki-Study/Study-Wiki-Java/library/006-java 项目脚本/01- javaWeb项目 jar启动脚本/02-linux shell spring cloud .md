@@ -67,7 +67,7 @@ start)
 		cd $HOME
         ## 启动eureka
         echo "--------eureka 开始启动--------------"
-        nohup java -jar --spring.config.location=/home/zhgj/parent/yml/applicationeureka.yml $EUREKA > $EUREAKLOG 2>&1 &
+        nohup java -jar $EUREKA --spring.config.location=/home/zhgj/parent/yml/applicationeureka.yml  >> $EUREAKLOG 2>&1 &
         EUREKA_pid=`lsof -i:$EUREKA_port|grep "LISTEN"|awk '{print $2}'`
         until [ -n "$EUREKA_pid" ]
             do
@@ -499,3 +499,128 @@ esac
 exit 0
 
 ```
+
+# 成功案例：
+
+zzzh
+
+```sh
+#!/bin/sh
+export EUREKA=gp_eureka-0.0.1-SNAPSHOT.jar
+export ZUUL=gp_zuul-0.0.1-SNAPSHOT.jar
+export DEFORM=gp_dform-0.0.1-SNAPSHOT.jar
+export MONGODB=gp_mongodb-0.0.1-SNAPSHOT.jar
+
+export EUREKA_port=8771
+export ZUUL_port=8773
+export DEFORM_port=8142
+export MONGODB_port=8438
+
+
+#启动命令所在目录
+HOME='/home/graphsafe/ZZZHPX/back'
+#LOGDIR=/home/graphsafe/ZZZHPX/zzzhpx.log
+EUREAKLOG=/home/graphsafe/ZZZHPX/back/log/eureka.log
+ZUULLOG=/home/graphsafe/ZZZHPX/back/log/zuul.log
+DEFORMLOG=/home/graphsafe/ZZZHPX/back/log/deform.log
+MONGODBLOG=/home/graphsafe/ZZZHPX/back/log/mongodb.log
+ 
+case "$1" in
+ 
+start)
+		#进入命令所在目录
+		cd $HOME
+        ## 启动eureka
+        echo "--------eureka 开始启动--------------"
+        nohup java -jar  $EUREKA --spring.config.location=/home/graphsafe/ZZZHPX/back/yml/gp_eureka_application.yml >> $EUREAKLOG 2>&1 &
+        EUREKA_pid=`lsof -i:$EUREKA_port|grep "LISTEN"|awk '{print $2}'`
+        until [ -n "$EUREKA_pid" ]
+            do
+              EUREKA_pid=`lsof -i:$EUREKA_port|grep "LISTEN"|awk '{print $2}'`  
+            done
+        echo "EUREKA pid is $EUREKA_pid" 
+        echo "--------eureka 启动成功--------------"
+		
+		## 启动ZUUL
+        echo "--------开始启动ZUUL---------------"
+        nohup java -jar  $ZUUL --spring.config.location=/home/graphsafe/ZZZHPX/back/yml/gp_zuul_application.yml >> $ZUULLOG 2>&1 &
+        ZUUL_pid=`lsof -i:$ZUUL_port|grep "LISTEN"|awk '{print $2}'`
+        until [ -n "$ZUUL_pid" ]
+            do
+              ZUUL_pid=`lsof -i:$ZUUL_port|grep "LISTEN"|awk '{print $2}'`  
+            done
+        echo "ZUUL pid is $ZUUL_pid"    
+        echo "---------ZUUL 启动成功-----------"
+		
+		## 启动DEFORM
+        echo "--------开始启动DEFORM---------------"
+        nohup java -jar $DEFORM --spring.config.location=/home/graphsafe/ZZZHPX/back/yml/gp_dform_application.yml  >> $DEFORMLOG 2>&1 &
+        DEFORM_pid=`lsof -i:$DEFORM_port|grep "LISTEN"|awk '{print $2}'`
+        until [ -n "$DEFORM_pid" ]
+            do
+              DEFORM_pid=`lsof -i:$DEFORM_port|grep "LISTEN"|awk '{print $2}'`  
+            done
+        echo "DEFORM pid is $DEFORM_pid"    
+        echo "---------DEFORM 启动成功-----------"
+		 
+		## 启动MONGODB
+        echo "--------开始启动MONGODB---------------"
+        nohup java -jar $MONGODB --spring.config.location=/home/graphsafe/ZZZHPX/back/yml/gp_mongodb_application.yml  >> $MONGODBLOG 2>&1 &
+        MONGODB_pid=`lsof -i:$MONGODB_port|grep "LISTEN"|awk '{print $2}'`
+        until [ -n "$MONGODB_pid" ]
+            do
+              MONGODB_pid=`lsof -i:$MONGODB_port|grep "LISTEN"|awk '{print $2}'`  
+            done
+        echo "MONGODB pid is $MONGODB_pid"    
+        echo "---------MONGODB 启动成功-----------"
+		
+        echo "===startAll success==="
+        ;;
+ 
+ stop)
+        P_ID=`ps -ef | grep -w $EUREKA | grep -v "grep" | awk '{print $2}'`
+        if [ "$P_ID" == "" ]; then
+            echo "===EUREKA process not exists or stop success"
+        else
+            kill -9 $P_ID
+            echo "EUREKA killed success"
+        fi
+		P_ID=`ps -ef | grep -w $ZUUL | grep -v "grep" | awk '{print $2}'`
+        if [ "$P_ID" == "" ]; then
+            echo "===ZUUL process not exists or stop success"
+        else
+            kill -9 $P_ID
+            echo "ZUUL killed success"
+        fi
+		P_ID=`ps -ef | grep -w $DEFORM | grep -v "grep" | awk '{print $2}'`
+        if [ "$P_ID" == "" ]; then
+            echo "===DEFORM process not exists or stop success"
+        else
+            kill -9 $P_ID
+            echo "DEFORM killed success"
+        fi
+		P_ID=`ps -ef | grep -w $MONGODB | grep -v "grep" | awk '{print $2}'`
+        if [ "$P_ID" == "" ]; then
+            echo "===MONGODB process not exists or stop success"
+        else
+            kill -9 $P_ID
+            echo "MONGODB killed success"
+        fi
+        echo "===stop success==="
+        ;;   
+ 
+restart)
+        $0 stop
+        sleep 2
+        $0 start
+        echo "===restart success==="
+        ;;   
+esac	
+exit 0
+
+```
+
+
+# 配置文件不起作用；
+
+我是吧配置文件放在了jar 同级下的一个yml中了，后来给拿出来与jar 同级，并且指定了配置文件，名字必须是application.yml 才有效
