@@ -143,7 +143,6 @@
         - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
         - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
-    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -189,7 +188,7 @@
     - **jdk 1.8 新特性案例总结**
         - [公用](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/00-公用 "公用")
         - [jdk1.8 新特性去重自定义对象](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/01-jdk1.8 新特性去重自定义对象 "jdk1.8 新特性去重自定义对象")
-        - [数组初始化](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/02-数组初始化 "数组初始化")
+        - [List-数组初始化-转换](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/02-List-数组初始化-转换 "List-数组初始化-转换")
         - [自定义一二三四中文排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/03-自定义一二三四中文排序 "自定义一二三四中文排序")
         - [ list-Stream以及Comparator 二级排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list-Stream以及Comparator 二级排序 " list-Stream以及Comparator 二级排序")
         - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
@@ -224,12 +223,15 @@
     - **Spring中ioc中单例多例**
         - [测试Controller-Service中单例多例](?file=009-java 框架学习/01-基础框架Spring/100-Spring中ioc中单例多例/01-测试Controller-Service中单例多例 "测试Controller-Service中单例多例")
 - **基础框架Hibernate**
+    - **公共**
+        - [公用记录](?file=009-java 框架学习/02-基础框架Hibernate/00-公共/01-公用记录 "公用记录")
     - **传智14学习**
         - [Hibernate笔记](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/01-Hibernate笔记 "Hibernate笔记")
         - [关联映射](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/02-关联映射 "关联映射")
         - [对象状态-懒加载-缓存](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/03-对象状态-懒加载-缓存 "对象状态-懒加载-缓存")
+        - [hibernate查询、连接池、二级缓存](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/04-hibernate查询、连接池、二级缓存 "hibernate查询、连接池、二级缓存")
+        - [二级缓存](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/05-二级缓存 "二级缓存")
 - **myBatis**
-    - **myBatis学习**
     - **myBatis问题记录**
         - [mybatis中自增字段](?file=009-java 框架学习/03-myBatis/02-myBatis问题记录/01-mybatis中自增字段 "mybatis中自增字段")
 - **tkMybatis**
@@ -246,8 +248,12 @@
         - [框架中yml配置总结](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/01-框架中yml配置总结 "框架中yml配置总结")
         - [springboot中引入数据库链接池](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/02-springboot中引入数据库链接池 "springboot中引入数据库链接池")
         - [springboot项目中初始化事件](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/03-springboot项目中初始化事件 "springboot项目中初始化事件")
+    - **springcloud**
+        - **springCloud 记录**
+            - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
 
 ##### java-JVM
+- **jvm 公共**
 - **jvm调优**
     - **jvm 前置知识基础**
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")

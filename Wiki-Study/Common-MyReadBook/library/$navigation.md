@@ -79,6 +79,8 @@
     - [DateUtil](?file=006-项目吸取/028-时间工具类/01-DateUtil "DateUtil")
     - [java时间工具类](?file=006-项目吸取/028-时间工具类/02-java时间工具类 "java时间工具类")
     - [js时间工具类](?file=006-项目吸取/028-时间工具类/03-js时间工具类 "js时间工具类")
+- **mongo工具类**
+    - [mongo工具类](?file=006-项目吸取/029-mongo工具类/01-mongo工具类 "mongo工具类")
 - **quartz实战总结.md**
     - [quartz代码部分总结](?file=006-项目吸取/03-quartz实战总结.md/02-quartz代码部分总结 "quartz代码部分总结")
 - **log4j实战总结.md**
