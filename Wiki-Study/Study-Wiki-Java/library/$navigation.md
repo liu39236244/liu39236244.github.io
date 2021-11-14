@@ -166,9 +166,15 @@
         - [excel工具类直接导出流](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/01-excel工具类直接导出流 "excel工具类直接导出流")
         - [easyExcel阿里的导出包](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/02-easyExcel阿里的导出包 "easyExcel阿里的导出包")
         - [easyExcel 注解直接返回excel](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/03-easyExcel 注解直接返回excel "easyExcel 注解直接返回excel")
+        - [easyExcel 合并单元格](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/04-easyExcel 合并单元格 "easyExcel 合并单元格")
         - [临时记录](?file=003-java进阶知识/08-excel导出/02-excel工具类直接导出流response返回.md/100-临时记录 "临时记录")
     - **excel 导入**
         - [excel 导入](?file=003-java进阶知识/08-excel导出/03-excel 导入/01-excel 导入 "excel 导入")
+- **页面以及下载部分证件功能**
+    - **生成下载专家证件**
+        - [公用](?file=003-java进阶知识/09-页面以及下载部分证件功能/01-生成下载专家证件/00-公用 "公用")
+        - [需求简述](?file=003-java进阶知识/09-页面以及下载部分证件功能/01-生成下载专家证件/01-需求简述 "需求简述")
+        - [代码开发](?file=003-java进阶知识/09-页面以及下载部分证件功能/01-生成下载专家证件/02-代码开发 "代码开发")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**

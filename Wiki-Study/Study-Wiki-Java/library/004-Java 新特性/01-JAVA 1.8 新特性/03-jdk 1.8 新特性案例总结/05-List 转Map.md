@@ -57,6 +57,7 @@ return accounts.stream().collect(Collectors.toMap(Account::getId, account -> acc
 
 public Map<String, Account> getNameAccountMap(List<Account> accounts) {
 return accounts.stream().collect(Collectors.toMap(Account::getUsername, Function.identity(), (key1, key2) -> key2));
+
 }
 
 ```

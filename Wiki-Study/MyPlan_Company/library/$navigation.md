@@ -26,6 +26,24 @@
             - **运维相关**
                 - **K8s**
                     - [k8s相关](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/04-运维相关/03-K8s/01-k8s相关 "k8s相关")
+            - **java相关**
+                - **java集合相关**
+                - **java新特性相关**
+                - **java并发相关**
+                    - **countDownLatch了解**
+                        - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/01-countDownLatch了解/01-简述 "简述")
+                        - [简单使用](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/01-countDownLatch了解/02-简单使用 "简单使用")
+                        - [主线程控制开始案例](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/01-countDownLatch了解/03-主线程控制开始案例 "主线程控制开始案例")
+                    - **CyclicBarrier**
+                        - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/02-CyclicBarrier/01-简述 "简述")
+                        - [使用案例](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/02-CyclicBarrier/02-使用案例 "使用案例")
+                    - **Volatile关键字**
+                        - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/03-Volatile关键字/01-简述 "简述")
+                    - **Java异步编程**
+                        - **异步编程介绍**
+                            - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/05-Java异步编程/01-异步编程介绍/01-简述 "简述")
+                        - **Future**
+                            - [Future编程简单案例](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/05-Java异步编程/03-Future/03-Future编程简单案例 "Future编程简单案例")
         - [程序生涯记录](?file=000-Common/01-EverythingRecord/01-每日记录/100-程序生涯记录 "程序生涯记录")
     - **视频学习记录**
         - **Common视频学习地址记录**

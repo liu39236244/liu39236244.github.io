@@ -9,7 +9,7 @@
 @echo off
 start cmd /c "title zh_eureka && java -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m  -jar C:\zhjt\parent\zh_eureka-1.0-SNAPSHOT.jar"
 start cmd /c "title zh_user && java -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms2048m -Xmx2048m  -jar C:\zhjt\parent\zh_user-1.0-SNAPSHOT.jar > user.log"
-start cmd /c "title zh_mongodb && javaw -Dfile.encoding=utf-8 -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms10240m -Xmx10240m  -jar C:\zhjt\parent\zh_mongodb-1.0-SNAPSHOT.jar > mongodb.log"
+start cmd /c "title zh_mongodb && javaw -Dfile.encoding=utf-8 -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m  -jar C:\zhjt\parent\zh_mongodb-1.0-SNAPSHOT.jar > mongodb.log"
 start cmd /c "title zh_auth && java -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar C:\zhjt\parent\zh_auth-1.0-SNAPSHOT.jar > auth.log"
 start cmd /c "title zh_change && java -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m  -jar C:\zhjt\parent\zh_change-1.0-SNAPSHOT.jar > change.log"
 start cmd /c "title zh_edu && java -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms2048m -Xmx2048m  -jar C:\zhjt\parent\zh_edu-1.0-SNAPSHOT.jar > edu.log"
