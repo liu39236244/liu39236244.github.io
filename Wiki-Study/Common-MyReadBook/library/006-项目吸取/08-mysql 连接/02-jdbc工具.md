@@ -525,3 +525,133 @@ public class CommonDAO { // 所有初始化工作在这里完成
 }
 
 ```
+
+
+## jdbc工具类
+
+```java
+package com.zmh.util;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+/**
+ * JDBC工具类
+ */
+public class Util1 {
+    //加载驱动
+    static {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    //获得连接
+    public static Connection getConnection(){
+        try {
+            DriverManager.getConnection("jdbc:mysql://localhost:3306/qy97?characterEnconding=utf-8","root","root");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    /** 增删改的通用方法
+     * @param String sql  要执行的sql
+     * @param Object[] obj    对象类型的数组  里面存放着 sql执行的占位符参数
+     *              【name，age，id】
+     *                【id】
+     *               【name，age】
+     *         Object... 可变参数
+     * */
+    public static boolean executeUpdate(String sql,Object... args){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = getConnection();
+            ps = conn.prepareStatement(sql);
+            //有参数
+            for(int i=0;i<args.length;i++){
+                ps.setObject(i+1,args[i]);
+            }
+            //执行sql语句
+            int i = ps.executeUpdate();
+            //返回  true
+            return i>0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            //关闭资源
+            close(conn,ps,null);
+        }
+        return false;
+    }
+    /**
+     *  查询的通用方法
+     * @param sql;
+     * @param args;
+     * @return
+     * */
+    public static List<Map<String,Object>> executeQuery(String sql,Object... args){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            conn = getConnection();
+            ps = conn.prepareStatement(sql);
+            //有可能有参数
+            for(int i=0;i<args.length;i++){
+                ps.setObject(i+1,args[i]);
+            }
+            //执行sql语句
+            rs = ps.executeQuery();
+            //创建List集合
+            List<Map<String, Object>> list = new ArrayList<>();
+            //获取本次查询结果集有多少列
+            int count = rs.getMetaData().getColumnCount();
+            //while循环
+            while(rs.next()){
+                //创建Map集合   获取一个数据封装成一个Map集合
+                Map<String, Object> map = new HashMap<>();
+                //for循环  遍历所有的列
+                for(int i=0;i<count;i++){
+                    //获取本次查询结果集的列名
+                    String name = rs.getMetaData().getColumnLabel(i + 1);
+                    map.put(name,rs.getObject(name));
+                }
+                //把所有的map集合添加到List集合中
+                list.add(map);
+            }
+            //返回值
+            return list;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            //关闭资源
+            close(conn,ps,rs);
+        }
+        return null;
+    }
+    /**
+     *  关闭资源的通用方法
+     * */
+    public static void close(Connection conn,Statement stat,ResultSet rs){
+        try{
+            if(rs!=null){
+                rs.close();
+            }
+            if(stat!=null){
+                stat.close();
+            }
+            if(conn!=null){
+                conn.close();
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+```
+

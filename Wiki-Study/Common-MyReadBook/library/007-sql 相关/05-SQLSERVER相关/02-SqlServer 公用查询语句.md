@@ -166,3 +166,68 @@ exec(@sql)
 -- 57 替换为对应的进程id执行即可
  
 ```
+
+
+## 存储过程
+
+## 创建使用存储过程，
+
+参考博客：
+https://www.cnblogs.com/ouyy/p/9854585.html
+
+### 查看建表语句存储过程
+
+
+```sql
+declare @sql varchar(8000),@tablename varchar(100)
+set @tablename ='test'--这里输入表名
+set @sql = 'create table ['+@tablename+'] 
+(
+'
+select @sql = @sql + b.name + ' '+
+       c.name+
+       case when c.collation_name is not null then '('+
+         case when b.max_length <>-1 then convert(varchar(100),b.max_length)
+           else 'MAX'
+         end +') '
+        else ''
+       end +
+       case when b.is_identity = 1 then ' identity('+convert(varchar(100),IDENT_SEED(@tablename))+','+convert(varchar(100),IDENT_INCR(@tablename))+')' else '' end +
+       case when d.definition is not null then ' default('+d.definition +')' else '' end +
+       case when b.is_nullable = 0 then ' not null' else ' null' end +
+       
+',
+'
+from sys.objects a join sys.columns b
+on a.object_id = b.object_id
+join sys.types c
+on b.system_type_id = c.system_type_id and b.user_type_id = c.user_type_id
+left join sys.default_constraints d
+on b.default_object_id = d.object_id
+where a.name=@tablename
+order by b.column_id
+if exists(select * from sys.indexes where object_id =object_id(@tablename) and is_primary_key =1 )
+begin
+select @sql = @sql + 'CONSTRAINT ['+name+'] PRIMARY KEY '+type_desc+'
+(
+' from sys.indexes where object_id =object_id(@tablename) and is_primary_key =1
+select @sql = @sql + b.name + case when a.is_descending_key =1 then ' DESC' else ' ASC' end +',
+' from sys.index_columns a join sys.columns b
+on a.object_id= b.object_id and a.column_id = b.column_id
+where a.object_id =object_id(@tablename)
+select @sql = left(@sql,len(@sql)-3)+'
+)'
+select @sql = @sql+'
+) ON [PRIMARY] '
+end
+else
+begin
+select @sql = left(@sql,len(@sql)-1)+'
+) ON [PRIMARY] '
+end
+print @sql
+```
+
+
+
+## 
