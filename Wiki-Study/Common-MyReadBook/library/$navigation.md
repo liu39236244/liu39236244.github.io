@@ -15,12 +15,6 @@
 - **好好说话阅读感想**
     - [好好说话](?file=001-《好好说话》/01-好好说话阅读感想/01-好好说话 "好好说话")
 
-##### EnglishWorld
-- **English Remember**
-    - [2018_&#40;4-5&#41;月单词记录](?file=002-EnglishWorld/01-English Remember/01-2018_&#40;4-5&#41;月单词记录 "2018_&#40;4-5&#41;月单词记录")
-    - [2019（5-N）单词记录](?file=002-EnglishWorld/01-English Remember/02-2019（5-N）单词记录 "2019（5-N）单词记录")
-    - [英文句子记录&#40;1&#41;](?file=002-EnglishWorld/01-English Remember/03-英文句子记录&#40;1&#41; "英文句子记录&#40;1&#41;")
-
 ##### 视频学习数据结构预算法
 - **数据结构算法**
     - [记录](?file=003-视频学习数据结构预算法/01-数据结构算法/01-记录 "记录")
@@ -209,6 +203,14 @@
     - [SqlServer 公用查询语句](?file=007-sql 相关/05-SQLSERVER相关/02-SqlServer 公用查询语句 "SqlServer 公用查询语句")
     - **sql server 数据类型对应jdbcType**
         - [sql Server 字段对应JDBCTYPE](?file=007-sql 相关/05-SQLSERVER相关/03-sql server 数据类型对应jdbcType/01-sql Server 字段对应JDBCTYPE "sql Server 字段对应JDBCTYPE")
+    - **SqlServer备份生成语句**
+        - [记录](?file=007-sql 相关/05-SQLSERVER相关/04-SqlServer备份生成语句/01-记录 "记录")
+        - [java程序备份sqlserver数据库](?file=007-sql 相关/05-SQLSERVER相关/04-SqlServer备份生成语句/02-java程序备份sqlserver数据库 "java程序备份sqlserver数据库")
+        - [存储过程](?file=007-sql 相关/05-SQLSERVER相关/04-SqlServer备份生成语句/03-存储过程 "存储过程")
+        - [Agent备份sqlserver](?file=007-sql 相关/05-SQLSERVER相关/04-SqlServer备份生成语句/04-Agent备份sqlserver "Agent备份sqlserver")
+        - [创建sqlserver的insert语句](?file=007-sql 相关/05-SQLSERVER相关/04-SqlServer备份生成语句/05-创建sqlserver的insert语句 "创建sqlserver的insert语句")
+    - **存储过程**
+        - [存储过程](?file=007-sql 相关/05-SQLSERVER相关/05-存储过程/01-存储过程 "存储过程")
 - **Mongodb相关**
     - **Mongodb记录**
         - [mongodb备份恢复](?file=007-sql 相关/06-Mongodb相关/01-Mongodb记录/02-mongodb备份恢复 "mongodb备份恢复")

@@ -44,6 +44,12 @@
                             - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/05-Java异步编程/01-异步编程介绍/01-简述 "简述")
                         - **Future**
                             - [Future编程简单案例](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/05-Java异步编程/03-Future/03-Future编程简单案例 "Future编程简单案例")
+        - **每日外语**
+            - **每日英语**
+                - [每日一句](?file=000-Common/01-EverythingRecord/01-每日记录/08-每日外语/01-每日英语/01-每日一句 "每日一句")
+                - [每日单词](?file=000-Common/01-EverythingRecord/01-每日记录/08-每日外语/01-每日英语/02-每日单词 "每日单词")
+        - **使用工具软件总结**
+            - [win小软件总结](?file=000-Common/01-EverythingRecord/01-每日记录/09-使用工具软件总结/01-win小软件总结 "win小软件总结")
         - [程序生涯记录](?file=000-Common/01-EverythingRecord/01-每日记录/100-程序生涯记录 "程序生涯记录")
     - **视频学习记录**
         - **Common视频学习地址记录**

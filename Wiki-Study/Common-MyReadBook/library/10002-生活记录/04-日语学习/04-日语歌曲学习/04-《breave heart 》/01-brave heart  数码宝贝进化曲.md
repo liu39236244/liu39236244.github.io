@@ -20,6 +20,8 @@ b 站教学
 
 光芒：光（ひかり）[hi  ka ri ]
 
+
+
 ```
 
 
@@ -202,9 +204,6 @@ believe in your heart
 
 
 きっとかなうから…showmeyourbraveheart
-
-
-
 
 
 

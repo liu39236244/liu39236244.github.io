@@ -76,6 +76,8 @@ public class DateTimeUtils {
         return date;
     }
 
+
+
     /***
      * 获取时间菜单
      * @return
@@ -119,6 +121,213 @@ public class DateTimeUtils {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHH");
         return simpleDateFormat.format(date);
     }
+
+
+    /** 
+     * 两个时间之间相差距离多少天 
+     * @param one 时间参数 1： 
+     * @param two 时间参数 2： 
+     * @return 相差天数 
+     */  
+    public static long getDistanceDays(String str1, String str2) throws Exception{  
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");  
+        Date one;  
+        Date two;  
+        long days=0;  
+        try {  
+            one = df.parse(str1);  
+            two = df.parse(str2);  
+            long time1 = one.getTime();  
+            long time2 = two.getTime();  
+            long diff ;  
+            if(time1<time2) {  
+                diff = time2 - time1;  
+            } else {  
+                diff = time1 - time2;  
+            }  
+            days = diff / (1000 * 60 * 60 * 24);  
+        } catch (ParseException e) {  
+            e.printStackTrace();  
+        }  
+        return days;  
+    }  
+      
+    /** 
+     * 两个时间相差距离多少天多少小时多少分多少秒 
+     * @param str1 时间参数 1 格式：1990-01-01 12:00:00 
+     * @param str2 时间参数 2 格式：2009-01-01 12:00:00 
+     * @return long[] 返回值为：{天, 时, 分, 秒} 
+     */  
+    public static long[] getDistanceTimes(String str1, String str2) {  
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+        Date one;  
+        Date two;  
+        long day = 0;  
+        long hour = 0;  
+        long min = 0;  
+        long sec = 0;  
+        try {  
+            one = df.parse(str1);  
+            two = df.parse(str2);  
+            long time1 = one.getTime();  
+            long time2 = two.getTime();  
+            long diff ;  
+            if(time1<time2) {  
+                diff = time2 - time1;  
+            } else {  
+                diff = time1 - time2;  
+            }  
+            day = diff / (24 * 60 * 60 * 1000);  
+            hour = (diff / (60 * 60 * 1000) - day * 24);  
+            min = ((diff / (60 * 1000)) - day * 24 * 60 - hour * 60);  
+            sec = (diff/1000-day*24*60*60-hour*60*60-min*60);  
+        } catch (ParseException e) {  
+            e.printStackTrace();  
+        }  
+        long[] times = {day, hour, min, sec};  
+        return times;  
+    }  
+    /** 
+     * 两个时间相差距离多少天多少小时多少分多少秒 
+     * @param str1 时间参数 1 格式：1990-01-01 12:00:00 
+     * @param str2 时间参数 2 格式：2009-01-01 12:00:00 
+     * @return String 返回值为：xx天xx小时xx分xx秒 
+     */  
+    public static String getDistanceTime(String str1, String str2) {  
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+        Date one;  
+        Date two;  
+        long day = 0;  
+        long hour = 0;  
+        long min = 0;  
+        long sec = 0;  
+        try {  
+            one = df.parse(str1);  
+            two = df.parse(str2);  
+            long time1 = one.getTime();  
+            long time2 = two.getTime();  
+            long diff ;  
+            if(time1<time2) {  
+                diff = time2 - time1;  
+            } else {  
+                diff = time1 - time2;  
+            }  
+            day = diff / (24 * 60 * 60 * 1000);  
+            hour = (diff / (60 * 60 * 1000) - day * 24);  
+            min = ((diff / (60 * 1000)) - day * 24 * 60 - hour * 60);  
+            sec = (diff/1000-day*24*60*60-hour*60*60-min*60);  
+        } catch (ParseException e) {  
+            e.printStackTrace();  
+        }  
+        return day + "天" + hour + "小时" + min + "分" + sec + "秒";  
+    }  
+ 
+    //获取前几天时间
+    public static Date getAgoDay(int i) {  
+    Date date = new Date();
+            Calendar calendar = Calendar.getInstance();  
+            calendar.setTime(date);  
+            calendar.add(Calendar.DAY_OF_MONTH, -i);  
+            date = calendar.getTime();  
+            return date;
+        } 
+
+ /**
+     * 计算两个时间差
+     */
+    public static String getDatePoor(Date endDate, Date nowDate)
+    {
+        long nd = 1000 * 24 * 60 * 60;
+        long nh = 1000 * 60 * 60;
+        long nm = 1000 * 60;
+        // long ns = 1000;
+        // 获得两个时间的毫秒时间差异
+        long diff = endDate.getTime() - nowDate.getTime();
+        // 计算差多少天
+        long day = diff / nd;
+        // 计算差多少小时
+        long hour = diff % nd / nh;
+        // 计算差多少分钟
+        long min = diff % nd % nh / nm;
+        // 计算差多少秒//输出结果
+        // long sec = diff % nd % nh % nm / ns;
+        return day + "天" + hour + "小时" + min + "分钟";
+    }
+
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2021/6/8 16:19
+     * @Description:  获取一个时间当天起始时间
+     * @Params: [date]
+     * @Return: java.util.Date
+     */
+    public static Date getStartTime(Date date) {
+
+        Calendar calendar = Calendar.getInstance();
+        if(date !=null){
+            calendar.setTime(date);
+        }
+       calendar.set(Calendar.HOUR, 0);
+       calendar.set(Calendar.MINUTE, 0);
+       calendar.set(Calendar.SECOND, 0);
+       calendar.set(Calendar.MILLISECOND, 0);
+        return calendar.getTime();
+    }
+
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2021/6/8 16:20
+     * @Description: 获取当天结束时间
+     * @Params: [date]
+     * @Return: java.util.Date
+     */
+    public static Date getEndTime(Date date) {
+
+        Calendar calendar = Calendar.getInstance();
+        if(date !=null){
+            calendar.setTime(date);
+        }
+        calendar.set(Calendar.HOUR, 23);
+        calendar.set(Calendar.MINUTE, 59);
+        calendar.set(Calendar.SECOND, 59);
+        calendar.set(Calendar.MILLISECOND, 999);
+        return calendar.getTime();
+    }
+
+    // 获得本周一0点时间
+    public static Date getTimesWeekmorning() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONDAY), cal.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
+        cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+        return cal.getTime();
+    }
+
+    // 获得本周日24点时间
+    public static Date getTimesWeeknight() {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(getTimesWeekmorning());
+        cal.add(Calendar.DAY_OF_WEEK, 7);
+        return cal.getTime();
+    }
+
+    // 获得本月第一天0点时间
+    public static Date getTimesMonthmorning() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONDAY), cal.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
+        cal.set(Calendar.DAY_OF_MONTH, cal.getActualMinimum(Calendar.DAY_OF_MONTH));
+        return cal.getTime();
+    }
+
+    // 获得本月最后一天24点时间
+    public static Date getTimesMonthnight() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONDAY), cal.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
+        cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
+        cal.set(Calendar.HOUR_OF_DAY, 24);
+        return cal.getTime();
+    }
+
+
 
     public static void main(String[] args) {
 
