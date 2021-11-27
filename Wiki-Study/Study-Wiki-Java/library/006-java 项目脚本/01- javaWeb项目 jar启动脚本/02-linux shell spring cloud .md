@@ -620,7 +620,69 @@ exit 0
 
 ```
 
+## 学生奶
+
+```sh
+
+```sh
+#!/bin/sh
+export XSN_BASE_SERVICE=gp_xsn-1.0-SNAPSHOT.jar
+
+export XSN_PORT=27501
+
+
+#启动命令所在目录
+HOME='/home/graphsafe/MNXSN/jar'
+#LOGDIR=/home/graphsafe/ZZZHPX/zzzhpx.log
+XSN_LOG=/home/graphsafe/MNXSN/jar/log/xsn.log
+
+ 
+case "$1" in
+ 
+start)
+		#进入命令所在目录
+		cd $HOME
+
+		## 启动XSN
+        echo "--------开始启动XSN_BASE_SERVICE---------------"
+        nohup java -jar $XSN_BASE_SERVICE --spring.config.location=/home/graphsafe/ZZZHPX/back/application.yml  >> $XSN_LOG 2>&1 &
+        XSN_BASE_SERVICE_pid=`lsof -i:$XSN_PORT|grep "LISTEN"|awk '{print $2}'`
+        until [ -n "$XSN_BASE_SERVICE_pid" ]
+            do
+              XSN_BASE_SERVICE_pid=`lsof -i:$XSN_PORT|grep "LISTEN"|awk '{print $2}'`  
+            done
+        echo "XSN pid is $XSN_BASE_SERVICE_pid"    
+        echo "---------XSN_BASE_SERVICE 启动成功-----------"
+		
+        echo "===startAll success==="
+        ;;
+        
+ stop)
+        P_ID=`ps -ef | grep -w $XSN_BASE_SERVICE | grep -v "grep" | awk '{print $2}'`
+        if [ "$P_ID" == "" ]; then
+            echo "===XSN_BASE_SERVICE process not exists or stop success"
+        else
+            kill -9 $P_ID
+            echo "XSN_BASE_SERVICE killed success"
+        fi
+        echo "===stop success==="
+        ;;   
+
+restart)
+        $0 stop
+        sleep 2
+        $0 start
+        echo "===restart success==="
+        ;;   
+esac	
+exit 0
+
+```
+```
 
 # 配置文件不起作用；
 
 我是吧配置文件放在了jar 同级下的一个yml中了，后来给拿出来与jar 同级，并且指定了配置文件，名字必须是application.yml 才有效
+
+
+
