@@ -288,6 +288,101 @@ public class FileUtils {
     }
 
 
+    // xsn 文件工具类
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2021/11/15 14:16
+     * @Description: 读取指定目录中的文件，将文件名称存入fileNameList 中
+     * @Params: [path, fileNameList]
+     * @Return: java.util.ArrayList<java.lang.String>
+     */
+    public static List<String> readFilesName(String path, List<String> fileNameList) {
+
+        File file = new File(path);
+        if (file.isDirectory()) {
+            File[] files = file.listFiles();
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isDirectory()) {
+                    readFilesName(files[i].getPath(), fileNameList);
+                } else {
+                    String currentPath = files[i].getPath();
+                    String fileName = currentPath.substring(currentPath.lastIndexOf("\\") + 1);
+                    fileNameList.add(fileName);
+                }
+            }
+        } else {
+            String path1 = file.getPath();
+            String fileName = path1.substring(path1.lastIndexOf("\\") + 1);
+            fileNameList.add(fileName);
+        }
+        return fileNameList;
+    }
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2021/11/15 17:15
+     * @Description: 返回指定目录下所有   文件名称-文件对应全路径 的Map
+     * @Params: [path, fileNameMap]
+     * @Return: java.util.Map<java.lang.String,java.lang.String>
+     */
+    public static Map<String,String> readFilesNameMap(String path, Map<String,String> fileNameMap) {
+
+        File file = new File(path);
+        if (file.isDirectory()) {
+            File[] files = file.listFiles();
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isDirectory()) {
+                    readFilesNameMap(files[i].getPath(), fileNameMap);
+                } else {
+                    String currentPath = files[i].getPath();
+                    String fileName = currentPath.substring(currentPath.lastIndexOf("\\") + 1);
+                    fileNameMap.put(fileName,currentPath);
+                }
+            }
+        } else {
+            String currentPath = file.getPath();
+            String fileName = currentPath.substring(currentPath.lastIndexOf("\\") + 1);
+            fileNameMap.put(fileName,currentPath);
+        }
+        return fileNameMap;
+    }
+
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2021/11/15 14:05
+     * @Description: 文件是否存在
+     * @Params: [filePath]
+     * @Return: boolean
+     */
+    public static boolean isExists(String filePath) {
+        File file = new File(filePath);
+        return file.exists();
+    }
+
+
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2021/11/15 13:52
+     * @Description: 删除指定文件
+     * @Params: [fileName]
+     * @Return: boolean
+     */
+    public static boolean delete (String fileName){
+        try{
+            File sourceFile = new File(fileName);
+            if(sourceFile.isDirectory()){
+                for (File listFile : sourceFile.listFiles()) {
+                    delete(listFile.getAbsolutePath());
+                }
+            }
+            return sourceFile.delete();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
+
 }
 
 

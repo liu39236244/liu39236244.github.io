@@ -46,6 +46,11 @@
                             - [Future编程简单案例](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/05-Java异步编程/03-Future/03-Future编程简单案例 "Future编程简单案例")
         - **每日外语**
             - **每日英语**
+                - **EnglishWorld**
+                    - **English Remember**
+                        - [2018_&#40;4-5&#41;月单词记录](?file=000-Common/01-EverythingRecord/01-每日记录/08-每日外语/01-每日英语/00-EnglishWorld/01-English Remember/01-2018_&#40;4-5&#41;月单词记录 "2018_&#40;4-5&#41;月单词记录")
+                        - [2019（5-N）单词记录](?file=000-Common/01-EverythingRecord/01-每日记录/08-每日外语/01-每日英语/00-EnglishWorld/01-English Remember/02-2019（5-N）单词记录 "2019（5-N）单词记录")
+                        - [英文句子记录&#40;1&#41;](?file=000-Common/01-EverythingRecord/01-每日记录/08-每日外语/01-每日英语/00-EnglishWorld/01-English Remember/03-英文句子记录&#40;1&#41; "英文句子记录&#40;1&#41;")
                 - [每日一句](?file=000-Common/01-EverythingRecord/01-每日记录/08-每日外语/01-每日英语/01-每日一句 "每日一句")
                 - [每日单词](?file=000-Common/01-EverythingRecord/01-每日记录/08-每日外语/01-每日英语/02-每日单词 "每日单词")
         - **使用工具软件总结**
@@ -134,6 +139,9 @@
             - [ 音乐记录](?file=000-Common/01-EverythingRecord/06-生活记录/01-音乐记录/01- 音乐记录 " 音乐记录")
     - **md 特效总结**
         - [md 特效文件总结](?file=000-Common/01-EverythingRecord/07-md 特效总结/01-md 特效文件总结 "md 特效文件总结")
+- **Bug漏洞记录**
+    - **java组件漏洞**
+        - [log4j2漏洞在springboot中解决](?file=000-Common/02-Bug漏洞记录/01-java组件漏洞/01-log4j2漏洞在springboot中解决 "log4j2漏洞在springboot中解决")
 
 ##### Company
 - **Common**

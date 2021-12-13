@@ -36,3 +36,7 @@ mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\jar\dove-common-1
 
 
 mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\gp_base-3.4.RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=3.4.RELEASE -Dpackaging=jar
+
+
+
+mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\gp_base-3.8.7.RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=3.8.7.RELEASE -Dpackaging=jar

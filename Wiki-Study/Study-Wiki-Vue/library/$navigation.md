@@ -6,6 +6,7 @@
 - **vue项目公共记录**
     - [项目记录](?file=000-vue 公共记录/02-vue项目公共记录/01-项目记录 "项目记录")
     - [vue页面 style 样式编译报错](?file=000-vue 公共记录/02-vue项目公共记录/02-vue页面 style 样式编译报错 "vue页面 style 样式编译报错")
+    - [前端存储cookie](?file=000-vue 公共记录/02-vue项目公共记录/03-前端存储cookie "前端存储cookie")
 
 ##### Vue
 - **Vue基础**
@@ -36,6 +37,7 @@
         - [vue中通信-$ref 的使用](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/05-vue中通信-$ref 的使用 "vue中通信-$ref 的使用")
         - [vue 中 options获取子父组件传值](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/06-vue 中 options获取子父组件传值 "vue 中 options获取子父组件传值")
         - [路由传值](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/07-路由传值 "路由传值")
+        - [子父组件加载顺序与数据传值问题](?file=001-Vue/03-Vue学习/07-vue父子属性方法调用/08-子父组件加载顺序与数据传值问题 "子父组件加载顺序与数据传值问题")
     - **vue 中控制函数执行顺序先后问题**
         - [Promise.resolve 方法解决](?file=001-Vue/03-Vue学习/08-vue 中控制函数执行顺序先后问题/01-Promise.resolve 方法解决 "Promise.resolve 方法解决")
         - [elment-验证中使用同步](?file=001-Vue/03-Vue学习/08-vue 中控制函数执行顺序先后问题/02-elment-验证中使用同步 "elment-验证中使用同步")
@@ -70,7 +72,7 @@
         - [vue中监听按键](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/10-vue中监听按键 "vue中监听按键")
         - [vue中定时器](?file=001-Vue/05-Vue 工作记录/01-vue-PC 端记录/11-vue中定时器 "vue中定时器")
     - **Vue app端记录**
-        - [Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41;](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/03-Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41; "Vue SpringCloud Mybatis 组合请求方式总结&#40;$http&#41;")
+        - [Vue SpringBoot 组合请求方式总结](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/03-Vue SpringBoot 组合请求方式总结 "Vue SpringBoot 组合请求方式总结")
         - [验证表单数据van](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/04-验证表单数据van "验证表单数据van")
         - [app 提示确认](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/05-app 提示确认 "app 提示确认")
         - [vant 点击弹出下拉框](?file=001-Vue/05-Vue 工作记录/02-Vue app端记录/06-vant 点击弹出下拉框 "vant 点击弹出下拉框")
@@ -92,8 +94,14 @@
     - **组织架构图整合Vue使用**
         - [ 模块介绍](?file=001-Vue/05-Vue 工作记录/07-组织架构图整合Vue使用/01- 模块介绍 " 模块介绍")
         - [ vue-orgchart 组件总结使用](?file=001-Vue/05-Vue 工作记录/07-组织架构图整合Vue使用/02- vue-orgchart 组件总结使用 " vue-orgchart 组件总结使用")
+    - **vue slot的使用**
+        - [slot 槽的使用](?file=001-Vue/05-Vue 工作记录/08-vue slot的使用/01-slot 槽的使用 "slot 槽的使用")
+    - **页面操作控制**
+        - [控制不能用鼠标滑轮操作](?file=001-Vue/05-Vue 工作记录/09-页面操作控制/01-控制不能用鼠标滑轮操作 "控制不能用鼠标滑轮操作")
 - **vue待整理笔记的**
-    - [vue笔记](?file=001-Vue/06-vue待整理笔记的/01-vue笔记 "vue笔记")
+- **vue对接摄像头**
+    - **vue对接萤石云摄像头**
+        - [vue对接萤石云摄像头](?file=001-Vue/10-vue对接摄像头/01-vue对接萤石云摄像头/01-vue对接萤石云摄像头 "vue对接萤石云摄像头")
 
 ##### Vant 移动端组件
 - **Vant基础**
@@ -117,6 +125,7 @@
 ##### js 相关总结
 - ** 前端工具类**
     - [ 验证工具](?file=004-js 相关总结/01- 前端工具类/01- 验证工具 " 验证工具")
+    - [数据骚操作代码总结](?file=004-js 相关总结/01- 前端工具类/02-数据骚操作代码总结 "数据骚操作代码总结")
 - **数据类型转换**
     - [数据类型js 中转换](?file=004-js 相关总结/02-数据类型转换/01-数据类型js 中转换 "数据类型js 中转换")
 - **js中数组的相关操作**
