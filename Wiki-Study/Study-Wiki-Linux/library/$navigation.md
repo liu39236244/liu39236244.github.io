@@ -4,7 +4,8 @@
 ##### linux系统了解
 - **虚拟机安装linux**
     - [ win10 虚拟机安装centos](?file=001-linux系统了解/01-虚拟机安装linux/01- win10 虚拟机安装centos " win10 虚拟机安装centos")
-    - [ 虚拟机网络配置](?file=001-linux系统了解/01-虚拟机安装linux/02- 虚拟机网络配置 " 虚拟机网络配置")
+    - [ 虚拟机网络配置_vmware](?file=001-linux系统了解/01-虚拟机安装linux/02- 虚拟机网络配置_vmware " 虚拟机网络配置_vmware")
+    - [win10_hyper-v设置虚拟机](?file=001-linux系统了解/01-虚拟机安装linux/03-win10_hyper-v设置虚拟机 "win10_hyper-v设置虚拟机")
 - **linux -权限用户**
     - **linux马哥用户权限专题**
         - [公用部分](?file=001-linux系统了解/02-linux -权限用户/01-linux马哥用户权限专题/01-公用部分 "公用部分")
@@ -59,6 +60,7 @@
     - [查看mysql版本四种方式](?file=005-linux 知识点总结/03-Mysql 相关/03-查看mysql版本四种方式 "查看mysql版本四种方式")
     - [mysql 导入csv](?file=005-linux 知识点总结/03-Mysql 相关/04-mysql 导入csv "mysql 导入csv")
     - [mysql limit 分页](?file=005-linux 知识点总结/03-Mysql 相关/05-mysql limit 分页 "mysql limit 分页")
+    - [mysql执行sql文件](?file=005-linux 知识点总结/03-Mysql 相关/06-mysql执行sql文件 "mysql执行sql文件")
 - **脚本备份**
     - [mysql 备份脚本](?file=005-linux 知识点总结/04-脚本备份/01-mysql 备份脚本 "mysql 备份脚本")
     - [ linux 启动jar](?file=005-linux 知识点总结/04-脚本备份/03- linux 启动jar " linux 启动jar")
@@ -69,6 +71,9 @@
     - [date 时间](?file=005-linux 知识点总结/05-语法总结/05-date 时间 "date 时间")
     - [shell 注释](?file=005-linux 知识点总结/05-语法总结/06-shell 注释 "shell 注释")
     - [lnux-ssh命令详解](?file=005-linux 知识点总结/05-语法总结/08-lnux-ssh命令详解 "lnux-ssh命令详解")
+- **yum**
+    - **yum 下载对应包**
+        - [yum下载对应包](?file=005-linux 知识点总结/06-yum/01-yum 下载对应包/01-yum下载对应包 "yum下载对应包")
 
 ##### v2ray
 - **v2ray Common**

@@ -91,6 +91,9 @@ import com.graphsafe.xsn.testTrue.function.PresentOrElseHandler;
 import com.graphsafe.xsn.testTrue.function.ThrowExceptionFunction;
 import com.graphsafe.xsn.utils.StringUtils;
 
+import java.util.Collection;
+import java.util.Map;
+
 /**
  * @ClassName:
  * @Author: shenyabo
@@ -107,6 +110,7 @@ public class VUtils {
      * @Description: 如果为true 则抛出异常
      * @Params: [flag]
      * @Return: com.graphsafe.xsn.testTrue.function.ThrowExceptionFunction
+     *    VUtils.isTrue(false).throwMessage("你是真的就报错了");
      */
     public static ThrowExceptionFunction isTrue(boolean flag){
 
@@ -123,6 +127,11 @@ public class VUtils {
      * @Description: 为true false 执行不同操作
      * @Params: [b]
      * @Return: com.graphsafe.xsn.testTrue.function.BranchHandle
+     *   VUtils.isTureOrFalse(true).trueOrFalseHandle(()->{
+     *             System.out.println("为true，我是真的");
+     *         },()->{
+     *             System.out.println("false，我是假的");
+     *         });
      */
     public static BranchHandle isTureOrFalse(boolean b){
 
@@ -141,18 +150,68 @@ public class VUtils {
      * @Description: 为空执行逻辑；不为空执行逻辑
      * @Params: [str]
      * @Return: com.graphsafe.xsn.testTrue.function.PresentOrElseHandler<?>
+     *         VUtils.isBlankOrNoBlank("123").presentOrElseHandle(new Consumer<Object>() {
+     *             @Override
+     *             public void accept(Object o) {
+     *                 System.out.println("不为空"+ o.toString());
+     *             }
+     *         }, () -> {
+     *             System.out.println("为空字符串");
+     *         });
+     *
+     *         VUtils.isBlankOrNoBlank("123").presentOrElseHandle((cunsumerParam)->{
+     *             System.out.println("不为空"+cunsumerParam);
+     *         }, () -> {
+     *             System.out.println("为空字符串");
+     *         });
+     *
+     *         VUtils.isBlankOrNoBlank("123").presentOrElseHandle(System.out::println, () -> {
+     *             System.out.println("为空字符串");
+     *         });
      */
-    public static PresentOrElseHandler<?> isBlankOrNoBlank(String str){
+    public static PresentOrElseHandler<?> isBlankOrNoBlank(Object obj){
 
         return (consumer, runnable) -> {
-            if (StringUtils.isEmpty(str)){
+            if (isEmpty(obj)){
+                // 为空的逻辑
                 runnable.run();
             } else {
-                consumer.accept(str);
+                // 不为空的逻辑
+                consumer.accept(obj);
             }
         };
     }
+
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2021/12/16 10:12
+     * @Description:  判断对象是否为空
+     * @Params: [obj]
+     * @Return: boolean
+     */
+
+    public static boolean isEmpty(Object obj) {
+
+        if (obj == null || "null".equals(obj.toString()) || "".equals(obj.toString())) {
+            return true;
+        }
+
+        if (obj instanceof String) {
+            return ((String) obj).trim().length() == 0;
+        }
+
+        if (obj instanceof Collection) {
+            return ((Collection) obj).isEmpty();
+        }
+
+        if (obj instanceof Map) {
+            return ((Map) obj).isEmpty();
+        }
+
+        return false;
+    }
 }
+
 
 
 ```

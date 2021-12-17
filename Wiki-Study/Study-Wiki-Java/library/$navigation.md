@@ -185,6 +185,9 @@
         - [代码开发](?file=003-java进阶知识/09-页面以及下载部分证件功能/01-生成下载专家证件/02-代码开发 "代码开发")
 - **java 获取项目文件流**
     - [java获取文件流遇到的问题](?file=003-java进阶知识/10-java 获取项目文件流/01-java获取文件流遇到的问题 "java获取文件流遇到的问题")
+- **java-线程**
+    - **springBoot项目中使用异步多线程**
+        - [springBoot中使用多线程](?file=003-java进阶知识/11-java-线程/01-springBoot项目中使用异步多线程/01-springBoot中使用多线程 "springBoot中使用多线程")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -208,6 +211,7 @@
         - [自定义一二三四中文排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/03-自定义一二三四中文排序 "自定义一二三四中文排序")
         - [ list-Stream以及Comparator 二级排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list-Stream以及Comparator 二级排序 " list-Stream以及Comparator 二级排序")
         - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
+        - [函数式接口-消费者组合去除ifelse](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/06-函数式接口-消费者组合去除ifelse "函数式接口-消费者组合去除ifelse")
 
 ##### java 后端之maven
 - **maven学习记录**
