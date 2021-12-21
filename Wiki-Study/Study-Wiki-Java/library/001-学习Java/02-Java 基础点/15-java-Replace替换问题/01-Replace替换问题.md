@@ -1,6 +1,5 @@
 # java replace替换问题
 
-
 这两者有些人很容易搞混，因此我在这里详细讲述下。
 
 replace的参数是char和CharSequence，即可以支持字符的替换，也支持字符串的替换（CharSequence即字符串序列的意思,说白了也就是字符串）；
@@ -15,7 +14,6 @@ replaceAll的参数是regex，即基于规则表达式的替换，比如：可�
 
 如果只想替换第一次出现的，可以使用replaceFirst()，这个方法也是基于规则表达式的替换，但与replaceAll()不同的是，只替换第一次出现的字符串。
 
-
 ```java
   String a = "我的\n朋友\n叫做\n小明\"";
             System.out.println(a);
@@ -29,4 +27,3 @@ replaceAll的参数是regex，即基于规则表达式的替换，比如：可�
 // 小明"
 // 我的\n朋友\n叫做\n小明\"
 ```
-
