@@ -1,5 +1,6 @@
 # spring 介绍
 
+
 ## 回顾
 
 	*  Struts与Hibernate可以做什么事？
@@ -101,6 +102,7 @@ AOP
 切面举例：事务、日志、权限;
 
 ### spring 概述
+
 
 Spring框架，可以解决对象创建以及对象之间依赖关系的一种框架。
 且可以和其他框架一起使用；Spring与Struts,  Spring与hibernate
@@ -532,4 +534,4 @@ web.xml
 4） 代码以及配置
 ```
 
-# # day36_Spring框架核心
+## day36_Spring框架核心

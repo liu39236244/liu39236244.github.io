@@ -78,7 +78,7 @@ docker: Cannot connect to the Docker daemon. Is the docker daemon running on thi
 如果是 Centos 7 以上版本，则使用下面的命令启动 Docker 服务
 
 systemctl start docker
-Java
+
 如果是较低的版本，则使用下面的命令启动 Docker 服务
 
 service docker start
