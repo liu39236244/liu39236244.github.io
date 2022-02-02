@@ -153,6 +153,10 @@
                 - [手机推荐](?file=000-Common/01-EverythingRecord/06-生活记录/02-科技/01-手机/01-手机推荐 "手机推荐")
     - **md 特效总结**
         - [md 特效文件总结](?file=000-Common/01-EverythingRecord/07-md 特效总结/01-md 特效文件总结 "md 特效文件总结")
+    - **学科基础知识**
+        - **计算机基础知识**
+            - [二进制位代表数值范围](?file=000-Common/01-EverythingRecord/20-学科基础知识/01-计算机基础知识/01-二进制位代表数值范围 "二进制位代表数值范围")
+        - **数据结构**
 - **Bug漏洞记录**
     - **java组件漏洞**
         - [log4j2漏洞在springboot中解决](?file=000-Common/02-Bug漏洞记录/01-java组件漏洞/01-log4j2漏洞在springboot中解决 "log4j2漏洞在springboot中解决")
