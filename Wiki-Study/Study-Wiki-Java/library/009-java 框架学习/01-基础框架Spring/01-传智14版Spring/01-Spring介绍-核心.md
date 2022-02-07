@@ -1,4 +1,4 @@
-# spring 介绍
+# spring 介绍 36天
 
 
 ## 回顾
@@ -103,7 +103,7 @@ AOP
 
 ### spring 概述
 
-
+```
 Spring框架，可以解决对象创建以及对象之间依赖关系的一种框架。
 且可以和其他框架一起使用；Spring与Struts,  Spring与hibernate
 (起到整合（粘合）作用的一个框架)
@@ -118,6 +118,7 @@ Spring提供了一站式解决方案：
  也可以使用spring的对hibernate操作的封装
 5）Spring AOP  切面编程
 6）SpringEE   spring 对javaEE其他模块的支持
+```
 
 ### 开发步骤
 
@@ -242,6 +243,7 @@ public class App {
 
 #### 1  创建对象
 
+```
 SpringIOC容器，是spring核心内容。
 作用： 创建对象 & 处理对象的依赖关系
 
@@ -252,6 +254,8 @@ IOC容器创建对象：
 3） 工厂创建对象
 工厂类，静态方法创建对象
 工厂类，非静态方法创建对象
+```
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -312,12 +316,14 @@ IOC容器创建对象：
 
 #### 2 对象依赖注入
 
+```
 Spring中，如何给对象的属性赋值?  【DI, 依赖注入】
 1) 通过构造函数
 2) 通过set方法给属性注入值
 3) p名称空间
 4)自动装配(了解)
 5) 注解
+```
 
 ##### 1 set方法注入
 
@@ -484,6 +490,8 @@ xmlns:context="http://www.springframework.org/schema/context"
 	@Component   指定把一个对象加入IOC容器
 ```
 
+```
+
 @Repository   作用同@Component； 在持久层使用
 @Service      作用同@Component； 在业务逻辑层使用
 @Controller    作用同@Component； 在控制层使用
@@ -493,6 +501,7 @@ xmlns:context="http://www.springframework.org/schema/context"
 总结：
 1） 使用注解，可以简化配置，且可以把对象加入IOC容器,及处理依赖关系(DI)
 2） 注解可以和XML配置一起使用。
+```
 
 ## Spring与Struts框架整合 （这个不用怎么看，以后用这个可能性也不大，这里作为了解）
 
@@ -533,5 +542,3 @@ web.xml
 ```
 4） 代码以及配置
 ```
-
-## day36_Spring框架核心
