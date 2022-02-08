@@ -212,6 +212,7 @@
         - [ list-Stream以及Comparator 二级排序](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/04- list-Stream以及Comparator 二级排序 " list-Stream以及Comparator 二级排序")
         - [List 转Map](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/05-List 转Map "List 转Map")
         - [函数式接口-消费者组合去除ifelse](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/06-函数式接口-消费者组合去除ifelse "函数式接口-消费者组合去除ifelse")
+        - [新特性中groupBy的用法](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/10-新特性中groupBy的用法 "新特性中groupBy的用法")
 
 ##### java 后端之maven
 - **maven学习记录**

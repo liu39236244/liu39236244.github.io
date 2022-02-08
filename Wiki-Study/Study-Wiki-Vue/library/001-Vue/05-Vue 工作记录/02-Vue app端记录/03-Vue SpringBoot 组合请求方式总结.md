@@ -187,6 +187,10 @@ http://10.0.12.66:27502/gp-xsn/baseLog/exportBaseLog?baseLogMultiTableDto=%7B"pa
 ```
 
 ```js
+
+// 日志导出
+export const exportBaseLog = exportExcelUrl + "/exportBaseLog?baseLogMultiTableDto="
+
    window.location.href =
             log.exportExcelUrl + "/exportBaseLog?baseLogMultiTableDto="+ encodeURIComponent(JSON.stringify(this.listQuery), 'utf-8')
 ```
