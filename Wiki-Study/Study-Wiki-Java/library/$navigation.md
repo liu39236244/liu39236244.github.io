@@ -148,7 +148,6 @@
         - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
         - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
-    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -240,7 +239,9 @@
 ##### java 框架学习
 - **基础框架Spring**
     - **传智14版Spring**
-        - [Spring介绍](?file=009-java 框架学习/01-基础框架Spring/01-传智14版Spring/01-Spring介绍 "Spring介绍")
+        - [Spring介绍-核心](?file=009-java 框架学习/01-基础框架Spring/01-传智14版Spring/01-Spring介绍-核心 "Spring介绍-核心")
+        - [代理模式-aop编程-jdbc支持](?file=009-java 框架学习/01-基础框架Spring/01-传智14版Spring/02-代理模式-aop编程-jdbc支持 "代理模式-aop编程-jdbc支持")
+        - [spring事务管理](?file=009-java 框架学习/01-基础框架Spring/01-传智14版Spring/03-spring事务管理 "spring事务管理")
     - **Spring中ioc中单例多例**
         - [测试Controller-Service中单例多例](?file=009-java 框架学习/01-基础框架Spring/100-Spring中ioc中单例多例/01-测试Controller-Service中单例多例 "测试Controller-Service中单例多例")
 - **基础框架Hibernate**
@@ -254,9 +255,15 @@
         - [hibernate查询、连接池、二级缓存](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/04-hibernate查询、连接池、二级缓存 "hibernate查询、连接池、二级缓存")
         - [二级缓存](?file=009-java 框架学习/02-基础框架Hibernate/01-传智14学习/05-二级缓存 "二级缓存")
 - **myBatis**
-    - **myBatis学习**
+    - **mybatis 黑马笔记**
+        - [公用](?file=009-java 框架学习/03-myBatis/01-mybatis 黑马笔记/01-公用 "公用")
+        - [mybatis基础使用](?file=009-java 框架学习/03-myBatis/01-mybatis 黑马笔记/02-mybatis基础使用 "mybatis基础使用")
+        - [mybatis进阶](?file=009-java 框架学习/03-myBatis/01-mybatis 黑马笔记/03-mybatis进阶 "mybatis进阶")
     - **myBatis问题记录**
         - [mybatis中自增字段](?file=009-java 框架学习/03-myBatis/02-myBatis问题记录/01-mybatis中自增字段 "mybatis中自增字段")
+- **maven**
+    - [公用](?file=009-java 框架学习/04-maven/01-公用 "公用")
+    - [maven](?file=009-java 框架学习/04-maven/02-maven "maven")
 - **tkMybatis**
     - **tk与数据库字段问题**
         - [自增字段设置](?file=009-java 框架学习/10-tkMybatis/02-tk与数据库字段问题/01-自增字段设置 "自增字段设置")
@@ -276,6 +283,7 @@
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
 
 ##### java-JVM
+- **jvm 公共**
 - **jvm调优**
     - **jvm 前置知识基础**
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
