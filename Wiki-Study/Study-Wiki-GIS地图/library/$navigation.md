@@ -15,8 +15,6 @@
     - [Ol.Map 参数方法详解](?file=002-学习总结/01-Openlayers Study/05-Ol.Map 参数方法详解 "Ol.Map 参数方法详解")
     - [Example-](?file=002-学习总结/01-Openlayers Study/06-Example- "Example-")
 
-##### Openlayers 练习项目
-
 ##### OlWind 流线学习
 - **OlWind study记录**
     - [OlWind 配置参数](?file=004-OlWind 流线学习/01-OlWind study记录/01-OlWind 配置参数 "OlWind 配置参数")
