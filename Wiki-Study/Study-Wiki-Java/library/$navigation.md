@@ -106,15 +106,20 @@
         - [bucketSort桶排序](?file=001-学习Java/10-十大经典排序算法/01-hustcc 总结的算法/09-bucketSort桶排序 "bucketSort桶排序")
         - [radixSort基数排序](?file=001-学习Java/10-十大经典排序算法/01-hustcc 总结的算法/10-radixSort基数排序 "radixSort基数排序")
         - [时间复杂度_空间复杂度](?file=001-学习Java/10-十大经典排序算法/01-hustcc 总结的算法/11-时间复杂度_空间复杂度 "时间复杂度_空间复杂度")
-- **Java线程并发**
+- **Java线程**
     - **线程基础**
-        - [线程基础](?file=001-学习Java/11-Java线程并发/01-线程基础/01-线程基础 "线程基础")
+        - [线程基础](?file=001-学习Java/11-Java线程/01-线程基础/01-线程基础 "线程基础")
     - **线程调用**
-        - [java 线程调用总结](?file=001-学习Java/11-Java线程并发/02-线程调用/02-java 线程调用总结 "java 线程调用总结")
+        - [java 线程调用总结](?file=001-学习Java/11-Java线程/02-线程调用/02-java 线程调用总结 "java 线程调用总结")
     - **线程通信**
-        - [线程通信](?file=001-学习Java/11-Java线程并发/03-线程通信/01-线程通信 "线程通信")
+        - [线程通信](?file=001-学习Java/11-Java线程/03-线程通信/01-线程通信 "线程通信")
     - **PassJava教程多线程**
-        - [ Volatitle](?file=001-学习Java/11-Java线程并发/10-PassJava教程多线程/01- Volatitle " Volatitle")
+        - [ Volatitle](?file=001-学习Java/11-Java线程/10-PassJava教程多线程/01- Volatitle " Volatitle")
+    - **java架构师之路线程学习**
+        - **入门**
+            - [线程入门](?file=001-学习Java/11-Java线程/11-java架构师之路线程学习/01-入门/01-线程入门 "线程入门")
+    - **线程使用案例**
+        - [springBoot中使用多线程](?file=001-学习Java/11-Java线程/20-线程使用案例/01-springBoot中使用多线程 "springBoot中使用多线程")
 - **泛型**
     - **泛型记录**
         - [泛型上下限问题](?file=001-学习Java/12-泛型/01-泛型记录/03-泛型上下限问题 "泛型上下限问题")
@@ -148,11 +153,13 @@
         - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
         - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
+    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
     - [Collection集合](?file=003-java进阶知识/04- java 集合进阶/01-Collection集合 "Collection集合")
     - [List 遍历过程的删除操作](?file=003-java进阶知识/04- java 集合进阶/02-List 遍历过程的删除操作 "List 遍历过程的删除操作")
+    - [集合的并集-交集-差集](?file=003-java进阶知识/04- java 集合进阶/03-集合的并集-交集-差集 "集合的并集-交集-差集")
 - **Map**
     - **HashMap**
         - [hashMap讲解](?file=003-java进阶知识/05-Map/02-HashMap/01-hashMap讲解 "hashMap讲解")
@@ -189,9 +196,25 @@
         - [代码开发](?file=003-java进阶知识/09-页面以及下载部分证件功能/01-生成下载专家证件/02-代码开发 "代码开发")
 - **java 获取项目文件流**
     - [java获取文件流遇到的问题](?file=003-java进阶知识/10-java 获取项目文件流/01-java获取文件流遇到的问题 "java获取文件流遇到的问题")
-- **java-线程**
-    - **springBoot项目中使用异步多线程**
-        - [springBoot中使用多线程](?file=003-java进阶知识/11-java-线程/01-springBoot项目中使用异步多线程/01-springBoot中使用多线程 "springBoot中使用多线程")
+- **工作流**
+    - **Activiti工作流**
+    - **Camunda工作流**
+        - [介绍](?file=003-java进阶知识/12-工作流/002-Camunda工作流/01-介绍 "介绍")
+- **池化技术**
+    - **基础知识**
+        - [基础介绍](?file=003-java进阶知识/13-池化技术/01-基础知识/01-基础介绍 "基础介绍")
+    - **案例**
+        - [案例博主](?file=003-java进阶知识/13-池化技术/02-案例/00-案例博主 "案例博主")
+        - [person多线程使用池化技术](?file=003-java进阶知识/13-池化技术/02-案例/01-person多线程使用池化技术 "person多线程使用池化技术")
+        - [httpFactory有疑问案例](?file=003-java进阶知识/13-池化技术/02-案例/02-httpFactory有疑问案例 "httpFactory有疑问案例")
+    - **httpClient使用池化技术**
+        - [线上成功使用案例1](?file=003-java进阶知识/13-池化技术/03-httpClient使用池化技术/01-线上成功使用案例1 "线上成功使用案例1")
+        - [简单方式创建HttpClient对象](?file=003-java进阶知识/13-池化技术/03-httpClient使用池化技术/02-简单方式创建HttpClient对象 "简单方式创建HttpClient对象")
+- **报表**
+    - **润乾报表**
+        - [公用](?file=003-java进阶知识/15-报表/01-润乾报表/01-公用 "公用")
+        - [sql数据源案例](?file=003-java进阶知识/15-报表/01-润乾报表/02-sql数据源案例 "sql数据源案例")
+    - **其他报表工具**
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -292,7 +315,6 @@
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
 
 ##### java-JVM
-- **jvm 公共**
 - **jvm调优**
     - **jvm 前置知识基础**
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
