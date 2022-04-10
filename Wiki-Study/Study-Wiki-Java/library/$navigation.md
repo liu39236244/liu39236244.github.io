@@ -153,7 +153,6 @@
         - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
         - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
-    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -197,7 +196,6 @@
 - **java 获取项目文件流**
     - [java获取文件流遇到的问题](?file=003-java进阶知识/10-java 获取项目文件流/01-java获取文件流遇到的问题 "java获取文件流遇到的问题")
 - **工作流**
-    - **Activiti工作流**
     - **Camunda工作流**
         - [介绍](?file=003-java进阶知识/12-工作流/002-Camunda工作流/01-介绍 "介绍")
 - **池化技术**
@@ -214,7 +212,6 @@
     - **润乾报表**
         - [公用](?file=003-java进阶知识/15-报表/01-润乾报表/01-公用 "公用")
         - [sql数据源案例](?file=003-java进阶知识/15-报表/01-润乾报表/02-sql数据源案例 "sql数据源案例")
-    - **其他报表工具**
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -296,6 +293,12 @@
     - **黑马springmvc**
         - [公用](?file=009-java 框架学习/05-springmvc/01-黑马springmvc/01-公用 "公用")
         - [基础知识](?file=009-java 框架学习/05-springmvc/01-黑马springmvc/02-基础知识 "基础知识")
+- **spring-boot**
+    - [公用](?file=009-java 框架学习/06-spring-boot/00-公用 "公用")
+    - **springboot尚硅谷**
+        - [公用](?file=009-java 框架学习/06-spring-boot/01-springboot尚硅谷/00-公用 "公用")
+        - [第一节](?file=009-java 框架学习/06-spring-boot/01-springboot尚硅谷/01-第一节 "第一节")
+        - [springboot入门程序解读](?file=009-java 框架学习/06-spring-boot/01-springboot尚硅谷/02-springboot入门程序解读 "springboot入门程序解读")
 - **tkMybatis**
     - **tk与数据库字段问题**
         - [自增字段设置](?file=009-java 框架学习/10-tkMybatis/02-tk与数据库字段问题/01-自增字段设置 "自增字段设置")
@@ -315,6 +318,7 @@
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
 
 ##### java-JVM
+- **jvm 公共**
 - **jvm调优**
     - **jvm 前置知识基础**
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
