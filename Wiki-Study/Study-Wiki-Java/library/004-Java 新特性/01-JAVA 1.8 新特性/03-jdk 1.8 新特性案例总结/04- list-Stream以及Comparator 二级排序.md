@@ -2,7 +2,7 @@
 
 
 
-## 基础使用
+## List基础使用
 
 ```java
 package com.common;
@@ -84,7 +84,7 @@ class Employee {
 ```
 
 
-## 自然排序，三列
+## List自然排序，三列
 
 
 * 原博主：https://blog.csdn.net/kang_jie/article/details/106627814?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf
@@ -247,7 +247,7 @@ User(name=b, age=2, gameLevel=4, birthday=Wed Nov 11 10:59:14 CST 2020, createTi
 ```
 
 
-## 自定义对象时间排序2 
+## List自定义对象时间排序2 
 
 
 > 切记。如果分页的话还是得老老实实用sql 的多级排序，你比如我想要查询每天不同企业出入人员统计，假设总共有11各企业，分页是10条，然后这样只能对已经分页了的数据进行二级排序，假设第二页的那个企业我想要排在第一页，但是呢没有被分页查到怎么办？ 所以 还是会有这个问题的切记
@@ -296,6 +296,123 @@ public List<PeopleKkInOutCountDto> getPeopleKkInOutList(PeopleKkInOutCountDto pe
 
     }
 ```
+
+## List含有空值的List自定义对象排序
+
+### 一、单字段排序
+先造点数据
+
+```java
+pigs.add(new Pig(1, "猪爸爸", 31, "M", false));
+pigs.add(new Pig(2, "猪妈妈", 28, "F", true));
+pigs.add(new Pig(3, "乔治", 2, "M", false));
+pigs.add(new Pig(4, "佩奇", 5, "F", false));
+```
+### 按照id升序
+
+```java
+pigs.sort(comparing(Pig::getId));
+
+```
+
+### 按照id降序
+
+```java
+pigs.sort(comparing(Pig::getId).reversed());
+
+```
+
+### 二、多字段排序
+
+### 根据性别gender升序,再以年龄age升序
+
+```java
+pigs.sort(
+        comparing(Pig::getGender)
+                .thenComparing(Pig::getAge)
+);
+```
+
+### 根据性别gender升序,再以年龄age降序
+注意：下面的reversed()在thenComparing()里面
+
+```java
+pigs.sort(
+        comparing(Pig::getGender)
+                .thenComparing(comparing(Pig::getAge).reversed())
+);
+```
+
+### 根据性别gender降序,再以年龄age升序
+
+```java
+pigs.sort(
+        comparing(Pig::getGender).reversed()
+                .thenComparing(Pig::getAge)
+);
+
+```
+
+### 根据性别gender降序,再以年龄age降序
+
+注意：下面的reversed()在thenComparing()外面
+
+pigs.sort(
+        comparing(Pig::getGender)
+                .thenComparing(Pig::getAge)
+                .reversed()
+);
+
+### 三、Null值参与排序
+
+如果集合中某个数据的某个字段值是null，那就得特殊处理，否则报异常。
+
+再添加一行数据，其中age=null
+
+pigs.add(new Pig(5, "米可", null, "F", false));
+
+### null值排在前面
+
+pigs.sort(comparing(Pig::getAge,  Comparator.nullsFirst(Integer::compareTo)));
+
+### null值排在后面
+
+pigs.sort(comparing(Pig::getAge,  Comparator.nullsLast(Integer::compareTo)));
+
+### 四、同时Null值排序和多字段排序
+
+学了上面的知识，考一考如何同时处理Null值排序和多字段排序？
+
+那就是下面这么写
+
+pigs.sort(
+        comparing(Pig::getGender)
+                .thenComparing(Pig::getAge, Comparator.nullsFirst(Integer::compareTo))
+);
+
+### 五、List<Map<String, Object>> 排序
+
+```java
+List<Map<String, Object>> cats = new ArrayList<>();
+Map<String,Object> cat1 = new HashMap<>();
+cat1.put("name", "cat1");
+cat1.put("age", 10);
+cats.add(cat1);
+
+Map<String,Object> cat2 = new HashMap<>();
+cat2.put("name", "cat2");
+cat2.put("age", 2);
+cats.add(cat2);
+
+List<Map<String, Object>> sortedCats = cats.stream().sorted((map1, map2) -> {
+    int age1 = (int) map1.getOrDefault("age", 0);
+    int age2 = (int) map2.getOrDefault("age", 0);
+    return age1 - age2;
+}).collect(Collectors.toList());
+
+sortedCats.forEach(System.out::println);
+```
+
 
 ## 2 List set Map 的流排序 
 
@@ -622,3 +739,5 @@ for (int i = 0; i < infoIds.size(); i++) {
 }
 
 ```
+
+
