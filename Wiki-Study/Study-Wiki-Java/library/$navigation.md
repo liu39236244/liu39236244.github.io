@@ -109,8 +109,14 @@
 - **Java线程**
     - **线程基础**
         - [线程基础](?file=001-学习Java/11-Java线程/01-线程基础/01-线程基础 "线程基础")
+        - [线程中断](?file=001-学习Java/11-Java线程/01-线程基础/02-线程中断 "线程中断")
+        - **Callable创建线程返回值**
+            - [Callable记录](?file=001-学习Java/11-Java线程/01-线程基础/03-Callable创建线程返回值/01-Callable记录 "Callable记录")
+            - [案例使用Demo](?file=001-学习Java/11-Java线程/01-线程基础/03-Callable创建线程返回值/03-案例使用Demo "案例使用Demo")
     - **线程调用**
-        - [java 线程调用总结](?file=001-学习Java/11-Java线程/02-线程调用/02-java 线程调用总结 "java 线程调用总结")
+        - [java ExecutorService 线程调用总结](?file=001-学习Java/11-Java线程/02-线程调用/02-java ExecutorService 线程调用总结 "java ExecutorService 线程调用总结")
+        - [java 多线程执行等待场景](?file=001-学习Java/11-Java线程/02-线程调用/03-java 多线程执行等待场景 "java 多线程执行等待场景")
+        - [批量执行异步任务之CompletionService](?file=001-学习Java/11-Java线程/02-线程调用/04-批量执行异步任务之CompletionService "批量执行异步任务之CompletionService")
     - **线程通信**
         - [线程通信](?file=001-学习Java/11-Java线程/03-线程通信/01-线程通信 "线程通信")
     - **PassJava教程多线程**
@@ -153,6 +159,7 @@
         - [Java发送http请求工具类总结](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/01-Java发送http请求工具类总结 "Java发送http请求工具类总结")
         - [post请求遇到的问题记录](?file=003-java进阶知识/02-对接相关技术/04-java 发送Http请求.md/02-post请求遇到的问题记录 "post请求遇到的问题记录")
 - **java 后台上传文件**
+    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -196,6 +203,7 @@
 - **java 获取项目文件流**
     - [java获取文件流遇到的问题](?file=003-java进阶知识/10-java 获取项目文件流/01-java获取文件流遇到的问题 "java获取文件流遇到的问题")
 - **工作流**
+    - **Activiti工作流**
     - **Camunda工作流**
         - [介绍](?file=003-java进阶知识/12-工作流/002-Camunda工作流/01-介绍 "介绍")
 - **池化技术**
@@ -212,6 +220,13 @@
     - **润乾报表**
         - [公用](?file=003-java进阶知识/15-报表/01-润乾报表/01-公用 "公用")
         - [sql数据源案例](?file=003-java进阶知识/15-报表/01-润乾报表/02-sql数据源案例 "sql数据源案例")
+    - **其他报表工具**
+- **流程**
+    - **camunda**
+        - **camunda基础**
+            - [camunda](?file=003-java进阶知识/20-流程/01-camunda/01-camunda基础/01-camunda "camunda")
+        - **camunda案例**
+    - **activity**
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -318,7 +333,6 @@
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
 
 ##### java-JVM
-- **jvm 公共**
 - **jvm调优**
     - **jvm 前置知识基础**
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
@@ -352,3 +366,10 @@
     - **jmeter**
         - [jmeter介绍](?file=101-测试相关/01-压力测试工具/01-jmeter/01-jmeter介绍 "jmeter介绍")
         - [jmeter使用](?file=101-测试相关/01-压力测试工具/01-jmeter/02-jmeter使用 "jmeter使用")
+
+##### 数据结构专栏
+- **数据结构基础知识**
+    - **基础**
+    - **Hash表**
+        - [hash表介绍](?file=200-数据结构专栏/01-数据结构基础知识/02-Hash表/01-hash表介绍 "hash表介绍")
+- **数据结构other**
