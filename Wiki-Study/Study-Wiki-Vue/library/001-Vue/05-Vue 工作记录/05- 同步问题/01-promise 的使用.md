@@ -153,4 +153,33 @@ async function asyncAwaitIsYourNewBestFriend () {
 博主写的这个博客很棒！
 
 
+## 一次等待多个请求执行完成 在执行剩下接口
+
+Promise
+
+```js
+       let res1 = this.axios.get(this.baseUrl+'/***接口地址').then((res) => {
+          if(res.data.code==1){
+            this.optCategory = res.data.data
+          }
+        })
+        let res2 = this.axios.get(this.baseUrl+'/***接口地址'+'?code='+'DANGER_YHDJ').then((res) => {
+          if(res.data.code==1){
+            this.optLevel=res.data.data;
+          }
+        })
+        let res3 = this.axios.get(this.baseUrl+'/***接口地址').then((res) => {
+          if (res.data.code == 1) {
+            this.checkSource = res.data.data;
+          }
+        })
+ let res4 = this.axios.get(this.baseUrl+'/***接口地址/'+this.qyId).then((res) => {
+          if (res.data.code == 1) {
+            this.syb=res.data.data
+          }
+        })
+        
+        Promise.all([res1,res2,res3,res4]).then(() => {})
+```
+
 

@@ -11,6 +11,9 @@
 while循环方式 ，
 
 ```java
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 List<HazardousPersonnel> listQyInfo = hazardousPersonnelMapper.getQyInfo(dto);
 int poolSize = 2;
 if (listQyInfo.size() > 0) {
@@ -26,7 +29,7 @@ if (listQyInfo.size() > 0) {
                     //超时时间，没人调用时就会释放
                     3,
                     TimeUnit.SECONDS,
-                    new LinkedBlockingQueue<>(3),
+                    new LinkedBlockingQueue<>(listQyInfo.size()),
                     Executors.defaultThreadFactory(),
                     new ThreadPoolExecutor.AbortPolicy()
             );
@@ -69,7 +72,7 @@ if (listQyInfo.size() > 0) {
                     //超时时间，没人调用时就会释放
                     3,  
                     TimeUnit.SECONDS,
-                    new LinkedBlockingQueue<>(3),
+                    new LinkedBlockingQueue<>(listQyInfo.size()),
                     Executors.defaultThreadFactory(),
                     new ThreadPoolExecutor.AbortPolicy()
             );

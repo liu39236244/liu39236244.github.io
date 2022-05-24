@@ -184,6 +184,7 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
     - **sql语句入坑总结**
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
     - **系统操作语句**
@@ -199,7 +200,10 @@
     - [postgresql 拓展1](?file=007-sql 相关/04-Postgresql相关/03-postgresql 拓展1 "postgresql 拓展1")
     - [postgresql 主从备份记录](?file=007-sql 相关/04-Postgresql相关/04-postgresql 主从备份记录 "postgresql 主从备份记录")
 - **SQLSERVER相关**
-    - [SqlServer 介绍](?file=007-sql 相关/05-SQLSERVER相关/01-SqlServer 介绍 "SqlServer 介绍")
+    - **sqlserver基础**
+        - [SqlServer 介绍](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/01-SqlServer 介绍 "SqlServer 介绍")
+        - [删除数据库](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/02-删除数据库 "删除数据库")
+        - [sqlserver-Win10-2019](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/03-sqlserver-Win10-2019 "sqlserver-Win10-2019")
     - [SqlServer 公用查询语句](?file=007-sql 相关/05-SQLSERVER相关/02-SqlServer 公用查询语句 "SqlServer 公用查询语句")
     - **sql server 数据类型对应jdbcType**
         - [sql Server 字段对应JDBCTYPE](?file=007-sql 相关/05-SQLSERVER相关/03-sql server 数据类型对应jdbcType/01-sql Server 字段对应JDBCTYPE "sql Server 字段对应JDBCTYPE")
@@ -220,6 +224,7 @@
 - **达梦数据库**
     - [公用](?file=007-sql 相关/09-达梦数据库/01-公用 "公用")
     - [数据库字段存储](?file=007-sql 相关/09-达梦数据库/02-数据库字段存储 "数据库字段存储")
+    - [达梦数据库函数使用](?file=007-sql 相关/09-达梦数据库/03-达梦数据库函数使用 "达梦数据库函数使用")
 
 ##### 备忘录
 - [备忘录](?file=008-备忘录/01-备忘录 "备忘录")
@@ -272,6 +277,7 @@
     - [sparkStreaming 操作](?file=011-ws Company Study/04-算子总结/04-sparkStreaming 操作 "sparkStreaming 操作")
 - **数据库**
     - [mysql](?file=011-ws Company Study/05-数据库/01-mysql "mysql")
+- **数据加载**
 
 ##### 开发中的设计模式
 - **设计模式**
@@ -327,6 +333,7 @@
     - [服务器tomcat 80 问题](?file=019-MyService 服务器总结/01-service 服务器常见问题/01-服务器tomcat 80 问题 "服务器tomcat 80 问题")
 
 ##### 零碎记录
+- **零碎记录之-搜索技巧**
 - **计算机端口问题**
     - [端口定义范围](?file=020-零碎记录/02-计算机端口问题/01-端口定义范围 "端口定义范围")
 
@@ -359,8 +366,15 @@
         - [ES6 解构](?file=021-JS的记录/08-ES6 语法/00-ES6 语法公用记录/01-ES6 解构 "ES6 解构")
     - **ES 6 语法学习记录**
         - [公用](?file=021-JS的记录/08-ES6 语法/01-ES 6 语法学习记录/00-公用 "公用")
+    - **ES6-菜鸟教程**
+        - [ES6新语法公用](?file=021-JS的记录/08-ES6 语法/10-ES6-菜鸟教程/00-ES6新语法公用 "ES6新语法公用")
+        - [菜鸟教程](?file=021-JS的记录/08-ES6 语法/10-ES6-菜鸟教程/01-菜鸟教程 "菜鸟教程")
+- **javaScript-mdmWebdocs**
+    - **js内置对象**
+        - [Object](?file=021-JS的记录/20-javaScript-mdmWebdocs/01-js内置对象/01-Object "Object")
 
 ##### Html css 记录
+- **Html 基础**
 - **css样式记录**
     - [ div 定位 Absolute（绝对定位）与relative（相对定位）](?file=022-Html css 记录/02-css样式记录/03- div 定位 Absolute（绝对定位）与relative（相对定位） " div 定位 Absolute（绝对定位）与relative（相对定位）")
 
@@ -412,6 +426,10 @@
         - [第二季-曲谱-各种音](?file=030-生活记录/02-吉他/02-新思维教程/06-第二季-曲谱-各种音 "第二季-曲谱-各种音")
         - [和声](?file=030-生活记录/02-吉他/02-新思维教程/07-和声 "和声")
         - [节奏-扫弦](?file=030-生活记录/02-吉他/02-新思维教程/08-节奏-扫弦 "节奏-扫弦")
+- **日语学习**
+    - **小a老师的**
+    - **梦子老师日语课程**
+    - **日语歌曲学习**
 - **书籍**
     - **每日书籍**
         - **你要对得起你所受的苦**
@@ -453,7 +471,6 @@
         - [另外教唱](?file=10002-生活记录/04-日语学习/04-日语歌曲学习/03-另外教唱 "另外教唱")
         - **《breave heart 》**
             - [brave heart  数码宝贝进化曲](?file=10002-生活记录/04-日语学习/04-日语歌曲学习/04-《breave heart 》/01-brave heart  数码宝贝进化曲 "brave heart  数码宝贝进化曲")
-    - **日语零散记录**
     - **语境练习**
         - **零散记录**
             - **零散记录**
@@ -462,6 +479,8 @@
         - **天气**
             - [讨论今天天气](?file=10002-生活记录/04-日语学习/100-语境练习/01-天气/01-讨论今天天气 "讨论今天天气")
             - [对应单词](?file=10002-生活记录/04-日语学习/100-语境练习/01-天气/02-对应单词 "对应单词")
+    - **单词对应语境**
+        - ** 天气**
 - **医术**
     - **高血压**
         - [ 静脉血栓](?file=10002-生活记录/05-医术/01-高血压/01- 静脉血栓 " 静脉血栓")
@@ -505,8 +524,17 @@
     - **amWiki**
         - [amwiki 搭建](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
         - [博客搭建参考](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
+- **服务器选择**
 - **github教程**
     - [github教程](?file=10004-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
 - **blog页面美化**
     - **右下角卡通角色**
         - [添加页面卡通角色](?file=10004-blog 博客搭建.md/04-blog页面美化/01-右下角卡通角色/01-添加页面卡通角色 "添加页面卡通角色")
+
+##### 复看知识点
+- **java**
+    - **java线程**
+        - [线程基础问题记录](?file=10005-复看知识点/01-java/02-java线程/01-线程基础问题记录 "线程基础问题记录")
+    - **springboot**
+        - **springboot知识点**
+            - [基础知识点](?file=10005-复看知识点/01-java/100-springboot/01-springboot知识点/01-基础知识点 "基础知识点")
