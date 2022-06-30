@@ -14,3 +14,4 @@ mongodump -h 10.0.2.4 --port 27017  -d xzpx_mongodb -o C:\Users\Administrator\De
 mongorestore -d xzpx_mongodb --drop C:\Users\Administrator\Desktop\xzpx_mongodb
 ```
 
+/opt/module/mongodb-linux-x86_64-4.0.1/bin/mongodump -h 127.0.0.1 --port 27017  -d gp-gcwz  -o /home/sysadm/guochu_bug_fixed_need/data_backup/gp-gcwz

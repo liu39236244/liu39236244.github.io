@@ -202,6 +202,7 @@
         - [代码开发](?file=003-java进阶知识/09-页面以及下载部分证件功能/01-生成下载专家证件/02-代码开发 "代码开发")
 - **java 获取项目文件流**
     - [java获取文件流遇到的问题](?file=003-java进阶知识/10-java 获取项目文件流/01-java获取文件流遇到的问题 "java获取文件流遇到的问题")
+    - [视频播放player可快进](?file=003-java进阶知识/10-java 获取项目文件流/02-视频播放player可快进 "视频播放player可快进")
 - **工作流**
     - **Activiti工作流**
     - **Camunda工作流**
@@ -227,6 +228,13 @@
             - [camunda](?file=003-java进阶知识/20-流程/01-camunda/01-camunda基础/01-camunda "camunda")
         - **camunda案例**
     - **activity**
+- **跨域问题**
+    - **springboot后端处理跨域问题**
+        - **三种方式解决跨域**
+            - [公用](?file=003-java进阶知识/21-跨域问题/01-springboot后端处理跨域问题/01-三种方式解决跨域/00-公用 "公用")
+            - [三种方式解决跨域](?file=003-java进阶知识/21-跨域问题/01-springboot后端处理跨域问题/01-三种方式解决跨域/01-三种方式解决跨域 "三种方式解决跨域")
+- **Request-Response请求头问题**
+    - [springboot在请求头中保存值返回前段](?file=003-java进阶知识/22-Request-Response请求头问题/01-springboot在请求头中保存值返回前段 "springboot在请求头中保存值返回前段")
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**

@@ -44,7 +44,7 @@ spring内部是有指定版本的，但如果自动指定则对应的包会被sp
 ```xml
     <properties>
         <!-- log4j2 漏洞-->
-        <log4j2.version>2.15.0</log4j2.version>
+        <log4j2.version>2.17.1</log4j2.version>
     </properties>
 
 

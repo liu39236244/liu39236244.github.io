@@ -65,7 +65,7 @@ if (listQyInfo.size() > 0) {
 
 // ExecutorService pool = Executors.newFixedThreadPool(poolSize);
  ThreadPoolExecutor pool = new ThreadPoolExecutor(
-                    //核心线程池大小
+                    //核心线程池大小,有的电脑这个参数设置为2 ，运行会报错
                     2,
                     //获取CPU核数 System.out.println(Runtime.getRuntime().availableProcessors());
                     poolSize,

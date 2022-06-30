@@ -1,5 +1,9 @@
 # win redis 基础
 
+## redis 常用命令
+
+[redis 常用命令](https://blog.csdn.net/wlchina123/article/details/120388361)
+
 ## win redis 下安装启动
 
 (原文)[https://www.cnblogs.com/yunqing/p/10605934.html]
@@ -87,6 +91,25 @@ redis 解压文档中也有一份
 ![](assets/001/01/01/02-1614937468664.png)
 
 
+
+### 添加redis密码验证
+
+
+#### 1 找到启动时使用的配置文件
+
+![](assets/001/01/01/02-1655862947248.png)
+
+#### 2 requirepass 那一行注释的# 号给去掉， requirepass 后设置密码即可
+
+![](assets/001/01/01/02-1655862992446.png)
+
+#### 3 yml配置文件
+
+
+![](assets/001/01/01/02-1655863146685.png)
+
+
+![](assets/001/01/01/02-1655863211449.png)
 
 ## linux 下 redis 安装配置
 

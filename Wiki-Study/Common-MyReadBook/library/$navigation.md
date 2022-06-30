@@ -157,6 +157,8 @@
         - [代码实现mysql备份](?file=007-sql 相关/03-mysql相关/00-mysql公用/10-代码实现mysql备份 "代码实现mysql备份")
         - [jdbc工具类](?file=007-sql 相关/03-mysql相关/00-mysql公用/11-jdbc工具类 "jdbc工具类")
         - [mysql查看对应数据库表占用空间](?file=007-sql 相关/03-mysql相关/00-mysql公用/15-mysql查看对应数据库表占用空间 "mysql查看对应数据库表占用空间")
+        - [mysql安装相关](?file=007-sql 相关/03-mysql相关/00-mysql公用/20-mysql安装相关 "mysql安装相关")
+        - [mysql-linux-rpm升级mysql](?file=007-sql 相关/03-mysql相关/00-mysql公用/21-mysql-linux-rpm升级mysql "mysql-linux-rpm升级mysql")
     - [mysql 学习](?file=007-sql 相关/03-mysql相关/01-mysql 学习 "mysql 学习")
     - [mysql 权限管理](?file=007-sql 相关/03-mysql相关/02-mysql 权限管理 "mysql 权限管理")
     - [mysql 建表語句mysql中engine=innodb和engine=myisam](?file=007-sql 相关/03-mysql相关/03-mysql 建表語句mysql中engine=innodb和engine=myisam "mysql 建表語句mysql中engine=innodb和engine=myisam")
@@ -535,6 +537,16 @@
 - **java**
     - **java线程**
         - [线程基础问题记录](?file=10005-复看知识点/01-java/02-java线程/01-线程基础问题记录 "线程基础问题记录")
+    - **设计模式**
+        - **设计模式详解1**
+            - [设计模式知识点详解](?file=10005-复看知识点/01-java/05-设计模式/01-设计模式详解1/01-设计模式知识点详解 "设计模式知识点详解")
     - **springboot**
         - **springboot知识点**
             - [基础知识点](?file=10005-复看知识点/01-java/100-springboot/01-springboot知识点/01-基础知识点 "基础知识点")
+- **计算机知识**
+    - **TCP,ID 详细介绍**
+        - [TCP,ID 图解详解](?file=10005-复看知识点/02-计算机知识/01-TCP,ID 详细介绍/01-TCP,ID 图解详解 "TCP,ID 图解详解")
+- **三方成熟组件**
+    - **Netty**
+        - [Netty基础](?file=10005-复看知识点/03-三方成熟组件/01-Netty/01-Netty基础 "Netty基础")
+        - [Netty应用场景](?file=10005-复看知识点/03-三方成熟组件/01-Netty/02-Netty应用场景 "Netty应用场景")

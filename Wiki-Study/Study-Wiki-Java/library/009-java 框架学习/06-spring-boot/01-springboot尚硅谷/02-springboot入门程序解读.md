@@ -106,7 +106,7 @@ public @interface SpringBootApplication {}
 
 标注在某个类上，表示这是一个Spring Boot的配置类；
 
-@Configuration:配置类上来标注这个注解；
+@Configuration:配置类上来标注这个注解；这个是spring 的注解
 
 配置类 ----- 配置文件；配置类也是容器中的一个组件；@Component
 
@@ -142,7 +142,7 @@ AutoConfigurationPackages.Registrar.class；
 
 **将主配置类（@SpringBootApplication标注的类）的所在包及下面所有子包里面的所有组件扫描到Spring容器；**
 
-@Import(EnableAutoConfigurationImportSelector.class)；
+#### @Import(EnableAutoConfigurationImportSelector.class)；
 
 给容器中导入组件？
 
@@ -154,11 +154,59 @@ EnableAutoConfigurationImportSelector：导入哪些组件的选择器；
 
 并配置好这些组件；
 
+![](assets/009/06/01/02-1654499196529.png)
+
+
+* 如下找一个springboot下的一个包，
+
+![](assets/009/06/01/02-1654499631006.png)
+
+#### @AutoConfigurationPackage注解 
+
+```java
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package org.springframework.boot.autoconfigure;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import org.springframework.boot.autoconfigure.AutoConfigurationPackages.Registrar;
+import org.springframework.context.annotation.Import;
+
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@Import({Registrar.class})
+public @interface AutoConfigurationPackage {
+}
+
+```
+
+对应的  @Import({Registrar.class}) 中的  Registrar 点进去。
+
+![](assets/009/06/01/02-1654498311418.png)
+
 
 ![](assets/009/06/01/02-1649576879605.png)
 
 
 ![](assets/009/06/01/02-1649577287646.png)
+
+以 debug形式启动，断点，查到springbootapplication注解信息；
+
+![](assets/009/06/01/02-1654498527358.png)!
+
+得到注解所在包：
+
+![](assets/009/06/01/02-1654498591442.png)
 
 有了自动配置类，免去了我们手动编写配置注入功能组件等的工作；
 
@@ -169,6 +217,11 @@ SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader
 J2EE的整体整合解决方案和自动配置都在spring-boot-autoconfigure-1.5.9.RELEASE.jar；
 
 专题注解讲解可以查看：Spring注解版（谷粒学院）
+
+
+#### 所以之前spring 使用的都不会说省略，只不过是springboot帮我们做了
+
+![](assets/009/06/01/02-1654500126327.png)
 
 
 ## 使用Spring Initializer快速创建Spring Boot项目
@@ -194,6 +247,8 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
 
 ### idea 创建springboot项目
 
+** 注意得连上网
+
 ![](assets/009/06/01/02-1649578270594.png)
 
 ![](assets/009/06/01/02-1649578301148.png)
@@ -218,3 +273,9 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
 ![](assets/009/06/01/02-1649578757010.png)
 
 ### 2、STS使用 Spring Starter Project快速创建项目
+
+
+
+
+继续学: 08 使用向导快速创建springboot应用 https://www.bilibili.com/video/BV1xW411g7mD?p=8&spm_id_from=pageDriver
+

@@ -109,7 +109,7 @@ export const arrayNotEmpty = (rule, value, callback) => {
     }
     if (rule.required && newvalue.length === 0) {
         return callback(new Error('必填项不能为空'));
-    } else {
+    } else {    
         callback();
     }
 };
