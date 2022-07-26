@@ -22,3 +22,26 @@ https://www.aboutyun.com/forum.php?mod=viewthread&tid=28709
 [springCloud springCloudAlibaba 区别](https://blog.csdn.net/weixin_39737132/article/details/112148214)
 
 [eureka、nacos、consul的区别](https://blog.csdn.net/riemann_/article/details/108743564)
+
+
+# 2022年7月1日10:29:44
+
+jdk 收费介绍
+
+
+[jdk收费怎么说](https://www.cnblogs.com/xuruiming/p/12881503.html)
+
+
+[openjdk](https://www.redhat.com/rhdc/managed-files/mi-openjdk-datasheet-f17057cs-201908-a4-zh.pdf)
+
+[openjdk  jdk  区别 ](https://blog.csdn.net/u014116780/article/details/92440115)
+
+
+以GPL协议 jrl协议  区别
+
+
+[openjdk 下载 ](https://www.openlogic.com/openjdk-downloads)
+
+
+
+[OpenJDK-11的新特征](https://blog.csdn.net/Aria_Miazzy/article/details/86407886#:~:text=OpenJDK%20-11%E7%9A%84%E6%96%B0%E7%89%B9%E5%BE%81%20JDK%2011%E6%98%AFJava%20SE%2011%E5%B9%B3%E5%8F%B0%E7%89%88%E6%9C%AC11%E7%9A%84%E5%BC%80%E6%BA%90%E5%8F%82%E8%80%83%E5%AE%9E%E7%8E%B0%EF%BC%8C%E7%94%B1%20JSR%20384,11%20%E4%BA%8E2018%E5%B9%B49%E6%9C%8825%E6%97%A5%E8%BE%BE%E5%88%B0%20%E4%B8%80%E8%88%AC%E5%8F%AF%E7%94%A8%E6%80%A7.GPL%E4%B8%8B%E7%9A%84%E7%94%9F%E4%BA%A7%E5%B0%B1%E7%BB%AA%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%20%E5%8F%AF%E4%BB%8EOracle%E8%8E%B7%E5%BE%97%20%3B%20%E5%85%B6%E4%BB%96%E4%BE%9B%E5%BA%94%E5%95%86%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%20%E5%BE%88%E5%BF%AB%E5%B0%B1%E4%BC%9A%E5%87%BA%E7%8E%B0%20%E3%80%82)
