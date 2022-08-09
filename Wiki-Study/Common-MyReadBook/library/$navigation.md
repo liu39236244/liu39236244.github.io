@@ -112,6 +112,9 @@
 - **pom文件汇总**
     - [mven 设置jdk编译版本](?file=006-项目吸取/20-pom文件汇总/01-mven 设置jdk编译版本 "mven 设置jdk编译版本")
     - [gs配置](?file=006-项目吸取/20-pom文件汇总/02-gs配置 "gs配置")
+- **前端相关**
+    - **nvm_node版本控制**
+        - [nvm基础](?file=006-项目吸取/200-前端相关/01-nvm_node版本控制/01-nvm基础 "nvm基础")
 - **redis工具类**
     - [redis连接](?file=006-项目吸取/21-redis工具类/02-redis连接 "redis连接")
 - **gitlab搭建**
@@ -138,6 +141,9 @@
     - **oracle 公用.md**
         - [设置连接数](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/01-设置连接数 "设置连接数")
         - [创建oracle 表命名空间](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/02-创建oracle 表命名空间 "创建oracle 表命名空间")
+        - [如何关掉正在用的临时表](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/03-如何关掉正在用的临时表 "如何关掉正在用的临时表")
+        - [oracle关联修改](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/04-oracle关联修改 "oracle关联修改")
+        - [oracle截取字符串](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/05-oracle截取字符串 "oracle截取字符串")
     - **Sql 查询语句**
         - [oracle 基础语句](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/00-oracle 基础语句 "oracle 基础语句")
         - [oracel 模糊查询](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/01-oracel 模糊查询 "oracel 模糊查询")
@@ -191,6 +197,7 @@
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
     - **系统操作语句**
         - [添加用户给予权限](?file=007-sql 相关/03-mysql相关/20-系统操作语句/01-添加用户给予权限 "添加用户给予权限")
+        - [同步两张表数据](?file=007-sql 相关/03-mysql相关/20-系统操作语句/02-同步两张表数据 "同步两张表数据")
     - **mysql-sql语句**
         - [mysql 分组函数语句](?file=007-sql 相关/03-mysql相关/200-mysql-sql语句/01-mysql 分组函数语句 "mysql 分组函数语句")
     - **mysql在框架中配置问题**
@@ -220,6 +227,7 @@
 - **Mongodb相关**
     - **Mongodb记录**
         - [mongodb备份恢复](?file=007-sql 相关/06-Mongodb相关/01-Mongodb记录/02-mongodb备份恢复 "mongodb备份恢复")
+        - [mongodb添加账户名密码](?file=007-sql 相关/06-Mongodb相关/01-Mongodb记录/03-mongodb添加账户名密码 "mongodb添加账户名密码")
 - **H2数据库**
     - **H2数据库暂时记录**
         - [简单使用](?file=007-sql 相关/08-H2数据库/01-H2数据库暂时记录/01-简单使用 "简单使用")
@@ -371,6 +379,10 @@
     - **ES6-菜鸟教程**
         - [ES6新语法公用](?file=021-JS的记录/08-ES6 语法/10-ES6-菜鸟教程/00-ES6新语法公用 "ES6新语法公用")
         - [菜鸟教程](?file=021-JS的记录/08-ES6 语法/10-ES6-菜鸟教程/01-菜鸟教程 "菜鸟教程")
+- **js特效页面**
+    - **js 3d图片特效**
+        - [js3d特效图](?file=021-JS的记录/100-js特效页面/01-js 3d图片特效/01-js3d特效图 "js3d特效图")
+    - **特效2**
 - **javaScript-mdmWebdocs**
     - **js内置对象**
         - [Object](?file=021-JS的记录/20-javaScript-mdmWebdocs/01-js内置对象/01-Object "Object")
@@ -550,3 +562,20 @@
     - **Netty**
         - [Netty基础](?file=10005-复看知识点/03-三方成熟组件/01-Netty/01-Netty基础 "Netty基础")
         - [Netty应用场景](?file=10005-复看知识点/03-三方成熟组件/01-Netty/02-Netty应用场景 "Netty应用场景")
+
+##### 面试题
+- **Java 面试题总结**
+    - **java面试相关**
+        - [java-hashMap 操作](?file=10006-面试题/01-Java 面试题总结/01-java面试相关/01-java-hashMap 操作 "java-hashMap 操作")
+    - **sql数据库**
+        - [ 数据库中的内联外联自然连接](?file=10006-面试题/01-Java 面试题总结/02-sql数据库/01- 数据库中的内联外联自然连接 " 数据库中的内联外联自然连接")
+    - [临时面试归纳](?file=10006-面试题/01-Java 面试题总结/03-临时面试归纳 "临时面试归纳")
+    - **springBoot**
+        - [springboot面试题](?file=10006-面试题/01-Java 面试题总结/04-springBoot/01-springboot面试题 "springboot面试题")
+    - **面试资料文档记录**
+        - **java**
+            - **java基础面试题**
+                - [java基础题](?file=10006-面试题/01-Java 面试题总结/50001-面试资料文档记录/01-java/001-java基础面试题/01-java基础题 "java基础题")
+            - **java其他面试题**
+        - **其他**
+- **其他**

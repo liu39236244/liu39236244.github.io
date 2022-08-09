@@ -9,7 +9,7 @@
         - [待看待学](?file=000-Common/01-EverythingRecord/01-每日记录/03-待看待学 "待看待学")
         - [每日一读](?file=000-Common/01-EverythingRecord/01-每日记录/04-每日一读 "每日一读")
         - [工具总结](?file=000-Common/01-EverythingRecord/01-每日记录/05-工具总结 "工具总结")
-        - [每日错误总结](?file=000-Common/01-EverythingRecord/01-每日记录/06-每日错误总结 "每日错误总结")
+        - [迷之错误总结](?file=000-Common/01-EverythingRecord/01-每日记录/06-迷之错误总结 "迷之错误总结")
         - **每日在读**
             - **读取jdk源码**
                 - [读取jdk源码公用记录](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/01-读取jdk源码/01-读取jdk源码公用记录 "读取jdk源码公用记录")
@@ -27,6 +27,8 @@
                 - **K8s**
                     - [k8s相关](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/04-运维相关/03-K8s/01-k8s相关 "k8s相关")
             - **java相关**
+                - **java集合相关**
+                - **java新特性相关**
                 - **java并发相关**
                     - **countDownLatch了解**
                         - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/01-countDownLatch了解/01-简述 "简述")
@@ -68,6 +70,7 @@
         - **尚硅谷SpringCloud**
             - **课程记录**
                 - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-尚硅谷SpringCloud/01-课程记录/01- 记录 " 记录")
+            - **SpringCloud学习笔记**
         - **尚硅谷springboot视频**
             - [SpringBoot记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/03-尚硅谷springboot视频/01-SpringBoot记录 "SpringBoot记录")
         - **Redis双11高并发架构与源码深度解剖**
@@ -162,6 +165,7 @@
         - [log4j2漏洞在springboot中解决](?file=000-Common/02-Bug漏洞记录/01-java组件漏洞/01-log4j2漏洞在springboot中解决 "log4j2漏洞在springboot中解决")
 
 ##### Company
+- **Common**
 - **CompanyPlan**
     - [CompanyPlan](?file=001-Company/01-CompanyPlan/01-CompanyPlan "CompanyPlan")
 - **Items_Common_Java**

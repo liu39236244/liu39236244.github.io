@@ -90,7 +90,7 @@
     - **java 中下载服务器上文件**
         - [springcloud 中controller 下载服务器上文件](?file=001-学习Java/08-java 文件操作/03-java 中下载服务器上文件/01-springcloud 中controller 下载服务器上文件 "springcloud 中controller 下载服务器上文件")
 - **java 开发之设计模式**
-    - [设计模式](?file=001-学习Java/09-java 开发之设计模式/02-设计模式 "设计模式")
+    - [java设计模式](?file=001-学习Java/09-java 开发之设计模式/02-java设计模式 "java设计模式")
 - **十大经典排序算法**
     - [Common](?file=001-学习Java/10-十大经典排序算法/00-Common "Common")
     - **hustcc 总结的算法**
@@ -362,14 +362,6 @@
         - [垃圾收集器与内存分配策略](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/03-垃圾收集器与内存分配策略 "垃圾收集器与内存分配策略")
 
 ##### Java 知识点
-- **Java 面试题总结**
-    - **java面试相关**
-        - [java-hashMap 操作](?file=100-Java 知识点/01-Java 面试题总结/01-java面试相关/01-java-hashMap 操作 "java-hashMap 操作")
-    - **sql数据库**
-        - [ 数据库中的内联外联自然连接](?file=100-Java 知识点/01-Java 面试题总结/02-sql数据库/01- 数据库中的内联外联自然连接 " 数据库中的内联外联自然连接")
-    - [临时面试归纳](?file=100-Java 知识点/01-Java 面试题总结/03-临时面试归纳 "临时面试归纳")
-    - **springBoot**
-        - [springboot面试题](?file=100-Java 知识点/01-Java 面试题总结/04-springBoot/01-springboot面试题 "springboot面试题")
 - **问题记录**
     - **鲁班课程分布式微服务94**
         - [spirng 高并发94](?file=100-Java 知识点/02-问题记录/01-鲁班课程分布式微服务94/01-spirng 高并发94 "spirng 高并发94")

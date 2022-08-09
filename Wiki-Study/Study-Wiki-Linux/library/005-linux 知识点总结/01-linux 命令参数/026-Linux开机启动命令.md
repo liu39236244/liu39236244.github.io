@@ -3,9 +3,12 @@
 
 ## 我的目前采用：
 
+[其他参考博客：Centos 设置开机自动启动脚本](https://blog.csdn.net/qq_36551453/article/details/108099806)
+
 ```
 我目前使用的是第一种 
-cd /etc/rc.d/rc.local 
+vi /etc/rc.d/rc.local
+ 
 中添加自己的语句：
 
 # start Tomcat V2ray
@@ -23,6 +26,9 @@ echo "Started tomcat /v2ray success"
 sleep 1
 nohup /shenyabo/v2ray-All/v2ray-unzip/v2ray config.json > /dev/null 2>&1 &
 ```
+
+**如果开机rc.local 中 执行某个脚本 后面最好加上 & 符号**
+
 
 ## mysql 问题：
 
