@@ -713,17 +713,297 @@ Math.floor(11.6)的结果是11，Math.floor(-11.4)的结果-12；
     3、方法的内部类作为了解，其实上内部类的课程没什么逻辑，你记住就好了。
 
 
-### 运算符
+### 6 运算符
+
+
+&和&&的区别
+
+&运算符有两种用法：(1)按位与；(2)逻辑与。
+
+&&运算符是短路与运算。逻辑与跟短路与的差别是非常巨大的，虽然二者都要求运算符左右两端
+的布尔值都是true 整个表达式的值才是 true。&&之所以称为短路运算，是因为如果&&左边的表
+达式的值是 false，右边的表达式会被直接短路掉，不会进行运算。
+
+注意：逻辑或运算符（|）和短路或运算符（||）的差别也是如此。
+
+
+
 
 
 【java书签%%】
 
-### 关键字
-### 流程控制语句
-### 数据类型
+### 7 关键字
+
+#### 7.1 Java 有没有 goto
+
+goto 是 Java 中的保留字，在目前版本的 Java 中没有使用。
 
 
-## 面向对象
+#### 7.2  final 有什么用？
+
+    用于修饰类、属性和方法；
+    被final修饰的类不可以被继承
+    被final修饰的方法不可以被重写
+    被final修饰的变量不可以被改变，被final修饰不可变的是变量的引用，而不是引用指向的内容，比如  final int i=5; i 不能再被赋值，但是final Student stu=new Student(); 虽然 stu 不可以指向其他Student 对象，但是stu对应在堆上的学生类的一些自定义属性是可以被修改的
+    引用指向的内容是可以改变的
+
+#### 7.3  final finally finalize区别
+
+    final可以修饰类、变量、方法，修饰类表示该类不能被继承、修饰方法表示该方法不能被重写、
+    修饰变量表 示该变量是一个常量不能被重新赋值。
+    finally一般作用在try-catch代码块中，在处理异常的时候，通常我们将一定要执行的代码方法
+    finally代码块 中，表示不管是否出现异常，该代码块都会执行，一般用来存放一些关闭资源的代
+    码。
+    finalize是一个方法，属于Object类的一个方法，而Object类是所有类的父类，该方法一般由垃圾
+    回收器来调 用，当我们调用System.gc() 方法的时候，由垃圾回收器调用finalize()，回收垃圾，一
+    个对象是否可回收的 最后判断。
+
+
+#### 7.4 this关键字的用法
+
+this是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。
+
+this的用法在java中大体可以分为3种：
+
+#####  1.普通的直接引用，this相当于是指向当前对象本身。
+    
+    
+##### 2.形参与成员名字重名，用this来区分：
+
+```java
+public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+}
+
+```
+##### 3.引用本类的构造函数
+
+```java
+
+
+class Person {
+    private String name;
+    private int age;
+
+    public Person() {
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public Person(String name, int age) {
+        this(name);
+        this.age = age;
+    }
+}
+```
+#### 7.5 super关键字的用法
+
+super可以理解为是指向自己超（父）类对象的一个指针，而这个超类指的是离自己最近的一个父
+类。
+
+super也有三种用法：
+
+> 1.普通的直接引用
+        与this类似，super相当于是指向当前对象的父类的引用，这样就可以用super.xxx来引用父类的成员。
+    
+> 2.子类中的成员变量或方法与父类中的成员变量或方法同名时，用super进行区分
+
+```java
+
+class Person {
+    protected String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+}
+
+class Student extends Person {
+    private String name;
+
+    public Student(String name, String name1) {
+        super(name);
+        this.name = name1;
+    }
+
+    public void getInfo() {
+        System.out.println(this.name); //Child
+        System.out.println(super.name); //Father
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s1 = new Student("Father", "Child");
+        s1.getInfo();
+    }
+}
+
+
+
+```
+
+> 3.引用父类构造函数
+
+
+super（参数）：调用父类中的某一个构造函数（应该为构造函数中的第一条语句）。
+
+this（参数）：调用本类中另一种形式的构造函数（应该为构造函数中的第一条语句）。
+
+
+
+#### 7.6 this与super的区别
+
+
+    super:它引用当前对象的直接父类中的成员（用来访问直接父类中被隐藏的父类中成员数据或函
+    数，基类与派生类中有相同成员定义时如：super.变量名 super.成员函数据名（实参）
+    
+    this：它代表当前对象名（在程序中易产生二义性之处，应使用this来指明当前对象；
+    
+    super()和this()类似,区别是，super()在子类中调用父类的构造方法，this()在本类内调用本类的其
+    它构造方法。
+
+    super()和this()均需放在构造方法内第一行。
+
+    尽管可以用this调用一个构造器，但却不能调用两个。
+    
+    this和super不能同时出现在一个构造函数里面，因为this必然会调用其它的构造函数，其它的构
+    造函数必然也会有super语句的存在，所以在同一个构造函数里面有相同的语句，就失去了语句的
+    意义，编译器也不会通过。
+    
+    this()和super()都指的是**对象**，所以，均不可以在static环境中使用。包括：static变量,static方
+    法，static语句块。
+    
+    从本质上讲，this是一个指向本对象的指针, 然而super是一个Java关键字。
+
+#### 7.7  static存在的主要意义
+
+> 1 static的主要意义是在于创建独立于具体对象的域变量或者方法。以致于即使没有创建对象，也能
+使用属性和调用方法！
+
+> 2static关键字还有一个比较关键的作用就是 用来形成静态代码块以优化程序性能。 
+    
+    static块可以置于类中的任何地方，
+    类中可以有多个static块。
+    在类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次。
+
+>3 为什么说static块可以用来优化程序性能，
+    
+    是因为它的特性:只会在类加载的时候执行一次。因此，很多时候会将一些只需要进行一次的初始化操作都放在static代码块中进行。
+
+
+
+#### 7.8  static 的独特之处
+
+
+> 1、被static修饰的变量或者方法是独立于该类的任何对象，也就是说，这些变量和方法不属于任
+
+```
+    何一个实例对象，而是被类的实例对象所共享。
+    怎么理解 “被类的实例对象所共享” 这句话呢？就是说，一个类的静态成员，它是属于大伙的【大
+    伙指的是这个类的多个对象实例，我们都知道一个类可以创建多个实例！】，所有的类对象共享
+    的，不像成员变量是自个的【自个指的是这个类的单个实例对象】,就是每一次new XXX(); 的对象就是指的每个自个;
+
+```    
+> 2、在该类被第一次加载的时候，就会去加载被static修饰的部分，而且只在类第一次使用时加载
+
+    并进行初始化，注意这是第一次用就要初始化，后面根据需要是可以再次赋值的。
+
+如下代码：
+
+```
+class A{
+    private  String name ;
+    private  String address;
+    public static int a=1;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(A.a);// 1
+        A.a = 2;
+        System.out.println(A.a);// 2
+
+    }
+}
+
+```
+> 3、static变量值在类加载的时候分配空间，以后创建类对象的时候不会重新分配。赋值的话，是可以任意赋值的！
+
+> 4、被static修饰的变量或者方法是优先于对象存在的，也就是说当一个类加载完毕之后，即便没
+有创建对象，也可以去访问。
+
+#### 7.9 static应用场景
+
+因为static是被类的实例对象所共享，因此如果某个成员变量是被所有对象所共享的，那么这个成员变量就应该定义为静态变量。
+
+因此比较常见的static应用场景有：
+
+`1、修饰成员变量 2、修饰成员方法 3、静态代码块 4、修饰类【只能修饰内部类也就是静态内部
+类】 5、静态导包`
+
+#### 7.10 static注意事项
+
+```
+
+    1、静态只能访问静态。
+    2、非静态既可以访问非静态的，也可以访问静态的
+
+```
+
+### 8 流程控制语句
+
+#### 8.1  break ,continue ,return 的区别及作用
+
+```
+    break 跳出总上一层循环，不再执行循环(结束当前的循环体)
+    continue 跳出本次循环，继续执行下次循环(结束正在执行的循环 进入下一个循环条件)
+    return 程序返回，不再执行下面的代码(结束当前的方法 直接返回)
+
+```
+
+#### 8.2 在 Java 中，如何跳出当前的多重嵌套循环
+
+在Java中，要想跳出多重循环，可以在外面的循环语句前定义一个标号，然后在里层循环体的代码
+中使用带有标号的break 语句，即可跳出外层循环。例如
+
+```java
+  public static void main(String[] args) {
+        ok:
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.println("i=" + i + ",j=" + j);
+                if (j == 5) {
+                    break ok;
+                }
+            }
+        }
+        // i=0,j=0
+        // i=0,j=1
+        // i=0,j=2
+        // i=0,j=3
+        // i=0,j=4
+        // i=0,j=5
+        // 跳出循环
+        System.out.println("跳出循环");
+    }
+
+```
+
+### 9 数据类型
+
+【java书签==】
+
+##  面向对象
 
 
 ## IO流
