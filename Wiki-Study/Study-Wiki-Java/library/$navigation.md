@@ -2,6 +2,8 @@
 #### [首页](?file=home-首页)
 
 ##### 学习Java
+- **公用**
+    - [公用](?file=001-学习Java/00-公用/01-公用 "公用")
 - **Java基础学习**
     - [Java 基础](?file=001-学习Java/01-Java基础学习/01-Java 基础 "Java 基础")
 - **Java 基础点**
@@ -91,6 +93,7 @@
         - [springcloud 中controller 下载服务器上文件](?file=001-学习Java/08-java 文件操作/03-java 中下载服务器上文件/01-springcloud 中controller 下载服务器上文件 "springcloud 中controller 下载服务器上文件")
 - **java 开发之设计模式**
     - [java设计模式](?file=001-学习Java/09-java 开发之设计模式/02-java设计模式 "java设计模式")
+    - [itype-设计模式案例](?file=001-学习Java/09-java 开发之设计模式/03-itype-设计模式案例 "itype-设计模式案例")
 - **十大经典排序算法**
     - [Common](?file=001-学习Java/10-十大经典排序算法/00-Common "Common")
     - **hustcc 总结的算法**
@@ -169,6 +172,7 @@
     - [Collection集合](?file=003-java进阶知识/04- java 集合进阶/01-Collection集合 "Collection集合")
     - [List 遍历过程的删除操作](?file=003-java进阶知识/04- java 集合进阶/02-List 遍历过程的删除操作 "List 遍历过程的删除操作")
     - [集合的并集-交集-差集](?file=003-java进阶知识/04- java 集合进阶/03-集合的并集-交集-差集 "集合的并集-交集-差集")
+    - [List分组操作](?file=003-java进阶知识/04- java 集合进阶/04-List分组操作 "List分组操作")
 - **Map**
     - **HashMap**
         - [hashMap讲解](?file=003-java进阶知识/05-Map/02-HashMap/01-hashMap讲解 "hashMap讲解")

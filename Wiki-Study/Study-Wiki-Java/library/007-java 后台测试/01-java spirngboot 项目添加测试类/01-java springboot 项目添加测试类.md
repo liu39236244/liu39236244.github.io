@@ -21,6 +21,16 @@
 
 > 3 测试
 
+添加依赖
+
+```xml
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+   
+```
 
 * 测试1 
 
