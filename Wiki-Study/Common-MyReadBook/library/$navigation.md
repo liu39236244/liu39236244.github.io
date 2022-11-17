@@ -146,6 +146,7 @@
         - [如何关掉正在用的临时表](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/03-如何关掉正在用的临时表 "如何关掉正在用的临时表")
         - [oracle关联修改](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/04-oracle关联修改 "oracle关联修改")
         - [oracle截取字符串](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/05-oracle截取字符串 "oracle截取字符串")
+        - [查看数据库oracle链接数等信息](?file=007-sql 相关/02-oracle相关/00-oracle 公用.md/06-查看数据库oracle链接数等信息 "查看数据库oracle链接数等信息")
     - **Sql 查询语句**
         - [oracle 基础语句](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/00-oracle 基础语句 "oracle 基础语句")
         - [oracel 模糊查询](?file=007-sql 相关/02-oracle相关/01-Sql 查询语句/01-oracel 模糊查询 "oracel 模糊查询")
