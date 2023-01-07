@@ -30,44 +30,6 @@ nohup /shenyabo/v2ray-All/v2ray-unzip/v2ray config.json > /dev/null 2>&1 &
 **如果开机rc.local 中 执行某个脚本 后面最好加上 & 符号**
 
 
-## mysql 问题：
-
-## 查看mysql安装目录
-
-### 启动报错
-启动报错：
-
-
-```sh
-[root@boyashen startTomcat_V2ray]# mysql -u root -p
-Enter password: 
-ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (111)
-
-```
-
-## 尝试解决：
-
-
-
-
-* 查看状态
-systemctl status mysqld 
-或者：/etc/rc.d/init.d/mysqld status
-没有/etc/rc.d/ini.d/mysqld 启动文件解决：
-https://blog.csdn.net/imliuqun123/article/details/83347081 
-
-* 验证错误文件是否存在
-查找 验证mysql.sock 
-
-[root@boyashen startTomcat_V2ray]# find /-name mysql.sock
-find: ?.-name?. No such file or directory
-find: ?.ysql.sock?. No such file or directory
-
-
-
-
-[原文博主链接](https://blog.csdn.net/qq_35440678/article/details/80489102)
-
 ## 第一种 在 /etc/rc.d/rc.local 文件中 执行脚本，或者语句
 
 ```shell
@@ -111,3 +73,42 @@ chmod +x /etc/rc.d/rc.local
 （6） ~/.bash_profile: 是交互式、login 方式进入 bash 运行的~/.bashrc 是交互式 non-login 方式进入 bash 运行的通常二者设置大致相同，所以通常前者会调用后者。
 
 ```
+
+
+## mysql 问题：
+
+## 查看mysql安装目录
+
+### 启动报错
+启动报错：
+
+
+```sh
+[root@boyashen startTomcat_V2ray]# mysql -u root -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (111)
+
+```
+
+## 尝试解决：
+
+
+
+
+* 查看状态
+systemctl status mysqld 
+或者：/etc/rc.d/init.d/mysqld status
+没有/etc/rc.d/ini.d/mysqld 启动文件解决：
+https://blog.csdn.net/imliuqun123/article/details/83347081 
+
+* 验证错误文件是否存在
+查找 验证mysql.sock 
+
+[root@boyashen startTomcat_V2ray]# find /-name mysql.sock
+find: ?.-name?. No such file or directory
+find: ?.ysql.sock?. No such file or directory
+
+
+
+
+[原文博主链接](https://blog.csdn.net/qq_35440678/article/details/80489102)

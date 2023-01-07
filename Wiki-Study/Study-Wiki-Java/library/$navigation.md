@@ -224,6 +224,8 @@
     - **httpClient使用池化技术**
         - [线上成功使用案例1](?file=003-java进阶知识/13-池化技术/03-httpClient使用池化技术/01-线上成功使用案例1 "线上成功使用案例1")
         - [简单方式创建HttpClient对象](?file=003-java进阶知识/13-池化技术/03-httpClient使用池化技术/02-简单方式创建HttpClient对象 "简单方式创建HttpClient对象")
+    - **springboot异步注解添加线程池**
+        - [异步async注解配置线程池](?file=003-java进阶知识/13-池化技术/04-springboot异步注解添加线程池/01-异步async注解配置线程池 "异步async注解配置线程池")
 - **报表**
     - **润乾报表**
         - [公用](?file=003-java进阶知识/15-报表/01-润乾报表/01-公用 "公用")
@@ -299,6 +301,8 @@
 - **spring四种数据库连接池**
     - [基础四种常见连接池](?file=008-spring问题总结.md/02-spring四种数据库连接池/01-基础四种常见连接池 "基础四种常见连接池")
     - [常用的数据库连接池](?file=008-spring问题总结.md/02-spring四种数据库连接池/02-常用的数据库连接池 "常用的数据库连接池")
+- **获取spring上下文对象**
+    - [webSocket无法注入bean](?file=008-spring问题总结.md/03-获取spring上下文对象/01-webSocket无法注入bean "webSocket无法注入bean")
 
 ##### java 框架学习
 - **基础框架Spring**
