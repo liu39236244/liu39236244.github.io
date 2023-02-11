@@ -4,6 +4,7 @@
 ##### 公用
 - **vscode  md 文档插件**
     - [vscode md 插件 ](?file=00-公用/01-vscode  md 文档插件/01-vscode md 插件  "vscode md 插件 ")
+    - [vscode操作案例](?file=00-公用/01-vscode  md 文档插件/02-vscode操作案例 "vscode操作案例")
 - **md文档写法说明**
     - [md文档写法说明](?file=00-公用/02-md文档写法说明/01-md文档写法说明 "md文档写法说明")
     - [颜色列表](?file=00-公用/02-md文档写法说明/02-颜色列表 "颜色列表")
