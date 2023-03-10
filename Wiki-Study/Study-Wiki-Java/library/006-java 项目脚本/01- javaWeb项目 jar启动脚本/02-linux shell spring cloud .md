@@ -2,6 +2,38 @@
 
 springboot后端部署脚本
 
+## 日志一天一个文件
+
+原文链接：https://blog.csdn.net/qq_43101205/article/details/126004329
+
+```
+ohup java -jar app_name.jar >> /xx/log/$(date +%Y-%m-%d)-err.log 2>/xx/log/$(date +%Y-%m-%d)-log.log& 
+
+ or 
+
+nohup java -jar app_name.jar >> /home/log/app_name-$(date +%Y-%m-%d).log 2>&1
+
+错误文件就放在 yyyy-MM-dd-err.log，正常日志就放在 yyyy-MM-dd-log.log，这样可以避免当程序长时间运行日志文件太大导致无法打开的问题。
+
+
+上面的2 意思如下:
+0 标准输入（一般是键盘）
+1 标准输出（一般是显示屏，是用户终端控制台）
+2 标准错误（错误信息输出）
+
+nohup java -jar app_name.jar  //这个是启动命令，可按ctrl+c打断程序运行，或直接关闭窗口，程序退出。
+
+java -jar xxxx.jar & //&表示在后台运行。当窗口关闭时，程序中止运行。
+
+nohup java -jar xxxx.jar & //nohup 意思是不挂断运行命令，当账户退出或终端关闭时，程序仍然运行。缺省情况下该作业的所有输出被重定向到nohup.out的文件中
+
+nohup java -jar xxxx.jar >/log.log&  //将日志输出到log.log指定的文件内。
+
+
+
+```
+
+
 ## 脚本
 
 
@@ -626,7 +658,6 @@ exit 0
 
 ```sh
 
-```sh
 #!/bin/sh
 export XSN_BASE_SERVICE=gp_xsn-1.0-SNAPSHOT.jar
 
@@ -634,9 +665,9 @@ export XSN_PORT=27501
 
 
 #启动命令所在目录
-HOME='/home/graphsafe/MNXSN/jar'
-#LOGDIR=/home/graphsafe/ZZZHPX/zzzhpx.log
-XSN_LOG=/home/graphsafe/MNXSN/jar/log/xsn.log
+HOME='/home/graphsafe/MNXSN/back'
+#LOGDIR=/home/graphsafe/back/xsn.log
+XSN_LOG=/home/graphsafe/MNXSN/back/log/xsn.log
 
  
 case "$1" in
@@ -647,7 +678,7 @@ start)
 
 		## 启动XSN
         echo "--------开始启动XSN_BASE_SERVICE---------------"
-        nohup java -jar $XSN_BASE_SERVICE --spring.config.location=/home/graphsafe/ZZZHPX/back/application.yml  >> $XSN_LOG 2>&1 &
+        nohup java -jar $XSN_BASE_SERVICE --spring.config.location=/home/graphsafe/MNXSN/back/yml/application.yml  >> $XSN_LOG 2>&1 &
         XSN_BASE_SERVICE_pid=`lsof -i:$XSN_PORT|grep "LISTEN"|awk '{print $2}'`
         until [ -n "$XSN_BASE_SERVICE_pid" ]
             do
@@ -679,7 +710,6 @@ restart)
 esac	
 exit 0
 
-```
 ```
 
 # 配置文件不起作用；

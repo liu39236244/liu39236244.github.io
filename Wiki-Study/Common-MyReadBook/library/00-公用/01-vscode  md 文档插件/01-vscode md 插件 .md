@@ -13,3 +13,8 @@
 第二个是：insert-numerical-series
     使用过sublime　text上的insertNums工具后，就一直诟病vscode为什么没有这么好的工具，无意中，见到这款工具，目前下载量还很少，看来很少被检索到，也可能是因为一般使用这个功能的用户比较少。而且这款工具目前看来也不像insertNums这么强大，但是很简洁，用基本上可以设置格式，起始值，步长，基本要求还是能满足的。值得推荐。！！！
 ```
+
+
+## 全局目录 以及流程图代码生成
+
+[参考博客](https://blog.csdn.net/Gordo_Li/article/details/103268147)

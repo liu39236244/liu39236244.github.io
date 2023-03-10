@@ -4,6 +4,7 @@
 ##### 公用
 - **vscode  md 文档插件**
     - [vscode md 插件 ](?file=00-公用/01-vscode  md 文档插件/01-vscode md 插件  "vscode md 插件 ")
+    - [vscode操作案例](?file=00-公用/01-vscode  md 文档插件/02-vscode操作案例 "vscode操作案例")
 - **md文档写法说明**
     - [md文档写法说明](?file=00-公用/02-md文档写法说明/01-md文档写法说明 "md文档写法说明")
     - [颜色列表](?file=00-公用/02-md文档写法说明/02-颜色列表 "颜色列表")
@@ -136,6 +137,8 @@
             - [数据库字符串匹配函数](?file=007-sql 相关/00-Command公用/01-数据库函数/01-字符串匹配.md/01-数据库字符串匹配函数 "数据库字符串匹配函数")
     - **sql 工具类**
         - [jdbc 直接执行sql文件](?file=007-sql 相关/00-Command公用/02-sql 工具类/01-jdbc 直接执行sql文件 "jdbc 直接执行sql文件")
+    - **各个数据库语法区别**
+        - [各个数据库语法区别](?file=007-sql 相关/00-Command公用/03-各个数据库语法区别/01-各个数据库语法区别 "各个数据库语法区别")
 - **PD相关**
     - [PW相关操作](?file=007-sql 相关/01-PD相关/01-PW相关操作 "PW相关操作")
     - [oracel 驱动问题](?file=007-sql 相关/01-PD相关/02-oracel 驱动问题 "oracel 驱动问题")
@@ -195,6 +198,7 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
     - **sql语句入坑总结**
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
     - **系统操作语句**
@@ -215,6 +219,8 @@
         - [SqlServer 介绍](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/01-SqlServer 介绍 "SqlServer 介绍")
         - [删除数据库](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/02-删除数据库 "删除数据库")
         - [sqlserver-Win10-2019](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/03-sqlserver-Win10-2019 "sqlserver-Win10-2019")
+        - [sqlserver关联修改](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/04-sqlserver关联修改 "sqlserver关联修改")
+        - [插入数据结果集](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/05-插入数据结果集 "插入数据结果集")
     - [SqlServer 公用查询语句](?file=007-sql 相关/05-SQLSERVER相关/02-SqlServer 公用查询语句 "SqlServer 公用查询语句")
     - **sql server 数据类型对应jdbcType**
         - [sql Server 字段对应JDBCTYPE](?file=007-sql 相关/05-SQLSERVER相关/03-sql server 数据类型对应jdbcType/01-sql Server 字段对应JDBCTYPE "sql Server 字段对应JDBCTYPE")
@@ -226,6 +232,8 @@
         - [创建sqlserver的insert语句](?file=007-sql 相关/05-SQLSERVER相关/04-SqlServer备份生成语句/05-创建sqlserver的insert语句 "创建sqlserver的insert语句")
     - **存储过程**
         - [存储过程](?file=007-sql 相关/05-SQLSERVER相关/05-存储过程/01-存储过程 "存储过程")
+    - **sqlserver配置主从备份**
+        - [SqlServer主从备份](?file=007-sql 相关/05-SQLSERVER相关/06-sqlserver配置主从备份/01-SqlServer主从备份 "SqlServer主从备份")
 - **Mongodb相关**
     - **Mongodb记录**
         - [mongodb备份恢复](?file=007-sql 相关/06-Mongodb相关/01-Mongodb记录/02-mongodb备份恢复 "mongodb备份恢复")
@@ -289,6 +297,7 @@
     - [sparkStreaming 操作](?file=011-ws Company Study/04-算子总结/04-sparkStreaming 操作 "sparkStreaming 操作")
 - **数据库**
     - [mysql](?file=011-ws Company Study/05-数据库/01-mysql "mysql")
+- **数据加载**
 
 ##### 开发中的设计模式
 - **设计模式**
@@ -344,6 +353,7 @@
     - [服务器tomcat 80 问题](?file=019-MyService 服务器总结/01-service 服务器常见问题/01-服务器tomcat 80 问题 "服务器tomcat 80 问题")
 
 ##### 零碎记录
+- **零碎记录之-搜索技巧**
 - **计算机端口问题**
     - [端口定义范围](?file=020-零碎记录/02-计算机端口问题/01-端口定义范围 "端口定义范围")
 
@@ -382,11 +392,13 @@
 - **js特效页面**
     - **js 3d图片特效**
         - [js3d特效图](?file=021-JS的记录/100-js特效页面/01-js 3d图片特效/01-js3d特效图 "js3d特效图")
+    - **特效2**
 - **javaScript-mdmWebdocs**
     - **js内置对象**
         - [Object](?file=021-JS的记录/20-javaScript-mdmWebdocs/01-js内置对象/01-Object "Object")
 
 ##### Html css 记录
+- **Html 基础**
 - **css样式记录**
     - [ div 定位 Absolute（绝对定位）与relative（相对定位）](?file=022-Html css 记录/02-css样式记录/03- div 定位 Absolute（绝对定位）与relative（相对定位） " div 定位 Absolute（绝对定位）与relative（相对定位）")
 
@@ -451,10 +463,13 @@
         - **动漫**
             - **犬夜叉**
                 - [穿越时空的思念](?file=030-生活记录/02-吉他/10-吉他乐谱/02-动漫/01-犬夜叉/01-穿越时空的思念 "穿越时空的思念")
-            - **别的**
         - **喜欢**
             - [可能](?file=030-生活记录/02-吉他/10-吉他乐谱/03-喜欢/01-可能 "可能")
             - [安河桥](?file=030-生活记录/02-吉他/10-吉他乐谱/03-喜欢/02-安河桥 "安河桥")
+- **日语学习**
+    - **小a老师的**
+    - **梦子老师日语课程**
+    - **日语歌曲学习**
 - **书籍**
     - **每日书籍**
         - **你要对得起你所受的苦**
@@ -463,13 +478,20 @@
         - **超级沟通心理学**
             - [超级沟通心理学](?file=030-生活记录/06-书籍/01-每日书籍/02-超级沟通心理学/01-超级沟通心理学 "超级沟通心理学")
 
-##### 视频剪辑
+##### 视频相关
 - **PR学习**
     - **贝塔珐入门教程**
-        - [课程记录](?file=10001-视频剪辑/01-PR学习/03-贝塔珐入门教程/01-课程记录 "课程记录")
+        - [课程记录](?file=10001-视频相关/01-PR学习/03-贝塔珐入门教程/01-课程记录 "课程记录")
 - **AU学习**
     - **au 的学习**
-        - [临时总结](?file=10001-视频剪辑/03-AU学习/01-au 的学习/03-临时总结 "临时总结")
+        - [临时总结](?file=10001-视频相关/03-AU学习/01-au 的学习/03-临时总结 "临时总结")
+- **动画制作**
+    - **公用**
+        - [动画制作公用](?file=10001-视频相关/10-动画制作/00-公用/01-动画制作公用 "动画制作公用")
+    - **Moho**
+        - ** moho学习**
+            - [moho 公用记录](?file=10001-视频相关/10-动画制作/02-Moho/01- moho学习/01-moho 公用记录 "moho 公用记录")
+    - **其他**
 
 ##### 生活记录
 - **音乐**
@@ -504,6 +526,11 @@
         - **天气**
             - [讨论今天天气](?file=10002-生活记录/04-日语学习/100-语境练习/01-天气/01-讨论今天天气 "讨论今天天气")
             - [对应单词](?file=10002-生活记录/04-日语学习/100-语境练习/01-天气/02-对应单词 "对应单词")
+        - **问候**
+            - **简单问候相关单词**
+                - [问候语打招呼_1](?file=10002-生活记录/04-日语学习/100-语境练习/02-问候/01-简单问候相关单词/01-问候语打招呼_1 "问候语打招呼_1")
+    - **单词对应语境**
+        - ** 天气**
 - **医术**
     - **高血压**
         - [ 静脉血栓](?file=10002-生活记录/05-医术/01-高血压/01- 静脉血栓 " 静脉血栓")
@@ -547,6 +574,7 @@
     - **amWiki**
         - [amwiki 搭建](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
         - [博客搭建参考](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
+- **服务器选择**
 - **github教程**
     - [github教程](?file=10004-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
 - **blog页面美化**
@@ -584,3 +612,7 @@
         - **java**
             - **java基础面试题**
                 - [java基础题](?file=10006-面试题/01-Java 面试题总结/50001-面试资料文档记录/01-java/001-java基础面试题/01-java基础题 "java基础题")
+            - **java并发编程**
+                - [java并发编程](?file=10006-面试题/01-Java 面试题总结/50001-面试资料文档记录/01-java/002-java并发编程/01-java并发编程 "java并发编程")
+        - **其他**
+- **其他**

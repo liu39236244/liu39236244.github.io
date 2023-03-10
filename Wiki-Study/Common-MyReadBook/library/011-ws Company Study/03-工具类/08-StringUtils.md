@@ -126,6 +126,31 @@ public class StringUtils {
         }
         return null;
     }
+
+
+/**
+     * @Author: shenyabo
+     * @Date: Create in 2022/11/7 11:37
+     * @Description: 将url 对应参数转为map， 比如 ：curPeopleId=80800895-5d3a-4410-bcb7-5e9e528999b6&curPeopleName=张三&curPeoplePointPcApp=PC ； separator: & ， pairSeparator: =
+     * @Params: [mapString, separator, pairSeparator]
+     * @Return: java.util.Map<java.lang.String,java.lang.Object>
+     */
+    public static Map<String, Object> transUrlStringToMap(String mapString, String separator, String pairSeparator) {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        String[] fSplit = mapString.split(separator);
+        for (int i = 0; i < fSplit.length; i++) {
+            if (fSplit[i]==null||fSplit[i].length()==0) {
+                continue;
+            }
+            String[] sSplit = fSplit[i].split(pairSeparator);
+            String value = fSplit[i].substring(fSplit[i].indexOf('=') + 1);
+            map.put(sSplit[0], value);
+        }
+
+        return map;
+    }
+   
 }
 
 

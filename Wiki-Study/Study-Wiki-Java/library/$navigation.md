@@ -222,6 +222,8 @@
     - **httpClient使用池化技术**
         - [线上成功使用案例1](?file=003-java进阶知识/13-池化技术/03-httpClient使用池化技术/01-线上成功使用案例1 "线上成功使用案例1")
         - [简单方式创建HttpClient对象](?file=003-java进阶知识/13-池化技术/03-httpClient使用池化技术/02-简单方式创建HttpClient对象 "简单方式创建HttpClient对象")
+    - **springboot异步注解添加线程池**
+        - [异步async注解配置线程池](?file=003-java进阶知识/13-池化技术/04-springboot异步注解添加线程池/01-异步async注解配置线程池 "异步async注解配置线程池")
 - **报表**
     - **润乾报表**
         - [公用](?file=003-java进阶知识/15-报表/01-润乾报表/01-公用 "公用")
@@ -230,6 +232,7 @@
     - **camunda**
         - **camunda基础**
             - [camunda](?file=003-java进阶知识/20-流程/01-camunda/01-camunda基础/01-camunda "camunda")
+        - **activity-公用**
 - **跨域问题**
     - **springboot后端处理跨域问题**
         - **三种方式解决跨域**
@@ -240,6 +243,10 @@
 - **高并发**
     - **高并发生成id问题**
         - [高并发下生成全局id](?file=003-java进阶知识/30-高并发/01-高并发生成id问题/01-高并发下生成全局id "高并发下生成全局id")
+- **高并发**
+    - **高并发生成id问题**
+        - [高并发下生成全局id](?file=003-java进阶知识/30-高并发/01-高并发生成id问题/01-高并发下生成全局id "高并发下生成全局id")
+    - **其他**
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -291,6 +298,8 @@
 - **spring四种数据库连接池**
     - [基础四种常见连接池](?file=008-spring问题总结.md/02-spring四种数据库连接池/01-基础四种常见连接池 "基础四种常见连接池")
     - [常用的数据库连接池](?file=008-spring问题总结.md/02-spring四种数据库连接池/02-常用的数据库连接池 "常用的数据库连接池")
+- **获取spring上下文对象**
+    - [webSocket无法注入bean](?file=008-spring问题总结.md/03-获取spring上下文对象/01-webSocket无法注入bean "webSocket无法注入bean")
 
 ##### java 框架学习
 - **基础框架Spring**
@@ -333,6 +342,10 @@
     - **springboot问题点**
         - **springboot配置多个数据源**
             - [springboot配置多个数据源](?file=009-java 框架学习/06-spring-boot/10-springboot问题点/01-springboot配置多个数据源/01-springboot配置多个数据源 "springboot配置多个数据源")
+    - **springboot问题点**
+        - **springboot配置多个数据源**
+            - [springboot配置多个数据源](?file=009-java 框架学习/06-spring-boot/10-springboot问题点/01-springboot配置多个数据源/01-springboot配置多个数据源 "springboot配置多个数据源")
+        - **其他**
 - **tkMybatis**
     - **tk与数据库字段问题**
         - [自增字段设置](?file=009-java 框架学习/10-tkMybatis/02-tk与数据库字段问题/01-自增字段设置 "自增字段设置")
@@ -349,6 +362,9 @@
         - [springboot项目中初始化事件](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/03-springboot项目中初始化事件 "springboot项目中初始化事件")
     - **springboot启动后初始操作**
         - [项目启动执行自定义逻辑](?file=009-java 框架学习/100-框架问题/03-springboot启动后初始操作/01-项目启动执行自定义逻辑 "项目启动执行自定义逻辑")
+    - **springboot启动后初始操作**
+        - [项目启动执行自定义逻辑](?file=009-java 框架学习/100-框架问题/03-springboot启动后初始操作/01-项目启动执行自定义逻辑 "项目启动执行自定义逻辑")
+    - **springboot 自定义数据源**
     - **springcloud**
         - **springCloud 记录**
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
@@ -366,6 +382,8 @@
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
 - **jvm项目调优案例**
     - [jvm调优手段](?file=010-java-JVM/03-jvm项目调优案例/01-jvm调优手段 "jvm调优手段")
+- **jvm项目调优案例**
+    - [jvm调优手段](?file=010-java-JVM/03-jvm项目调优案例/01-jvm调优手段 "jvm调优手段")
 
 ##### java相关书籍
 - **jvm虚拟机相关**
@@ -375,6 +393,8 @@
         - [名词解析](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/010-名词解析 "名词解析")
         - [自动内存管理](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/02-自动内存管理 "自动内存管理")
         - [垃圾收集器与内存分配策略](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/03-垃圾收集器与内存分配策略 "垃圾收集器与内存分配策略")
+- **jvm调优**
+    - [jvm调优参数](?file=020-java相关书籍/02-jvm调优/01-jvm调优参数 "jvm调优参数")
 - **jvm调优**
     - [jvm调优参数](?file=020-java相关书籍/02-jvm调优/01-jvm调优参数 "jvm调优参数")
 

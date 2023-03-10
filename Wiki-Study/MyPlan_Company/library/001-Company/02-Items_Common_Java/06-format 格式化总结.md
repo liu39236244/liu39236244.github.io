@@ -8,6 +8,7 @@
 原文地址：https://blog.csdn.net/kjfcpua/article/details/4240486
 
 * decimal
+
 ```
 DecimalFormat的主要功能：
 
@@ -49,21 +50,21 @@ DecimalFormat 包含一个模式 和一组符号
 
 DecimalFormat df1 = new DecimalFormat("0.0");
 
-        DecimalFormat df2 = new DecimalFormat("#.#");
+DecimalFormat df2 = new DecimalFormat("#.#");
 
-        DecimalFormat df3 = new DecimalFormat("000.000");
+DecimalFormat df3 = new DecimalFormat("000.000");
 
-        DecimalFormat df4 = new DecimalFormat("###.###");
+DecimalFormat df4 = new DecimalFormat("###.###");
 
 
 
-        System.out.println(df1.format(12.34));
+System.out.println(df1.format(12.34));
 
-        System.out.println(df2.format(12.34));
+System.out.println(df2.format(12.34));
 
-        System.out.println(df3.format(12.34));
+System.out.println(df3.format(12.34));
 
-        System.out.println(df4.format(12.34));
+System.out.println(df4.format(12.34));
 
 结果：
 
@@ -81,49 +82,49 @@ DecimalFormat df1 = new DecimalFormat("0.0");
 
 DecimalFormat format = new DecimalFormat("###,####.000");
 
-       System.out.println(format.format(111111123456.1227222));
+System.out.println(format.format(111111123456.1227222));
 
 
 
-       Locale.setDefault(Locale.US);
+Locale.setDefault(Locale.US);
 
-       DecimalFormat usFormat = new DecimalFormat("###,###.000");
+DecimalFormat usFormat = new DecimalFormat("###,###.000");
 
-       System.out.println(usFormat.format(111111123456.1227222));
-
-
-
-       DecimalFormat addPattenFormat = new DecimalFormat();
-
-       addPattenFormat.applyPattern("##,###.000");
-
-                                         System.out.println(addPattenFormat.format(111111123456.1227));
+System.out.println(usFormat.format(111111123456.1227222));
 
 
 
-       DecimalFormat zhiFormat = new DecimalFormat();
+DecimalFormat addPattenFormat = new DecimalFormat();
 
-       zhiFormat.applyPattern("0.000E0000");
+addPattenFormat.applyPattern("##,###.000");
 
-       System.out.println(zhiFormat.format(10000));
-
-       System.out.println(zhiFormat.format(12345678.345));
+System.out.println(addPattenFormat.format(111111123456.1227));
 
 
 
-       DecimalFormat percentFormat = new DecimalFormat();
+DecimalFormat zhiFormat = new DecimalFormat();
 
-       percentFormat.applyPattern("#0.000%");
+zhiFormat.applyPattern("0.000E0000");
 
-       System.out.println(percentFormat.format(0.3052222));
+System.out.println(zhiFormat.format(10000));
+
+System.out.println(zhiFormat.format(12345678.345));
+
+
+
+DecimalFormat percentFormat = new DecimalFormat();
+
+percentFormat.applyPattern("#0.000%");
+
+System.out.println(percentFormat.format(0.3052222));
 
 
 
 
 
-       结果
+结果
 
-       1111,1112,3456.123
+1111,1112,3456.123
 
 111,111,123,456.123
 
@@ -142,3 +143,37 @@ DecimalFormat format = new DecimalFormat("###,####.000");
 如果使用具有多个分组字符的模式，则最后一个分隔符和整数结尾之间的间隔才是使用的分组大小。所以 "#,##,###,####" == "######,####" == "##,####,####"。
 
 ```
+
+
+## 注意 decimal.format (double/double) 
+
+format 中的值需要double
+
+
+  <resultMap id="BaseResultMap" type="com.graphsafe.emergencydrill.model.po.DrillTaskRecordMain">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="CHAR" property="id" />
+    <result column="planmanage_id" jdbcType="CHAR" property="planmanageId" />
+    <result column="drill_start_time" jdbcType="TIMESTAMP" property="drillStartTime" />
+    <result column="drill_end_time" jdbcType="TIMESTAMP" property="drillEndTime" />
+    <result column="all_subject_num" jdbcType="INTEGER" property="allSubjectNum" />
+    <result column="all_subject_score" jdbcType="INTEGER" property="allSubjectScore" />
+    <result column="all_task_num" jdbcType="INTEGER" property="allTaskNum" />
+    <result column="all_task_score" jdbcType="INTEGER" property="allTaskScore" />
+    <result column="drill_scene_id" jdbcType="CHAR" property="drillSceneId" />
+    <result column="drill_scene_name" jdbcType="VARCHAR" property="drillSceneName" />
+    <result column="drill_sight_id" jdbcType="CHAR" property="drillSightId" />
+    <result column="drill_sight_name" jdbcType="VARCHAR" property="drillSightName" />
+    <result column="drill_role_id" jdbcType="CHAR" property="drillRoleId" />
+    <result column="drill_role_name" jdbcType="VARCHAR" property="drillRoleName" />
+    <result column="drill_params_ids" jdbcType="VARCHAR" property="drillParamsIds" />
+    <result column="drill_params_names" jdbcType="VARCHAR" property="drillParamsNames" />
+    <result column="all_details_num" jdbcType="INTEGER" property="allDetailsNum" />
+    <result column="cur_completed_num" jdbcType="INTEGER" property="curCompletedNum" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_people_id" jdbcType="VARCHAR" property="createPeopleId" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_people_id" jdbcType="VARCHAR" property="updatePeopleId" />
+  </resultMap>

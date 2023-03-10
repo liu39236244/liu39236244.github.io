@@ -30,44 +30,6 @@ nohup /shenyabo/v2ray-All/v2ray-unzip/v2ray config.json > /dev/null 2>&1 &
 **如果开机rc.local 中 执行某个脚本 后面最好加上 & 符号**
 
 
-## mysql 问题：
-
-## 查看mysql安装目录
-
-### 启动报错
-启动报错：
-
-
-```sh
-[root@boyashen startTomcat_V2ray]# mysql -u root -p
-Enter password: 
-ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (111)
-
-```
-
-## 尝试解决：
-
-
-
-
-* 查看状态
-systemctl status mysqld 
-或者：/etc/rc.d/init.d/mysqld status
-没有/etc/rc.d/ini.d/mysqld 启动文件解决：
-https://blog.csdn.net/imliuqun123/article/details/83347081 
-
-* 验证错误文件是否存在
-查找 验证mysql.sock 
-
-[root@boyashen startTomcat_V2ray]# find /-name mysql.sock
-find: ?.-name?. No such file or directory
-find: ?.ysql.sock?. No such file or directory
-
-
-
-
-[原文博主链接](https://blog.csdn.net/qq_35440678/article/details/80489102)
-
 ## 第一种 在 /etc/rc.d/rc.local 文件中 执行脚本，或者语句
 
 ```shell
@@ -109,5 +71,86 @@ chmod +x /etc/rc.d/rc.local
 （5） ~/.bash_logout: 当每次退出系统(退出bash shell)时,执行该文件. 另外,/etc/profile中设定的变量(全局)的可以作用于任何用户,而~/.bashrc等中设定的变量(局部)只能继承 /etc/profile中的变量,他们是”父子”关系。
 
 （6） ~/.bash_profile: 是交互式、login 方式进入 bash 运行的~/.bashrc 是交互式 non-login 方式进入 bash 运行的通常二者设置大致相同，所以通常前者会调用后者。
+
+```
+
+
+## mysql 问题：
+
+## 查看mysql安装目录
+
+### 启动报错
+启动报错：
+
+
+```sh
+[root@boyashen startTomcat_V2ray]# mysql -u root -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (111)
+
+```
+
+## 尝试解决：
+
+
+
+
+* 查看状态
+systemctl status mysqld 
+或者：/etc/rc.d/init.d/mysqld status
+没有/etc/rc.d/ini.d/mysqld 启动文件解决：
+https://blog.csdn.net/imliuqun123/article/details/83347081 
+
+* 验证错误文件是否存在
+查找 验证mysql.sock 
+
+[root@boyashen startTomcat_V2ray]# find /-name mysql.sock
+find: ?.-name?. No such file or directory
+find: ?.ysql.sock?. No such file or directory
+
+
+
+
+[原文博主链接](https://blog.csdn.net/qq_35440678/article/details/80489102)
+
+
+## win 服务器开机启动 
+
+有做过一个项目开机需要启动好多个脚本
+
+
+
+
+可以创建一个启动脚本  allStart.vbs，脚本中每一个run 后面 路径对应的文件bat文件脚本，比如我这一个springcloud 项目启动脚本
+
+### start-sjzx-optimization
+```
+@echo off
+start cmd /c "title pxks_auth && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_auth-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_auth_application.yml  > ./log/pxks_auth.log"
+start cmd /c "title pxks_eureka && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_eureka-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_eureka_application.yml  > ./log/pxks_eureka.log"
+start cmd /c "title pxks_exam && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_exam-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_exam_application.yml  > ./log/pxks_exam.log"
+start cmd /c "title pxks_message && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_message-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_message_application.yml  > ./log/pxks_message.log"
+start cmd /c "title pxks_mongodb && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_mongodb-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_mongodb_application.yml  > ./log/pxks_mongodb.log"
+start cmd /c "title pxks_user && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_user-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_user_application.yml  > ./log/pxks_user.log"
+start cmd /c "title pxks_zuul && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_zuul-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_zuul_application.yml  > ./log/pxks_zuul.log"
+pause
+```
+
+###  allStart.vbs
+
+
+```
+createobject("wscript.shell").run "D:\project\project-bat\sjzx\redis",0 
+createobject("wscript.shell").run "D:\project\project-bat\sjzx\sjzx-start-tomcat",0
+createobject("wscript.shell").run "D:\project\project-bat\sjzx\start-sjzx-optimization",0
+
+
+createobject("wscript.shell").run "D:\project\project-bat\pxks\start-nginx",0
+createobject("wscript.shell").run "D:\project\project-bat\pxks\start-pxks-optimization",0
+
+
+createobject("wscript.shell").run "D:\project\project-bat\zhaj\zhaj-tomcat-start",0
+createobject("wscript.shell").run "D:\project\project-bat\zhaj\start-zhaj-optimization",0
+
 
 ```
