@@ -137,6 +137,8 @@
             - [数据库字符串匹配函数](?file=007-sql 相关/00-Command公用/01-数据库函数/01-字符串匹配.md/01-数据库字符串匹配函数 "数据库字符串匹配函数")
     - **sql 工具类**
         - [jdbc 直接执行sql文件](?file=007-sql 相关/00-Command公用/02-sql 工具类/01-jdbc 直接执行sql文件 "jdbc 直接执行sql文件")
+    - **各个数据库语法区别**
+        - [各个数据库语法区别](?file=007-sql 相关/00-Command公用/03-各个数据库语法区别/01-各个数据库语法区别 "各个数据库语法区别")
 - **PD相关**
     - [PW相关操作](?file=007-sql 相关/01-PD相关/01-PW相关操作 "PW相关操作")
     - [oracel 驱动问题](?file=007-sql 相关/01-PD相关/02-oracel 驱动问题 "oracel 驱动问题")
@@ -230,6 +232,8 @@
         - [创建sqlserver的insert语句](?file=007-sql 相关/05-SQLSERVER相关/04-SqlServer备份生成语句/05-创建sqlserver的insert语句 "创建sqlserver的insert语句")
     - **存储过程**
         - [存储过程](?file=007-sql 相关/05-SQLSERVER相关/05-存储过程/01-存储过程 "存储过程")
+    - **sqlserver配置主从备份**
+        - [SqlServer主从备份](?file=007-sql 相关/05-SQLSERVER相关/06-sqlserver配置主从备份/01-SqlServer主从备份 "SqlServer主从备份")
 - **Mongodb相关**
     - **Mongodb记录**
         - [mongodb备份恢复](?file=007-sql 相关/06-Mongodb相关/01-Mongodb记录/02-mongodb备份恢复 "mongodb备份恢复")

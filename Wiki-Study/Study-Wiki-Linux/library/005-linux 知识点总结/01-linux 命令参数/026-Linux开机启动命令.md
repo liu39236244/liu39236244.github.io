@@ -112,3 +112,45 @@ find: ?.ysql.sock?. No such file or directory
 
 
 [原文博主链接](https://blog.csdn.net/qq_35440678/article/details/80489102)
+
+
+## win 服务器开机启动 
+
+有做过一个项目开机需要启动好多个脚本
+
+
+
+
+可以创建一个启动脚本  allStart.vbs，脚本中每一个run 后面 路径对应的文件bat文件脚本，比如我这一个springcloud 项目启动脚本
+
+### start-sjzx-optimization
+```
+@echo off
+start cmd /c "title pxks_auth && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_auth-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_auth_application.yml  > ./log/pxks_auth.log"
+start cmd /c "title pxks_eureka && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_eureka-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_eureka_application.yml  > ./log/pxks_eureka.log"
+start cmd /c "title pxks_exam && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_exam-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_exam_application.yml  > ./log/pxks_exam.log"
+start cmd /c "title pxks_message && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_message-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_message_application.yml  > ./log/pxks_message.log"
+start cmd /c "title pxks_mongodb && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_mongodb-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_mongodb_application.yml  > ./log/pxks_mongodb.log"
+start cmd /c "title pxks_user && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_user-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_user_application.yml  > ./log/pxks_user.log"
+start cmd /c "title pxks_zuul && java  -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar pxks_zuul-1.0-SNAPSHOT.jar --spring.config.location=./yml/pxks_zuul_application.yml  > ./log/pxks_zuul.log"
+pause
+```
+
+###  allStart.vbs
+
+
+```
+createobject("wscript.shell").run "D:\project\project-bat\sjzx\redis",0 
+createobject("wscript.shell").run "D:\project\project-bat\sjzx\sjzx-start-tomcat",0
+createobject("wscript.shell").run "D:\project\project-bat\sjzx\start-sjzx-optimization",0
+
+
+createobject("wscript.shell").run "D:\project\project-bat\pxks\start-nginx",0
+createobject("wscript.shell").run "D:\project\project-bat\pxks\start-pxks-optimization",0
+
+
+createobject("wscript.shell").run "D:\project\project-bat\zhaj\zhaj-tomcat-start",0
+createobject("wscript.shell").run "D:\project\project-bat\zhaj\start-zhaj-optimization",0
+
+
+```

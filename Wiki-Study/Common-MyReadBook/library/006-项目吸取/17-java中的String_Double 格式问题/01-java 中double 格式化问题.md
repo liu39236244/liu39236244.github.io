@@ -10,6 +10,7 @@ import java.math.BigDecimal;
         double f = 111231.5585;  
         public void m1() {  
             BigDecimal bg = new BigDecimal(f);  
+            // 保留两位小数  4 舍5入
             double f1 = bg.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();  
             System.out.println(f1);  
         }  
