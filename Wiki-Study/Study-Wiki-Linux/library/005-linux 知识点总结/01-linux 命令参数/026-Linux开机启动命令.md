@@ -154,3 +154,57 @@ createobject("wscript.shell").run "D:\project\project-bat\zhaj\start-zhaj-optimi
 
 
 ```
+
+
+
+## java 启动jar 单独脚本
+
+```sh
+HOME='/data/java'
+####启动参数
+JAVA_OPTS=" -XX:+UseG1GC -XX:SurvivorRatio=4 -Duser.timezone=GMT+08 -Xmx2g -Xms2g -Xmn2g -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m"
+###后端服务列表
+PROJECT=(xsn)
+####后端服务jar包后缀版本
+VERSION=1.0-SNAPSHOT
+
+##注意：在脚本当前目录创建jar目录,将所有jar包放置在该目录下面
+
+####创建日志目录
+mkdir -p ${HOME}/logs
+
+case "$1" in
+
+start)
+        cd $HOME
+                for i in ${PROJECT[@]};do
+                        export JAR_NAME=${HOME}/jar/gp_${i}-${VERSION}.jar
+                        export JAR_LOG=${HOME}/logs/${i}.log
+                        if [ ! -f ${HOME}/logs/${i}.log ];then
+                touch ${HOME}/logs/${i}.log
+                        fi
+                        nohup java -jar ${JAVA_OPTS} -Dspring.config.location=/data/java/yml/${PROJECT}.yml  ${JAR_NAME} > ${JAR_LOG} &
+                        echo "--------${i}启动成功-------------"
+                done
+        echo "=====所有程序启动完毕====="
+        ;;
+
+stop)
+        for i in ${PROJECT[@]};do
+        P_ID=`ps -ef | grep ${i} | grep -v "grep" | awk '{print $2}'`
+                if [ "$P_ID" == "" ]; then
+                        echo "${i} 程序已关闭"
+                else
+                        kill -9 $P_ID
+                        echo "${i} 程序已关闭"
+                fi
+        done
+        echo "===所有程序已关闭==="
+        ;;
+esac
+exit 0
+              
+
+```
+
+执行命令：bash java.sh start

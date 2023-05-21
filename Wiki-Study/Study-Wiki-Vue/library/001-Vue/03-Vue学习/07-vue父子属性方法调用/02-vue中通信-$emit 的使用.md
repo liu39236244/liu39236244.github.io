@@ -63,3 +63,10 @@ $emit 绑定一个自定义事件event，当这个这个语句被执行到的时
 
 
 [组件嵌套以及事件](https://www.jianshu.com/p/ad22c84a8a87)
+
+
+# 子组件调用父组件方法，同时父组件定义自己的scope 参数
+
+参考博客：https://www.cnblogs.com/lalalagq/p/9901139.html
+
+![](assets/001/03/07/02-1680159057985.png)

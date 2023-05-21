@@ -27,6 +27,8 @@
 [java8中的日期和时间API](https://blog.csdn.net/u014231523/article/details/102652501)
 
 
+[Stream Collectors.groupingBy的四种用法 解决分组统计（计数、求和、平均数等）、范围统计、分组合并、分组结果自定义映射等问题](http://e.betheme.net/article/show-985998.html?action=onClick)
+
 
 ## 数据准备
 
@@ -144,6 +146,17 @@ Map<String, Product> prodMap = prodList.stream().collect(Collectors.groupingBy(P
 
 ```
 
+### 分组以后，拼接对象中某个属性查成字符串
+
+
+```java
+Map<String, String> collect = list.stream().collect(Collectors.groupingBy(HiddendangerInfoFlowInfo::getRectifyPeopleId, Collectors.mapping(item -> item.getDescription().substring(0, 3), Collectors.joining(","))));
+System.out.println(collect);
+```
+
+
+
+
 
 ### 联合其他收集器
 
@@ -156,3 +169,5 @@ Map<String, Set<String>> prodMap = prodList.stream().collect(Collectors.grouping
 
 
 ```
+通知：
+	由于仓储温湿度监控监测系统与2023年4月18日晚上 7点进行服务迁移，在此期间仓储温湿度系统所有功能将暂停，时间2小时左右，也可能提前迁移完毕，迁移完毕将会再次通知大家，为大家带来的不便还忘谅解!

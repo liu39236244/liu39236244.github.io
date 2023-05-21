@@ -1,6 +1,16 @@
 # Promise 方法解决
 
+
+
+
 ## 总结
+
+### Promise 功能使用介绍
+
+[ES6---new Promise()使用方法](https://blog.csdn.net/qq_40792800/article/details/105860758?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-105860758-blog-127206265.235%5Ev29%5Epc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-105860758-blog-127206265.235%5Ev29%5Epc_relevant_default_base3&utm_relevant_index=2)
+
+
+
 
 ### Promise实现
 
@@ -125,3 +135,4 @@ async function readByAsync(){
 }
 readByAsync();
 ```
+
