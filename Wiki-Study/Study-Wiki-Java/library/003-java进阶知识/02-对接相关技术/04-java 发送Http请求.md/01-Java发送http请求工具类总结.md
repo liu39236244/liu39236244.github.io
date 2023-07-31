@@ -4,6 +4,17 @@
 
 
 ```java
+@Data
+public class PostMethodHttpResult {
+
+    private int code;
+    private String responseBodyString;
+    private byte[] responseBody;
+}
+
+```
+
+```java
 package com.szdp.utils;
 import java.io.BufferedReader;
 import java.io.IOException;
