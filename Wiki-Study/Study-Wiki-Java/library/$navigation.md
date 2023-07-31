@@ -165,7 +165,6 @@
     - **前端实时弹窗报警案例**
         - [springboot项目中添加websocket案例](?file=003-java进阶知识/023-websocket/01-前端实时弹窗报警案例/01-springboot项目中添加websocket案例 "springboot项目中添加websocket案例")
 - **java 后台上传文件**
-    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -211,7 +210,6 @@
     - [java获取文件流遇到的问题](?file=003-java进阶知识/10-java 获取项目文件流/01-java获取文件流遇到的问题 "java获取文件流遇到的问题")
     - [视频播放player可快进](?file=003-java进阶知识/10-java 获取项目文件流/02-视频播放player可快进 "视频播放player可快进")
 - **工作流**
-    - **Activiti工作流**
     - **Camunda工作流**
         - [介绍](?file=003-java进阶知识/12-工作流/002-Camunda工作流/01-介绍 "介绍")
 - **池化技术**
@@ -230,13 +228,10 @@
     - **润乾报表**
         - [公用](?file=003-java进阶知识/15-报表/01-润乾报表/01-公用 "公用")
         - [sql数据源案例](?file=003-java进阶知识/15-报表/01-润乾报表/02-sql数据源案例 "sql数据源案例")
-    - **其他报表工具**
 - **流程**
     - **camunda**
         - **camunda基础**
             - [camunda](?file=003-java进阶知识/20-流程/01-camunda/01-camunda基础/01-camunda "camunda")
-        - **camunda案例**
-    - **activity**
         - **activity-公用**
 - **跨域问题**
     - **springboot后端处理跨域问题**
@@ -245,6 +240,9 @@
             - [三种方式解决跨域](?file=003-java进阶知识/21-跨域问题/01-springboot后端处理跨域问题/01-三种方式解决跨域/01-三种方式解决跨域 "三种方式解决跨域")
 - **Request-Response请求头问题**
     - [springboot在请求头中保存值返回前段](?file=003-java进阶知识/22-Request-Response请求头问题/01-springboot在请求头中保存值返回前段 "springboot在请求头中保存值返回前段")
+- **高并发**
+    - **高并发生成id问题**
+        - [高并发下生成全局id](?file=003-java进阶知识/30-高并发/01-高并发生成id问题/01-高并发下生成全局id "高并发下生成全局id")
 - **高并发**
     - **高并发生成id问题**
         - [高并发下生成全局id](?file=003-java进阶知识/30-高并发/01-高并发生成id问题/01-高并发下生成全局id "高并发下生成全局id")
@@ -277,7 +275,6 @@
 - **openjdk11新特性**
     - **公共记录**
         - [openjdk11新特性](?file=004-Java 新特性/02-openjdk11新特性/01-公共记录/01-openjdk11新特性 "openjdk11新特性")
-    - **其他教程记录**
 
 ##### java 后端之maven
 - **maven学习记录**
@@ -345,6 +342,9 @@
     - **springboot问题点**
         - **springboot配置多个数据源**
             - [springboot配置多个数据源](?file=009-java 框架学习/06-spring-boot/10-springboot问题点/01-springboot配置多个数据源/01-springboot配置多个数据源 "springboot配置多个数据源")
+    - **springboot问题点**
+        - **springboot配置多个数据源**
+            - [springboot配置多个数据源](?file=009-java 框架学习/06-spring-boot/10-springboot问题点/01-springboot配置多个数据源/01-springboot配置多个数据源 "springboot配置多个数据源")
         - **其他**
 - **tkMybatis**
     - **tk与数据库字段问题**
@@ -362,15 +362,26 @@
         - [springboot项目中初始化事件](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/03-springboot项目中初始化事件 "springboot项目中初始化事件")
     - **springboot启动后初始操作**
         - [项目启动执行自定义逻辑](?file=009-java 框架学习/100-框架问题/03-springboot启动后初始操作/01-项目启动执行自定义逻辑 "项目启动执行自定义逻辑")
+    - **springboot启动后初始操作**
+        - [项目启动执行自定义逻辑](?file=009-java 框架学习/100-框架问题/03-springboot启动后初始操作/01-项目启动执行自定义逻辑 "项目启动执行自定义逻辑")
     - **springboot 自定义数据源**
     - **springcloud**
         - **springCloud 记录**
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
+- **工作流**
+    - **activity学习**
+        - **common activity学习**
+            - [公用activity学习](?file=009-java 框架学习/21-工作流/01-activity学习/00-common activity学习/01-公用activity学习 "公用activity学习")
+        - **bilibili activity 临时记录**
+            - [两小时看懂activity](?file=009-java 框架学习/21-工作流/01-activity学习/001-bilibili activity 临时记录/01-两小时看懂activity "两小时看懂activity")
+            - [三个小时搞懂activity与springboot整合](?file=009-java 框架学习/21-工作流/01-activity学习/001-bilibili activity 临时记录/02-三个小时搞懂activity与springboot整合 "三个小时搞懂activity与springboot整合")
 
 ##### java-JVM
 - **jvm调优**
     - **jvm 前置知识基础**
         - [java中 类加载过程到jvm](?file=010-java-JVM/02-jvm调优/01-jvm 前置知识基础/01-java中 类加载过程到jvm "java中 类加载过程到jvm")
+- **jvm项目调优案例**
+    - [jvm调优手段](?file=010-java-JVM/03-jvm项目调优案例/01-jvm调优手段 "jvm调优手段")
 - **jvm项目调优案例**
     - [jvm调优手段](?file=010-java-JVM/03-jvm项目调优案例/01-jvm调优手段 "jvm调优手段")
 
@@ -382,6 +393,8 @@
         - [名词解析](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/010-名词解析 "名词解析")
         - [自动内存管理](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/02-自动内存管理 "自动内存管理")
         - [垃圾收集器与内存分配策略](?file=020-java相关书籍/01-jvm虚拟机相关/01-深入理解java虚拟机第三版/03-垃圾收集器与内存分配策略 "垃圾收集器与内存分配策略")
+- **jvm调优**
+    - [jvm调优参数](?file=020-java相关书籍/02-jvm调优/01-jvm调优参数 "jvm调优参数")
 - **jvm调优**
     - [jvm调优参数](?file=020-java相关书籍/02-jvm调优/01-jvm调优参数 "jvm调优参数")
 
@@ -400,7 +413,5 @@
 
 ##### 数据结构专栏
 - **数据结构基础知识**
-    - **基础**
     - **Hash表**
         - [hash表介绍](?file=200-数据结构专栏/01-数据结构基础知识/02-Hash表/01-hash表介绍 "hash表介绍")
-- **数据结构other**
