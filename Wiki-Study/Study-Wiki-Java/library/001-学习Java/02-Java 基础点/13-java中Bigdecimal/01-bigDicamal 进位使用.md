@@ -2,6 +2,8 @@
 
 ## 总结
 
+[参考博客：关于【BigDecimal】和Mysql中的decimal](https://blog.csdn.net/chenpp666/article/details/124372731)
+
 
 ## 参考
 
@@ -112,3 +114,19 @@ System.out.println(l);
 //断言请求的操作具有精确的结果，因此不需要舍入。
 //如果对获得精确结果的操作指定此舍入模式，则抛出ArithmeticException。
 ```
+
+
+
+
+```
+{
+	"updateBridge":false,
+	"updatedevice":false,
+	"updateSensor":false,
+	"updateProbe":false,
+	"updateProbeFormula":false,
+	"probeTypeChild":false,
+}
+```
+
+
