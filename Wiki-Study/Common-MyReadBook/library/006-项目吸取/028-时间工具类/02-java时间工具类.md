@@ -327,7 +327,27 @@ public class DateTimeUtils {
         return cal.getTime();
     }
 
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2023/11/20 13:52
+     * @Description: 解决字符串为 Mon Nov 20 10:50:01 CST 2023 的时间
+     * @Params: [dateStr]
+     * @Return: java.util.Date
+     */
+    private Date parseDate(String dateStr) {
 
+        Date result =null;
+        if (!StringUtils.isEmpty(dateStr) && !"null".equals(dateStr)) {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH);
+            try {
+                result = dateFormat.parse(dateStr);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+
+    }
 
     public static void main(String[] args) {
 

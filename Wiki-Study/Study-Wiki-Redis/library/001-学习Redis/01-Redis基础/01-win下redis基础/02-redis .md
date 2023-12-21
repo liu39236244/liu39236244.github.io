@@ -91,6 +91,23 @@ redis 解压文档中也有一份
 ![](assets/001/01/01/02-1614937468664.png)
 
 
+### redis 数据的迁移备份
+
+
+参考博客：https://blog.csdn.net/nings666/article/details/131416497/
+
+![](assets/001/01/01/02-1698650506342.png)
+
+
+```
+导出：
+redis-dump -u :password@原服务器ip:6379 > 文件名
+
+导入：
+cat 文件名 | redis-load -u :password@目标服务器ip:6379
+
+```
+
 
 ### 添加redis密码验证
 
