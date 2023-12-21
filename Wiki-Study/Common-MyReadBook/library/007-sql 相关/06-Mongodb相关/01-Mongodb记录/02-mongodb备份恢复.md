@@ -21,3 +21,8 @@ mongorestore -h 10.0.2.4:27017 -d xzpx_mongodb --drop C:\Users\Administrator\Des
 
 mongodump -h 10.0.2.4 --port 27017  -d gp-yjyl -o C:\Users\Administrator\Desktop\
 mongorestore -h 10.0.2.4:27017 -d gs-yjyl-three --drop C:\Users\Administrator\Desktop\gp-yjyl
+
+
+mongodump -h localhost --port 27017  -d sjzx -o C:\Users\Administrator\Desktop\mongodb
+
+
