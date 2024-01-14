@@ -11,7 +11,16 @@ SpringBoot全套视频分为上下两部；
 学习本套视频需要掌握SpringBoot；对于其他技术，视频包含快速入门讲解；
 
 
+## spring 整体课程 内容
+
+![](assets/000/01/02/03/01-1686985350119.png)
+
+
+
 ## 1 Spring boot 入门
+
+
+
 
 
 > 1 简介
@@ -24,7 +33,10 @@ SpringBoot全套视频分为上下两部；
 
     2014,martin flowler 
     微服务：架构风格
-    一个应用应该是一组小型服务
+    一个应用应该是一组小型服务,可以通过htttp的方式互通
+    每一个功能元素最终都是一个可独立替换和独立升级的软件单元
+
+![](assets/000/01/02/03/01-1686987131300.png)
 
 ![](assets/000/01/02/03/01-1605777132472.png)
 
@@ -38,21 +50,106 @@ SpringBoot全套视频分为上下两部；
 spring 入门容易精通比较难，需要对spring 底层的一些框架需要比较了解
 
 
+## 2 环境准备
+
+![](assets/000/01/02/03/01-1686987444810.png)
 
 
-```java
-    @PostMapping(value = "/getAllMediaTree", produces = "application/json;charset=UTF-8")
-    @Override
-    public RestMessage<Map> getAllMediaTree(@RequestBody Map<String, String> paramMap) {
-        // 最终返回结果
-        Map map = new HashMap();
-        try {
-            map = spreadManageService.getAllMediaTree(paramMap);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new RestMessage(RespCodeAndMsg.FAIL, e.getMessage());
-        }
-        return new RestMessage(map);
-    }
 
-```
+## 3 helloworld
+
+
+![](assets/000/01/02/03/01-1686987685014.png)
+
+### 3.1 创建一个maven项目
+
+![](assets/000/01/02/03/01-1686987756968.png)
+
+
+### 3.2 快速开始
+
+![](assets/000/01/02/03/01-1686987848044.png)
+
+
+### 3.3 打包springboot 引入一个插件
+
+![](assets/000/01/02/03/01-1686988198350.png)
+
+### 3.4 打完jar包 自带tomcat 内置版
+
+![](assets/000/01/02/03/01-1686988356556.png)
+
+
+## 4 springboot 启动器
+
+### 4.1 父项目pom配置
+
+![](assets/000/01/02/03/01-1686988436380.png)
+
+父项目 中存在一个dependencise 依赖
+
+![](assets/000/01/02/03/01-1686988479426.png)
+
+
+
+点入进去 即可看到 默认的springboot 的应用依赖版本（也叫作版本仲裁中心），没有在此项目中定义的则需要定义版本号
+
+![](assets/000/01/02/03/01-1686988528577.png)   
+
+
+### 4.2 springboot start 依赖
+
+![](assets/000/01/02/03/01-1686988671070.png)
+
+spring-boot-start :场景启动器   
+
+
+Spring Boot将所有的功能场景都抽取出来，做成一个个的starters(启动器)，只需要在项目里面引入这些starter相关场景的所有依赖都会导入进来。用什么功能就将对应的启动器导入即可
+
+
+## 5 helloworld 自动配置
+
+springbootapplication 注解 组成：
+
+![](assets/000/01/02/03/01-1686989015791.png)
+
+
+
+![](assets/000/01/02/03/01-1686989105928.png)
+
+![](assets/000/01/02/03/01-1686989246836.png)
+
+![](assets/000/01/02/03/01-1686989290011.png)
+
+将主配置类( @SpringBootApplication标注的类 )的所在包及下面所有子包里面的所有组件扫描到Spring容器;
+
+
+![](assets/000/01/02/03/01-1686989301323.png)
+
+
+![](assets/000/01/02/03/01-1686989637621.png)
+
+
+查看 究竟要导入那些组件
+
+
+![](assets/000/01/02/03/01-1686989696241.png)
+
+![](assets/000/01/02/03/01-1686989762430.png)
+
+![](assets/000/01/02/03/01-1686989841635.png)
+
+
+![](assets/000/01/02/03/01-1686990108022.png)
+
+## 6 使用快速想到创建springboot应用
+
+![](assets/000/01/02/03/01-1686991660102.png)
+
+![](assets/000/01/02/03/01-1686991737443.png)
+
+
+![](assets/000/01/02/03/01-1686991911144.png) 
+
+
+![](assets/000/01/02/03/01-1686992169527.png)

@@ -73,6 +73,7 @@
             - **SpringCloud学习笔记**
         - **尚硅谷springboot视频**
             - [SpringBoot记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/03-尚硅谷springboot视频/01-SpringBoot记录 "SpringBoot记录")
+            - [springboot配置](?file=000-Common/01-EverythingRecord/02-视频学习记录/03-尚硅谷springboot视频/02-springboot配置 "springboot配置")
         - **Redis双11高并发架构与源码深度解剖**
             - [04_Redis 公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/04-Redis双11高并发架构与源码深度解剖/01-04_Redis 公用 "04_Redis 公用")
             - [Redis](?file=000-Common/01-EverythingRecord/02-视频学习记录/04-Redis双11高并发架构与源码深度解剖/02-Redis "Redis")
@@ -147,7 +148,9 @@
             - ** 互联网安全相关问题**
                 - [公用笔记](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/01- 互联网安全相关问题/00-公用笔记 "公用笔记")
                 - [ 第一节介绍](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/01- 互联网安全相关问题/01- 第一节介绍 " 第一节介绍")
-            - [如何防止抓包工具篡改](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/02-如何防止抓包工具篡改 "如何防止抓包工具篡改")
+                - [如何防止抓包工具篡改](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/01- 互联网安全相关问题/02-如何防止抓包工具篡改 "如何防止抓包工具篡改")
+            - **新一代服务网关Gateway**
+                - [公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/02-新一代服务网关Gateway/00-公用 "公用")
     - **在线工具总结**
         - [vps 供应商](?file=000-Common/01-EverythingRecord/03-在线工具总结/00-vps 供应商 "vps 供应商")
         - [检测ip工具](?file=000-Common/01-EverythingRecord/03-在线工具总结/01-检测ip工具 "检测ip工具")
