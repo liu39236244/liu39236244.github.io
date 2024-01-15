@@ -128,6 +128,9 @@
     - [Properties解析四种方式](?file=006-项目吸取/25-Properties解析/04-Properties解析四种方式 "Properties解析四种方式")
 - **Math类的使用**
     - [Math类的使用](?file=006-项目吸取/27-Math类的使用/01-Math类的使用 "Math类的使用")
+- **程序demo记录**
+    - **java程序demo记录**
+        - [抽奖控制概率](?file=006-项目吸取/30-程序demo记录/01-java程序demo记录/01-抽奖控制概率 "抽奖控制概率")
 
 ##### sql 相关
 - **Command公用**
@@ -221,6 +224,7 @@
         - [sqlserver关联修改](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/04-sqlserver关联修改 "sqlserver关联修改")
         - [插入数据结果集](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/05-插入数据结果集 "插入数据结果集")
         - [索引](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/06-索引 "索引")
+        - [嵌套查询包含外联](?file=007-sql 相关/05-SQLSERVER相关/01-sqlserver基础/07-嵌套查询包含外联 "嵌套查询包含外联")
     - [SqlServer 公用查询语句](?file=007-sql 相关/05-SQLSERVER相关/02-SqlServer 公用查询语句 "SqlServer 公用查询语句")
     - **sql server 数据类型对应jdbcType**
         - [sql Server 字段对应JDBCTYPE](?file=007-sql 相关/05-SQLSERVER相关/03-sql server 数据类型对应jdbcType/01-sql Server 字段对应JDBCTYPE "sql Server 字段对应JDBCTYPE")
@@ -487,6 +491,8 @@
 
 ##### 视频相关
 - **PR学习**
+    - **操作点记录**
+        - [操作记录](?file=10001-视频相关/01-PR学习/01-操作点记录/02-操作记录 "操作记录")
     - **贝塔珐入门教程**
         - [课程记录](?file=10001-视频相关/01-PR学习/03-贝塔珐入门教程/01-课程记录 "课程记录")
 - **AU学习**
@@ -575,6 +581,10 @@
     - [postman 使用](?file=10003-工具使用/01-PostMan测试工具使用/01-postman 使用 "postman 使用")
 - **二维码网站以及api**
     - [二维码记录](?file=10003-工具使用/02-二维码网站以及api/01-二维码记录 "二维码记录")
+- **Powerdesigner**
+    - **操作点**
+        - [pd显示注释列-设置显示出来注释](?file=10003-工具使用/04-Powerdesigner/02-操作点/01-pd显示注释列-设置显示出来注释 "pd显示注释列-设置显示出来注释")
+        - [pd显示comment列字段](?file=10003-工具使用/04-Powerdesigner/02-操作点/02-pd显示comment列字段 "pd显示comment列字段")
 
 ##### blog 博客搭建.md
 - **blog 选择**
