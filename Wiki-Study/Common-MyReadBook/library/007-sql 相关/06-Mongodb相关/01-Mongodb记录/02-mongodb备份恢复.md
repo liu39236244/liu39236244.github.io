@@ -26,3 +26,4 @@ mongorestore -h 10.0.2.4:27017 -d gs-yjyl-three --drop C:\Users\Administrator\De
 mongodump -h localhost --port 27017  -d sjzx -o C:\Users\Administrator\Desktop\mongodb
 
 
+mongodump -h 10.110.34.214 --port 27017 --username=gp_bridge --password=lsmeuuOOxy637ovvCA -d gp_bridge -o C:\Users\Administrator\Desktop\mongodb
