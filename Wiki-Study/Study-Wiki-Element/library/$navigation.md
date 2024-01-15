@@ -19,6 +19,7 @@
         - [el table 设置点击事件以及数据字段](?file=001-学习Element/02-Element开发总结/05-elTable表格组件/01-el table 设置点击事件以及数据字段 "el table 设置点击事件以及数据字段")
         - [el-table修改行内数据颜色](?file=001-学习Element/02-Element开发总结/05-elTable表格组件/02-el-table修改行内数据颜色 "el-table修改行内数据颜色")
         - [elTable默认选中](?file=001-学习Element/02-Element开发总结/05-elTable表格组件/03-elTable默认选中 "elTable默认选中")
+        - [表格选中不刷新视图问题](?file=001-学习Element/02-Element开发总结/05-elTable表格组件/05-表格选中不刷新视图问题 "表格选中不刷新视图问题")
     - **Dialog**
         - **dialog使用**
             - [dialog使用](?file=001-学习Element/02-Element开发总结/06-Dialog/01-dialog使用/01-dialog使用 "dialog使用")
@@ -27,6 +28,7 @@
             - [修改dialog 弹框距离top为可设定](?file=001-学习Element/02-Element开发总结/06-Dialog/02-Dialog 弹框三方修改/02-修改dialog 弹框距离top为可设定 "修改dialog 弹框距离top为可设定")
         - **elDialog 样式控制**
             - [eldialog中elbody 样式修改](?file=001-学习Element/02-Element开发总结/06-Dialog/03-elDialog 样式控制/02-eldialog中elbody 样式修改 "eldialog中elbody 样式修改")
+            - [dialog修改高度](?file=001-学习Element/02-Element开发总结/06-Dialog/03-elDialog 样式控制/03-dialog修改高度 "dialog修改高度")
         - **dialog 弹框对应键位关闭问题**
             - [dialog 点击esc、enter 关闭弹框问题](?file=001-学习Element/02-Element开发总结/06-Dialog/04-dialog 弹框对应键位关闭问题/01-dialog 点击esc、enter 关闭弹框问题 "dialog 点击esc、enter 关闭弹框问题")
     - **input**
@@ -41,3 +43,7 @@
             - [获取当前节点所有父节点](?file=001-学习Element/02-Element开发总结/10-Elment Tree/01-Elment Tree 获取父节点问题/02-获取当前节点所有父节点 "获取当前节点所有父节点")
         - **elTree +elselect 可过滤**
             - [El-select+El-Tree实现可过滤下拉树](?file=001-学习Element/02-Element开发总结/10-Elment Tree/02-elTree +elselect 可过滤/01-El-select+El-Tree实现可过滤下拉树 "El-select+El-Tree实现可过滤下拉树")
+        - **懒加载选中节点问题**
+            - [懒加载导致回显修改数据之后深层节点选中丢失](?file=001-学习Element/02-Element开发总结/10-Elment Tree/03-懒加载选中节点问题/01-懒加载导致回显修改数据之后深层节点选中丢失 "懒加载导致回显修改数据之后深层节点选中丢失")
+    - **el-popover气泡**
+        - [popover气泡标签](?file=001-学习Element/02-Element开发总结/11-el-popover气泡/01-popover气泡标签 "popover气泡标签")

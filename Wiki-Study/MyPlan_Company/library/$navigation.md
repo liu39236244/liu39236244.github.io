@@ -67,10 +67,15 @@
             - **hash由浅入深-jam-分布式锁**
                 - [公用](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/02-hash由浅入深-jam-分布式锁/00-公用 "公用")
                 - [ 笔记记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/01-动脑学院视频/02-hash由浅入深-jam-分布式锁/01- 笔记记录 " 笔记记录")
-        - **尚硅谷SpringCloud**
-            - **课程记录**
-                - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-尚硅谷SpringCloud/01-课程记录/01- 记录 " 记录")
-            - **SpringCloud学习笔记**
+        - **SpringCloud**
+            - **尚硅谷**
+                - **课程记录**
+                    - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-SpringCloud/01-尚硅谷/01-课程记录/01- 记录 " 记录")
+                - **SpringCloud学习笔记**
+            - **springcloud 分布式**
+                - **微服务分布式架构实战教程**
+                    - [记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-SpringCloud/02-springcloud 分布式/01-微服务分布式架构实战教程/01-记录 "记录")
+                    - [课程记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-SpringCloud/02-springcloud 分布式/01-微服务分布式架构实战教程/02-课程记录 "课程记录")
         - **尚硅谷springboot视频**
             - [SpringBoot记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/03-尚硅谷springboot视频/01-SpringBoot记录 "SpringBoot记录")
             - [springboot配置](?file=000-Common/01-EverythingRecord/02-视频学习记录/03-尚硅谷springboot视频/02-springboot配置 "springboot配置")
