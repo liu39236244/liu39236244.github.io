@@ -35,6 +35,9 @@ callable实现的存在返回值的并发编程。（call的返回值String受�
 
 ## 代码案例
 
+
+### 案例1 
+
 ```java
 
 package demo.future;
@@ -87,3 +90,37 @@ isDone，判断是否完成
 3).如果想要取消一个任务，或如果提交Callable对象，那就要保存好返回的Future对象。
 
 4).当不再提交任何任务时，调用shutdown方法。
+
+### 案例2
+
+
+
+[简单使用案例1](https://zhuanlan.zhihu.com/p/439879500)
+
+```java
+@RestController
+@EnableAsync //开启异步调用
+public class MyController {
+
+    @Autowired
+    private MyAAServiceImpl service;
+
+    @GetMapping("/select")
+    public String test() throws ExecutionException {
+        System.out.println("主线程线程=========="+Thread.currentThread().getName());
+        Future future = service.select();
+        //boolean done = future.isDone(); 用于判断线程是否执行完毕
+        return future.get().toString;
+    }
+}
+@Service
+public class MyAAServiceImpl implements MyAAService {
+
+    @Override
+    @Async
+    public Future select() {
+        System.out.println("select()线程=========="+Thread.currentThread().getName());
+        return new AsyncResult<>("success");
+    }
+}
+```

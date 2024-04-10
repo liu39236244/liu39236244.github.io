@@ -127,13 +127,16 @@
     - **java架构师之路线程学习**
         - **入门**
             - [线程入门](?file=001-学习Java/11-Java线程/11-java架构师之路线程学习/01-入门/01-线程入门 "线程入门")
-    - **线程使用案例**
-        - [springboot 中使用线程池](?file=001-学习Java/11-Java线程/20-线程使用案例/00-springboot 中使用线程池 "springboot 中使用线程池")
-        - [springBoot中使用多线程](?file=001-学习Java/11-Java线程/20-线程使用案例/01-springBoot中使用多线程 "springBoot中使用多线程")
-        - [springboot中线程池基本用法](?file=001-学习Java/11-Java线程/20-线程使用案例/02-springboot中线程池基本用法 "springboot中线程池基本用法")
-        - [springboot中优雅使用多线程](?file=001-学习Java/11-Java线程/20-线程使用案例/03-springboot中优雅使用多线程 "springboot中优雅使用多线程")
-        - [线程之间交互](?file=001-学习Java/11-Java线程/20-线程使用案例/04-线程之间交互 "线程之间交互")
-        - [主线程分多线程执行任务并等待](?file=001-学习Java/11-Java线程/20-线程使用案例/05-主线程分多线程执行任务并等待 "主线程分多线程执行任务并等待")
+    - **java springboot中线程池使用案例**
+        - [springboot 中使用线程池](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/00-springboot 中使用线程池 "springboot 中使用线程池")
+        - [springBoot中使用多线程](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/01-springBoot中使用多线程 "springBoot中使用多线程")
+        - [springboot中线程池基本用法](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/02-springboot中线程池基本用法 "springboot中线程池基本用法")
+        - [springboot中优雅使用多线程](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/03-springboot中优雅使用多线程 "springboot中优雅使用多线程")
+        - [线程之间交互](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/04-线程之间交互 "线程之间交互")
+        - [springboot yml配置多个线程池案例](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/05-springboot yml配置多个线程池案例 "springboot yml配置多个线程池案例")
+        - [主线程分多线程执行任务并等待](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/06-主线程分多线程执行任务并等待 "主线程分多线程执行任务并等待")
+        - [springboot 中 @async 的使用](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/07-springboot 中 @async 的使用 "springboot 中 @async 的使用")
+        - [无线程CompletableFutureDemo](?file=001-学习Java/11-Java线程/20-java springboot中线程池使用案例/08-无线程CompletableFutureDemo "无线程CompletableFutureDemo")
 - **泛型**
     - **泛型记录**
         - [泛型上下限问题](?file=001-学习Java/12-泛型/01-泛型记录/03-泛型上下限问题 "泛型上下限问题")
@@ -282,6 +285,7 @@
         - [函数式接口-消费者组合去除ifelse](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/06-函数式接口-消费者组合去除ifelse "函数式接口-消费者组合去除ifelse")
         - [新特性中groupBy的用法](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/10-新特性中groupBy的用法 "新特性中groupBy的用法")
         - [parallelStream 用法](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/11-parallelStream 用法 "parallelStream 用法")
+        - [list-map 数据排序分页](?file=004-Java 新特性/01-JAVA 1.8 新特性/03-jdk 1.8 新特性案例总结/12-list-map 数据排序分页 "list-map 数据排序分页")
 - **openjdk11新特性**
     - **公共记录**
         - [openjdk11新特性](?file=004-Java 新特性/02-openjdk11新特性/01-公共记录/01-openjdk11新特性 "openjdk11新特性")

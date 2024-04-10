@@ -501,6 +501,41 @@ FutureTask 表示一个异步运算的任务。FutureTask 里面可以传入一�
 [FutureTask的用法及两种经常使用的使用场景](https://blog.csdn.net/shengxiaohua1/article/details/120702347)
 
 
+
+#### 11.9.1 future 简单使用
+
+
+[简单使用案例1](https://zhuanlan.zhihu.com/p/439879500)
+
+```java
+@RestController
+@EnableAsync //开启异步调用
+public class MyController {
+
+    @Autowired
+    private MyAAServiceImpl service;
+
+    @GetMapping("/select")
+    public String test() throws ExecutionException {
+        System.out.println("主线程线程=========="+Thread.currentThread().getName());
+        Future future = service.select();
+        //boolean done = future.isDone(); 用于判断线程是否执行完毕
+        return future.get().toString;
+    }
+}
+@Service
+public class MyAAServiceImpl implements MyAAService {
+
+    @Override
+    @Async
+    public Future select() {
+        System.out.println("select()线程=========="+Thread.currentThread().getName());
+        return new AsyncResult<>("success");
+    }
+}
+```
+
+
 ## 12 线程的状态
 
 ![](assets/10006/01/50001/01/002/01-1673248888747.png)

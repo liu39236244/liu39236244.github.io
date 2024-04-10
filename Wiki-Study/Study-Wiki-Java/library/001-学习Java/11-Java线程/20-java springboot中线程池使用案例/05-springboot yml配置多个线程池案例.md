@@ -1,6 +1,6 @@
 # 配置多个线程池 
 
-## 线程池配置
+## 线程池配置以及简单使用版本1 
 
 ```
 # 异步线程池配置
@@ -402,5 +402,158 @@ public void probe1() {
         log.info(".....生产三万条数据完成..");
 
     }
+
+```
+
+
+## springboot 配置线自定义线程池 且 future 有线程阻塞等待的接口
+
+
+### yml 配置
+
+
+```yml
+# 异步线程池配置
+async:
+  executor:
+    # 每次往starrocks 一张表中插入数据线程池配置，一个桥 1s 按照3万条数据， 1个线程批量插入1000条 大概30次， 往后会有7 座桥甚至 30座桥 ， 按照7座桥的标准 给 70 个核心线程数
+    thread-addDataToStarrocks-threadPool:
+      # 配置核心线程数
+      core_pool_size: 12
+      # 配置最大线程数
+      max_pool_size: 16
+      # 配置队列大小
+      queue_capacity: 1000
+      # 空闲线程 保持时间 ：秒
+      keep_alive_seconds: 60
+      # 超时等待秒数
+      set_awaitTermination_seconds: 180
+      # 配置线程池中的线程的名称前缀
+      name:
+        prefix: async-addDataToStarrocks-thread
+```
+
+
+### java配置类
+
+```java
+
+
+package com.graphsafe.dataStorage.config.thread;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.ThreadPoolExecutor;
+
+/**
+ * @author : shenyabo
+ * @date : Created in 2023-04-25 11:30
+ * @description :
+ * @modified By :
+ * @version: : v1.0
+ */
+@Configuration
+@Slf4j
+public class MyThreadPoolConfig {
+    /**
+     * @Description: socket 服务端接受客户端 对应线程池配置
+     * @Date: 2023-10-18 17:14:29
+     */
+    @Value("${async.executor.thread-addDataToStarrocks-threadPool.core_pool_size}")
+    private int addStarrocksCorePoolSize;
+    @Value("${async.executor.thread-addDataToStarrocks-threadPool.max_pool_size}")
+    private int addStarrocksMaxPoolSize;
+    @Value("${async.executor.thread-addDataToStarrocks-threadPool.queue_capacity}")
+    private int addStarrocksQueueCapacity;
+    @Value("${async.executor.thread-addDataToStarrocks-threadPool.name.prefix}")
+    private String addStarrocksNamePrefixSocket;
+    @Value("${async.executor.thread-addDataToStarrocks-threadPool.keep_alive_seconds}")
+    private Integer addStarrocksKeepAliveSeconds;
+    @Value("${async.executor.thread-addDataToStarrocks-threadPool.set_awaitTermination_seconds}")
+    private Integer setAwaitTerminationSeconds;
+
+    @Bean(name = "asyncAddStarRocksServiceExecutor")
+    public Executor asyncAddStarRocksServiceExecutor() {
+        log.info("start asyncAddStarrocksServiceExecutor 初始化线程池 asyncAddStarrocksServiceExecutor");
+        log.info("Runtime.getRuntime().availableProcessors() 查看服务器核心数{}",Runtime.getRuntime().availableProcessors());
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        //配置核心线程数
+        executor.setCorePoolSize(addStarrocksCorePoolSize);
+        //配置最大线程数
+        executor.setMaxPoolSize(addStarrocksMaxPoolSize);
+        //配置队列大小
+        executor.setQueueCapacity(addStarrocksQueueCapacity);
+        //配置线程池中的线程的名称前缀
+        executor.setThreadNamePrefix(addStarrocksNamePrefixSocket);
+
+        // 空闲线程保持多久
+        executor.setKeepAliveSeconds(addStarrocksKeepAliveSeconds);
+
+        // rejection-policy：当pool已经达到max size的时候，如何处理新任务
+        // CALLER_RUNS：不在新线程中执行任务，而是有调用者所在的线程来执行
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.DiscardOldestPolicy());
+
+        //调度器shutdown被调用时等待当前被调度的任务完成
+        executor.setWaitForTasksToCompleteOnShutdown(true);
+        //等待时长
+        executor.setAwaitTerminationSeconds(setAwaitTerminationSeconds);
+
+        //执行初始化
+        executor.initialize();
+        return executor;
+    }
+}
+
+
+
+```
+
+### 使用demo
+
+
+
+```java
+
+@Component
+@Slf4j
+public class KafkaConsumer {
+
+    @Resource(name = "asyncAddStarRocksServiceExecutor")
+    private ThreadPoolTaskExecutor asyncAddStarRocksServiceExecutor;
+
+    public void topicListener2(List<Message<String>> list, Consumer consumer) {
+        List<Future> futureList = new ArrayList<>();
+        try {
+            for (Message<String> stringMessage : list) {
+                FutureTask<String> task = new FutureTask<>(() -> {
+                    /**
+                    * 耗时间的业务逻辑代码
+                    */
+                
+                    return "";
+                });
+                Future<?> future = asyncAddStarRocksServiceExecutor.submit(task);
+                futureList.add(future);
+            }
+
+            //等待 所有线程都执行完
+            for (Future future:futureList) {
+                try {
+                    //监听线程池子线程执行状态及执行结果。
+                    future.get();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+}
 
 ```
