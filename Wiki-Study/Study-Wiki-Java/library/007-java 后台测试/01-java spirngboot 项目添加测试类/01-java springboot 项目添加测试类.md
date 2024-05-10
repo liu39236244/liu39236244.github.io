@@ -23,6 +23,13 @@
 
 添加依赖
 
+因为SpringRunner.class继承了SpringJUnit4ClassRunner.class且没有进行任何修改
+所以@RunWith(SpringRunner.class)基本等同于@RunWith(SpringJUnit4ClassRunner.class)
+
+注解的作用：
+让测试在Spring容器环境下执行。如测试类中无此注解，将导致service,dao等自动注入失败。
+
+
 ```xml
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,6 +37,12 @@
             <version>2.2.6.RELEASE</version>
         </dependency>
    
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <!--<scope>test</scope>-->
+        </dependency>
 ```
 
 * 测试1 

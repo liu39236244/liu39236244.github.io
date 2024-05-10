@@ -139,3 +139,25 @@ for /f "tokens=1-5" %%i in ('netstat -ano^|findstr ":%port%"') do (
     taskkill /t /f /pid %%m
 )
 ```
+
+
+
+```
+@echo off
+start cmd /c "title qzq_Storage_01 && java -Dfile.encoding=utf-8 -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m --spring.config.location=.\application-prod-37001-rt1.yml -jar  .\dataStorage-1.0-SNAPSHOT.jar > .\log\qzqStorage_01.log"
+pause
+
+```
+
+
+java -Dfile.encoding=utf-8 -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar -Dspring.config.location=.\application-local.yml D:\test\qzq_bs\dataStorage-1.0-SNAPSHOT.jar > D:\test\qzq_bs\log\qzqStorage_01.log
+
+bridge
+
+D:\test\qzq_bs\bridge
+
+
+java -jar -Dfile.encoding=utf-8 -Dspring.config.location=.\application-prod.yml .\gp_bridge-2.2.6.jar > .\log\bridge.log
+java -jar -Dfile.encoding=utf-8 -Dspring.config.location=.\application-local.yml .\gp_bridge-2.2.6.jar > .\log\bridge.log
+
+java -jar -Dfile.encoding=utf-8  halo-1.4.0.jar > .\log\halo.log
