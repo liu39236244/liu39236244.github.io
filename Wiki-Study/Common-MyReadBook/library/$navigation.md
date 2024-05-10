@@ -604,6 +604,8 @@
     - **amWiki**
         - [amwiki 搭建](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/02-amwiki 搭建 "amwiki 搭建")
         - [博客搭建参考](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
+    - **halo**
+        - [halo 搭建博客](?file=10004-blog 博客搭建.md/01-blog 选择/03-halo/01-halo 搭建博客 "halo 搭建博客")
 - **github教程**
     - [github教程](?file=10004-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
 - **blog页面美化**
