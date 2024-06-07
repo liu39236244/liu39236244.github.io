@@ -104,7 +104,7 @@ Host github.com
 
 git remote set-url origin git@github.com:git账号(liu39236244)/仓库名(liu39236244.github.io.git)
 
-
+git remote set-url origin git@github.com:liu39236244/liu39236244.github.io.git
 * 测试访问github 是否成功命令
 
 
