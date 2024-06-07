@@ -63,8 +63,9 @@ https://blog.csdn.net/G_C_H/article/details/127981765
  * 下面. 当前目录就是 .ssh 目录
 
 
+ ssh-keygen -t rsa -C "2268288783@qq.com" -f ~/.ssh/id_rsa_github
 
- ssh-keygen -t rsa -C "2268288783@qq.com" -f ./id_ecdsa  
+
 
 
 #### 2.2 事后总结
