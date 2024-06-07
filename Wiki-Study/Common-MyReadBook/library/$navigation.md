@@ -24,11 +24,15 @@
 
 ##### git、atom命令
 - **git 使用过的命令**
-    - [git 命令](?file=004-git、atom命令/01-git 使用过的命令/01-git 命令 "git 命令")
-    - [git 设置用户名账号](?file=004-git、atom命令/01-git 使用过的命令/02-git 设置用户名账号 "git 设置用户名账号")
-    - [git 分支查看与切换](?file=004-git、atom命令/01-git 使用过的命令/03-git 分支查看与切换 "git 分支查看与切换")
-    - [git Tortoise](?file=004-git、atom命令/01-git 使用过的命令/04-git Tortoise "git Tortoise")
-    - [github本地推送代码无权限解决](?file=004-git、atom命令/01-git 使用过的命令/05-github本地推送代码无权限解决 "github本地推送代码无权限解决")
+    - **git记录**
+        - [git 命令](?file=004-git、atom命令/01-git 使用过的命令/01-git记录/01-git 命令 "git 命令")
+        - [git 设置用户名账号](?file=004-git、atom命令/01-git 使用过的命令/01-git记录/02-git 设置用户名账号 "git 设置用户名账号")
+        - [git 分支查看与切换](?file=004-git、atom命令/01-git 使用过的命令/01-git记录/03-git 分支查看与切换 "git 分支查看与切换")
+        - [git Tortoise](?file=004-git、atom命令/01-git 使用过的命令/01-git记录/04-git Tortoise "git Tortoise")
+    - **github记录**
+        - [github基础](?file=004-git、atom命令/01-git 使用过的命令/02-github记录/01-github基础 "github基础")
+        - [github 问题记录](?file=004-git、atom命令/01-git 使用过的命令/02-github记录/02-github 问题记录 "github 问题记录")
+        - [github本地推送代码无权限解决](?file=004-git、atom命令/01-git 使用过的命令/02-github记录/05-github本地推送代码无权限解决 "github本地推送代码无权限解决")
 - **atom 命令**
     - [atom 快捷鍵](?file=004-git、atom命令/02-atom 命令/01-atom 快捷鍵 "atom 快捷鍵")
     - [atom问题解决](?file=004-git、atom命令/02-atom 命令/02-atom问题解决 "atom问题解决")
@@ -142,6 +146,7 @@
     - **数据库函数**
         - **字符串匹配.md**
             - [数据库字符串匹配函数](?file=007-sql 相关/00-Command公用/01-数据库函数/01-字符串匹配.md/01-数据库字符串匹配函数 "数据库字符串匹配函数")
+            - [数据库isnull 函数使用](?file=007-sql 相关/00-Command公用/01-数据库函数/01-字符串匹配.md/02-数据库isnull 函数使用 "数据库isnull 函数使用")
     - **sql 工具类**
         - [jdbc 直接执行sql文件](?file=007-sql 相关/00-Command公用/02-sql 工具类/01-jdbc 直接执行sql文件 "jdbc 直接执行sql文件")
     - **各个数据库语法区别**
@@ -205,6 +210,7 @@
         - [mysql varchar 存储汉字长度问题](?file=007-sql 相关/03-mysql相关/16-mysql 字符串长度存储问题/01-mysql varchar 存储汉字长度问题 "mysql varchar 存储汉字长度问题")
     - **字符串操作**
         - [字符串操作](?file=007-sql 相关/03-mysql相关/17-字符串操作/01-字符串操作 "字符串操作")
+    - **mysql 长度问题**
     - **sql语句入坑总结**
         - [ mysql 分组拼接会截取数据](?file=007-sql 相关/03-mysql相关/19-sql语句入坑总结/01- mysql 分组拼接会截取数据 " mysql 分组拼接会截取数据")
     - **系统操作语句**
@@ -307,6 +313,7 @@
     - [sparkStreaming 操作](?file=011-ws Company Study/04-算子总结/04-sparkStreaming 操作 "sparkStreaming 操作")
 - **数据库**
     - [mysql](?file=011-ws Company Study/05-数据库/01-mysql "mysql")
+- **数据加载**
 
 ##### 开发中的设计模式
 - **设计模式**
@@ -362,6 +369,7 @@
     - [服务器tomcat 80 问题](?file=019-MyService 服务器总结/01-service 服务器常见问题/01-服务器tomcat 80 问题 "服务器tomcat 80 问题")
 
 ##### 零碎记录
+- **零碎记录之-搜索技巧**
 - **计算机端口问题**
     - [端口定义范围](?file=020-零碎记录/02-计算机端口问题/01-端口定义范围 "端口定义范围")
 
@@ -400,11 +408,13 @@
 - **js特效页面**
     - **js 3d图片特效**
         - [js3d特效图](?file=021-JS的记录/100-js特效页面/01-js 3d图片特效/01-js3d特效图 "js3d特效图")
+    - **特效2**
 - **javaScript-mdmWebdocs**
     - **js内置对象**
         - [Object](?file=021-JS的记录/20-javaScript-mdmWebdocs/01-js内置对象/01-Object "Object")
 
 ##### Html css 记录
+- **Html 基础**
 - **css样式记录**
     - [ div 定位 Absolute（绝对定位）与relative（相对定位）](?file=022-Html css 记录/02-css样式记录/03- div 定位 Absolute（绝对定位）与relative（相对定位） " div 定位 Absolute（绝对定位）与relative（相对定位）")
     - [背景background-size值](?file=022-Html css 记录/02-css样式记录/04-背景background-size值 "背景background-size值")
@@ -477,7 +487,6 @@
         - **动漫**
             - **犬夜叉**
                 - [穿越时空的思念](?file=030-生活记录/02-吉他/10-吉他乐谱/02-动漫/01-犬夜叉/01-穿越时空的思念 "穿越时空的思念")
-            - **别的**
         - **喜欢**
             - [可能](?file=030-生活记录/02-吉他/10-吉他乐谱/03-喜欢/01-可能 "可能")
             - [安河桥](?file=030-生活记录/02-吉他/10-吉他乐谱/03-喜欢/02-安河桥 "安河桥")
@@ -505,7 +514,8 @@
     - **唐朝**
         - **李白**
             - [李白诗集](?file=030-生活记录/08-诗集/01-唐朝/01-李白/01-李白诗集 "李白诗集")
-
+        - **杨万里**
+    - **先秦**
 
 ##### 视频相关
 - **PR学习**
@@ -568,6 +578,8 @@
         - **问候**
             - **简单问候相关单词**
                 - [问候语打招呼_1](?file=10002-生活记录/04-日语学习/100-语境练习/02-问候/01-简单问候相关单词/01-问候语打招呼_1 "问候语打招呼_1")
+    - **单词对应语境**
+        - ** 天气**
 - **医术**
     - **高血压**
         - [ 静脉血栓](?file=10002-生活记录/05-医术/01-高血压/01- 静脉血栓 " 静脉血栓")
@@ -603,6 +615,7 @@
 - **二维码网站以及api**
     - [二维码记录](?file=10003-工具使用/02-二维码网站以及api/01-二维码记录 "二维码记录")
 - **Powerdesigner**
+    - **使用记录**
     - **操作点**
         - [pd显示注释列-设置显示出来注释](?file=10003-工具使用/04-Powerdesigner/02-操作点/01-pd显示注释列-设置显示出来注释 "pd显示注释列-设置显示出来注释")
         - [pd显示comment列字段](?file=10003-工具使用/04-Powerdesigner/02-操作点/02-pd显示comment列字段 "pd显示comment列字段")
@@ -617,6 +630,7 @@
         - [博客搭建参考](?file=10004-blog 博客搭建.md/01-blog 选择/02-amWiki/03-博客搭建参考 "博客搭建参考")
     - **halo**
         - [halo 搭建博客](?file=10004-blog 博客搭建.md/01-blog 选择/03-halo/01-halo 搭建博客 "halo 搭建博客")
+- **服务器选择**
 - **github教程**
     - [github教程](?file=10004-blog 博客搭建.md/03-github教程/01-github教程 "github教程")
 - **blog页面美化**
@@ -656,3 +670,5 @@
                 - [java基础题](?file=10006-面试题/01-Java 面试题总结/50001-面试资料文档记录/01-java/001-java基础面试题/01-java基础题 "java基础题")
             - **java并发编程**
                 - [java并发编程](?file=10006-面试题/01-Java 面试题总结/50001-面试资料文档记录/01-java/002-java并发编程/01-java并发编程 "java并发编程")
+        - **其他**
+- **其他**
