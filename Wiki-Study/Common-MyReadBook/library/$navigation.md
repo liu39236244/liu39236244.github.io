@@ -139,6 +139,8 @@
 - **程序demo记录**
     - **java程序demo记录**
         - [抽奖控制概率](?file=006-项目吸取/30-程序demo记录/01-java程序demo记录/01-抽奖控制概率 "抽奖控制概率")
+- **nginx配置websocket域名转发**
+    - [nginx配置 websocket 域名](?file=006-项目吸取/31-nginx配置websocket域名转发/01-nginx配置 websocket 域名 "nginx配置 websocket 域名")
 
 ##### sql 相关
 - **Command公用**

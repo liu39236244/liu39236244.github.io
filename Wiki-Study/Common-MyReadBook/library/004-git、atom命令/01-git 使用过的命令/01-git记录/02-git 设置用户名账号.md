@@ -51,3 +51,25 @@ git config user.email newemail
 
 * git设置用户名账号：https://blog.csdn.net/maofenghua/article/details/72967511?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase
 
+## 不同项目使用不同的邮箱
+
+
+### 全局配置
+
+
+原文博客：https://zhuanlan.zhihu.com/p/703453117
+
+```
+git config --global user.name '张三'
+git config --global user.email 'zhangsan@example.com'
+```
+
+### 配置特定项目
+```
+# 进入自己项目的根目录
+cd [your_project_dir]
+
+# 设置用户名和邮箱
+git config user.name '张三'
+git config user.email 'zhangsan@example.com'
+```

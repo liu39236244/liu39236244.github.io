@@ -387,6 +387,18 @@
         - **bilibili activity 临时记录**
             - [两小时看懂activity](?file=009-java 框架学习/21-工作流/01-activity学习/001-bilibili activity 临时记录/01-两小时看懂activity "两小时看懂activity")
             - [三个小时搞懂activity与springboot整合](?file=009-java 框架学习/21-工作流/01-activity学习/001-bilibili activity 临时记录/02-三个小时搞懂activity与springboot整合 "三个小时搞懂activity与springboot整合")
+- **Netty**
+    - **netty 基础**
+        - [netty基础](?file=009-java 框架学习/22-Netty/01-netty 基础/01-netty基础 "netty基础")
+        - [Netty应用场景](?file=009-java 框架学习/22-Netty/01-netty 基础/02-Netty应用场景 "Netty应用场景")
+        - **netty知识点**
+            - [netty如何实现断线重连](?file=009-java 框架学习/22-Netty/01-netty 基础/03-netty知识点/01-netty如何实现断线重连 "netty如何实现断线重连")
+        - **netty视频教程**
+            - **尚硅谷netty教程**
+                - [netty视频教程](?file=009-java 框架学习/22-Netty/01-netty 基础/04-netty视频教程/01-尚硅谷netty教程/01-netty视频教程 "netty视频教程")
+    - **netty案例总结**
+        - **孪生项目MEC雷达数据**
+            - [MEC数据案例](?file=009-java 框架学习/22-Netty/02-netty案例总结/01-孪生项目MEC雷达数据/01-MEC数据案例 "MEC数据案例")
 
 ##### java-JVM
 - **jvm调优**

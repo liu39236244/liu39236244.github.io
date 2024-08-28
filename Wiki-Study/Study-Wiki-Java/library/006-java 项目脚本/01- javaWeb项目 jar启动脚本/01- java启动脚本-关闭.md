@@ -98,15 +98,15 @@ pause
 
 ```bat
 @echo off
-start cmd /c "title zh_dform && java -Dfile.encoding=utf-8 -jar --spring.config.location=application_deform.yml gp_dform-0.0.1-SNAPSHOT.jar > ./log/zh_dform.log"
-start cmd /c "title zh_eureka && java -Dfile.encoding=utf-8 -jar --spring.config.location=application_eureka.yml gp_eureka-0.0.1-SNAPSHOT.jar > ./log/zh_eureka.log"
-start cmd /c "title zh_mongodb && java -Dfile.encoding=utf-8 -jar --spring.config.location=application_mongodb.yml gp_mongodb-0.0.1-SNAPSHOT.jar > ./log/zh_mongodb.log"
-start cmd /c "title zh_zuul && java -Dfile.encoding=utf-8 -jar --spring.config.location=application_zuul.yml gp_zuul-0.0.1-SNAPSHOT.jar > ./log/zh_zuul.log"
+start cmd /c "title zh_dform && java -Dfile.encoding=utf-8 -jar gp_dform-0.0.1-SNAPSHOT.jar --spring.config.location=application_deform.yml > ./log/zh_dform.log"
+start cmd /c "title zh_eureka && java -Dfile.encoding=utf-8 -jar  gp_eureka-0.0.1-SNAPSHOT.jar --spring.config.location=application_eureka.yml > ./log/zh_eureka.log"
+start cmd /c "title zh_mongodb && java -Dfile.encoding=utf-8 -jar  gp_mongodb-0.0.1-SNAPSHOT.jar  --spring.config.location=application_mongodb.yml> ./log/zh_mongodb.log"
+start cmd /c "title zh_zuul && java -Dfile.encoding=utf-8 -jar gp_zuul-0.0.1-SNAPSHOT.jar --spring.config.location=application_zuul.yml  > ./log/zh_zuul.log"
 pause
 
 ```
 
- java  -jar --spring.config.location=application_deform.yml gp_dform-0.0.1-SNAPSHOT.jar
+ java  -jar  gp_dform-0.0.1-SNAPSHOT.jar --spring.config.location=application_deform.yml
  
 > 关闭
 
@@ -140,9 +140,21 @@ for /f "tokens=1-5" %%i in ('netstat -ano^|findstr ":%port%"') do (
 )
 ```
 
+### win 指定 外置配置文件 
 
+注意指定外部配置文件需要应用程序启动参数加上args
+
+```java
+@SpringBootApplication(scanBasePackages = {"com.graphsafe.cadxlk"})
+public class CadxlkApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(CadxlkApplication.class,args);
+    }
+}
 
 ```
+
+```bat
 @echo off
 start cmd /c "title qzq_Storage_01 && java -Dfile.encoding=utf-8 -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m --spring.config.location=.\application-prod-37001-rt1.yml -jar  .\dataStorage-1.0-SNAPSHOT.jar > .\log\qzqStorage_01.log"
 pause
@@ -150,14 +162,12 @@ pause
 ```
 
 
-java -Dfile.encoding=utf-8 -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m  -Xms1024m -Xmx1024m -jar -Dspring.config.location=.\application-local.yml D:\test\qzq_bs\dataStorage-1.0-SNAPSHOT.jar > D:\test\qzq_bs\log\qzqStorage_01.log
-
-bridge
-
-D:\test\qzq_bs\bridge
-
-
-java -jar -Dfile.encoding=utf-8 -Dspring.config.location=.\application-prod.yml .\gp_bridge-2.2.6.jar > .\log\bridge.log
-java -jar -Dfile.encoding=utf-8 -Dspring.config.location=.\application-local.yml .\gp_bridge-2.2.6.jar > .\log\bridge.log
+```bat
+@echo off
+start cmd /c "title gp_cadxlk && javaw -jar  .\cadxlk_main-1.0-SNAPSHOT.jar --spring.config.location=.\application-local-school.yml >D:\shenyabo-work\service\java_cadx\logs\cadxlk_main.log"
+TIMEOUT /T 30
+taskkill /f /im cmd.exe
+exit
+```
 
 java -jar -Dfile.encoding=utf-8  halo-1.4.0.jar > .\log\halo.log
