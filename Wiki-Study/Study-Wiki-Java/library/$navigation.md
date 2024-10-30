@@ -122,6 +122,25 @@
         - [批量执行异步任务之CompletionService](?file=001-学习Java/11-Java线程/02-线程调用/04-批量执行异步任务之CompletionService "批量执行异步任务之CompletionService")
     - **线程通信**
         - [线程通信](?file=001-学习Java/11-Java线程/03-线程通信/01-线程通信 "线程通信")
+    - **java锁**
+        - **锁-重入锁ReentrantLock**
+            - [公用](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/00-公用 "公用")
+            - [Lock 的condition](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/01-Lock 的condition "Lock 的condition")
+            - [stampedLock 与 reentrantLock 区别](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/14-stampedLock 与 reentrantLock 区别 "stampedLock 与 reentrantLock 区别")
+            - [reentrantLock  与  reentrantreadwritelock区别](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/15-reentrantLock  与  reentrantreadwritelock区别 "reentrantLock  与  reentrantreadwritelock区别")
+        - **javaStampedLock锁**
+            - [Demo 使用方法Demo](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/05-Demo 使用方法Demo "Demo 使用方法Demo")
+            - [使用StampedLock实现超卖问题的解决](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/06-使用StampedLock实现超卖问题的解决 "使用StampedLock实现超卖问题的解决")
+            - [StampedLock实现卖完通知生产再卖](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/07-StampedLock实现卖完通知生产再卖 "StampedLock实现卖完通知生产再卖")
+            - [让买票这等待对应时间以后再结束](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/08-让买票这等待对应时间以后再结束 "让买票这等待对应时间以后再结束")
+            - [多个生产-多消费者模拟的问题](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/09-多个生产-多消费者模拟的问题 "多个生产-多消费者模拟的问题")
+            - [模拟生产者消费者互相通知&#40;ReentrantLock-condition&#41;](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/10-模拟生产者消费者互相通知&#40;ReentrantLock-condition&#41; "模拟生产者消费者互相通知&#40;ReentrantLock-condition&#41;")
+            - [ReentrantLock-condition模拟单次消费-单次生产](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/11-ReentrantLock-condition模拟单次消费-单次生产 "ReentrantLock-condition模拟单次消费-单次生产")
+            - [ReentrantLock-condition模拟无线消费无限生产](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/12-ReentrantLock-condition模拟无线消费无限生产 "ReentrantLock-condition模拟无线消费无限生产")
+            - [使用StampedLock-condition实现无限生产](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/13-使用StampedLock-condition实现无限生产 "使用StampedLock-condition实现无限生产")
+            - [stampedLock 用到乐观、悲观读锁的Demo](?file=001-学习Java/11-Java线程/05-java锁/10-javaStampedLock锁/14-stampedLock 用到乐观、悲观读锁的Demo "stampedLock 用到乐观、悲观读锁的Demo")
+        - **ReentrantReadWriteLock**
+            - [ReentrantReadWriteLock 锁](?file=001-学习Java/11-Java线程/05-java锁/12-ReentrantReadWriteLock/02-ReentrantReadWriteLock 锁 "ReentrantReadWriteLock 锁")
     - **PassJava教程多线程**
         - [ Volatitle](?file=001-学习Java/11-Java线程/10-PassJava教程多线程/01- Volatitle " Volatitle")
     - **java架构师之路线程学习**
@@ -157,6 +176,11 @@
         - [记录](?file=003-java进阶知识/01-登录验证/02-webgate单点登录/01-记录 "记录")
         - [单点登录记录](?file=003-java进阶知识/01-登录验证/02-webgate单点登录/02-单点登录记录 "单点登录记录")
         - [单点登录实战记录](?file=003-java进阶知识/01-登录验证/02-webgate单点登录/03-单点登录实战记录 "单点登录实战记录")
+    - **加密验证算法.md**
+        - [sm3加密算法](?file=003-java进阶知识/01-登录验证/03-加密验证算法.md/01-sm3加密算法 "sm3加密算法")
+    - **验证码登录**
+        - **前端验证码登录**
+            - [java 画布画验证码](?file=003-java进阶知识/01-登录验证/04-验证码登录/01-前端验证码登录/01-java 画布画验证码 "java 画布画验证码")
 - **对接相关技术**
     - **webService**
         - [webService基础](?file=003-java进阶知识/02-对接相关技术/01-webService/01-webService基础 "webService基础")
