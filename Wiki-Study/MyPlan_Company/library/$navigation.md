@@ -174,6 +174,19 @@
                 - **Netty**
                     - [Netty基础](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/01-Netty基础 "Netty基础")
                     - [Netty 基础 之 IO模型、BIO介绍、NIO介绍](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/02-Netty 基础 之 IO模型、BIO介绍、NIO介绍 "Netty 基础 之 IO模型、BIO介绍、NIO介绍")
+                    - [Netty 基础 之 NIO之Buffer](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/03-Netty 基础 之 NIO之Buffer "Netty 基础 之 NIO之Buffer")
+                    - [Netty 基础 之 NIO之Channel](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/04-Netty 基础 之 NIO之Channel "Netty 基础 之 NIO之Channel")
+                    - [Netty 基础 之 NIO之Selector](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/05-Netty 基础 之 NIO之Selector "Netty 基础 之 NIO之Selector")
+                    - [Netty 基础 之 NIO快速入门](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/06-Netty 基础 之 NIO快速入门 "Netty 基础 之 NIO快速入门")
+                    - [Netty 基础 之 NIO与零拷贝](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/07-Netty 基础 之 NIO与零拷贝 "Netty 基础 之 NIO与零拷贝")
+                - **java**
+                    - **java-1.8新特性**
+                        - [java1.8 新特性](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/004-java/01-java-1.8新特性/00-java1.8 新特性 "java1.8 新特性")
+                        - [java1.8其他新特性](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/004-java/01-java-1.8新特性/01-java1.8其他新特性 "java1.8其他新特性")
+                    - **java17新特性**
+                        - [java17新特性](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/004-java/02-java17新特性/00-java17新特性 "java17新特性")
+                - **Nginx**
+                    - [nginx基础](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/010-Nginx/01-nginx基础 "nginx基础")
         - **其他**
     - **学科基础知识**
         - **计算机基础知识**
