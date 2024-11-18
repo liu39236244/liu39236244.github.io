@@ -756,3 +756,132 @@ public class NetUtil {
 }
 
 ```
+
+
+
+## hutool 调用请求接口设置参数
+
+```java
+  /**
+     * @Author: shenyabo
+     * @Date: Create in 2024/10/28 17:12
+     * @Description: hutool 包发送 get or post 请求 返回bytes[]
+     * @Params: [getOrPost, urlStr, headerMap 请求头, params]
+     * @Return: byte[]
+     */
+    public static byte[] getBytesUseHutoolHttpUrl(String getOrPost, String urlStr, Map<String, String> headerMap, Map<String, Object> params) {
+
+        InputStream input;
+        try {
+            if (StringUtils.isEmpty(getOrPost)) {
+                getOrPost = POST;
+            }
+            HttpRequest httpRequest = null;
+            if (POST.equals(getOrPost)) {
+                httpRequest = HttpRequest.post(urlStr);
+            } else if (GET.equals(getOrPost)) {
+                httpRequest = HttpRequest.get(urlStr);
+            }
+
+            /**
+             * 设置请求头
+             */
+            if (!CollectionUtils.isEmpty(headerMap)) {
+                for (Map.Entry<String, String> headerEntry : headerMap.entrySet()) {
+                    httpRequest.header(headerEntry.getKey(), headerEntry.getValue());
+                }
+            }
+
+            /**
+             * 设置参数
+             */
+            if (!CollectionUtils.isEmpty(params)) {
+                for (Map.Entry<String, Object> entry : params.entrySet()) {
+                    httpRequest.form(entry.getKey(), entry.getValue());
+                }
+            }
+            HttpResponse response = httpRequest.execute();
+            input = response.bodyStream();
+            return toByteArray(input);
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+            return null;
+        }
+    }
+
+    /**
+     * @Author: shenyabo
+     * @Date: Create in 2024/11/2 15:27
+     * @Description: hutool 包发送 get or post 请求 返回String
+     * @Params: [getOrPost, paramType（form/body两种） , urlStr, headerMap, params]
+     * 目前对接e+中
+     * form参数类型有：
+     *  1 获取组织机构
+     * body 参数类型有：
+     *  1 推送用户到e+
+     * @Return: java.lang.String
+     */
+    public static String getStringBodyUseHutoolHttpUrlFormParam(String getOrPost, String paramType, String urlStr, Map<String, String> headerMap, Map<String, Object> params) {
+
+        try {
+            if (StringUtils.isEmpty(getOrPost)) {
+                getOrPost = POST;
+            }
+            HttpRequest httpRequest = null;
+            if (POST.equals(getOrPost)) {
+                httpRequest = HttpRequest.post(urlStr);
+            } else if (GET.equals(getOrPost)) {
+                httpRequest = HttpRequest.get(urlStr);
+            } else if (PUT.equals(getOrPost)) {
+                httpRequest = HttpRequest.put(urlStr);
+            }
+
+            /**
+             * 设置请求头
+             */
+            if (!CollectionUtils.isEmpty(headerMap)) {
+                for (Map.Entry<String, String> headerEntry : headerMap.entrySet()) {
+                    httpRequest.header(headerEntry.getKey(), headerEntry.getValue());
+                }
+            }
+            /**
+             * 设置参数
+             */
+            if (!CollectionUtils.isEmpty(params)) {
+                // form 方式设置参数
+                if (paramsTypeForm.equals(paramType)) {
+                    for (Map.Entry<String, Object> entry : params.entrySet()) {
+                        httpRequest.form(entry.getKey(), entry.getValue());
+                    }
+                } else if (paramsTypeBody.equals(paramType)) {
+                    //body 方式设置参数
+                    httpRequest.body(JSONObject.toJSONString(params));
+                }
+            }
+            HttpResponse response = httpRequest.execute();
+            return response.body();
+        } catch (Exception e) {
+            logger.error("getStringBodyUseHutoolHttpUrl 发送http请求报错:{}", e.getMessage(), e);
+            return null;
+        }
+    }
+
+
+    /**
+     * 将输入流转换成字节数组
+     *
+     * @param input 输入流对象
+     * @return 字节数组
+     * @throws IOException IO异常
+     * @author xiaoqqya
+     */
+    private static byte[] toByteArray(InputStream input) throws IOException {
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        byte[] buffer = new byte[4096];
+        int n;
+        while (-1 != (n = input.read(buffer))) {
+            output.write(buffer, 0, n);
+        }
+        return output.toByteArray();
+    }
+```
