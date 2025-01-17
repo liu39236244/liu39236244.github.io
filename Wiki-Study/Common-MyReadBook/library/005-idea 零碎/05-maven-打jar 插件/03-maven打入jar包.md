@@ -12,3 +12,9 @@ mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\sigar-1.6.5.132-6
 
 
 mvn install:install-file -Dfile=E:\shenyabo-work\idea_working_space\2021_QDSWJT\bamboocloud_Codec-0.0.3.jar -DgroupId=com.bamboocloud.Codec.bamboocloud_Codec -DartifactId=bamboocloud_Codec -Dversion=0.0.3 -Dpackaging=jar
+
+
+mvn install:install-file -Dfile=D:\idea_work\jar\gp_base-3.9.8.RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=3.9.8.RELEASE -Dpackaging=jar
+
+
+mvn install:install-file -Dfile=/home/gq-mid/gp_base-3.9.8.RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=3.9.8.RELEASE -Dpackaging=jar

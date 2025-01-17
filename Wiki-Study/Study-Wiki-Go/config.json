@@ -1,0 +1,11 @@
+{
+    "name": "Study-Wiki-Go",
+    "ver": "1.0",
+    "logo": "",
+    "testing": true,
+    "colour": "#9F9F5F",
+    "title": "Go语言",
+    "description": "记录go语言学习过程",
+    "theme": "default"
+  
+}

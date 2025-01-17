@@ -161,3 +161,298 @@ java -jar -Dfile.encoding=utf-8 -Dspring.config.location=.\application-prod.yml 
 java -jar -Dfile.encoding=utf-8 -Dspring.config.location=.\application-local.yml .\gp_bridge-2.2.6.jar > .\log\bridge.log
 
 java -jar -Dfile.encoding=utf-8  halo-1.4.0.jar > .\log\halo.log
+
+
+## win 启动jar bat （带有pom 将jar 分离开来）
+
+
+
+
+
+### start.bat
+
+### ### pom 
+
+
+```xml
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+<!--            全jar打包-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+            <!--            将包拆分开-->
+
+            <!--拆分配置文件和LIB，给JAR瘦身-->
+            <!--启动参考命令，再JAR目录执行，也可以指定绝对路径：
+    ${project.build.directory}工程路径下的target目录
+            Dloader.path:加载本地lib
+            Dspring.config.location:加载本地配置
+            server.port：指定端口
+            /-/- 这个有转义，注命令要去掉/
+            java -Dloader.path=lib/ -jar xxxx.jar /-/-Dspring.config.location=resources/ /-/-server.port=8080
+            -->
+
+<!--            定义项目的编译环境-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <source>1.8</source>-->
+<!--                    <target>1.8</target>-->
+<!--                    <encoding>UTF-8</encoding>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+            <!--默认执行src/test/java路径下的测试用例，建议跳过执行-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <!--全量JAR包，最初的打包方式，springboot的默认编译插件，默认会把所有的文件打包成一个jar-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <mainClass>com.example.minblog.MYApplication</mainClass>-->
+<!--                    <fork>true</fork>-->
+<!--                    <addResources>true</addResources>-->
+<!--                    <outputDirectory>${project.build.directory}/jar</outputDirectory>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+            <!-- 打JAR包 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <!-- 不打包资源文件,如果放开全量JAR也不会打进去-->
+<!--                    <excludes>-->
+<!--                        <exclude>*.yml</exclude>-->
+<!--                        <exclude>*.properties</exclude>-->
+<!--                    </excludes>-->
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <!-- MANIFEST.MF 中 Class-Path 加入前缀 -->
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!-- jar包不包含唯一版本标识 -->
+                            <useUniqueVersions>false</useUniqueVersions>
+                            <!--指定springboot启动入口类 -->
+                            <mainClass>com.example.minblog.MYApplication</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <!--MANIFEST.MF 中 Class-Path 加入资源文件目录 -->
+                            <Class-Path>./resources/</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                </configuration>
+            </plugin>
+            <!--复制关联JAR包到指定lib打包目录 ，target目录下的文件夹下，按需修改 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib/</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 复制配置文件到指定resources打包目录 ，target目录下的文件夹下，按需修改-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution> <!-- 复制配置文件 -->
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>*.yml</include>
+                                        <include>*.properties</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                            <outputDirectory>${project.build.directory}/resources</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <!--逆向工程-->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.5</version>
+                <configuration>
+                    <!--配置文件的位置-->
+                    <configurationFile>src/main/resources/generatorConfig.xml</configurationFile>
+                    <verbose>true</verbose>
+                    <overwrite>true</overwrite>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.mybatis.generator</groupId>
+                        <artifactId>mybatis-generator-core</artifactId>
+                        <version>1.3.5</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>tk.mybatis</groupId>
+                        <artifactId>mapper</artifactId>
+                        <version>4.1.5</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.gsxz</groupId>
+                        <artifactId>gsxz_base</artifactId>
+                        <version>${gp.base.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>Generate MyBatis Artifacts</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
+```
+
+
+### win 脚本筛选出来最新依赖中那些需要删除，哪些需要新增的jar
+
+
+```bat
+@echo off
+setlocal enabledelayedexpansion
+
+set NEWLIB_DIR=newlib
+set LIB_DIR=lib
+set ADDLIB_DIR=addlib
+set DELLIB_DIR=dellib
+
+:: 创建 addlib 和 dellib 目录
+if not exist %ADDLIB_DIR% (
+    mkdir %ADDLIB_DIR%
+)
+
+if not exist %DELLIB_DIR% (
+    mkdir %DELLIB_DIR%
+)
+
+:: 对比 newlib 和 lib 目录中的 JAR 文件
+echo Comparing JAR files...
+
+:: 复制 newlib 中多出的文件到 addlib
+for %%f in (%NEWLIB_DIR%\*.jar) do (
+    if not exist "%LIB_DIR%\%%~nxf" (
+        echo Copying %%~nxf to %ADDLIB_DIR%
+        copy "%%f" "%ADDLIB_DIR%"
+    )
+)
+
+:: 复制 lib 中少的文件到 dellib
+for %%f in (%LIB_DIR%\*.jar) do (
+    if not exist "%NEWLIB_DIR%\%%~nxf" (
+        echo Copying %%~nxf to %DELLIB_DIR%
+        copy "%%f" "%DELLIB_DIR%"
+    )
+)
+
+echo Comparison and copying completed.
+pause
+```
+
+
+
+```bat
+
+@echo off
+set APP_JAR=minBlog-0.0.1-SNAPSHOT.jar
+set LIB_PATH=./lib
+set LOG_FILE=application.log
+java -Dloader.path=%LIB_PATH% -jar %APP_JAR% --spring.profiles.active=local > %LOG_FILE% 2>&1
+pause
+```
+
+
+### stop.bat
+
+```bat
+@echo off
+set PORT=25010
+
+:: 查找占用指定端口的进程 ID
+for /f "tokens=5" %%a in ('netstat -aon ^| findstr :%PORT%') do (
+    set PID=%%a
+)
+
+:: 如果找到进程 ID，则终止该进程
+if defined PID (
+    echo Terminating process with PID: %PID%
+    taskkill /F /PID %PID%
+) else (
+    echo No process found using port %PORT%.
+)
+
+pause
+
+```

@@ -86,3 +86,10 @@ systemctl restart docker
 
 
 04-docker 安装刚完
+
+
+
+## 卸载docker
+
+
+![](assets/000/01/02/13/01/03-1736671554695.png)
