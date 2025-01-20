@@ -226,3 +226,62 @@ save: function () {
         }
     }
 ```
+
+
+
+## 后端 base64图片字符串转文件上传到mongdob
+
+
+
+```java
+
+
+
+// 使用：setImage mongodb 上的文件id
+  bridgeTrafficFlow.setImage(mongoDbUtil.uploadFileBackFileId(Base64Util.base64ToInputStream(bridgeTrafficFlow.getImage()), bridgeTrafficFlow.getImagename()));
+
+
+  // 用到的工具类
+
+    /**
+     * @Description: 图片Base64转输入流
+     * @Param: [base64Str]
+     * @return: java.io.InputStream
+     * @Author: yb
+     * @Date: 2023/12/5
+     */
+    public static InputStream base64ToInputStream(String base64Str){
+        ByteArrayInputStream stream = null;
+        try {
+//            String  base64Str0 = base64Str.split(",")[1];
+            String  base64Str0 = base64Str.replace("data:image/png;base64,","");
+            // 将空格替换为+
+            String base64Str1 = base64Str0.replace(" ", "+");
+            byte[] bytes = Base64.getDecoder().decode(base64Str1);
+            stream = new ByteArrayInputStream(bytes);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stream;
+    }
+
+
+
+//  上传mongodb
+
+    /**
+     *@Author: hxf
+     *@date: Create in 2021/9/6 11:23
+     *@Description: 后端通过输入流上传
+     */
+    public String uploadFileBackFileId(InputStream inputStream, String fileName) {
+        if (inputStream == null){
+            return "";
+        }
+        if (StrUtil.isBlank(fileName)){
+            fileName = RandomUtil.randomString(10)+".png";
+        }
+        ObjectId objectId = gridFsTemplate.store(inputStream, fileName);
+        return objectId.toString();
+    }
+```

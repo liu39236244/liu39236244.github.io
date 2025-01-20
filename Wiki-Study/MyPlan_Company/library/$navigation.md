@@ -27,6 +27,8 @@
                 - **K8s**
                     - [k8s相关](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/04-运维相关/03-K8s/01-k8s相关 "k8s相关")
             - **java相关**
+                - **java集合相关**
+                - **java新特性相关**
                 - **java并发相关**
                     - **countDownLatch了解**
                         - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/01-countDownLatch了解/01-简述 "简述")
@@ -69,6 +71,7 @@
             - **尚硅谷**
                 - **课程记录**
                     - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-SpringCloud/01-尚硅谷/01-课程记录/01- 记录 " 记录")
+                - **SpringCloud学习笔记**
             - **springcloud 分布式**
                 - **微服务分布式架构实战教程**
                     - [记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-SpringCloud/02-springcloud 分布式/01-微服务分布式架构实战教程/01-记录 "记录")
@@ -160,24 +163,45 @@
         - [检测ip工具](?file=000-Common/01-EverythingRecord/03-在线工具总结/01-检测ip工具 "检测ip工具")
     - **暂时工作记录**
         - [echarts bar 数据格式](?file=000-Common/01-EverythingRecord/05-暂时工作记录/01-echarts bar 数据格式 "echarts bar 数据格式")
-    - **生活记录**
-        - **音乐记录**
-            - [ 音乐记录](?file=000-Common/01-EverythingRecord/06-生活记录/01-音乐记录/01- 音乐记录 " 音乐记录")
-        - **科技**
-            - **手机**
-                - [手机推荐](?file=000-Common/01-EverythingRecord/06-生活记录/02-科技/01-手机/01-手机推荐 "手机推荐")
     - **md 特效总结**
         - [md 特效文件总结](?file=000-Common/01-EverythingRecord/07-md 特效总结/01-md 特效文件总结 "md 特效文件总结")
+    - **程序员网站学习记录**
+        - **DDKK弟弟快看**
+            - **公用**
+                - **DDKK-java题目**
+                    - [大厂7500道](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/001-DDKK-java题目/01-大厂7500道 "大厂7500道")
+                - **并发编程**
+                    - [并发编程-公用](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/002-并发编程/000-并发编程-公用 "并发编程-公用")
+                    - [并发](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/002-并发编程/001-并发 "并发")
+                - **Netty**
+                    - [Netty基础](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/01-Netty基础 "Netty基础")
+                    - [Netty 基础 之 IO模型、BIO介绍、NIO介绍](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/02-Netty 基础 之 IO模型、BIO介绍、NIO介绍 "Netty 基础 之 IO模型、BIO介绍、NIO介绍")
+                    - [Netty 基础 之 NIO之Buffer](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/03-Netty 基础 之 NIO之Buffer "Netty 基础 之 NIO之Buffer")
+                    - [Netty 基础 之 NIO之Channel](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/04-Netty 基础 之 NIO之Channel "Netty 基础 之 NIO之Channel")
+                    - [Netty 基础 之 NIO之Selector](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/05-Netty 基础 之 NIO之Selector "Netty 基础 之 NIO之Selector")
+                    - [Netty 基础 之 NIO快速入门](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/06-Netty 基础 之 NIO快速入门 "Netty 基础 之 NIO快速入门")
+                    - [Netty 基础 之 NIO与零拷贝](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/07-Netty 基础 之 NIO与零拷贝 "Netty 基础 之 NIO与零拷贝")
+                    - [Netty 基础 之 AIO介绍](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/08-Netty 基础 之 AIO介绍 "Netty 基础 之 AIO介绍")
+                    - [Netty 基础 之 Netty和线程模型概述](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/003-Netty/09-Netty 基础 之 Netty和线程模型概述 "Netty 基础 之 Netty和线程模型概述")
+                - **java**
+                    - **java-1.8新特性**
+                        - [java1.8 新特性](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/004-java/01-java-1.8新特性/00-java1.8 新特性 "java1.8 新特性")
+                        - [java1.8其他新特性](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/004-java/01-java-1.8新特性/01-java1.8其他新特性 "java1.8其他新特性")
+                    - **java17新特性**
+                        - [java17新特性](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/004-java/02-java17新特性/00-java17新特性 "java17新特性")
+                - **Nginx**
+                    - [nginx基础](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/010-Nginx/01-nginx基础 "nginx基础")
+        - **其他**
     - **学科基础知识**
         - **计算机基础知识**
             - [二进制位代表数值范围](?file=000-Common/01-EverythingRecord/20-学科基础知识/01-计算机基础知识/01-二进制位代表数值范围 "二进制位代表数值范围")
+        - **数据结构**
 - **Bug漏洞记录**
     - **java组件漏洞**
         - [log4j2漏洞在springboot中解决](?file=000-Common/02-Bug漏洞记录/01-java组件漏洞/01-log4j2漏洞在springboot中解决 "log4j2漏洞在springboot中解决")
 
 ##### Company
-- **CompanyPlan**
-    - [CompanyPlan](?file=001-Company/01-CompanyPlan/01-CompanyPlan "CompanyPlan")
+- **Common**
 - **Items_Common_Java**
     - [Item_XML](?file=001-Company/02-Items_Common_Java/01-Item_XML "Item_XML")
     - [log4j 加载](?file=001-Company/02-Items_Common_Java/03-log4j 加载 "log4j 加载")

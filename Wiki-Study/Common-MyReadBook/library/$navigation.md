@@ -139,6 +139,8 @@
 - **程序demo记录**
     - **java程序demo记录**
         - [抽奖控制概率](?file=006-项目吸取/30-程序demo记录/01-java程序demo记录/01-抽奖控制概率 "抽奖控制概率")
+- **nginx配置websocket域名转发**
+    - [nginx配置 websocket 域名](?file=006-项目吸取/31-nginx配置websocket域名转发/01-nginx配置 websocket 域名 "nginx配置 websocket 域名")
 
 ##### sql 相关
 - **Command公用**
@@ -635,9 +637,6 @@
     - **TCP,ID 详细介绍**
         - [TCP,ID 图解详解](?file=10005-复看知识点/02-计算机知识/01-TCP,ID 详细介绍/01-TCP,ID 图解详解 "TCP,ID 图解详解")
 - **三方成熟组件**
-    - **Netty**
-        - [Netty基础](?file=10005-复看知识点/03-三方成熟组件/01-Netty/01-Netty基础 "Netty基础")
-        - [Netty应用场景](?file=10005-复看知识点/03-三方成熟组件/01-Netty/02-Netty应用场景 "Netty应用场景")
 
 ##### 面试题
 - **Java 面试题总结**

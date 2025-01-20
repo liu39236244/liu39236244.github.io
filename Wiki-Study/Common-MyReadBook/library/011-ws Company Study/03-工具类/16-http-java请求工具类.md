@@ -1,5 +1,46 @@
 # http 请求工具类
 
+
+
+
+
+
+## huttol 的http工具类
+
+```java
+        // 大桥 处理
+        if (!CollectionUtils.isEmpty(specialBridgeCodesYmk)) {
+            // 访问接口并带上token
+            String bridgeName = "大桥";
+            String baseUrl = "http://ip:port/地址";
+            String url = baseUrl + "?token=" + jwtToken;
+            try {
+
+                MinistryMeetingRecordVoiceDto curDto = new MinistryMeetingRecordVoiceDto();
+                BeanUtils.copyProperties(dto, curDto);
+                curDto.getData().setBridgeUniqueCodes(specialBridgeCodesYmk);
+
+                HttpResponse response = HttpRequest.post(url)
+                        // .header(Header.AUTHORIZATION, jwtToken)
+                        .body(JSONObject.toJSONString(curDto))
+                        .execute();
+                // 处理响应
+                if (response.isOk()) {
+                    log.info("会议记录中调用 {} 大桥，返回结果为{}", bridgeName, response.body());
+                    result.put(bridgeName, "执行" + baseUrl + " 完成,结果:" + response.body());
+                } else {
+                    log.info("会议记录中调用 大桥，状态码：{},返回结果为{}", bridgeName, response.getStatus(), response.body());
+                    result.put(bridgeName, "执行" + baseUrl + " 报错," + response.body());
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                result.put(bridgeName, "执行" + baseUrl + " 报错," + ex.getMessage());
+            }
+        }
+```
+
+
+
 ## http工具类请求
 
 
