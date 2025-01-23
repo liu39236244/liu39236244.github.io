@@ -1,0 +1,58 @@
+/* player.css */
+
+/* 播放器区域样式 */
+#player-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #21abe2; /* 背景颜色 */
+    background-image: url('../../images/audio-img/犬夜叉2.jpg'); /* 背景图片 */
+    background-size: cover;
+    color: #333; /* 文字颜色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #song-list {
+    display: none;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  #song-list li {
+    list-style: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  #song-list li:hover {
+    background-color: #2a83cc;
+  }
+  
+  #controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  #controls img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  #toggle-list {
+    margin-top: 10px;
+    cursor: pointer;
+    color: rgb(221, 22, 22);
+    text-decoration: underline;
+  }
+  

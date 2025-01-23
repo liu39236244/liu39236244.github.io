@@ -20,165 +20,17 @@
 
   <script src="./js/jquery-1.7.2.min.js" type="text/javascript"></script>
 
- 
-  <script type="text/javascript">
-    $(function () {
-      /* position of the <li> that is currently shown */
-      var current = 0;
-      var loaded = 0;
-      for (var i = 1; i < 4; ++i)
-        $('<img />').load(function () {
-          ++loaded;
-          if (loaded == 3) {
-            $('#bg1,#bg2,#bg3').mouseover(function (e) {
-              var $this = $(this);
-              /* if we hover the current one, then don't do anything */
-              if ($this.parent().index() == current)
-                return;
-              /* item is bg1 or bg2 or bg3, depending where we are hovering */
-              var item = e.target.id;
-
-              /*
-              this is the sub menu overlay. Let's hide the current one
-              if we hover the first <li> or if we come from the last one,
-              then the overlay should move left -> right,
-              otherwise right->left
-               */
-              if (item == 'bg1' || current == 2)
-                $('#menu .sub' + parseInt(current + 1)).stop().animate({ backgroundPosition: "(-266px 0)" }, 300, function () {
-                  $(this).find('li').hide();
-                });
-              else
-                $('#menu .sub' + parseInt(current + 1)).stop().animate({ backgroundPosition: "(266px 0)" }, 300, function () {
-                  $(this).find('li').hide();
-                });
-
-              if (item == 'bg1' || current == 2) {
-                /* if we hover the first <li> or if we come from the last one, then the images should move left -> right */
-                $('#menu > li').animate({ backgroundPosition: "(-800px 0)" }, 0).removeClass('bg1 bg2 bg3').addClass(item);
-                move(1, item);
-              }
-              else {
-                /* if we hover the first <li> or if we come from the last one, then the images should move right -> left */
-                $('#menu > li').animate({ backgroundPosition: "(800px 0)" }, 0).removeClass('bg1 bg2 bg3').addClass(item);
-                move(0, item);
-              }
-
-              /*
-              We want that if we go from the first one to the last one (without hovering the middle one),
-              or from the last one to the first one, the middle menu's overlay should also slide, either
-              from left to right or right to left.
-               */
-              if (current == 2 && item == 'bg1') {
-                $('#menu .sub' + parseInt(current)).stop().animate({ backgroundPosition: "(-266px 0)" }, 300);
-              }
-              if (current == 0 && item == 'bg3') {
-                $('#menu .sub' + parseInt(current + 2)).stop().animate({ backgroundPosition: "(266px 0)" }, 300);
-              }
+  <!-- 引用外部 CSS 文件 play1 播放器css -->
+  <link rel="stylesheet" href="./css/customer/play1.css">
 
 
-              /* change the current element */
-              current = $this.parent().index();
+  <script src="./js/jquery-1.7.2.min.js" type="text/javascript"></script>
 
-              /* let's make the overlay of the current one appear */
-
-              $('#menu .sub' + parseInt(current + 1)).stop().animate({ backgroundPosition: "(0 0)" }, 300, function () {
-                $(this).find('li').fadeIn();
-              });
-            });
-          }
-        }).attr('src', 'images/' + i + '.jpg');
-
-
-      /*
-      dir:1 - move left->right
-      dir:0 - move right->left
-       */
-      function move(dir, item) {
-        if (dir) {
-          $('#bg1').parent().stop().animate({ backgroundPosition: "(0 0)" }, 200);
-          $('#bg2').parent().stop().animate({ backgroundPosition: "(-266px 0)" }, 300);
-          $('#bg3').parent().stop().animate({ backgroundPosition: "(-532px 0)" }, 400, function () {
-            $('#menuWrapper').removeClass('bg1 bg2 bg3').addClass(item);
-          });
-        }
-        else {
-          $('#bg1').parent().stop().animate({ backgroundPosition: "(0 0)" }, 400, function () {
-            $('#menuWrapper').removeClass('bg1 bg2 bg3').addClass(item);
-          });
-          $('#bg2').parent().stop().animate({ backgroundPosition: "(-266px 0)" }, 300);
-          $('#bg3').parent().stop().animate({ backgroundPosition: "(-532px 0)" }, 200);
-        }
-      }
-
-      //播放完毕
-      $('#mp3Btn').on('ended', function () {
-        
-        $('.mp3Box').css({ 'background': 'url(./images/audio-img/犬夜叉1.jpg) no-repeat center bottom', 'background-size': 'cover' });
-      });
-      //播放器控制
-      var audio = document.getElementById('mp3Btn');
-      audio.volume = 0.3;
-      $('.mp3Box').click(function () {
-        
-        event.stopPropagation();//防止冒泡
-        if (audio.paused) { //如果当前是暂停状态
-          $('.mp3Box').css({ 'background': 'url(./images/播放.jpg) no-repeat center bottom', 'background-size': 'cover' });
-          audio.play(); //播放
-        } else {//当前是播放状态
-          $('.mp3Box').css({ 'background': 'url(./images/暂停.jpg) no-repeat center bottom', 'background-size': 'cover' });
-          audio.pause(); //暂停
-        }
-      });
-
-    });
-
-    jQuery(document).ready(function () {
-
-        var qcloud = {};
-
-        $('[_t_nav]').hover(function () {
-
-          var _nav = $(this).attr('_t_nav');
-
-          clearTimeout(qcloud[_nav + '_timer']);
-
-          qcloud[_nav + '_timer'] = setTimeout(function () {
-
-            $('[_t_nav]').each(function () {
-
-              $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
-
-            });
-
-            $('#' + _nav).stop(true, true).slideDown(200);
-
-          }, 150);
-
-        }, function () {
-
-          var _nav = $(this).attr('_t_nav');
-
-          clearTimeout(qcloud[_nav + '_timer']);
-
-          qcloud[_nav + '_timer'] = setTimeout(function () {
-
-            $('[_t_nav]').removeClass('nav-up-selected');
-
-            $('#' + _nav).stop(true, true).slideUp(200);
-
-          }, 150);
-
-        });
-
-      });
-
-
-
-  </script>
+  <!-- 播放器 js -->
+  <script src="./js/customer/music/old-play.js" type="text/javascript"></script>
 
   <!-- 左下角卡通角色-->
-<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 
 
 
@@ -240,7 +92,7 @@
             <dt>前端相关</dt>
             <dd> <a hotrep="hp.header.WIKI.statistics1" href="./Wiki-Study/Study-Wiki-Vue/index.html">Vue</a>
             <dd> <a hotrep="hp.header.WIKI.statistics2" href="./Wiki-Study/Study-Wiki-Echarts/index.html">Echarts</a>
-              <dd> <a hotrep="hp.header.WIKI.statistics3" href="./Wiki-Study/Study-Wiki-Element/index.html">Element</a>
+            <dd> <a hotrep="hp.header.WIKI.statistics3" href="./Wiki-Study/Study-Wiki-Element/index.html">Element</a>
             </dd>
           </dl>
         </div>
@@ -260,53 +112,51 @@
           <dl style="margin-left: 610px;">
             <dd> <a class="link" hotrep="hp.header.document.1" href="./Doc-Study/index.html">java旧版笔记</a> </dd>
           </dl>
-            <dl style="margin-left: 610px;">
-              <dd> <a class="link" hotrep="hp.header.document.2" href="./Wiki-Study/Common-MyReadBook/index.html">WIKI公用记录</a> </dd>
-            </dl>
+          <dl style="margin-left: 610px;">
+            <dd> <a class="link" hotrep="hp.header.document.2"
+                href="./Wiki-Study/Common-MyReadBook/index.html">WIKI公用记录</a> </dd>
+          </dl>
           <dl style="margin-left: 610px;">
             <dd> <a class="link" hotrep="hp.header.document.3" href="#">留白</a> </dd>
           </dl>
         </div>
       </div>
       <div id="setting" class="nav-down-menu menu-4 menu-1" style="display: none;" _t_nav="setting">
+
+
         <div class="navigation-down-inner">
-          <!-- <dl style="margin-left:auto;">
+          <div id="player-container">
+            <audio id="audio-player" controls style="width: 90%; display: none;"></audio>
+            <div id="controls">
+              <img id="play-pause-btn" src="./images/播放.jpg" alt="播放">
+              <span id="current-song">请选择一首歌曲</span>
+            </div>
 
-              <audio src="./audio/bgAudio/犬夜叉.mp3" controls="controls">
-              </audio>
-          </dl> -->
-          <dl style="margin-left:auto;">
-          
-          <div class="btn-audio clear">
-            <img src="./images/audio-img/犬夜叉2.jpg" alt="" class="lf" style="width: 5.2rem;">
-            <div class="lf">
-              <p style="font-size: 1.2rem; color: #333;margin: 1rem 0 0.3rem 1.2rem;">跨越时空的思念</p>
-              <p style="font-size: 1rem; color: #888; margin: 0 0 0 1.2rem">犬夜叉- 跨越时空的思念</p>
-            </div>
-            <img src="./images/audio-img/犬夜叉2.jpg" alt="" style="width: 1rem;position: absolute;bottom: 0.5rem;right: 0.5rem;">
-            <div class="mp3Box">
-              <audio id="mp3Btn">
-                <!-- type="audio/mpeg" -->
-                <source src="./audio/bgAudio/犬夜叉.mp3"  type="audio/mpeg" />
-              </audio>
-            </div>
+            <div id="toggle-list">显示歌曲列表</div>
+            <ul id="song-list"></ul>
           </div>
-
-
-        
-
-          </dl>
-
-          <dl style="margin-left:auto;">
-             
-          </dl>
-
-        
-       
+          <!-- 自动播放开关 -->
+          <div>
+            <label for="autoplay-toggle">自动播放</label>
+            <input type="checkbox" id="autoplay-toggle">
+          </div>
+          <!-- 自动播放歌曲选择 -->
+          <div>
+            <label for="autoplay-song">选择自动播放歌曲</label>
+            <select id="autoplay-song">
+              <option value="">无</option>
+              <option value="./audio/bgAudio/犬夜叉.mp3">犬夜叉</option>
+              <option value="./audio/bgAudio/盗将行.mp3">盗将行</option>
+            </select>
+          </div>
         </div>
+        <!-- 引用外部 JS 文件 -->
+        <script src="./js/customer/music/play1.js"></script>
       </div>
 
     </div>
+
+  </div>
   </div>
 
 
@@ -346,4 +196,3 @@
 </body>
 
 </html>
-

@@ -18,3 +18,6 @@ mvn install:install-file -Dfile=D:\idea_work\jar\gp_base-3.9.8.RELEASE.jar -Dgro
 
 
 mvn install:install-file -Dfile=/home/gq-mid/gp_base-3.9.8.RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=3.9.8.RELEASE -Dpackaging=jar
+
+mvn install:install-file -Dfile=/home/gq-mid/gp_base-4.4.2RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=4.4.2RELEASE -Dpackaging=jar
+
