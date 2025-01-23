@@ -13,7 +13,7 @@ historyButton.addEventListener('click', (event) => {
 
 // 在文档上单击后隐藏下拉菜单
 document.addEventListener('click', (event) => {
-  if (!historyDropdown.contains(event.target)) {
+  if (!historyDropdown.contains(event.target) && event.target !== historyButton) {
     historyDropdown.style.display = 'none';
   }
 });
@@ -75,7 +75,7 @@ function addToHistory(name, url) {
 
   const checkboxLabel = document.createElement('label');
   checkboxLabel.appendChild(singleShowCheckbox);
-  checkboxLabel.appendChild(document.createTextNode('展示'));
+  checkboxLabel.appendChild(document.createTextNode('单独展示'));
 
   a.appendChild(checkboxLabel);
   a.appendChild(deleteButton);
@@ -102,11 +102,6 @@ function deleteHistory(url) {
 
 // 创建并显示新的 iframe
 function createIframe(url, name) {
-  if (!allowMultipleCheckbox.checked) {
-    const existingIframes = document.querySelectorAll('.iframe-wrapper');
-    existingIframes.forEach(iframe => iframe.remove());
-  }
-
   const iframeWrapper = document.createElement('div');
   iframeWrapper.classList.add('iframe-wrapper');
 
@@ -121,6 +116,13 @@ function createIframe(url, name) {
     deleteIframe(iframeWrapper);
   });
 
+  const hideButton = document.createElement('span');
+  hideButton.textContent = '-';
+  hideButton.classList.add('iframe-hide');
+  hideButton.addEventListener('click', () => {
+    iframeWrapper.style.display = 'none'; // 隐藏当前 iframe
+  });
+
   const iframe = document.createElement('iframe');
   iframe.src = url;
 
@@ -128,13 +130,14 @@ function createIframe(url, name) {
   resizeHandle.classList.add('iframe-resize-handle');
 
   dragBar.appendChild(closeButton);
+  dragBar.appendChild(hideButton);
   iframeWrapper.appendChild(dragBar);
   iframeWrapper.appendChild(iframe);
   iframeWrapper.appendChild(resizeHandle);
 
   document.body.appendChild(iframeWrapper);
 
-  if (centerIframeCheckbox.checked || !allowMultipleCheckbox.checked) {
+  if (centerIframeCheckbox.checked) {
     centerElement(iframeWrapper);
   }
 
@@ -150,9 +153,10 @@ function deleteIframe(iframeWrapper) {
 
 // 按 url 显示特定链接的 iframe
 function showIframe(url) {
-  document.querySelectorAll('.iframe-wrapper').forEach(wrapper => {
+  const iframes = document.querySelectorAll('.iframe-wrapper');
+  iframes.forEach(wrapper => {
     const iframe = wrapper.querySelector('iframe');
-    wrapper.style.display = (iframe.src === url || allowMultipleCheckbox.checked) ? 'flex' : 'none';
+    wrapper.style.display = (iframe.src === url) ? 'flex' : 'none';
   });
 }
 

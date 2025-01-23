@@ -1,7 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
- 
   height: 100vh;
   position: relative;
 }
@@ -23,7 +22,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1002; /* 确保按钮在下拉菜单上方 */
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -41,7 +40,7 @@ body {
   display: none;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1001;
+  z-index: 1001; /* 确保下拉菜单在iframe上方 */
   border-radius: 5px;
   min-width: 300px;
   padding: 10px;
@@ -68,15 +67,13 @@ body {
   margin-left: 10px;
 }
 
-
-
 /* iframe 容器 */
 .iframe-wrapper {
   position: fixed;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 70%;
+  width: 80%; /* 调整宽度为 80% */
+  height: 70%; /* 调整高度为 70% */
   border: 2px solid #007bff;
   border-radius: 5px;
   overflow: hidden;
@@ -85,9 +82,8 @@ body {
   resize: both;
   transition: left 0.1s, top 0.1s;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-top: 100px; /* 增加这个值将容器向下移动 */
+  margin-top: 100px; /** 增加这个值将容器向下移动 */
 }
-
 
 .iframe-wrapper iframe {
   width: 100%;
@@ -106,13 +102,17 @@ body {
   position: relative;
 }
 
-.iframe-close {
+.iframe-close, .iframe-hide {
   position: absolute;
   top: 5px;
-  right: 10px;
+  right: 30px; /* 间隔调整 */
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+
+.iframe-hide {
+  right: 10px; /* 不同于关闭按钮 */
 }
 
 .iframe-resize-handle {
