@@ -22,12 +22,16 @@
 
   <!-- 引用外部 CSS 文件 play1 播放器css -->
   <link rel="stylesheet" href="./css/customer/play1.css">
+  <!-- iframe css -->
+  <link rel="stylesheet" href="./css/iframe/iframe.css">
 
 
   <script src="./js/jquery-1.7.2.min.js" type="text/javascript"></script>
 
-  <!-- 播放器 js -->
+  <!-- 菜单下拉 选择 js -->
   <script src="./js/customer/music/old-play.js" type="text/javascript"></script>
+
+
 
   <!-- 左下角卡通角色-->
   <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
@@ -73,26 +77,36 @@
 
           <dl style="margin-left: 100px;">
             <dt>大数据</dt>
-            <dd> <a hotrep="hp.header.WIKI.compute1" href="./Wiki-Study/Study-Wiki-Hadoop/index.html">Hadoop</a> </dd>
-            <dd> <a hotrep="hp.header.WIKI.compute2" href="./Wiki-Study/Study-Wiki-Spark/index.html">Spark</a> </dd>
+            <!-- <dd> <a hotrep="hp.header.WIKI.compute1" class="dynamic-link" href="./Wiki-Study/Study-Wiki-Hadoop/index.html">Hadoop</a> </dd> -->
+            <dd> <a hotrep="hp.header.WIKI.compute1" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Hadoop/index.html">Hadoop</a> </dd>
+            <dd> <a hotrep="hp.header.WIKI.compute2" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Spark/index.html">Spark</a> </dd>
             <!-- <dd> <a hotrep="hp.header.WIKI.compute3" href="./Wiki-Study/Study-Wiki-Scala/index.html">Scala</a> </dd> -->
-            <dd> <a hotrep="hp.header.WIKI.compute4" href="./Wiki-Study/Study-Wiki-Hive/index.html">Hive</a> </dd>
+            <dd> <a hotrep="hp.header.WIKI.compute4" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Hive/index.html">Hive</a> </dd>
             <!-- <dd> <a hotrep="hp.header.WIKI.compute5" href="./Wiki-Study/Study-Wiki-Python/index.html">Python</a> </dd> -->
           </dl>
           <dl>
             <dt>java</dt>
-            <dd> <a hotrep="hp.header.WIKI.java1" href="./Wiki-Study/Study-Wiki-Java/index.html">Java 开发</a> </dd>
+            <dd> <a hotrep="hp.header.WIKI.java1" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Java/index.html">Java 开发</a> </dd>
           </dl>
           <dl>
             <dt>运维相关</dt>
-            <dd> <a hotrep="hp.header.WIKI.operations1" href="./Wiki-Study/Study-Wiki-Linux/index.html">Linux</a> </dd>
-            <dd> <a hotrep="hp.header.WIKI.operations2" href="./Wiki-Study/Study-Wiki-Git/index.html">Git</a> </dd>
+            <dd> <a hotrep="hp.header.WIKI.operations1" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Linux/index.html">Linux</a> </dd>
+            <dd> <a hotrep="hp.header.WIKI.operations2" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Git/index.html">Git</a> </dd>
           </dl>
           <dl>
             <dt>前端相关</dt>
-            <dd> <a hotrep="hp.header.WIKI.statistics1" href="./Wiki-Study/Study-Wiki-Vue/index.html">Vue</a>
-            <dd> <a hotrep="hp.header.WIKI.statistics2" href="./Wiki-Study/Study-Wiki-Echarts/index.html">Echarts</a>
-            <dd> <a hotrep="hp.header.WIKI.statistics3" href="./Wiki-Study/Study-Wiki-Element/index.html">Element</a>
+            <dd> <a hotrep="hp.header.WIKI.statistics1" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Vue/index.html">Vue</a>
+            <dd> <a hotrep="hp.header.WIKI.statistics2" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Echarts/index.html">Echarts</a>
+            <dd> <a hotrep="hp.header.WIKI.statistics3" class="dynamic-link"
+                href="./Wiki-Study/Study-Wiki-Element/index.html">Element</a>
             </dd>
           </dl>
         </div>
@@ -110,14 +124,14 @@
       <div id="document" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="document">
         <div class="navigation-down-inner">
           <dl style="margin-left: 610px;">
-            <dd> <a class="link" hotrep="hp.header.document.1" href="./Doc-Study/index.html">java旧版笔记</a> </dd>
+            <dd> <a class="dynamic-link" hotrep="hp.header.document.1" href="./Doc-Study/index.html">java旧版笔记</a> </dd>
           </dl>
           <dl style="margin-left: 610px;">
-            <dd> <a class="link" hotrep="hp.header.document.2"
+            <dd> <a class="link" hotrep="hp.header.document.2" class="dynamic-link"
                 href="./Wiki-Study/Common-MyReadBook/index.html">WIKI公用记录</a> </dd>
           </dl>
           <dl style="margin-left: 610px;">
-            <dd> <a class="link" hotrep="hp.header.document.3" href="#">留白</a> </dd>
+            <dd> <a class="link" class="dynamic-link" hotrep="hp.header.document.3" href="#">留白</a> </dd>
           </dl>
         </div>
       </div>
@@ -192,6 +206,17 @@
       </li>
     </ul>
   </div>
+
+  <!-- 显示历史连接按钮 -->
+  <button id="history-button">链接历史</button>
+
+  <!-- 历史连接下拉菜单 -->
+  <div id="history-dropdown">
+    <label><input type="checkbox" id="allow-multiple-iframes" checked> 允许同时打开多个 iframe</label>
+    <label><input type="checkbox" id="center-iframes" checked> 初始化时居中显示 iframe</label>
+  </div>
+  <!-- iframe 打开 js -->
+  <script src="./js/customer/iframe/iframe.js" type="text/javascript"></script>
 
 </body>
 

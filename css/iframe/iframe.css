@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+ 
+  height: 100vh;
+  position: relative;
+}
+
+/* 主页面样式 */
+#main-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* 历史链接按钮 */
+#history-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#history-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 美化下拉菜单 */
+#history-dropdown {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+  border-radius: 5px;
+  min-width: 300px;
+  padding: 10px;
+}
+
+#history-dropdown a, #history-dropdown label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+#history-dropdown a:hover, #history-dropdown label:hover {
+  background-color: #f5f5f5;
+}
+
+.delete-history {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+
+/* iframe 容器 */
+.iframe-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 70%;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+  z-index: 1000;
+  resize: both;
+  transition: left 0.1s, top 0.1s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: 100px; /* 增加这个值将容器向下移动 */
+}
+
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex-grow: 1;
+}
+
+.iframe-drag-bar {
+  background-color: #0056b3;
+  padding: 5px;
+  cursor: move;
+  color: white;
+  text-align: center;
+  user-select: none;
+  position: relative;
+}
+
+.iframe-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.iframe-resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  bottom: 0;
+  right: 0;
+  cursor: nwse-resize;
+}
