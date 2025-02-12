@@ -27,8 +27,6 @@
                 - **K8s**
                     - [k8s相关](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/04-运维相关/03-K8s/01-k8s相关 "k8s相关")
             - **java相关**
-                - **java集合相关**
-                - **java新特性相关**
                 - **java并发相关**
                     - **countDownLatch了解**
                         - [简述](?file=000-Common/01-EverythingRecord/01-每日记录/07-每日在读/05-java相关/03-java并发相关/01-countDownLatch了解/01-简述 "简述")
@@ -71,7 +69,6 @@
             - **尚硅谷**
                 - **课程记录**
                     - [ 记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-SpringCloud/01-尚硅谷/01-课程记录/01- 记录 " 记录")
-                - **SpringCloud学习笔记**
             - **springcloud 分布式**
                 - **微服务分布式架构实战教程**
                     - [记录](?file=000-Common/01-EverythingRecord/02-视频学习记录/02-SpringCloud/02-springcloud 分布式/01-微服务分布式架构实战教程/01-记录 "记录")
@@ -151,6 +148,9 @@
                 - [ Docker 命名容器](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/02-极客学院Docker连载博客/13- Docker 命名容器 " Docker 命名容器")
                 - [Docker 容器运行 Web 应用](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/02-极客学院Docker连载博客/14-Docker 容器运行 Web 应用 "Docker 容器运行 Web 应用")
                 - [Docker 端口映射](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/02-极客学院Docker连载博客/15-Docker 端口映射 "Docker 端口映射")
+            - **docker笔记**
+                - [docker 安装](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/01-docker 安装 "docker 安装")
+                - [docker 安装软件](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/02-docker 安装软件 "docker 安装软件")
         - **java 胜军课程记录**
             - ** 互联网安全相关问题**
                 - [公用笔记](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/01- 互联网安全相关问题/00-公用笔记 "公用笔记")
@@ -191,19 +191,24 @@
                         - [java17新特性](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/004-java/02-java17新特性/00-java17新特性 "java17新特性")
                 - **Nginx**
                     - [nginx基础](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/010-Nginx/01-nginx基础 "nginx基础")
-        - **其他**
+                - **设计模式**
+                    - [设计模式-公用](?file=000-Common/01-EverythingRecord/100-程序员网站学习记录/01-DDKK弟弟快看/000-公用/011-设计模式/00-设计模式-公用 "设计模式-公用")
     - **学科基础知识**
         - **计算机基础知识**
             - [二进制位代表数值范围](?file=000-Common/01-EverythingRecord/20-学科基础知识/01-计算机基础知识/01-二进制位代表数值范围 "二进制位代表数值范围")
-        - **数据结构**
 - **Bug漏洞记录**
     - **java组件漏洞**
         - [log4j2漏洞在springboot中解决](?file=000-Common/02-Bug漏洞记录/01-java组件漏洞/01-log4j2漏洞在springboot中解决 "log4j2漏洞在springboot中解决")
 
 ##### Company
-- **Common**
 - **Items_Common_Java**
     - [Item_XML](?file=001-Company/02-Items_Common_Java/01-Item_XML "Item_XML")
     - [log4j 加载](?file=001-Company/02-Items_Common_Java/03-log4j 加载 "log4j 加载")
     - [TestCase的使用](?file=001-Company/02-Items_Common_Java/05-TestCase的使用 "TestCase的使用")
     - [format 格式化总结](?file=001-Company/02-Items_Common_Java/06-format 格式化总结 "format 格式化总结")
+- **VPN**
+    - **vpn搭建知识**
+        - **deepseek 解释**
+            - [vpn 对接所需](?file=001-Company/10-VPN/01-vpn搭建知识/001-deepseek 解释/01-vpn 对接所需 "vpn 对接所需")
+            - [osi以及不同协议算法](?file=001-Company/10-VPN/01-vpn搭建知识/001-deepseek 解释/02-osi以及不同协议算法 "osi以及不同协议算法")
+            - [aes 算法](?file=001-Company/10-VPN/01-vpn搭建知识/001-deepseek 解释/03-aes 算法 "aes 算法")
