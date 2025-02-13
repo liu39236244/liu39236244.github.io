@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java开发工程师简历</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: auto; /* 允许页面滚动 */
+            position: relative;
+        }
+
+        /* 动态背景元素 */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background::before,
+        .background::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 168, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .background::before {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .background::after {
+            top: 60%;
+            left: 80%;
+            animation-delay: 3s;
+        }
+
+        /* 流动线条 */
+        .line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00a8ff, transparent);
+            animation: flow 5s infinite linear;
+        }
+
+        @keyframes flow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .line-1 { top: 15%; animation-delay: 0s; }
+        .line-2 { top: 45%; animation-delay: 2s; }
+        .line-3 { top: 75%; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
+
+        /* 简历容器 */
+        .resume {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 1000px;
+            padding: 30px;
+            margin: 50px auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 文字流光特效 */
+        .glow-text {
+            background: linear-gradient(90deg, #00a8ff, #0073e6, #00a8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 3s infinite linear;
+        }
+
+        @keyframes glow {
+            0% { background-position: 0 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* 头部信息 */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #00a8ff;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #ccc;
+            margin: 5px 0;
+        }
+
+        /* 内容部分 */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #00a8ff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid #00a8ff;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .section ul li:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 技能栏 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: rgba(0, 168, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-item h3 {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+
+        .skill-item p {
+            font-size: 0.9em;
+            color: #ccc;
+            margin: 0;
+        }
+
+        /* 联系方式 */
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact a {
+            color: #00a8ff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <!-- 动态背景 -->
+    <div class="background">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+
+    <!-- 简历内容 -->
+    <div class="resume">
+        <div class="header">
+            <img src="https://via.placeholder.com/150" alt="头像">
+            <h1 class="glow-text">张三</h1>
+            <p>Java开发工程师 | 年龄：28 | 技术爱好者</p>
+        </div>
+        <div class="section">
+            <h2 class="glow-text">关于我</h2>
+            <p>我是一名拥有5年经验的Java开发工程师，专注于后端开发和系统架构设计。擅长使用Spring Boot、微服务架构和云原生技术构建高性能、可扩展的系统。热爱技术，喜欢解决复杂问题，具备良好的团队协作和沟通能力。</p>
+        </div>
+        <div class="section">
+            <h2 class="glow-text">工作经验</h2>
+            <ul>
+                <li><strong>2019 - 至今 | ABC科技有限公司 | 高级Java开发工程师</strong><br>
+                    - 负责电商平台后端架构设计与开发，使用Spring Cloud实现微服务化。<br>
+                    - 优化数据库查询性能，将响应时间减少50%。<br>
+                    - 引入Kubernetes实现容器化部署，提升系统可扩展性。</li>
+                <li><strong>2017 - 2019 | XYZ软件公司 | Java开发工程师</strong><br>
+                    - 参与企业级ERP系统的开发，使用Hibernate进行数据持久化。<br>
+                    - 设计并实现RESTful API，支持多平台数据交互。<br>
+                    - 使用Redis缓存热点数据，提升系统吞吐量。</li>
+                <li><strong>2015 - 2017 | 123科技公司 | 初级Java开发工程师</strong><br>
+                    - 参与在线教育平台的开发，负责课程管理模块。<br>
+                    - 使用MySQL设计数据库，优化查询性能。<br>
+                    - 协助团队完成项目部署与维护。</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="glow-text">教育背景</h2>
+            <ul>
+                <li><strong>2011 - 2015 | 北京大学 | 计算机科学与技术 | 本科</strong><br>
+                    - 主修课程：数据结构、算法设计、数据库原理、操作系统。</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="glow-text">技能</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <h3>Java</h3>
+                    <p>熟练程度：精通</p>
+                    <p>可用于开发高性能后端服务、分布式系统和微服务架构。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Spring Boot</h3>
+                    <p>熟练程度：精通</p>
+                    <p>用于快速构建企业级应用，支持RESTful API和微服务开发。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>MySQL</h3>
+                    <p>熟练程度：熟练</p>
+                    <p>用于设计和管理关系型数据库，优化查询性能。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Docker</h3>
+                    <p>熟练程度：熟练</p>
+                    <p>用于容器化部署，提升开发和生产环境的一致性。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Kubernetes</h3>
+                    <p>熟练程度：熟练</p>
+                    <p>用于管理容器化应用，实现自动化部署和扩展。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Redis</h3>
+                    <p>熟练程度：熟练</p>
+                    <p>用于缓存热点数据，提升系统性能和响应速度。</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="glow-text">项目经验</h2>
+            <ul>
+                <li><strong>电商平台后端开发 | 2020.03 - 2021.12</strong><br>
+                    - 技术栈：Spring Boot、Spring Cloud、MySQL、Redis、Kubernetes。<br>
+                    - 实现了高并发的订单处理系统，支持每日百万级订单处理。<br>
+                    - 使用微服务架构，提升了系统的可维护性和扩展性。</li>
+                <li><strong>企业级ERP系统 | 2018.06 - 2019.12</strong><br>
+                    - 技术栈：Spring Boot、Hibernate、MySQL、RESTful API。<br>
+                    - 负责核心模块的设计与开发，优化了业务流程。<br>
+                    - 使用Redis缓存热点数据，提升了系统性能。</li>
+                <li><strong>在线教育平台 | 2016.09 - 2017.12</strong><br>
+                    - 技术栈：Spring Boot、MySQL、Redis、Docker。<br>
+                    - 实现了课程管理、用户管理等功能模块。<br>
+                    - 使用Docker实现容器化部署，简化了运维流程。</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <a href="mailto:zhangsan@example.com">zhangsan@example.com</a>
+            <a href="tel:+8613812345678">+86 138 1234 5678</a>
+            <a href="https://github.com/zhangsan" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/zhangsan" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>
