@@ -1,20 +1,15 @@
 # 孪生项目MEC雷达数据
 
-
-
 ## 说明
-
 
 此demo 是 mec 雷达数据的一个解析， java 这边是需要写一个socket 的客户端去连接  对方给出的一个 socket 服务端去接受数据，我们需要接过来。
 
 遇到的问题：
 首先我用的是netty 的客户端，因为最开始用socket 最开始接收数据有问题（应该是 截数据这块 单挑数据接取有问题，直接是接的字节流）, 用 socket 工具接受数据就是 16进制的 55 AA 55 BB 这种16进制字符串。
 
-本案例中记录了 模拟netty服务端 、 客户端 
-
+本案例中记录了 模拟netty服务端 、 客户端
 
 ## 案例记录
-
 
 ### 依赖导入
 
@@ -28,8 +23,6 @@ netty pom依赖引入
             <version>4.1.77.Final</version>
         </dependency>
 ```
-
-
 
 ### 自定义配置文件
 
@@ -69,13 +62,10 @@ mycustomer:
         # 配置线程池中的线程的名称前缀
         name:
           prefix: netty-client-handle-thread-
-          
+        
 ```
 
-
-
 ### netty 服务端
-
 
 #### NettyMecService.java
 
@@ -512,7 +502,6 @@ public class NettyMecService {
 
 #### 处理类 NettyMecServiceHandler
 
-
 ```java
 package com.graphsafe.cadxlk.utils.netty.server;
 
@@ -601,11 +590,9 @@ public class NettyMecServiceHandler extends ChannelInboundHandlerAdapter {
 
 ```
 
-
-### netty 客户端 
+### netty 客户端
 
 #### NettyMecClient
-
 
 ```java
 
@@ -861,8 +848,6 @@ public class NettyMecClient {
 
 #### NettyMecClientHandler
 
-
-
 ```java
 package com.graphsafe.cadxlk.utils.netty.client;
 
@@ -977,10 +962,7 @@ public class NettyMecClientHandler extends ChannelInboundHandlerAdapter {
 }
 ```
 
-
 #### 额外的异步处理 类 AsyncNettyClientHandle
-
-
 
 ```java
 
@@ -2071,9 +2053,7 @@ public class AsyncNettyClientHandle {
 
 ```
 
-
 #### 线程池 AllCustomerThreadPool
-
 
 ```java
 package com.graphsafe.cadxlk.config.threadpool;
@@ -2155,5 +2135,3 @@ public class AllCustomerThreadPool {
 }
 
 ```
-
-
