@@ -151,6 +151,8 @@
             - **docker笔记**
                 - [docker 安装](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/01-docker 安装 "docker 安装")
                 - [docker 安装软件](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/02-docker 安装软件 "docker 安装软件")
+                - [docker-win安装流程](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/03-docker-win安装流程 "docker-win安装流程")
+                - [docker-win安装遇到问题](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/04-docker-win安装遇到问题 "docker-win安装遇到问题")
         - **java 胜军课程记录**
             - ** 互联网安全相关问题**
                 - [公用笔记](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/01- 互联网安全相关问题/00-公用笔记 "公用笔记")
@@ -206,9 +208,3 @@
     - [log4j 加载](?file=001-Company/02-Items_Common_Java/03-log4j 加载 "log4j 加载")
     - [TestCase的使用](?file=001-Company/02-Items_Common_Java/05-TestCase的使用 "TestCase的使用")
     - [format 格式化总结](?file=001-Company/02-Items_Common_Java/06-format 格式化总结 "format 格式化总结")
-- **VPN**
-    - **vpn搭建知识**
-        - **deepseek 解释**
-            - [vpn 对接所需](?file=001-Company/10-VPN/01-vpn搭建知识/001-deepseek 解释/01-vpn 对接所需 "vpn 对接所需")
-            - [osi以及不同协议算法](?file=001-Company/10-VPN/01-vpn搭建知识/001-deepseek 解释/02-osi以及不同协议算法 "osi以及不同协议算法")
-            - [aes 算法](?file=001-Company/10-VPN/01-vpn搭建知识/001-deepseek 解释/03-aes 算法 "aes 算法")
