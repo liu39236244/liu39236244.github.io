@@ -322,3 +322,15 @@ export PATH=$PATH:$GOBIN
 go env  # 查看得到go的配置信息
 go version  # 查看go的版本号
 ```
+
+
+## gp win 安装
+
+
+
+安装：https://blog.csdn.net/qq_44830881/article/details/123457805
+配置环境：https://blog.csdn.net/m0_54850303/article/details/144318256
+
+
+
+go win 环境配置 

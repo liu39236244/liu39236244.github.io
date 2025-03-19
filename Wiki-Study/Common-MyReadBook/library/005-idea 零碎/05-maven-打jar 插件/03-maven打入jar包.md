@@ -16,3 +16,21 @@ mvn install:install-file -Dfile=/home/gq-mid/gp_base-4.4.2RELEASE.jar -DgroupId=
 
 
 mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\gp_base-4.4.2RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=4.4.2RELEASE -Dpackaging=jar
+mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\jar\gp_base-4.4.2RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=4.4.2RELEASE -Dpackaging=jar
+
+mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\jar\nova.traffic-1.2.0.jar -DgroupId=nova.traffic -DartifactId=traffic -Dversion=1.2.0 -Dpackaging=jar
+
+
+mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\jar\nova.traffic-1.2.0-sources.jar -DgroupId=nova.traffic.sources -DartifactId=sources -Dversion=1.2.0 -Dpackaging=jar
+
+
+
+
+```
+nova.traffic
+```
+
+
+```
+nova.traffic
+```
