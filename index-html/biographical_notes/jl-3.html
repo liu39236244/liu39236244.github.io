@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 头部元信息保持不变 -->
+    <style>
+        /* 新增技能矩阵特效 */
+        .skill-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .skill-card {
+            background: linear-gradient(145deg, 
+                rgba(0, 243, 255, 0.08) 0%, 
+                rgba(188, 19, 254, 0.08) 100%);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 25%, 
+                rgba(0, 243, 255, 0.1) 50%, 
+                transparent 75%);
+            animation: matrixFlow 4s linear infinite;
+        }
+
+        @keyframes matrixFlow {
+            0% { transform: rotate(0deg) translate(-25%, -25%); }
+            100% { transform: rotate(360deg) translate(-25%, -25%); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 流星雨背景保持不变 -->
+
+    <div class="resume">
+        <!-- 其他个人信息保持不变 -->
+
+        <!-- 增强版技术栈 -->
+        <div class="section">
+            <h2>技术全景图</h2>
+            <div class="skill-matrix">
+                <!-- 原有技术栈扩展 -->
+                <div class="skill-card">
+                    <h3>Java生态体系｜专家级 (8年+)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JUC并发编程</span>
+                        <span class="skill-tag">JVM调优</span>
+                        <span class="skill-tag">Arthas诊断</span>
+                    </div>
+                    <p>▸ 高并发场景：设计50万QPS的实时风控系统，平均响应时间≤15ms<br>
+                       ▸ JVM调优：通过GC日志分析，将Full GC频率从2次/天降至0<br>
+                       ▸ 诊断工具：基于Arthas定位线上CPU飙高问题，优化代码逻辑</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Spring全家桶｜深度实践</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Spring Cloud</span>
+                        <span class="skill-tag">Spring Security</span>
+                    </div>
+                    <p>▸ 微服务架构：搭建200+微服务的电商平台，日均处理3亿请求<br>
+                       ▸ 安全方案：OAuth2+JWT实现分布式认证，支持千万级用户<br>
+                       ▸ 性能优化：通过Actuator监控优化接口响应时间30%</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>数据库体系｜全栈掌控</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">StarRocks</span>
+                    </div>
+                    <p>▸ MySQL优化：通过索引优化将复杂查询从5s降至200ms<br>
+                       ▸ Redis架构：设计多级缓存方案，缓存命中率提升至92%<br>
+                       ▸ OLAP方案：基于StarRocks实现分钟级万亿数据查询</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>云原生架构｜生产级实践</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">K8s</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Istio</span>
+                    </div>
+                    <p>▸ 容器化：将单体应用拆分为30+微服务，资源利用率提升40%<br>
+                       ▸ 服务网格：基于Istio实现金丝雀发布，故障率降低90%<br>
+                       ▸ 弹性伸缩：HPA实现自动扩缩容，应对流量洪峰</p>
+                </div>
+
+                <!-- 新增技术维度 -->
+                <div class="skill-card">
+                    <h3>大数据体系｜实战专家</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flink</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Hadoop</span>
+                    </div>
+                    <p>▸ 实时计算：基于Flink构建CEP风控引擎，延迟＜500ms<br>
+                       ▸ 消息队列：设计Kafka多机房同步方案，零消息丢失<br>
+                       ▸ 数据湖：HDFS+Iceberg构建企业级数据湖方案</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>前沿技术｜持续探索</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Service Mesh</span>
+                        <span class="skill-tag">WebAssembly</span>
+                        <span class="skill-tag">AI工程化</span>
+                    </div>
+                    <p>▸ 服务网格：Envoy实现跨语言服务治理<br>
+                       ▸ 边缘计算：基于Wasm实现边缘节点智能处理<br>
+                       ▸ AI落地：模型服务化架构设计，QPS提升5倍</p>
+                </div>
+
+                <!-- 保留原有技术栈 -->
+                <div class="skill-card">
+                    <h3>中间件｜深度优化</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RocketMQ</span>
+                        <span class="skill-tag">Zookeeper</span>
+                        <span class="skill-tag">Nginx</span>
+                    </div>
+                    <p>▸ 消息队列：设计RocketMQ集群化方案，吞吐量达20万TPS<br>
+                       ▸ 协调服务：Zookeeper实现分布式锁服务，可用性99.99%<br>
+                       ▸ 网关架构：Nginx+Lua实现动态路由和流量染色</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目经验增强 -->
+        <div class="section">
+            <h2>架构级项目经验</h2>
+            <div class="skill-matrix">
+                <div class="skill-card">
+                    <h3>智能交通大数据平台</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flink</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">StarRocks</span>
+                    </div>
+                    <p>▸ 架构设计：处理日均10TB交通数据，支持200+实时分析维度<br>
+                       ▸ 性能优化：Flink Checkpoint优化，作业恢复时间≤30s<br>
+                       ▸ 技术创新：基于GIS算法实现实时交通流量预测</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>金融级交易系统</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Cloud</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">RocketMQ</span>
+                    </div>
+                    <p>▸ 高可用设计：异地多活架构，RTO≤2分钟<br>
+                       ▸ 分布式事务：TCC模式实现资金交易，成功率99.95%<br>
+                       ▸ 风控体系：实时规则引擎拦截异常交易＞1万次/日</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
