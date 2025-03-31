@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java全栈架构师简历 - 申亚博</title>
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-purple: #bc13fe;
+            --deep-space: #0a192f;
+            --cyber-pink: #ff2a6d;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--deep-space);
+            color: #e6f1ff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* 赛博网格背景 */
+        .cyber-grid {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -3;
+        }
+
+        /* 全息效果 */
+        .hologram-effect {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 50%,
+                    rgba(188, 19, 254, 0.15) 0%,
+                    rgba(0, 243, 255, 0.1) 50%,
+                    transparent 100%);
+            animation: hologram 8s infinite alternate;
+            z-index: -2;
+        }
+
+        @keyframes hologram {
+            0% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0.3;
+                transform: scale(1.2);
+            }
+        }
+
+        /* 动态线条 */
+        .cyber-line {
+            position: fixed;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            z-index: -1;
+            filter: blur(0.5px);
+            transform-origin: left center;
+        }
+
+        /* 简历容器 */
+        .resume {
+            background: rgba(10, 25, 47, 0.95);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 50px rgba(0, 243, 255, 0.1);
+            backdrop-filter: blur(15px);
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                    transparent 65%,
+                    rgba(0, 243, 255, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        /* 头部信息 */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-blue);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .header img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin: 0;
+            background: linear-gradient(90deg, var(--neon-blue), var(--cyber-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            color: rgba(230, 241, 255, 0.7);
+            margin: 10px 0;
+            letter-spacing: 0.5px;
+        }
+
+        /* 内容部分 */
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--neon-blue);
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            color: var(--neon-blue);
+            display: inline-block;
+        }
+
+        /* 关于我 */
+        .about-item {
+            background: linear-gradient(145deg,
+                    rgba(0, 243, 255, 0.08) 0%,
+                    rgba(188, 19, 254, 0.08) 100%);
+            border-left: 4px solid var(--neon-blue);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-item:hover {
+            transform: translateX(10px);
+            box-shadow: 5px 5px 15px rgba(0, 243, 255, 0.1);
+        }
+
+        /* 工作经历和教育背景 */
+        .experience-item {
+            background: linear-gradient(145deg,
+                    rgba(0, 243, 255, 0.08) 0%,
+                    rgba(188, 19, 254, 0.08) 100%);
+            border-left: 4px solid var(--neon-blue);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(0, 243, 255, 0.05),
+                    transparent);
+            transform: skewX(-15deg);
+            transition: all 0.6s ease;
+            z-index: 0;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 5px 5px 15px rgba(0, 243, 255, 0.1);
+        }
+
+        .experience-item:hover::before {
+            left: 100%;
+        }
+
+        .experience-item strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: var(--neon-blue);
+            position: relative;
+            z-index: 1;
+        }
+
+        .experience-item p {
+            margin: 8px 0;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 技能卡片 */
+        .skill-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(145deg,
+                    rgba(0, 243, 255, 0.08) 0%,
+                    rgba(188, 19, 254, 0.08) 100%);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            z-index: 1;
+            animation: float3d 6s ease-in-out infinite;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(0, 243, 255, 0.1),
+                    transparent);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0, 243, 255, 0.2);
+        }
+
+        .skill-card:hover::before {
+            left: 100%;
+        }
+
+        @keyframes float3d {
+
+            0%,
+            100% {
+                transform: translateY(0) rotateX(0) rotateY(0);
+                box-shadow: 0 5px 15px rgba(0, 243, 255, 0.3);
+            }
+
+            50% {
+                transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+                box-shadow: 0 15px 30px rgba(0, 243, 255, 0.4);
+            }
+        }
+
+        .skill-card h3 {
+            position: relative;
+            z-index: 1;
+            font-size: 1.3em;
+            margin-top: 0;
+            color: var(--neon-blue);
+        }
+
+        .skill-card p {
+            position: relative;
+            z-index: 1;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .skill-tag {
+            background: rgba(0, 243, 255, 0.15);
+            color: var(--neon-blue);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(0, 243, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* 进度条 */
+        .skill-progress {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .skill-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            border-radius: 2px;
+            width: 0;
+            transition: width 1s ease;
+        }
+
+        /* 项目卡片 */
+        .project-card {
+            background: linear-gradient(135deg,
+                    rgba(0, 243, 255, 0.05) 0%,
+                    rgba(188, 19, 254, 0.05) 100%);
+            border: 1px solid rgba(255, 42, 109, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .project-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right,
+                    transparent,
+                    transparent,
+                    transparent,
+                    rgba(255, 42, 109, 0.1),
+                    transparent);
+            transform: rotate(30deg);
+            transition: all 0.6s ease;
+            z-index: 0;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(255, 42, 109, 0.2);
+            border-color: rgba(255, 42, 109, 0.4);
+        }
+
+        .project-card:hover::after {
+            top: 100%;
+            left: 100%;
+        }
+
+        /* 流光文字效果 */
+        .flow-text {
+            background: linear-gradient(90deg,
+                    #00f3ff, #bc13fe, #ff2a6d, #00f3ff);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: flowText 8s linear infinite;
+        }
+
+        @keyframes flowText {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 300% 0;
+            }
+        }
+
+        /* 粒子背景效果 */
+        .particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+        }
+
+        /* 联系方式 */
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 243, 255, 0.2);
+        }
+
+        .contact a {
+            color: var(--neon-blue);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact a:hover {
+            color: var(--cyber-pink);
+            text-shadow: 0 0 10px rgba(255, 42, 109, 0.5);
+        }
+
+        .contact a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cyber-pink);
+            transition: width 0.3s ease;
+        }
+
+        .contact a:hover::after {
+            width: 100%;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .skill-matrix {
+                grid-template-columns: 1fr;
+            }
+
+            .resume {
+                padding: 20px;
+                width: 95%;
+            }
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .contact a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 背景元素 -->
+    <div id="particles-js"></div>
+    <div class="cyber-grid"></div>
+    <div class="hologram-effect"></div>
+
+    <!-- 动态线条将通过JS添加 -->
+
+    <!-- 简历内容 -->
+    <div class="resume">
+        <div class="header">
+            <img src="../../images/index-html/biographical_notes/头像.png" alt="申亚博">
+            <h1>申亚博</h1>
+            <p>Java全栈架构师 | 云原生专家 | 大数据架构师</p>
+            <p>年龄：30 | 技术极客 | 持续学习者</p>
+        </div>
+
+        <div class="section">
+            <h2 class="flow-text">关于我</h2>
+            <div class="about-item">
+                <p>出生: 1994年 | 2017年毕业 | 2017年 大数据参与培训</p>
+                <p>GitHub 轻博客地址：<a href="https://yabobj.cn/" target="_blank"
+                        style="color: var(--neon-blue);">https://yabobj.cn/</a></p>
+                <p>8年+全栈开发经验，专注高并发、分布式系统架构设计，擅长将前沿技术落地到生产环境</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="flow-text">工作经验</h2>
+            <div class="experience-item">
+                <strong>2019 - 2024 | 北京图安世纪科技股份有限公司 | Java架构师</strong>
+                <p>▸ 主导微服务架构转型，将单体应用拆分为30+微服务，资源利用率提升40%</p>
+                <p>▸ 设计实时大数据处理平台，处理日均10TB交通数据，支持200+实时分析维度</p>
+                <p>▸ 实现Kubernetes多集群管理，构建跨AZ的高可用部署方案，系统可用性达99.99%</p>
+                <p>▸ 基于Flink构建CEP风控引擎，延迟＜500ms，日均处理50万QPS</p>
+            </div>
+
+            <div class="experience-item">
+                <strong>2018 - 2019 | 北京紫石榴科技有限公司 | 大数据工程师</strong>
+                <p>▸ 开发Spark应用程序对APP数据进行分析统计，支持千万级用户行为分析</p>
+                <p>▸ 优化Hadoop集群性能，作业执行时间缩短35%</p>
+                <p>▸ 参与APP功能设计与需求分析，提升用户体验指标20%</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="flow-text">教育背景</h2>
+            <div class="experience-item">
+                <strong>2015 - 2017 | 安阳工学院 | 软件工程 | 本科</strong>
+                <p>▸ 主修课程：JAVA、数据结构、数据库原理、操作系统</p>
+                <p>▸ 毕业设计：基于Spring Cloud的分布式电商系统</p>
+            </div>
+
+            <div class="experience-item">
+                <strong>2013 - 2015 | 郑州轻工业大学 | 计算机科学与技术 | 专科</strong>
+                <p>▸ 主修课程：C、C#、网页设计与开发</p>
+                <p>▸ 课程设计：图书馆管理系统开发</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="flow-text">核心技术能力</h2>
+            <div class="skill-matrix">
+                <!-- 分布式架构 -->
+                <div class="skill-card" style="animation-delay: 0s;">
+                    <h3>分布式系统架构｜专家级</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">微服务</span>
+                        <span class="skill-tag">分布式事务</span>
+                        <span class="skill-tag">服务治理</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 90%"></div>
+                    </div>
+                    <p>▸ 设计日均亿级请求的微服务架构，实现99.99%可用性</p>
+                    <p>▸ 解决数据一致性难题：基于Seata实现分布式事务</p>
+                    <p>▸ 流量治理：Sentinel实现秒级熔断，Hystrix实现服务降级</p>
+                </div>
+
+                <!-- 云原生 -->
+                <div class="skill-card" style="animation-delay: 0.1s;">
+                    <h3>云原生架构｜精通</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">K8s</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Service Mesh</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%"></div>
+                    </div>
+                    <p>▸ Kubernetes多集群管理：实现跨AZ的高可用部署</p>
+                    <p>▸ 服务网格：基于Istio实现智能路由和灰度发布</p>
+                    <p>▸ 弹性伸缩：HPA实现自动扩缩容，应对流量洪峰</p>
+                </div>
+
+                <!-- 大数据 -->
+                <div class="skill-card" style="animation-delay: 0.2s;">
+                    <h3>实时计算架构｜专家级</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flink</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">StarRocks</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 88%"></div>
+                    </div>
+                    <p>▸ Flink实时计算：设计毫秒级延迟的实时风控系统</p>
+                    <p>▸ StarRocks应用：实现PB级数据的亚秒级查询响应</p>
+                    <p>▸ 流批一体：基于Kafka+Flink+ClickHouse构建OLAP平台</p>
+                </div>
+
+                <!-- Java生态 -->
+                <div class="skill-card" style="animation-delay: 0.3s;">
+                    <h3>Java生态体系｜专家级</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JUC</span>
+                        <span class="skill-tag">JVM</span>
+                        <span class="skill-tag">Spring</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 92%"></div>
+                    </div>
+                    <p>▸ 高并发场景：设计50万QPS的实时系统，平均响应时间≤15ms</p>
+                    <p>▸ JVM调优：通过GC日志分析，将Full GC频率从2次/天降至0</p>
+                    <p>▸ 诊断工具：基于Arthas定位线上CPU飙高问题</p>
+                </div>
+
+                <!-- 数据库体系 -->
+                <div class="skill-card" style="animation-delay: 0.4s;">
+                    <h3>数据库体系｜全栈掌控</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 87%"></div>
+                    </div>
+                    <p>▸ MySQL优化：通过索引优化将复杂查询从5s降至200ms</p>
+                    <p>▸ Redis架构：设计多级缓存方案，缓存命中率提升至92%</p>
+                    <p>▸ OLAP方案：基于StarRocks实现分钟级万亿数据查询</p>
+                </div>
+
+                <!-- 中间件 -->
+                <div class="skill-card" style="animation-delay: 0.5s;">
+                    <h3>中间件深度优化｜精通</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RocketMQ</span>
+                        <span class="skill-tag">Zookeeper</span>
+                        <span class="skill-tag">Nginx</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%"></div>
+                    </div>
+                    <p>▸ RocketMQ：设计跨机房双活架构，实现零消息丢失</p>
+                    <p>▸ 协调服务：Zookeeper实现分布式锁服务，可用性99.99%</p>
+                    <p>▸ 网关架构：Nginx+Lua实现动态路由和流量染色</p>
+                </div>
+
+                <!-- 高可用 -->
+                <div class="skill-card" style="animation-delay: 0.6s;">
+                    <h3>高可用架构｜专家级</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">多活架构</span>
+                        <span class="skill-tag">容灾方案</span>
+                        <span class="skill-tag">全链路压测</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 90%"></div>
+                    </div>
+                    <p>▸ 多活架构：基于ShardingSphere实现数据库单元化部署</p>
+                    <p>▸ 容灾方案：设计分钟级RTO的异地容灾方案</p>
+                    <p>▸ 压测体系：基于Jmeter+Prometheus构建全链路压测平台</p>
+                </div>
+
+                <!-- 前沿技术 -->
+                <div class="skill-card" style="animation-delay: 0.7s;">
+                    <h3>前沿技术探索｜熟练</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">WebAssembly</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">AI工程化</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 80%"></div>
+                    </div>
+                    <p>▸ WebAssembly：将核心算法编译为Wasm模块，性能提升3-5倍</p>
+                    <p>▸ Rust开发：实现高性能网络组件，内存安全零泄漏</p>
+                    <p>▸ AI工程化：基于TensorFlow Serving搭建模型服务平台，QPS提升5倍</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="flow-text">架构级项目经验</h2>
+            <div class="project-card">
+                <h3>长大桥监测系统</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Spring Cloud</span>
+                    <span class="skill-tag">Netty</span>
+                    <span class="skill-tag">StarRocks</span>
+                </div>
+                <p>▸ 架构设计：处理日均5TB传感器数据，延迟＜1秒</p>
+                <p>▸ 性能优化：Netty实现10万级并发连接处理</p>
+                <p>▸ 技术创新：基于StarRocks实现实时结构健康度分析</p>
+                <p>▸ 成果：系统稳定性达99.99%，获省部级科技创新奖</p>
+            </div>
+
+            <div class="project-card">
+                <h3>车行数据解析分析平台</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Flink</span>
+                    <span class="skill-tag">Kafka</span>
+                    <span class="skill-tag">Kubernetes</span>
+                </div>
+                <p>▸ 实时处理：毫秒级解析毫米波雷达数据</p>
+                <p>▸ 流式架构：Kafka+Flink实现复杂事件处理</p>
+                <p>▸ 云原生部署：K8s实现自动扩缩容，节省30%资源</p>
+                <p>▸ 成果：处理能力提升5倍，延迟降低80%</p>
+            </div>
+
+            <div class="project-card">
+                <h3>金融级实时风控系统</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">RocketMQ</span>
+                </div>
+                <p>▸ 高并发设计：50万QPS实时规则计算</p>
+                <p>▸ 低延迟：平均响应时间≤15ms，P99＜50ms</p>
+                <p>▸ 多级缓存：Redis集群+本地缓存，命中率＞95%</p>
+                <p>▸ 成果：拦截异常交易＞1万次/日，减少损失千万级</p>
+            </div>
+
+            <div class="project-card">
+                <h3>智能交通大数据平台</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Flink</span>
+                    <span class="skill-tag">Kafka</span>
+                    <span class="skill-tag">ClickHouse</span>
+                </div>
+                <p>▸ 架构设计：处理日均10TB交通数据，200+实时维度</p>
+                <p>▸ 性能优化：Flink Checkpoint优化，恢复时间≤30s</p>
+                <p>▸ 技术创新：基于GIS算法实现实时交通流量预测</p>
+                <p>▸ 成果：城市拥堵指数下降15%，获智慧城市创新奖</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="flow-text">技术认证</h2>
+            <div class="experience-item">
+                <p>▸ AWS Certified Solutions Architect - Professional</p>
+                <p>▸ Certified Kubernetes Administrator (CKA)</p>
+                <p>▸ Oracle Certified Professional: Java SE 11 Developer</p>
+                <p>▸ Spring Professional Certification</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <a href="mailto:2268288783@qq.com">2268288783@qq.com</a>
+            <a href="tel:+86 15238043665">+86 152 380 43665</a>
+            <a href="https://github.com/liu39236244/liu39236244.github.io" target="_blank">GitHub</a>
+            <a href="https://yabobj.cn/index-html/biographical_notes/deepseek-biographical-v1.html"
+                target="_blank">在线简历</a>
+            <a href="https://yabobj.cn/" target="_blank">技术博客</a>
+        </div>
+    </div>
+
+    <script>
+        // 粒子效果配置
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": ["#00f3ff", "#bc13fe", "#ff2a6d"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00f3ff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 0.5
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // 创建动态线条
+        function createCyberLines() {
+            const colors = ['#00f3ff', '#bc13fe', '#ff2a6d'];
+            for (let i = 0; i < 8; i++) {
+                const line = document.createElement('div');
+                line.className = 'cyber-line';
+                line.style.width = `${Math.random() * 300 + 100}px`;
+                line.style.top = `${Math.random() * 100}vh`;
+                line.style.left = `${Math.random() * 100}vw`;
+                line.style.opacity = Math.random() * 0.5 + 0.1;
+                line.style.transform = `rotate(${Math.random() * 360}deg)`;
+                line.style.background = `linear-gradient(90deg, transparent, ${colors[i % 3]}, transparent)`;
+                document.body.appendChild(line);
+
+                // 添加动画
+                animateLine(line);
+            }
+        }
+
+        // 线条动画
+        function animateLine(line) {
+            let x = parseFloat(line.style.left);
+            let y = parseFloat(line.style.top);
+            let angle = Math.random() * Math.PI * 2;
+            let speed = Math.random() * 0.2 + 0.1;
+
+            function move() {
+                x += Math.cos(angle) * speed;
+                y += Math.sin(angle) * speed;
+
+                // 边界检查
+                if (x < -100) x = window.innerWidth;
+                if (x > window.innerWidth) x = -100;
+                if (y < -100) y = window.innerHeight;
+                if (y > window.innerHeight) y = -100;
+
+                // 随机改变方向
+                if (Math.random() < 0.02) {
+                    angle += (Math.random() - 0.5) * Math.PI / 4;
+                }
+
+                line.style.left = `${x}px`;
+                line.style.top = `${y}px`;
+
+                requestAnimationFrame(move);
+            }
+
+            move();
+        }
+
+        // 初始化进度条动画
+        function initProgressBars() {
+            const bars = document.querySelectorAll('.skill-progress-bar');
+            bars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }
+
+        // 页面加载完成后执行
+        window.addEventListener('load', () => {
+            createCyberLines();
+            initProgressBars();
+
+            // 3D浮动效果增强
+            document.querySelectorAll('.skill-card').forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // 鼠标跟随效果
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.skill-card, .project-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+
+</html>
