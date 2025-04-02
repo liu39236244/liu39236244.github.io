@@ -153,6 +153,8 @@
                 - [docker 安装软件](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/02-docker 安装软件 "docker 安装软件")
                 - [docker-win安装流程](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/03-docker-win安装流程 "docker-win安装流程")
                 - [docker-win安装遇到问题](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/04-docker-win安装遇到问题 "docker-win安装遇到问题")
+                - **docker-安装linux**
+                    - [docker 安装linux ](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/03-docker笔记/05-docker-安装linux/01-docker 安装linux  "docker 安装linux ")
         - **java 胜军课程记录**
             - ** 互联网安全相关问题**
                 - [公用笔记](?file=000-Common/01-EverythingRecord/02-视频学习记录/14-java 胜军课程记录/01- 互联网安全相关问题/00-公用笔记 "公用笔记")
