@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,25 +99,45 @@
 
         /* 头部信息 */
         .header {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
+
+            display: flex;
+            /* 使用 flexbox 布局 */
+            justify-content: space-between;
+            /* 在横向上进行布局 */
+            align-items: flex-end;
+            /* 使内容底部对齐 */
+            padding: 20px;
+            /* 添加适当的内边距使内容不紧贴边框 */
         }
 
+
         .header img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 3px solid var(--neon-blue);
-            margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 3.5cm;
+            /* 一寸照片的宽度 */
+            height: 4.9cm;
+            /* 一寸照片的高度 */
+            object-fit: cover;
+            /* 确保图片完整显示，可能裁剪 */
+            border-radius: 5px;
+            /* 可选：增加圆角效果 */
+            border: 2px solid rgb(64, 137, 219);
+            /* 可选：增加边框 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* 可选：增加外部阴影效果 */
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* 平滑动画效果 */
+
+
+            margin-right: 10%;
+            /* 负值让图片向左移动 */
         }
 
         .header img:hover {
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+            /* 鼠标悬停时的样式 */
         }
+
 
         .header h1 {
             font-size: 2.8em;
@@ -467,6 +486,142 @@
                 margin: 10px 0;
             }
         }
+
+        @media print {
+
+            /* 全局设置 */
+            body {
+                font-size: 0.9em;
+                /* 字体稍小 */
+                line-height: 1.55;
+                /* 增加行间距，提升可读性 */
+                margin: 0;
+                /* 移除全局默认 margin */
+            }
+
+            /* 简历整体容器调整 */
+            .resume {
+                width: auto;
+                /* 页面自动适应打印宽度 */
+                margin: 1cm auto;
+                /* 页边距 */
+                padding: 1cm;
+                /* 内容与页面留白 */
+            }
+
+            /* 教育背景调整 */
+            .education-section {
+                margin-top: 30px;
+                /* 增加顶部间距 */
+                margin-bottom: 15px;
+                /* 增加底部间距 */
+            }
+
+            /* 核心技术能力部分 */
+            .skills-section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+         
+                /* 与教育背景结合，调整间距 */
+                margin-bottom: 10px;
+                /* 降低底部空间 */
+            }
+
+            .skill-item {
+                flex: 0 1 calc(50% - 10px);
+                margin-bottom: 10px;
+                /* 增加技能项之间的间隔 */
+                padding: 5px;
+                border: none;
+                /* 清除边框 */
+                page-break-inside: avoid;
+                /* 防止分页切割 */
+            }
+
+            /* 项目及架构经验 */
+            .projects-section {
+                margin-top: 30px;
+                /* 增加顶部间距 */
+                margin-bottom: 25px;
+                /* 增加底部间距 */
+            }
+
+
+            .skill-card {
+                margin-top: 15px;
+                margin-bottom: 10px;
+                /* 增加项目之间的底部间距 */
+                padding: 4px;
+                /* 增加内边距 */
+                border: none;
+                /* 清除边框 */
+                page-break-inside: avoid;
+                /* 防止分页切割 */
+            }
+
+            .project-card {
+                margin-top: 25px;
+                margin-bottom: 15px;
+                /* 增加项目之间的底部间距 */
+                padding: 8px;
+                /* 增加内边距 */
+                border: none;
+                /* 清除边框 */
+                page-break-inside: avoid;
+                /* 防止分页切割 */
+            }
+
+            .project-title {
+                margin-top: 10px;
+                /* 调整项目标题的距离 */
+                margin-bottom: 5px;
+                /* 增加项目标题与描述的间距 */
+            }
+
+            /* 联系方式横向排布 */
+            .contact {
+                margin-top: 30px;
+                /* 增加与前面内容的间距 */
+                padding-top: 5px;
+                /* 保持内部间距 */
+                border-top: none;
+                /* 移除分割线 */
+            }
+
+            .contact-item {
+                flex: 1;
+                /* 每项均匀分布 */
+                text-align: center;
+                /* 居中对齐 */
+            }
+
+            /* 标题和段落样式调整 */
+            h1,
+            h2,
+            h3 {
+                font-size: 1.2em;
+                margin: 10px 0;
+                /* 增加上下间距以提升留白 */
+                border: none;
+                /* 移除标题线条 */
+            }
+
+            p {
+                font-size: 0.85em;
+                margin: 5px 0;
+                /* 增加段落间距以提升可读性 */
+            }
+
+            /* 动态背景和装饰移除 */
+            .particles-js,
+            .cyber-grid,
+            .hologram-effect,
+            .cyber-line {
+                display: none;
+                /* 打印时隐藏动态效果 */
+            }
+        }
     </style>
 </head>
 
@@ -481,10 +636,15 @@
     <!-- 简历内容 -->
     <div class="resume">
         <div class="header">
-            <img src="../../images/index-html/biographical_notes/头像.png" alt="申亚博">
-            <h1>申亚博</h1>
-            <p>Java全栈架构师 | 云原生专家 | 大数据架构师</p>
-            <p>年龄：30</p>
+            <!-- <img src="../../images/index-html/biographical_notes/头像.png" alt="申亚博"> -->
+
+            <div>
+                <p>申亚博</p>
+                <p>Java全栈架构师 | 云原生专家 | 大数据架构师</p>
+                <p>年龄：30 | 工作地点： 不限</p>
+                <p>期望薪资：15K</p>
+            </div>
+            <img src="../../images/index-html/biographical_notes/my.png" alt="申亚博">
         </div>
 
         <div class="section">
@@ -515,7 +675,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section education-section">
             <h2 class="flow-text">教育背景</h2>
             <div class="experience-item">
                 <strong>2015 - 2017 | 安阳工学院 | 软件工程 | 本科</strong>
@@ -531,9 +691,9 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section skills-section">
             <h2 class="flow-text">核心技术能力</h2>
-            <div class="skill-matrix">
+            <div class="skill-matrix ">
                 <!-- 分布式架构 -->
                 <div class="skill-card" style="animation-delay: 0s;">
                     <h3>分布式系统架构｜了解</h3>
@@ -613,7 +773,7 @@
                     <p>▸ MySQL优化：通过索引优化将复杂查询从5s降至200ms</p>
                     <p>▸ Redis架构：设计多级缓存方案，缓存命中率提升至92%</p>
                     <p>▸ OLAP方案：基于StarRocks实现分钟级万亿数据查询</p>
-                    
+
                 </div>
 
                 <!-- 中间件 -->
@@ -631,6 +791,9 @@
                     <p>▸ 协调服务：Zookeeper实现分布式锁服务，可用性99.99%</p>
                     <p>▸ 网关架构：Nginx+Lua实现动态路由和流量染色</p>
                 </div>
+
+
+
 
                 <!-- 高可用 -->
                 <div class="skill-card" style="animation-delay: 0.6s;">
@@ -666,7 +829,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section projects-section">
             <h2 class="flow-text">架构级项目经验</h2>
             <div class="project-card">
                 <h3>长大桥监测系统</h3>
@@ -735,8 +898,7 @@
             <a href="mailto:2268288783@qq.com">2268288783@qq.com</a>
             <a href="tel:+86 15238043665">+86 152 380 43665</a>
             <a href="https://github.com/liu39236244/liu39236244.github.io" target="_blank">GitHub</a>
-            <a href="https://yabobj.cn/index-html/biographical_notes/myResume-v2.html"
-                target="_blank">在线简历</a>
+            <a href="https://yabobj.cn/index-html/biographical_notes/myResume-v2.html" target="_blank">在线简历</a>
             <a href="https://yabobj.cn/" target="_blank">技术博客</a>
         </div>
     </div>
