@@ -489,137 +489,119 @@
 
         @media print {
 
-            /* 全局设置 */
+            /* 全局紧凑布局重置 */
+            @page {
+                margin: 1.5cm 1.2cm !important;
+                /* 更紧凑的页边距 */
+                size: A4 portrait;
+            }
+
             body {
-                font-size: 0.9em;
-                /* 字体稍小 */
-                line-height: 1.55;
-                /* 增加行间距，提升可读性 */
-                margin: 0;
-                /* 移除全局默认 margin */
+                font-size: 10px !important;
+                /* 更小字号 */
+                line-height: 1.2 !important;
+                /* 更紧凑行距 */
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                margin: 0 !important;
             }
 
-            /* 简历整体容器调整 */
+            /* ========= 核心容器 ========= */
             .resume {
-                width: auto;
-                /* 页面自动适应打印宽度 */
-                margin: 1cm auto;
-                /* 页边距 */
-                padding: 1cm;
-                /* 内容与页面留白 */
+                padding-bottom: 3cm !important;
+                /* 新增 */
+                width: 100% !important;
+                max-width: 19cm !important;
+                /* 极限利用A4宽度 */
+                margin: 0 auto !important;
+                padding: 0.5cm !important;
+                /* 更紧凑内边距 */
+                box-sizing: border-box !important;
+
+                /* 保留原有视觉效果 */
+                border: 1px solid rgba(0, 243, 255, 0.3) !important;
+                box-shadow: 0 0 15px rgba(0, 243, 255, 0.1) !important;
+                background: linear-gradient(to right,
+                        rgba(10, 25, 47, 0.95),
+                        rgba(10, 25, 47, 0.98)) !important;
             }
 
-            /* 教育背景调整 */
-            .education-section {
-                margin-top: 30px;
-                /* 增加顶部间距 */
-                margin-bottom: 15px;
-                /* 增加底部间距 */
+            /* ========= 极致紧凑布局 ========= */
+            .section {
+                margin-bottom: 0.3cm !important;
+                /* 区块间距缩小50% */
             }
 
-            /* 核心技术能力部分 */
-            .skills-section {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-         
-                /* 与教育背景结合，调整间距 */
-                margin-bottom: 10px;
-                /* 降低底部空间 */
+            .section h2 {
+                font-size: 12px !important;
+                margin: 0.2cm 0 !important;
+                /* 标题间距压缩 */
+                padding-bottom: 0.1cm !important;
             }
 
-            .skill-item {
-                flex: 0 1 calc(50% - 10px);
-                margin-bottom: 10px;
-                /* 增加技能项之间的间隔 */
-                padding: 5px;
-                border: none;
-                /* 清除边框 */
-                page-break-inside: avoid;
-                /* 防止分页切割 */
-            }
-
-            /* 项目及架构经验 */
-            .projects-section {
-                margin-top: 30px;
-                /* 增加顶部间距 */
-                margin-bottom: 25px;
-                /* 增加底部间距 */
-            }
-
-
+            /* ========= 分页保护系统 ========= */
+            .experience-item,
+            .project-card,
             .skill-card {
-                margin-top: 15px;
-                margin-bottom: 10px;
-                /* 增加项目之间的底部间距 */
-                padding: 4px;
-                /* 增加内边距 */
-                border: none;
-                /* 清除边框 */
-                page-break-inside: avoid;
-                /* 防止分页切割 */
+                page-break-inside: avoid !important;
+                break-inside: avoid-column !important;
+                -webkit-column-break-inside: avoid !important;
+
+                margin: 0.2cm 0 !important;
+                /* 元素间距压缩 */
+                padding: 0.2cm !important;
+                /* 内边距压缩 */
             }
 
-            .project-card {
-                margin-top: 25px;
-                margin-bottom: 15px;
-                /* 增加项目之间的底部间距 */
-                padding: 8px;
-                /* 增加内边距 */
-                border: none;
-                /* 清除边框 */
-                page-break-inside: avoid;
-                /* 防止分页切割 */
+            /* ========= 智能分页算法 ========= */
+            .experience-item::after {
+                content: "";
+                display: block;
+                height: 0;
+                visibility: hidden;
+                break-after: avoid;
+                page-break-after: avoid;
             }
 
-            .project-title {
-                margin-top: 10px;
-                /* 调整项目标题的距离 */
-                margin-bottom: 5px;
-                /* 增加项目标题与描述的间距 */
-            }
-
-            /* 联系方式横向排布 */
+            /* ========= 联系方式优化 ========= */
             .contact {
-                margin-top: 30px;
-                /* 增加与前面内容的间距 */
-                padding-top: 5px;
-                /* 保持内部间距 */
-                border-top: none;
-                /* 移除分割线 */
+                position: relative !important;
+                /* 改为相对定位 */
+                display: flex !important;
+                justify-content: space-around;
+                margin-top: 2cm !important;
+                /* 与内容保持安全距离 */
+                padding: 0.5cm 0 !important;
+                border-top: 1px solid #ddd !important;
+           
+                /* 强制新页开始 */
+                background: rgba(10, 25, 47, 0.9) !important;
             }
 
-            .contact-item {
+            .contact a {
+                font-size: 9px !important;
+                /* 更小字号 */
+                padding: 0 0.1cm !important;
                 flex: 1;
-                /* 每项均匀分布 */
-                text-align: center;
-                /* 居中对齐 */
+                min-width: 0;
+                /* 允许内容压缩 */
             }
 
-            /* 标题和段落样式调整 */
-            h1,
-            h2,
-            h3 {
-                font-size: 1.2em;
-                margin: 10px 0;
-                /* 增加上下间距以提升留白 */
-                border: none;
-                /* 移除标题线条 */
+            /* ========= 防切割终极方案 ========= */
+            .print-protect {
+                display: block;
+                height: 1cm;
+                /* 动态保留空间 */
+                break-before: avoid;
+                page-break-before: avoid;
             }
 
-            p {
-                font-size: 0.85em;
-                margin: 5px 0;
-                /* 增加段落间距以提升可读性 */
-            }
-
-            /* 动态背景和装饰移除 */
-            .particles-js,
-            .cyber-grid,
-            .hologram-effect,
-            .cyber-line {
-                display: none;
-                /* 打印时隐藏动态效果 */
+            /* ========= 紧凑图片尺寸 ========= */
+            .header img {
+                width: 2cm !important;
+                height: 3cm !important;
+                /* 更小尺寸 */
+                margin-left: 0.5cm !important;
             }
         }
     </style>
@@ -893,7 +875,6 @@
                 <p>▸ Spring Professional Certification</p>
             </div>
         </div> -->
-
         <div class="contact">
             <a href="mailto:2268288783@qq.com">2268288783@qq.com</a>
             <a href="tel:+86 15238043665">+86 152 380 43665</a>
@@ -901,6 +882,7 @@
             <a href="https://yabobj.cn/index-html/biographical_notes/myResume-v2.html" target="_blank">在线简历</a>
             <a href="https://yabobj.cn/" target="_blank">技术博客</a>
         </div>
+
     </div>
 
     <script>
@@ -1082,6 +1064,7 @@
                 card.style.setProperty('--mouse-y', `${y}px`);
             });
         });
+
     </script>
 </body>
 
