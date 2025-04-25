@@ -7,59 +7,37 @@
     <title>Java全栈架构师简历 - 申亚博</title>
     <style>
         :root {
-            --primary-blue: #2A5CFF;
-            --accent-orange: #FF6B35;
-            --light-gray: #F5F7FB;
-            --dark-gray: #2D3748;
-            --success-green: #00C9A7;
-            --text-primary: #2D3748;
-            --text-secondary: #718096;
+            /* 亮色主题变量 */
+            --light-bg: #f8fafc;
+            --primary-text: #1e293b;
+            --border-color: #cbd5e1;
+            --card-bg: #ffffff;
+            --primary-blue: #2563eb;
+            --accent-cyan: #06b6d4;
+            --neon-purple: #8b5cf6;
+            --progress-bg: #e2e8f0;
         }
 
-        /* 重置基础样式 */
+        /* 基础重置 */
         body {
+            background: var(--light-bg);
+            color: var(--primary-text);
             font-family: 'Inter', system-ui, sans-serif;
-            background: #FFFFFF;
-            color: var(--text-primary);
             line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
         }
 
-        /* 现代网格背景 */
-        .background-pattern {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            background:
-                repeating-linear-gradient(45deg,
-                    var(--light-gray) 0px,
-                    var(--light-gray) 20px,
-                    transparent 20px,
-                    transparent 40px);
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        /* 简历主容器 */
+        /* 简历容器 */
         .resume {
-            background: white;
-            width: 90%;
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2.5rem;
             position: relative;
-            overflow: hidden;
-        }
-
-        .resume::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--accent-orange));
         }
 
         /* 头部信息 */
@@ -67,6 +45,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
             margin-bottom: 2rem;
         }
 
@@ -74,148 +54,119 @@
             width: 120px;
             height: 160px;
             border-radius: 8px;
-            border: 3px solid white;
+            border: 3px solid var(--card-bg);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .header img:hover {
-            transform: translateY(-3px);
         }
 
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             color: var(--primary-blue);
             margin: 0;
             position: relative;
-            padding-bottom: 0.5rem;
         }
 
         .header h1::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -10px;
             left: 0;
             width: 60px;
             height: 3px;
-            background: var(--accent-orange);
-        }
-
-        .header p {
-            color: var(--text-secondary);
-            font-size: 1.1em;
-            margin: 0.5rem 0;
+            background: var(--accent-cyan);
         }
 
         /* 内容区块 */
         .section {
             margin-bottom: 2.5rem;
             padding: 1.5rem;
-            background: var(--light-gray);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             transition: transform 0.3s;
         }
 
         .section:hover {
-            transform: translateX(5px);
+            transform: translateY(-3px);
         }
 
-        .section h2 {
-            font-size: 1.4em;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent-orange);
-        }
-
-        /* 工作经历 */
+        /* 经历条目 */
         .experience-item {
-            background: white;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             border-left: 4px solid var(--primary-blue);
-            border-radius: 6px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            background: var(--card-bg);
+            border-radius: 0 8px 8px 0;
         }
 
         .experience-item strong {
-            color: var(--dark-gray);
-            font-weight: 600;
+            color: var(--primary-blue);
             display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-item p {
-            color: var(--text-secondary);
-            margin: 0.5rem 0;
-            line-height: 1.5;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         /* 技能卡片 */
         .skill-card {
-            background: white;
-            padding: 1.2rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-            margin-bottom: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .skill-card:hover {
-            box-shadow: 0 5px 20px rgba(42, 92, 255, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .skill-tag {
-            background: rgba(42, 92, 255, 0.1);
-            color: var(--primary-blue);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        /* 项目卡片 */
-        .project-card {
-            background: white;
             padding: 1.5rem;
-            border-left: 4px solid var(--accent-orange);
-            border-radius: 6px;
             margin-bottom: 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             position: relative;
         }
 
-        .project-card::before {
+        .skill-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -4px;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .skill-card:hover::before {
+            opacity: 0.2;
+        }
+
+        /* 进度条 */
+        .skill-progress {
+            height: 8px;
+            background: var(--progress-bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-tag {
+            background: rgba(var(--tag-color), 0.1);
+            color: var(--tag-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .skill-progress-bar {
             height: 100%;
-            width: 3px;
-            background: linear-gradient(to bottom, var(--primary-blue), var(--accent-orange));
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+            border-radius: 4px;
         }
 
         /* 联系方式 */
         .contact {
-            background: var(--primary-blue);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 1rem;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-top: 2px solid var(--border-color);
+            margin-top: 3rem;
         }
 
         .contact a {
-            color: white;
+            color: var(--primary-blue);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -224,81 +175,43 @@
         }
 
         .contact a:hover {
-            opacity: 0.9;
+            opacity: 0.8;
         }
 
-        /* 进度条 */
-        .skill-progress {
-            height: 6px;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 3px;
-            overflow: hidden;
-            margin: 1rem 0;
-        }
-
-        .skill-progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-blue), var(--accent-orange));
-            border-radius: 3px;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .header img {
-                margin-bottom: 1.5rem;
-            }
-        }
-
+        /* 打印优化 */
         @media print {
+            body {
+                padding: 0;
+                background: white !important;
+            }
 
-            /* 打印优化 */
             .resume {
-                box-shadow: none;
-                padding: 1.5rem;
+                box-shadow: none !important;
+                border: none !important;
             }
 
             .section {
-                background: transparent;
-                padding: 1rem;
-            }
-
-            .contact {
-                background: transparent;
-                border: 2px solid var(--primary-blue);
-            }
-
-            .contact a {
-                color: var(--primary-blue);
+                border: none !important;
+                box-shadow: none !important;
             }
         }
     </style>
+
 </head>
 
 <body>
-    <!-- 背景元素 白色主调+静态 -->
-    <div class="background-pattern"></div>
 
-    <!-- 动态线条将通过JS添加 -->
 
     <!-- 简历内容 -->
     <div class="resume">
         <div class="header">
-            <!-- <img src="../../images/index-html/biographical_notes/头像.png" alt="申亚博"> -->
-
             <div>
-                <p>申亚博</p>
+                <h1>申亚博</h1>
                 <p>Java全栈架构师 | 云原生专家 | 大数据架构师</p>
-                <p>年龄：30 | 工作地点： 不限</p>
-                <p>期望薪资：15K</p>
+                <p>年龄：30 | 工作地点：不限 | 期望薪资：15K</p>
             </div>
             <img src="../../images/index-html/biographical_notes/my.png" alt="申亚博">
         </div>
-
         <div class="section">
             <h2 class="flow-text">关于我</h2>
             <div class="about-item">
@@ -350,9 +263,9 @@
                 <div class="skill-card" style="animation-delay: 0s;">
                     <h3>分布式系统架构｜了解</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">微服务</span>
-                        <span class="skill-tag">分布式事务</span>
-                        <span class="skill-tag">服务治理</span>
+                        <span class="skill-tag" style="--tag-color: var(--primary-blue)">微服务</span>
+                        <span class="skill-tag" style="--tag-color: var(--primary-blue)">分布式事务</span>
+                        <span class="skill-tag" style="--tag-color: var(--primary-blue)">服务治理</span>
                     </div>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" style="width: 90%"></div>
@@ -556,185 +469,16 @@
     </div>
 
     <script>
-        // 粒子效果配置
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": ["#00f3ff", "#bc13fe", "#ff2a6d"]
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#00f3ff",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": true,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 0.5
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-
-        // 创建动态线条
-        function createCyberLines() {
-            const colors = ['#00f3ff', '#bc13fe', '#ff2a6d'];
-            for (let i = 0; i < 8; i++) {
-                const line = document.createElement('div');
-                line.className = 'cyber-line';
-                line.style.width = `${Math.random() * 300 + 100}px`;
-                line.style.top = `${Math.random() * 100}vh`;
-                line.style.left = `${Math.random() * 100}vw`;
-                line.style.opacity = Math.random() * 0.5 + 0.1;
-                line.style.transform = `rotate(${Math.random() * 360}deg)`;
-                line.style.background = `linear-gradient(90deg, transparent, ${colors[i % 3]}, transparent)`;
-                document.body.appendChild(line);
-
-                // 添加动画
-                animateLine(line);
-            }
-        }
-
-        // 线条动画
-        function animateLine(line) {
-            let x = parseFloat(line.style.left);
-            let y = parseFloat(line.style.top);
-            let angle = Math.random() * Math.PI * 2;
-            let speed = Math.random() * 0.2 + 0.1;
-
-            function move() {
-                x += Math.cos(angle) * speed;
-                y += Math.sin(angle) * speed;
-
-                // 边界检查
-                if (x < -100) x = window.innerWidth;
-                if (x > window.innerWidth) x = -100;
-                if (y < -100) y = window.innerHeight;
-                if (y > window.innerHeight) y = -100;
-
-                // 随机改变方向
-                if (Math.random() < 0.02) {
-                    angle += (Math.random() - 0.5) * Math.PI / 4;
-                }
-
-                line.style.left = `${x}px`;
-                line.style.top = `${y}px`;
-
-                requestAnimationFrame(move);
-            }
-
-            move();
-        }
-
-        // 初始化进度条动画
-        function initProgressBars() {
-            const bars = document.querySelectorAll('.skill-progress-bar');
-            bars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-        }
-
-        // 页面加载完成后执行
+       // 仅保留这部分
         window.addEventListener('load', () => {
-            createCyberLines();
             initProgressBars();
-
-            // 3D浮动效果增强
-            document.querySelectorAll('.skill-card').forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-            });
         });
 
-        // 鼠标跟随效果
-        document.addEventListener('mousemove', (e) => {
-            const cards = document.querySelectorAll('.skill-card, .project-card');
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
+        function initProgressBars() {
+            document.querySelectorAll('.skill-progress-bar').forEach(bar => {
+                bar.style.width = bar.getAttribute('data-width');
             });
-        });
-
+        }
     </script>
 </body>
 
