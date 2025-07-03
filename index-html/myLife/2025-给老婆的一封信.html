@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 给你的一封信</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 星光背景 */
+        .star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                box-shadow: 0 0 5px white;
+            }
+
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 10px white, 0 0 20px rgba(255, 107, 157, 0.6);
+            }
+        }
+
+        /* 流星雨 */
+        .shooting-stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            border-radius: 50%;
+            opacity: 0;
+            filter: drop-shadow(0 0 10px white);
+            animation: shootingStar 2s ease-in-out;
+            transform-origin: left;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                opacity: 1;
+                transform: translateX(0) translateY(0) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(calc(100vw - 100px)) translateY(calc(100vh - 100px)) rotate(25deg);
+            }
+        }
+
+        /* 烟花特效容器 */
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .firework {
+            position: absolute;
+            border-radius: 50%;
+            animation: fireworkExplode 2s ease-out forwards;
+        }
+
+        @keyframes fireworkExplode {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+                box-shadow: 0 0 30px currentColor;
+            }
+
+            50% {
+                transform: scale(1);
+                opacity: 1;
+                box-shadow: 0 0 50px currentColor;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+                box-shadow: 0 0 30px currentColor;
+            }
+        }
+
+        /* 时间显示区域 - PC端左上角 */
+        .time-display {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
+            border: 2px solid rgba(255, 107, 157, 0.4);
+            min-width: 300px;
+            opacity: 0;
+            transition: all 1s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+            animation: fadeIn 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .time-item {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .time-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .time-label {
+            color: #ff6b9d;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+            font-size: 1rem;
+        }
+
+        .time-value {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: glowText 2s ease-in-out infinite alternate;
+            display: block;
+        }
+
+        @keyframes glowText {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 107, 157, 0.6);
+            }
+        }
+
+        /* 主容器 */
+        .letter-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 5;
+            padding-top: 80px;
+            /* 给时间显示留出空间 */
+        }
+
+        /* 页面标题 */
+        .page-title {
+            font-size: 4rem;
+            color: #fff;
+            margin-bottom: 70px;
+            text-align: center;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            animation: glow 3s ease-in-out infinite;
+            background: linear-gradient(to right, #ff6b9d, #7579ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 5px;
+            opacity: 0;
+            animation: titleAppear 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes titleAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+
+            50% {
+                text-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 107, 157, 0.5);
+            }
+        }
+
+        /* 超级炫酷信封样式 */
+        .envelope-container {
+            perspective: 2000px;
+            display: inline-block;
+            margin: 80px auto;
+            position: relative;
+            opacity: 0;
+            animation: envelopeAppear 2s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes envelopeAppear {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) rotateY(20deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) rotateY(0deg);
+            }
+        }
+
+        .envelope {
+            width: 350px;
+            height: 230px;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .envelope:hover {
+            transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+        }
+
+        .envelope-base {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        /* 信封花纹 */
+        .envelope-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 100px 100px, rgba(255, 255, 255, 0.1) 15px, transparent 15px);
+            background-size: 30px 30px, 120px 120px;
+            opacity: 0.5;
+        }
+
+        .envelope-seal {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #cd5c5c, #ff6b9d);
+            border-radius: 50%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .envelope-seal::before {
+            content: '❤️';
+            font-size: 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background: linear-gradient(45deg, #A0522D, #CD853F);
+            border-radius: 15px 15px 0 0;
+            transform-origin: bottom center;
+            transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+        }
+
+        .envelope-flap::before {
+            content: '💌';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            animation: heartBeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+            }
+        }
+
+        .envelope.opening .envelope-flap {
+            transform: rotateX(-180deg);
+        }
+
+        .envelope-shine {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+
+            20%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .envelope-hint {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 1.2rem;
+            animation: bounce 2s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            background: rgba(255, 107, 157, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        /* 立体信件内容 */
+        .letter-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            padding: 70px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+            font-family: 'Ma Shan Zheng', '楷体', cursive;
+            line-height: 2.2;
+            position: relative;
+            backdrop-filter: blur(20px);
+            max-width: 1000px;
+            margin: 50px auto;
+            border: 4px solid rgba(255, 107, 157, 0.4);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .letter-content.show {
+            display: block;
+            animation: letterUnfold 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes letterUnfold {
+            0% {
+                opacity: 0;
+                transform: rotateX(90deg) scale(0.5);
+                filter: blur(10px);
+            }
+
+            70% {
+                opacity: 1;
+                transform: rotateX(0deg) scale(1.05);
+                filter: blur(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* 信纸纹理 */
+        .letter-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 30px;
+        }
+
+        .letter-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .letter-title {
+            font-size: 3.5rem;
+            color: #d63384;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: inline-block;
+        }
+
+        .letter-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d63384, transparent);
+        }
+
+        .letter-date {
+            font-size: 1.3rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .letter-text {
+            font-size: 1.4rem;
+            color: #444;
+            text-align: justify;
+            position: relative;
+            z-index: 2;
+        }
+
+        .letter-text p {
+            margin-bottom: 25px;
+            text-indent: 2em;
+            position: relative;
+        }
+
+        .letter-text p::first-letter {
+            font-size: 1.8rem;
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        .letter-text .greeting {
+            text-align: right;
+            font-size: 1.6rem;
+            color: #d63384;
+            margin-top: 40px;
+            text-indent: 0;
+        }
+
+        .promises-list {
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            list-style: none;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .promises-list li {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .promises-list li:hover {
+            transform: translateX(10px);
+        }
+
+        .promises-list li::before {
+            content: '💕';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+            animation: promiseGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes promiseGlow {
+            from {
+                text-shadow: 0 0 5px transparent;
+            }
+
+            to {
+                text-shadow: 0 0 10px rgba(255, 107, 157, 0.8);
+            }
+        }
+
+        /* 信纸装饰 */
+        .letter-decor {
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .letter-decor-1 {
+            top: 100px;
+            left: 100px;
+            transform: rotate(-20deg);
+        }
+
+        .letter-decor-2 {
+            bottom: 100px;
+            right: 100px;
+            transform: rotate(15deg);
+        }
+
+        /* 控制按钮 */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .control-btn {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+        }
+
+        .control-btn:hover {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .control-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.4s ease;
+        }
+
+        .control-btn:hover::after {
+            transform: rotate(45deg) translateY(-100%);
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+
+            /* 移动端时间显示调整 */
+            .time-display {
+                top: 20px;
+                left: 15px;
+                right: 15px;
+                min-width: auto;
+                padding: 20px;
+                font-size: 0.9rem;
+            }
+
+            .time-label {
+                font-size: 0.9rem;
+            }
+
+            .time-value {
+                font-size: 1rem;
+            }
+
+            /* 移动端主容器调整 */
+            .letter-container {
+                padding: 15px;
+                padding-top: 140px;
+                /* 移动端给时间显示更多空间 */
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+                margin-bottom: 50px;
+                letter-spacing: 2px;
+            }
+
+            .envelope-container {
+                margin: 40px auto;
+            }
+
+            .envelope {
+                width: 280px;
+                height: 180px;
+            }
+
+            .envelope-hint {
+                font-size: 1rem;
+                padding: 8px 15px;
+                bottom: -50px;
+            }
+
+            .letter-content {
+                padding: 30px;
+                margin: 20px 10px;
+                max-width: calc(100vw - 40px);
+            }
+
+            .letter-title {
+                font-size: 2.2rem;
+            }
+
+            .letter-text {
+                font-size: 1.2rem;
+                line-height: 2;
+            }
+
+            .letter-text p {
+                text-indent: 1.5em;
+                margin-bottom: 20px;
+            }
+
+            .promises-list {
+                padding: 25px;
+                margin: 25px 0;
+            }
+
+            .promises-list li {
+                font-size: 1.1rem;
+                padding-left: 30px;
+                margin-bottom: 15px;
+            }
+
+            .controls {
+                bottom: 20px;
+                right: 20px;
+                gap: 15px;
+            }
+
+            .control-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* 超小屏幕适配 */
+        @media (max-width: 480px) {
+            .time-display {
+                top: 15px;
+                left: 10px;
+                right: 10px;
+                padding: 15px;
+            }
+
+            .time-item {
+                margin-bottom: 12px;
+                font-size: 12px;
+            }
+
+            .time-label {
+                font-size: 0.8rem;
+                margin-bottom: 3px;
+            }
+
+            .time-value {
+                font-size: 0.9rem;
+            }
+
+            .letter-container {
+                padding-top: 120px;
+            }
+
+            .page-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+            }
+
+            .envelope {
+                width: 240px;
+                height: 160px;
+            }
+
+            .envelope-seal {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+            }
+
+            .envelope-seal::before {
+                font-size: 25px;
+            }
+
+            .envelope-flap::before {
+                font-size: 2.5rem;
+            }
+
+            .letter-content {
+                padding: 25px;
+                margin: 15px 10px;
+            }
+
+            .letter-title {
+                font-size: 1.8rem;
+            }
+
+            .letter-date {
+                font-size: 1.1rem;
+            }
+
+            .letter-text {
+                font-size: 1.1rem;
+            }
+
+            .controls {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .control-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* 添加更多动画效果 */
+        .time-display:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.3);
+        }
+
+        /* 时间数字跳动效果 */
+        .time-value {
+            transition: all 0.3s ease;
+        }
+
+        .time-value.update {
+            animation: numberUpdate 0.5s ease;
+        }
+
+        @keyframes numberUpdate {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+                color: #ff6b9d;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 星光背景 -->
+    <div class="star-field" id="starField"></div>
+
+    <!-- 流星雨 -->
+    <div class="shooting-stars" id="shootingStars"></div>
+
+    <!-- 烟花特效容器 -->
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <!-- 时间显示区域 -->
+    <div class="time-display" id="timeDisplay">
+        <div class="time-item">
+            <span class="time-label">💕 我们相识至今</span>
+            <span class="time-value" id="meetTime">0天</span>
+        </div>
+        <div class="time-item">
+            <span class="time-label">💒 我们结婚至今</span>
+            <span class="time-value" id="marriageTime">0天</span>
+        </div>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="letter-container">
+        <h1 class="page-title">💌 给老婆的一封信</h1>
+
+        <div class="envelope-container">
+            <div class="envelope" id="envelope" onclick="openLetter()">
+                <div class="envelope-base">
+                    <div class="envelope-pattern"></div>
+                    <div class="envelope-shine"></div>
+                </div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-seal"></div>
+                <div class="envelope-hint">点击打开信封 💕</div>
+            </div>
+        </div>
+
+        <div class="letter-content" id="letterContent">
+            <div class="letter-texture"></div>
+            <div class="letter-decor letter-decor-1">❤️</div>
+            <div class="letter-decor letter-decor-2">💕</div>
+            <div class="letter-header">
+                <h2 class="letter-title">致我最爱的妻子</h2>
+                <p class="letter-date">写于我们结婚一周年纪念日</p>
+            </div>
+            <div class="letter-text">
+                <p> 哈喽啊老婆，原谅我只能在文字中这么对你称呼，生活中确实不好意思这么称呼。
+                    不知不觉我们已经结婚一年了，从2024年1月28号18:33:00 打开了微信对你的好友请求，再到33 分钟后我们第一次加上微信到现在；
+                    算是认识了 1年 161天 3时 39分 0秒 （信是2025年7月2日 22:46 写的），2025年7月3日
+                    就是我们结婚一周年纪念日，原谅我没有能给一个安稳的家，让你受尽了心酸委屈，对不起！ 话又说回来我想了许久在这个特殊的日子也没能带给你什么惊喜的仪式感，我决定为我们写一封信，
+                    虽然确实这个仪式感显得确实寒酸了些...
+                </p>
+                <p>
+                    有了我们的孩子以后你也为了照顾孩子操劳愈发辛苦，本就不华丽的生活让你丢掉了你为数不多的自由，我们之前也丢了许多交流，沟通甚至感情也淡化了许多。
+                    这封信如果有哪些地方哪些词语用的不恰当的还请多担待一些。
+                </p>
+
+                <p>
+                    回顾相识</p>
+
+                记得最开始
+                <p>你说 我与你期望的有点不符，你想找个成熟稳重，格局大，能教你人情世故，带你成长，事事有回应，件件有着落的人。【而我，没有最好其中任意一点】</p>
+                <p>你说 你不熟悉的人，不喜欢聊太多，也不知道聊啥；【那是你第一次给我安全感，我觉得这样的女生很好，很难得，我很欣赏】</p>
+                <p>你说 人品、情绪稳定同样重要 【但是我还好多次都跟孩子一样让你去调节与家人争吵得我，对不起</p>
+                <p>因为我以前处理他们的方式都是屏蔽，但是我不想让你也跟我一样压抑，我试图用反抗的行为不让你感到压抑，至少把他们都怼回去，那样我觉得你会多少觉得没那么憋屈。但是我却处理的一塌糊涂】</p>
+                <p>因为你说两个个人孩子气的人你害怕没办法生活【而我让你走进了你的害怕】</p>
+                <p>你说 你是一个比较简单的人，没有复杂的心思 【真诚 我见的人太少了，在这之前我的生活都是一片虚伪，看到你看到了最开始的我 】</p>
+                <p>你也说过 “没有必要为了别人委屈自己” 【】</p>
+                <p>你说 没有两个完全契合的人，但是要找一个意愿想自己靠近的人</p>
+                <p>你说 没有啥爱好，喜欢独处，游戏白痴，是不是觉得你很无趣（捂脸）【我不会觉得，因为每个人都有自己特有的生活方式，生活了几十年 你没必要看到别人会打游戏 喜欢这那的觉得不好意思，</p>
+                <p>不管别人怎么看你，那不重要，因为我只想让你能做自己，因为我知道不能做自己有多痛苦，</p>
+                <p>所以我会觉得你在如此特殊的情况下坚持自己的本心那么久，我觉得是你让我觉得在某些事情上面一定要坚持本心】 所以</p>
+                <p>哪怕是现在咱们之前争吵点：你觉得需要表现得像个正常人与时俱进的人重要，但是我觉得你能做自己才最重要；</p>
+                <p>你说 他们觉得你挥霍无度</p>
+                <p>【看到你坚信自己，也让我看到你不会活在别人话语之下，我觉得这才是对的，做自己就好没必要因为别人对自己的评价而去改变自己，你没有因为别人说你挥霍无度而去为了别人去改变，这些话在咱们今后拌嘴的时候你还记得吗，因为我欣赏不为别人改变做自己的人（当然并不是所有事情上）
+                </p>
+                <p>我看到了我欣赏的，我才喜欢你，所以不要觉得别人说你不好看你就趣味了别人改变（当然出么你化妆我不会觉得你为了别人的话去改变，因为这中改变完全没问题）</p>
+                <p>所以 喜欢一个人 我不看外表， 所以 对你的喜欢 并不是因为对爱情失去信心的摆烂，是对我们共同性格的欣赏；</p>
+
+                </p>
+
+                <p>
+                    回顾相见
+
+                    记得邀请你来天津，我其实还觉得你可能不会来，如果那样的话我们大概率不会成，因为不一起生活进一步了解是真的会擦肩而过。你来的那天天很冷，我也没有提醒你穿厚一点，也没有把身上的衣服给你取暖，害得你在外面冻了好久；
+                    那一个月一起晚上做饭吃饭、看电影，陪我去接触不擅长的游戏，再难你也没有说要放弃，通关boss 的那一刻得的激动无以言表。亲向你的那一刻，你应该没想到我会如此激动，当时的你也有点不知所措。
+                    但是你不得不承认你很优秀，
+                    所以也不要跟别人完了那么久时间游戏的人去跟自己不喜欢的事情作比较去低看自己，你同事他们都完了多久你又才接触了多久，所以不要否认你自己。
+
+                    <span>后来你了家，在郑州找工作。怀着宝宝满大街跑，在外面自己找过工作的我深知那种痛苦。当你说有一件事不确定要怎么给我说的时候，我充满了担忧，因为我深刻的清楚结婚我其实一无所有，内心的矛盾，希望你的这件事是你遇到了更合适你的，条件也比我好，那样你就能过得更好。
+                        同时也伴随一阵阵的失落。</span>
+
+                    <span>当得知柚宝宝以后激动，担忧。担心你会因为怀了宝宝被你家人说你，担心你家里人觉得你找了一个条件不怎么的人会不同意我们，然后逼着你打掉孩子对你造成伤害；但是最终我们订了婚，虽然很坎坷，婚礼上能让快点我都草草了事的结束，赶紧想着能休息；</span>
+
+
+                </p>
+
+
+                <p>
+                    宝宝出生
+                    直到宝宝出生，听到羊水的变少要紧急剖腹产，因为功课做的差远了，没能料想到这种情况，让你经历了不被理解，不过最后我们一致决定做了手术剖腹。 我也为自己在医院没有人没有专业知识害的你也担惊受怕；
+                    好在最后很顺利，手术后那个推车的护士一直想着
+                    赶快结束手上的这一车，拼命了往前拉，你说疼。 我心想 这破护士都不能慢点推吗，我死死的压住前面护士的速度，尽量让车走得慢一些..
+
+                    那晚上你一直出汗，没能想起来让医生去处理、晚上也没有能提前为你准备你能吃的小米粥，也没有安排好，处处都做的一塌糊涂。 对不起~！ 在医院让你受了无尽的委屈。
+
+                </p>
+
+                <p>
+                    月子中
+                    好在月子中心的环境还不错，宝宝也能吃下去奶，虽然这小子只认奶瓶，坐月子晚上其实也没怎么能完全都夜里休息好；好在是还算安稳一点；但是想起来医保当时为啥没有给算上就挺奇怪，不过后面再交就交了，买个踏实；
+
+
+                </p>
+
+
+                <p>
+                    分离
+                    我自己确实能力不足，公司哪些业务压得喘不过来气，但是我每天其实还是希望能让你看不到一个闷闷不乐的我，我是一个不愿意把自己悲痛表达出来的人（所以你总会觉得我很快乐，那都是装的，因为从小到大我只有这样才能试图欺骗我自己，骗我自己的身体
+                    让我自己觉得我过的还行。 这也是为什么我能在第二天笑着说我在家吵架的原因。 习惯了不把自己的负面情绪让你们看到，所以 你看到我的负面情绪得时候其实已经到了压不住的程度。）
+
+                    离开了郑州，留你一个人在咱妈家，让你饱受争议，以及咱爸妈被议论，对不起！ 当初答应的你一些不好的地方 有时候还会跟你吵，因为我 想从你身上得到一些关心但是我发现没有了，我心里会忐忑，也会不安。
+                    我们甚至开始出现了争吵；
+
+
+                </p>
+
+                <p>
+
+                    反思
+                    说再多没啥用，对我自己进行反思
+                    我发现我想要得到的关心慢慢消失，我是一个很容易多想的人，得不到了一些我希望的，加上我觉得我没有被得到对等的情绪容忍，让我觉得不公平于是开始寻求跟你沟通得到公平，我觉得我怎么想了怎么做了
+                    我就也理所应当觉得你也应该那样做。有了不公、不安全感。
+                    远离了家，每天三点一线，挺希望我们能多一些交流，多一些沟通...
+
+
+
+                </p>
+
+                <p>
+
+                    观点
+
+                    嫩感觉得到对我的失望，的确，作为丈夫什么都提供不了，也没减轻你作为母亲的压力、辛苦。作为孩子父亲 也没能力陪伴。
+
+                    看到了你眼中的疲惫，看到了你因为睡眠不足而消瘦的身影，看到了你为了照顾孩子而忽略自己的模样。
+
+                    我是一个如果让你感觉没有了爱，那你想做什么抉择我都不会对你说半个不。但是我还是希望我们能通过交流去解决我们的不合。 我知道你之前跟我试图沟通过，但是
+                    不为别人的话就随便改变自己这一点上，我还是之前的观念，因为我如果那么做了，
+
+                    我会觉得我丢失了自己，所以上次这个话题我说的可能比较直白。因为我也不希望你因为别人丢了自己。 我希望你能开心做你自己 我觉得这才是最没有遗憾的事。
+
+                    所以 有问题我希望我们能够多交流，如果有一天你跟我说你接受不了但是不愿沟通了， 你可以跟我说你做什么抉择我不会跟之前遇到的人一样拒绝你，阻拦你。
+
+
+                </p>
+
+
+
+                <p>
+
+                    观点
+
+                    嫩感觉得到对我的失望，的确，作为丈夫什么都提供不了，也没减轻你作为母亲的压力、辛苦。作为孩子父亲 也没能力陪伴。
+
+                    看到了你眼中的疲惫，看到了你因为睡眠不足而消瘦的身影，看到了你为了照顾孩子而忽略自己的模样。
+
+                    我是一个如果让你感觉没有了爱，那你想做什么抉择我都不会对你说半个不。但是我还是希望我们能通过交流去解决我们的不合。 我知道你之前跟我试图沟通过，但是
+                    不为别人的话就随便改变自己这一点上，我还是之前的观念，因为我如果那么做了，
+
+                    我会觉得我丢失了自己，所以上次这个话题我说的可能比较直白。因为我也不希望你因为别人丢了自己。 我希望你能开心做你自己 我觉得这才是最没有遗憾的事。
+
+                    所以 有问题我希望我们能够多交流，如果有一天你跟我说你接受不了但是不愿沟通了， 你可以跟我说你做什么抉择我不会跟之前遇到的人一样拒绝你，阻拦你。
+
+                    我希望我们能够好好地走完后半生，而不仅仅是走完后半生。 希望宝宝在今后的日子里能少气老婆一些。快快长大让你回归跟多自己的自由生活。
+                    快一点了原谅我半夜说的很多话有些语无伦次，因为脑子这会儿确实不听使唤了。
+
+                    那这封信的主要内容就暂且到这里吧，有些我们需要沟通的我希望我们可以继续沟通，不要因为某些事情上的分歧导致所有方面的事都停止了沟通交流，因为有些事情我没法完全妥协但是我也会去做些许改变，因为有些观点我保持强硬态度那是因为我就是靠着那些观念我才能让自己坚持
+
+                    生活到现在的，希望你能原谅我的部分的强硬观点，因为我不想否认掉一直支撑我活下来的精神观念。有些精神观念对我真的很重要。
+                    因为没了这些观念我的精神世界会破碎，我对你的坚信不移的专一会受到影响，会影响到我对你的看法.. 最后一定会影响我们的未来
+
+                </p>
+
+
+                <p>
+
+                    我想说的是
+
+                    为了孩子，辛苦无数个日夜，哄孩子、换尿布、一抱就是基本一整天，老婆，你真的辛苦了~
+
+                </p>
+
+
+                <p>我会：</p>
+
+                <ul class="promises-list">
+
+                    <li>我会努力让自己记住你说的细节，争取不忘</li>
+
+                    <li>我会更加注意我们沟通的时候的语气、心态</li>
+                    <li>我也会注意多给你一些问候与关心，但是我每次看到你对我消息的回应我会更有动力</li>
+
+                </ul>
+
+                <p>
+
+                    感谢你选择了我，感谢你给了我一个完整的家。在这个特殊的日子里，我想告诉你：你是世界上最了不起的女人，最优秀的妻子，最伟大的母亲。我爱你，因为你是我这一生中最重要的人。
+                    我希望以后你依然可以说出我的问题，但是多一些耐心的话我会更感动。 我也希望 你能更开心过好每一天 ，希望宝宝不在惹你生气~
+                </p>
+
+                <p>愿我们的爱情如这满天繁星般永恒，愿我们的家庭如这春日暖阳般温暖。</p>
+
+                <p class="greeting">永远爱你的 申亚博<br>写于2025年7月3日 1:06 </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 控制按钮 -->
+    <div class="controls">
+        <button class="control-btn" onclick="createFireworks()" title="烟花特效">🎆</button>
+    </div>
+
+    <script>
+        // 配置数据
+        const CONFIG = {
+            meetDate: new Date("2024/1/28 18:33:00"), // 相识日期
+            marriageDate: new Date("2024/7/3 00:00:00"), // 结婚日期
+        };
+
+        // 星光背景系统
+        class StarField {
+            constructor(container) {
+                this.container = container;
+                this.stars = [];
+                this.init();
+            }
+
+            init() {
+                for (let i = 0; i < 100; i++) {
+                    this.createStar();
+                }
+            }
+
+            createStar() {
+                const star = document.createElement('div');
+                star.className = 'star';
+
+                // 随机位置
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+
+                // 随机大小
+                const size = Math.random() * 3 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+
+                // 随机动画延迟
+                star.style.animationDelay = Math.random() * 5 + 's';
+
+                this.container.appendChild(star);
+                this.stars.push(star);
+            }
+        }
+
+        // 流星系统
+        class ShootingStars {
+            constructor(container) {
+                this.container = container;
+                this.startAutoShootingStars();
+            }
+
+            createShootingStar() {
+                const star = document.createElement('div');
+                star.className = 'shooting-star';
+
+                // 随机起始位置
+                star.style.left = Math.random() * 30 + '%';
+                star.style.top = Math.random() * 50 + '%';
+
+                // 随机角度
+                const angle = Math.random() * 45;
+                star.style.transform = `rotate(${angle}deg)`;
+
+                this.container.appendChild(star);
+
+                // 动画结束后移除
+                setTimeout(() => {
+                    star.remove();
+                }, 2000);
+            }
+
+            startAutoShootingStars() {
+                setInterval(() => {
+                    if (Math.random() > 0.7) {
+                        this.createShootingStar();
+                    }
+                }, 3000);
+            }
+        }
+
+        // 信封应用类
+        class LetterApp {
+            constructor() {
+                this.letterOpened = false;
+                this.init();
+            }
+
+            init() {
+                this.starField = new StarField(document.getElementById('starField'));
+                this.shootingStars = new ShootingStars(document.getElementById('shootingStars'));
+                this.updateTime();
+                this.timeInterval = setInterval(() => this.updateTime(), 1000);
+                this.bindEvents();
+                this.startAutoFireworks();
+            }
+
+            updateTime() {
+                const now = new Date();
+
+                // 计算相识时间
+                const meetTimeDiff = now - CONFIG.meetDate;
+                const meetDays = Math.floor(meetTimeDiff / (1000 * 60 * 60 * 24));
+
+                // 计算结婚时间
+                const marriageTimeDiff = now - CONFIG.marriageDate;
+                const marriageDays = Math.floor(marriageTimeDiff / (1000 * 60 * 60 * 24));
+
+                // 更新显示
+                const meetTimeElement = document.getElementById('meetTime');
+                const marriageTimeElement = document.getElementById('marriageTime');
+
+                const newMeetText = `${meetDays}天`;
+                const newMarriageText = `${marriageDays}天`;
+
+                // 添加更新动画效果
+                if (meetTimeElement.textContent !== newMeetText) {
+                    meetTimeElement.classList.add('update');
+                    setTimeout(() => meetTimeElement.classList.remove('update'), 500);
+                }
+
+                if (marriageTimeElement.textContent !== newMarriageText) {
+                    marriageTimeElement.classList.add('update');
+                    setTimeout(() => marriageTimeElement.classList.remove('update'), 500);
+                }
+
+                meetTimeElement.textContent = newMeetText;
+                marriageTimeElement.textContent = newMarriageText;
+            }
+
+            createFireworks() {
+                const container = document.getElementById('fireworksContainer');
+                const colors = ['#ff6b9d', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff8e8e', '#a8e6cf', '#ffd166', '#06d6a0', '#ef476f'];
+
+                for (let i = 0; i < 25; i++) {
+                    setTimeout(() => {
+                        const firework = document.createElement('div');
+                        firework.className = 'firework';
+                        firework.style.left = Math.random() * 100 + '%';
+                        firework.style.top = Math.random() * 100 + '%';
+                        firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                        firework.style.width = Math.random() * 20 + 10 + 'px';
+                        firework.style.height = firework.style.width;
+
+                        container.appendChild(firework);
+                        setTimeout(() => firework.remove(), 2000);
+                    }, i * 120);
+                }
+            }
+
+            openLetter() {
+                if (this.letterOpened) return;
+
+                const envelope = document.getElementById('envelope');
+                const letterContent = document.getElementById('letterContent');
+
+                envelope.classList.add('opening');
+                this.letterOpened = true;
+
+                // 信封打开特效
+                setTimeout(() => {
+                    this.createFireworks();
+
+                    // 流星雨特效
+                    for (let i = 0; i < 10; i++) {
+                        setTimeout(() => {
+                            this.shootingStars.createShootingStar();
+                        }, i * 200);
+                    }
+
+                    setTimeout(() => {
+                        letterContent.classList.add('show');
+                        envelope.style.display = 'none';
+                    }, 1000);
+                }, 800);
+            }
+
+            startAutoFireworks() {
+                setInterval(() => {
+                    if (Math.random() > 0.8) {
+                        this.createFireworks();
+                    }
+                }, 10000);
+            }
+
+            bindEvents() {
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'f' || e.key === 'F') {
+                        this.createFireworks();
+                    }
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (Math.random() > 0.98) {
+                        this.createMouseSparkle(e.clientX, e.clientY);
+                    }
+                });
+
+                // 点击时间显示时触发烟花
+                document.getElementById('timeDisplay').addEventListener('click', () => {
+                    this.createFireworks();
+                });
+            }
+
+            createMouseSparkle(x, y) {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'fixed';
+                sparkle.style.left = x + 'px';
+                sparkle.style.top = y + 'px';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.zIndex = '999';
+                sparkle.style.color = '#fff';
+                sparkle.style.fontSize = '20px';
+                sparkle.style.animation = 'sparkle 1s ease-out forwards';
+
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        }
+
+        // 全局函数
+        let app;
+
+        function openLetter() {
+            app.openLetter();
+        }
+
+        function createFireworks() {
+            app.createFireworks();
+        }
+
+        // 添加sparkle动画
+        const sparkleStyle = document.createElement('style');
+        sparkleStyle.textContent = `
+            @keyframes sparkle {
+                0% { transform: scale(0) rotate(0deg); opacity: 1; }
+                50% { transform: scale(1) rotate(180deg); opacity: 1; }
+                100% { transform: scale(0) rotate(360deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(sparkleStyle);
+
+        // 启动应用
+        window.addEventListener('load', () => {
+            app = new LetterApp();
+        });
+    </script>
+</body>
+
+</html>
