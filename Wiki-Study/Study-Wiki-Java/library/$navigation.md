@@ -126,6 +126,7 @@
         - **锁-重入锁ReentrantLock**
             - [公用](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/00-公用 "公用")
             - [Lock 的condition](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/01-Lock 的condition "Lock 的condition")
+            - [Lock的conditionawait-signal-signalAll](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/02-Lock的conditionawait-signal-signalAll "Lock的conditionawait-signal-signalAll")
             - [stampedLock 与 reentrantLock 区别](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/14-stampedLock 与 reentrantLock 区别 "stampedLock 与 reentrantLock 区别")
             - [reentrantLock  与  reentrantreadwritelock区别](?file=001-学习Java/11-Java线程/05-java锁/05-锁-重入锁ReentrantLock/15-reentrantLock  与  reentrantreadwritelock区别 "reentrantLock  与  reentrantreadwritelock区别")
         - **javaStampedLock锁**
@@ -199,7 +200,6 @@
     - **多人协作处理页面**
         - [websocket 多人协作案例](?file=003-java进阶知识/023-websocket/02-多人协作处理页面/01-websocket 多人协作案例 "websocket 多人协作案例")
 - **java 后台上传文件**
-    - **Java 上传文件-Mongodb**
     - **Java 后台使用 MultipartEntityBuilder**
         - [案例](?file=003-java进阶知识/03-java 后台上传文件/02-Java 后台使用 MultipartEntityBuilder/01-案例 "案例")
 - ** java 集合进阶**
@@ -228,6 +228,7 @@
             - [easyExcel阿里的导出包](?file=003-java进阶知识/08-excel导出-导入/01-excel导出/02-excel工具类直接导出流response返回.md/02-easyExcel阿里的导出包 "easyExcel阿里的导出包")
             - [easyExcel 注解直接返回excel](?file=003-java进阶知识/08-excel导出-导入/01-excel导出/02-excel工具类直接导出流response返回.md/03-easyExcel 注解直接返回excel "easyExcel 注解直接返回excel")
             - [easyExcel 合并单元格](?file=003-java进阶知识/08-excel导出-导入/01-excel导出/02-excel工具类直接导出流response返回.md/04-easyExcel 合并单元格 "easyExcel 合并单元格")
+            - [合并单元格](?file=003-java进阶知识/08-excel导出-导入/01-excel导出/02-excel工具类直接导出流response返回.md/05-合并单元格 "合并单元格")
             - [临时记录](?file=003-java进阶知识/08-excel导出-导入/01-excel导出/02-excel工具类直接导出流response返回.md/100-临时记录 "临时记录")
         - **easyexcel先上传到mongodb在下载**
             - [EasyExcel先上传到mongodb在下载](?file=003-java进阶知识/08-excel导出-导入/01-excel导出/04-easyexcel先上传到mongodb在下载/01-EasyExcel先上传到mongodb在下载 "EasyExcel先上传到mongodb在下载")
@@ -245,7 +246,6 @@
     - [java获取文件流遇到的问题](?file=003-java进阶知识/10-java 获取项目文件流/01-java获取文件流遇到的问题 "java获取文件流遇到的问题")
     - [视频播放player可快进](?file=003-java进阶知识/10-java 获取项目文件流/02-视频播放player可快进 "视频播放player可快进")
 - **工作流**
-    - **Activiti工作流**
     - **Camunda工作流**
         - [介绍](?file=003-java进阶知识/12-工作流/002-Camunda工作流/01-介绍 "介绍")
 - **池化技术**
@@ -264,14 +264,10 @@
     - **润乾报表**
         - [公用](?file=003-java进阶知识/15-报表/01-润乾报表/01-公用 "公用")
         - [sql数据源案例](?file=003-java进阶知识/15-报表/01-润乾报表/02-sql数据源案例 "sql数据源案例")
-    - **其他报表工具**
 - **流程**
     - **camunda**
         - **camunda基础**
             - [camunda](?file=003-java进阶知识/20-流程/01-camunda/01-camunda基础/01-camunda "camunda")
-        - **camunda案例**
-    - **activity**
-        - **activity-公用**
 - **跨域问题**
     - **springboot后端处理跨域问题**
         - **三种方式解决跨域**
@@ -282,7 +278,6 @@
 - **高并发**
     - **高并发生成id问题**
         - [高并发下生成全局id](?file=003-java进阶知识/30-高并发/01-高并发生成id问题/01-高并发下生成全局id "高并发下生成全局id")
-    - **其他**
 
 ##### Java 新特性
 - **JAVA 1.8 新特性**
@@ -313,7 +308,6 @@
 - **openjdk11新特性**
     - **公共记录**
         - [openjdk11新特性](?file=004-Java 新特性/02-openjdk11新特性/01-公共记录/01-openjdk11新特性 "openjdk11新特性")
-    - **其他教程记录**
 
 ##### java 后端之maven
 - **maven学习记录**
@@ -323,10 +317,12 @@
     - **maven 临时记录**
         - [maven jar 打包与配置文件分离](?file=005-java 后端之maven/02-maven 临时记录/001-maven 临时记录/01-maven jar 打包与配置文件分离 "maven jar 打包与配置文件分离")
 
-##### java 项目脚本
+##### java 项目整理
 - ** javaWeb项目 jar启动脚本**
-    - [ java启动脚本-关闭](?file=006-java 项目脚本/01- javaWeb项目 jar启动脚本/01- java启动脚本-关闭 " java启动脚本-关闭")
-    - [linux shell spring cloud ](?file=006-java 项目脚本/01- javaWeb项目 jar启动脚本/02-linux shell spring cloud  "linux shell spring cloud ")
+    - [ java启动脚本-关闭](?file=006-java 项目整理/01- javaWeb项目 jar启动脚本/01- java启动脚本-关闭 " java启动脚本-关闭")
+    - [linux shell spring cloud ](?file=006-java 项目整理/01- javaWeb项目 jar启动脚本/02-linux shell spring cloud  "linux shell spring cloud ")
+- **项目资源服务器整理**
+    - [项目服务器架构](?file=006-java 项目整理/02-项目资源服务器整理/01-项目服务器架构 "项目服务器架构")
 
 ##### java 后台测试
 - **java spirngboot 项目添加测试类**
@@ -383,7 +379,9 @@
             - [springboot配置多个数据源](?file=009-java 框架学习/06-spring-boot/10-springboot问题点/01-springboot配置多个数据源/01-springboot配置多个数据源 "springboot配置多个数据源")
         - **springboot配置log4j2日志**
             - [springboot配置日志](?file=009-java 框架学习/06-spring-boot/10-springboot问题点/02-springboot配置log4j2日志/01-springboot配置日志 "springboot配置日志")
-        - **其他**
+    - **springboot-整合MQTT**
+        - [springboot-基础版整合MQTT](?file=009-java 框架学习/06-spring-boot/31-springboot-整合MQTT/01-springboot-基础版整合MQTT "springboot-基础版整合MQTT")
+        - [springboot-yml配置文件](?file=009-java 框架学习/06-spring-boot/31-springboot-整合MQTT/02-springboot-yml配置文件 "springboot-yml配置文件")
 - **tkMybatis**
     - **tk与数据库字段问题**
         - [自增字段设置](?file=009-java 框架学习/10-tkMybatis/02-tk与数据库字段问题/01-自增字段设置 "自增字段设置")
@@ -400,10 +398,13 @@
         - [springboot项目中初始化事件](?file=009-java 框架学习/100-框架问题/02-框架中问题总结/03-springboot项目中初始化事件 "springboot项目中初始化事件")
     - **springboot启动后初始操作**
         - [项目启动执行自定义逻辑](?file=009-java 框架学习/100-框架问题/03-springboot启动后初始操作/01-项目启动执行自定义逻辑 "项目启动执行自定义逻辑")
-    - **springboot 自定义数据源**
     - **springcloud**
         - **springCloud 记录**
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
+- **开源前后端**
+- **jhipster**
+    - **公用**
+        - [安装流程](?file=009-java 框架学习/201-jhipster/01-公用/01-安装流程 "安装流程")
 - **工作流**
     - **activity学习**
         - **common activity学习**
@@ -423,6 +424,8 @@
     - **netty案例总结**
         - **孪生项目MEC雷达数据**
             - [MEC数据案例](?file=009-java 框架学习/22-Netty/02-netty案例总结/01-孪生项目MEC雷达数据/01-MEC数据案例 "MEC数据案例")
+- **java-高并发框架**
+    - [Java实现高性能多线程框架设计](?file=009-java 框架学习/30-java-高并发框架/01-Java实现高性能多线程框架设计 "Java实现高性能多线程框架设计")
 
 ##### java-JVM
 - **jvm调优**
@@ -448,6 +451,7 @@
         - [spirng 高并发94](?file=100-Java 知识点/02-问题记录/01-鲁班课程分布式微服务94/01-spirng 高并发94 "spirng 高并发94")
     - **java 进阶知识点**
         - [ 鲁班课程记录](?file=100-Java 知识点/02-问题记录/02-java 进阶知识点/01- 鲁班课程记录 " 鲁班课程记录")
+        - [高性能架构](?file=100-Java 知识点/02-问题记录/02-java 进阶知识点/02-高性能架构 "高性能架构")
 
 ##### 测试相关
 - **压力测试工具**
@@ -457,7 +461,5 @@
 
 ##### 数据结构专栏
 - **数据结构基础知识**
-    - **基础**
     - **Hash表**
         - [hash表介绍](?file=200-数据结构专栏/01-数据结构基础知识/02-Hash表/01-hash表介绍 "hash表介绍")
-- **数据结构other**
