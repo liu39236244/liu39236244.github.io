@@ -354,7 +354,7 @@ localhost:hello ruby$
 
 go install 命令是用来编译并安装代码包或者源码文件的。
 
-go install 命令在内部实际上分成了两步操作：第一步是生成结果文件(可执行文件或者.a包)，第二步会把编译好的结果移到 `$GOPATH/pkg`或者`$GOPATH/bin`。
+go install 命令在内部实际上分成了两步操作：第一步是生成结果文件(可执行文件或者.a包)，第二步会把编译好的结果移到 `$GOPATH/pkg`或者 `$GOPATH/bin`。
 
 可执行文件： 一般是 go install 带main函数的go文件产生的，有函数入口，所有可以直接运行。
 
@@ -528,3 +528,72 @@ go version 查看go当前的版本
 go env 查看当前go的环境变量
 
 go list 列出当前全部安装的package
+
+
+
+
+## go doc 默认新版本已经不存在命令了 新版本的go 需要额外下载
+
+
+这是因为 `godoc` 工具没有安装。在新版本的 Go 中，`godoc` 不再默认包含在 Go 安装包中。
+
+## 解决方案：
+
+### 方案1：安装 godoc 工具
+```bash
+# 安装 godoc
+go install golang.org/x/tools/cmd/godoc@latest
+```
+
+安装完成后再运行：
+```bash
+godoc -http=:5172
+```
+
+### 方案2：使用新的 Go 文档服务器
+Go 1.13+ 推荐使用：
+```bash
+# 安装 pkgsite（新的文档服务器）
+go install golang.org/x/pkgsite/cmd/pkgsite@latest
+
+# 运行文档服务器
+pkgsite -http=:5172
+```
+
+### 方案3：使用在线文档
+直接访问官方在线文档：
+- **Go 官方文档**：https://golang.org/doc/
+- **Go 包文档**：https://pkg.go.dev/
+
+### 方案4：使用 go doc 命令
+查看本地包文档：
+```bash
+# 查看当前包文档
+go doc
+
+# 查看指定包文档
+go doc fmt
+go doc fmt.Println
+
+# 查看所有导出的内容
+go doc -all fmt
+```
+
+## 推荐做法：
+
+**对于学习：**
+```bash
+# 1. 安装 godoc
+go install golang.org/x/tools/cmd/godoc@latest
+
+# 2. 启动文档服务器
+godoc -http=:5172
+
+# 3. 浏览器访问
+# http://localhost:5172
+```
+
+**或者直接使用在线文档：**
+- 访问 https://pkg.go.dev/ 查看所有 Go 包文档
+
+你想用哪种方式？我建议先试试方案1安装 godoc。
