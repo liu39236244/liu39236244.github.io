@@ -327,10 +327,38 @@ go version  # 查看go的版本号
 ## gp win 安装
 
 
-
+go国内可访问下载地址：https://golang.google.cn/dl/
 安装：https://blog.csdn.net/qq_44830881/article/details/123457805
 配置环境：https://blog.csdn.net/m0_54850303/article/details/144318256
 
 
 
-go win 环境配置 
+## go win/linx  环境配置 
+
+
+### linx 
+
+```
+总结：
+
+export GOROOT=/usr/local/go
+export GOPATH=/Users/ruby/go
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+
+```
+
+### win
+
+```
+
+GOROOT ：C:\Go
+GOPATH: C:\Users\Administrator\go
+
+
+path上添加：
+%GOROOT%\bin
+%GOPATH%\bin ( C:\Users\Administrator\go)
+
+```
+
