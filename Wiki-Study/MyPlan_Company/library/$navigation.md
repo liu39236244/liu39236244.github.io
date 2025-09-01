@@ -130,6 +130,28 @@
         - **docker**
             - **公用**
                 - [公用博客](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/01-公用博客 "公用博客")
+                - **docker的安装**
+                    - [linux安装docker](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/01-linux安装docker "linux安装docker")
+                    - **docker配置代理**
+                        - **docker连通性测试**
+                            - [docker连通性测试](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/02-docker配置代理/001-docker连通性测试/01-docker连通性测试 "docker连通性测试")
+                        - **测试docker 镜像地址可用性**
+                            - [创建sh脚本测试镜像可用性](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/02-docker配置代理/005-测试docker 镜像地址可用性/01-创建sh脚本测试镜像可用性 "创建sh脚本测试镜像可用性")
+                        - [linux 配置clash-docker 代理](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/02-docker配置代理/01-linux 配置clash-docker 代理 "linux 配置clash-docker 代理")
+                        - [简单配置docker 的镜像地址](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/02-docker配置代理/04-简单配置docker 的镜像地址 "简单配置docker 的镜像地址")
+                        - [代理配置路径说明](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/02-docker配置代理/10-代理配置路径说明 "代理配置路径说明")
+                    - **linux-docker-安装配置resutDesk**
+                        - [docker安装配置 rustdesk](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/03-linux-docker-安装配置resutDesk/01-docker安装配置 rustdesk "docker安装配置 rustdesk")
+                        - [整理简约版部署RustDesk](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/03-linux-docker-安装配置resutDesk/02-整理简约版部署RustDesk "整理简约版部署RustDesk")
+                    - [docker-compose命令](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/05-docker-compose命令 "docker-compose命令")
+                - **clash代理**
+                    - **linux代理**
+                        - [linux 安装代理都需要安装哪些](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/03-clash代理/000-linux代理/01-linux 安装代理都需要安装哪些 "linux 安装代理都需要安装哪些")
+                    - **linuxClash安装配置**
+                        - [linux下载安装clash](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/03-clash代理/001-linuxClash安装配置/01-linux下载安装clash "linux下载安装clash")
+                    - **linux使用v2raya**
+                        - [linux下载安装v2raya](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/03-clash代理/002-linux使用v2raya/01-linux下载安装v2raya "linux下载安装v2raya")
+                        - [安装好v2ray2 以后配置v2ray](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/03-clash代理/002-linux使用v2raya/02-安装好v2ray2 以后配置v2ray "安装好v2ray2 以后配置v2ray")
             - **docker-雷哥视频**
                 - [第一节 介绍概念](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/01-docker-雷哥视频/01-第一节 介绍概念 "第一节 介绍概念")
                 - [第二节 和虚拟技术比较](?file=000-Common/01-EverythingRecord/02-视频学习记录/13-docker/01-docker-雷哥视频/02-第二节 和虚拟技术比较 "第二节 和虚拟技术比较")
