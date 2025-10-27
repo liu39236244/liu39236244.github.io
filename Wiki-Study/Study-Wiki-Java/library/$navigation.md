@@ -401,6 +401,10 @@
     - **springcloud**
         - **springCloud 记录**
             - [spirngCloud记录](?file=009-java 框架学习/100-框架问题/100-springcloud/01-springCloud 记录/01-spirngCloud记录 "spirngCloud记录")
+- **开源前后端**
+- **jhipster**
+    - **公用**
+        - [安装流程](?file=009-java 框架学习/201-jhipster/01-公用/01-安装流程 "安装流程")
 - **工作流**
     - **activity学习**
         - **common activity学习**
