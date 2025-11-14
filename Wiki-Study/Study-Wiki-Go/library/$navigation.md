@@ -29,3 +29,4 @@
         - [go学习过程问题错误整理](?file=001-Go 整理/100-go整理/010-go学习错误记录/1-go学习过程问题错误整理 "go学习过程问题错误整理")
     - **go学习关键知识点**
         - [go build与go install](?file=001-Go 整理/100-go整理/02-go学习关键知识点/01-go build与go install "go build与go install")
+    - [go整理公用](?file=001-Go 整理/100-go整理/03-go整理公用 "go整理公用")

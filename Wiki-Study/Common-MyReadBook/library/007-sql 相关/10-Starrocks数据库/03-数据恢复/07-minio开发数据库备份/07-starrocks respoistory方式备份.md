@@ -91,6 +91,8 @@ PROPERTIES(
     "aws.s3.socket.timeout" = "1800000"
 );
 
+
+
 -- 6. 验证新 repository
 SHOW REPOSITORIES;
 ```
@@ -102,3 +104,4 @@ SHOW REPOSITORIES;
 - **任务状态**：确保所有相关任务状态都是 `CANCELLED` 或 `FINISHED` 后再删除 repository
 
 如果 `CANCEL BACKUP` 命令执行后仍然无法删除 repository，可能需要重启 StarRocks 服务或等待更长时间让任务彻底清理完成。
+

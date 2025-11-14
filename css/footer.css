@@ -1,0 +1,136 @@
+/* ============ 页脚样式 ============ */
+.footer-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-top: 2px solid #444;
+    border-bottom: 2px solid #444;
+    text-align: center;
+}
+
+/* 友情链接容器 */
+.links-container {
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.links-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f9f66d;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.links-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.links-list li {
+    display: inline-block;
+}
+
+.links-list a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 15px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.links-list a:hover {
+    color: #f9f66d;
+    border-color: #f9f66d;
+    background-color: rgba(249, 246, 109, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 246, 109, 0.2);
+}
+
+/* 备案号容器 */
+.beian-container {
+    padding: 15px 0;
+}
+
+.beian-title {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.beian-info {
+    font-size: 12px;
+    color: #aaa;
+    transition: all 0.3s ease;
+}
+
+.beian-info a {
+    color: #ddd;
+    text-decoration: none;
+    border-bottom: 1px dotted #666;
+    transition: all 0.3s ease;
+}
+
+.beian-info a:hover {
+    color: #f9f66d;
+    border-bottom-color: #f9f66d;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 30px 15px;
+        margin-top: 40px;
+    }
+
+    .links-list {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links-list li {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .links-list a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h2.title_name {
+        font-size: 2.5em;
+        padding: 30px 0 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .links-list a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .beian-info {
+        font-size: 11px;
+    }
+}
+
+/* 装饰线条 */
+.footer-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f9f66d, transparent);
+    margin: 15px auto;
+}

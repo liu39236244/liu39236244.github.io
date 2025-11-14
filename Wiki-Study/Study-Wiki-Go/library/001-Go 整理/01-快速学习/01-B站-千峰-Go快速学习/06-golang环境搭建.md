@@ -350,7 +350,30 @@ export PATH=$PATH:$GOBIN
 
 ### win
 
-```
+2.添加GOPATH环境变量
+在添加GOPATH环境变量之前，我们需要先新建一个工作区文件夹，这里笔者以goproject命名。然后在该文件夹下分别创建src, pkg, bin三个文件夹，这三个文件夹作用如下：
+
+src： 存放源代码（go项目存放的位置）
+
+b****in: 存放编译后的二进制文件 （在项目中用到的如swag.exe等exe文件就会在这里）
+
+pkg：存放编译后的包文件
+
+
+修改镜像：
+
+
+#开启mod模式（项目管理需要用到）
+go env -w GO111MODULE=on
+#重新设置成七牛镜像源（推荐）或阿里镜像源（用原有的会比较慢）
+go env -w GOPROXY=https://goproxy.cn,direct
+go env -w GOPROXY=https://mirrors.aliyun.com/goproxy
+
+
+
+```sh
+
+
 
 GOROOT ：C:\Go
 GOPATH: C:\Users\Administrator\go

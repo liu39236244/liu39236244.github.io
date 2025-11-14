@@ -162,6 +162,9 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer `
     portainer/portainer-ce:latest
 ```
 
+
+
+
 **为什么这个命令在 WSL 2 模式下能工作？**
 
 Docker Desktop (WSL 2 模式) 做了一件非常巧妙的事情：它会自动将主机上的 Docker CLI 命令转发到 WSL 2 虚拟机内的 Docker 守护进程，并且它也确保了 `/var/run/docker.sock` 这个路径在容器内可以正确地连接到守护进程。所以，即便是您在 Windows PowerShell 中输入这个 Linux 风格的路径，它也能被正确理解和执行。
@@ -181,3 +184,111 @@ Docker Desktop (WSL 2 模式) 做了一件非常巧妙的事情：它会自动�
 这次几乎可以肯定会成功启动 Portainer。启动后，您就可以通过 `https://localhost:9443` 访问它了。
 
 实在抱歉，因为 Docker Desktop for Windows 的后端模式不同导致了命令的差异，给您带来了困扰。这个排查过程也是解决 Docker 跨平台问题的典型路径。您提供的清晰报错是快速定位问题的关键！
+
+
+
+## 通过compose 进行搭建
+
+
+我来帮你创建一个 Portainer 的 Docker Compose 配置文件，包含数据永久存储配置：
+
+```yaml
+version: '3.8'
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "9443:9443"  # HTTPS 端口
+    volumes:
+      # 数据永久存储
+      - portainer_data:/data
+      # Docker socket 挂载（用于管理本地 Docker）
+      - /var/run/docker.sock:/var/run/docker.sock
+      # 如果你想使用本地目录存储数据，可以替换上面的 portainer_data 为：
+      # - ./portainer_data:/data
+    environment:
+      # 可选：设置管理员密码（首次启动时）
+      # - PORTAINER_PASSWORD=your_network
+
+# 定义数据卷（推荐使用 Docker 管理的卷）
+volumes:
+  portainer_data:
+    driver: local
+
+# 定义网络
+networks:
+  portainer_network:
+    driver: bridge
+```
+
+如果你更喜欢使用本地目录存储数据，这里是另一个版本：
+
+```yaml
+version: '3.8'
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "9443:9443"
+    volumes:
+      # 使用本地目录存储数据
+      - ./portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      TZ: Asia/Shanghai
+    networks:
+      - portainer_network
+
+networks:
+  portainer_network:
+    driver: bridge
+```
+
+## 使用方法：
+
+1. **创建配置文件**：
+   ```bash
+   mkdir portainer && cd portainer
+   nano docker-compose.yml
+   ```
+
+2. **启动 Portainer**：
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **访问 Portainer**：
+   - HTTP: `http://localhost:9000`
+   - HTTPS: `https://localhost:9443`
+
+4. **查看状态**：
+   ```bash
+   docker-compose ps
+   docker-compose logs portainer
+   ```
+
+## 配置说明：
+
+- **端口映射**：
+  - `9000`: HTTP 访问端口
+  - `9443`: HTTPS 访问端口
+
+- **数据存储**：
+  - `portainer_data:/data`: 使用 Docker 管理的卷存储数据
+  - 或 `./portainer_data:/data`: 使用本地目录存储
+
+- **Docker 管理**：
+  - `/var/run/docker.sock:/var/run/docker.sock`: 允许 Portainer 管理本地 Docker
+
+- **重启策略**：
+  - `unless-stopped`: 除非手动停止，否则总是重启
+
+首次访问时，你需要创建管理员账户。数据会永久保存在指定的卷或目录中，即使容器重启也不会丢失。
