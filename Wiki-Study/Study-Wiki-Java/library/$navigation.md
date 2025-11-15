@@ -421,6 +421,10 @@
         - **netty视频教程**
             - **尚硅谷netty教程**
                 - [netty视频教程](?file=009-java 框架学习/22-Netty/01-netty 基础/04-netty视频教程/01-尚硅谷netty教程/01-netty视频教程 "netty视频教程")
+            - **黑马netty教程**
+                - [公用记录](?file=009-java 框架学习/22-Netty/01-netty 基础/04-netty视频教程/02-黑马netty教程/01-公用记录 "公用记录")
+                - [导学](?file=009-java 框架学习/22-Netty/01-netty 基础/04-netty视频教程/02-黑马netty教程/02-导学 "导学")
+                - [01_nio三大组件-channel-buffer](?file=009-java 框架学习/22-Netty/01-netty 基础/04-netty视频教程/02-黑马netty教程/03-01_nio三大组件-channel-buffer "01_nio三大组件-channel-buffer")
     - **netty案例总结**
         - **孪生项目MEC雷达数据**
             - [MEC数据案例](?file=009-java 框架学习/22-Netty/02-netty案例总结/01-孪生项目MEC雷达数据/01-MEC数据案例 "MEC数据案例")
