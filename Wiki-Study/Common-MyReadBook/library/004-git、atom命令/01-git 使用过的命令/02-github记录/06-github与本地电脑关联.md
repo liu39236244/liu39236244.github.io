@@ -45,9 +45,11 @@ git config --global --list
 
 4. # 添加所有文件到仓库
 
-git add .
+
 
 4.1 git .ignore  ；设置忽略掉的一些文件以及一些文件夹 在 git add . 之前创建
+
+git add .
 
 5 # 提交更改
 git commit -m "Initial commit 初始化了项目"
