@@ -77,4 +77,25 @@ sudo docker-compose up -d
 
 
 
-## 
+## 指定配置文件
+
+
+
+cd /home/shenyabo/docker/portainer
+
+docker-compose -f portainer-compose.yml up -d
+docker-compose -f portainer-compose.yml down
+docker-compose -f portainer-compose.yml ps
+docker-compose -f portainer-compose.yml logs -f
+
+###  边坡 docker 上面portainer
+
+docker-compose -f /home/shenyabo/docker/portainer/portainer-compose.yml up -d
+docker-compose -f /home/shenyabo/docker/portainer/portainer-compose.yml down
+
+### 如果 5 分钟内没创建账号，被锁了
+docker-compose restart portainer
+
+想知道容器是不是真的起来了
+docker-compose ps          # 只看这个 compose 的容器
+docker ps | grep portainer # 全局看
