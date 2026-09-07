@@ -62,6 +62,7 @@
     - [idea 零散操作](?file=005-idea 零碎/02-idea 零散操作/02-idea 零散操作 "idea 零散操作")
     - [idea 创建spring boot 多模块工程创建](?file=005-idea 零碎/02-idea 零散操作/04-idea 创建spring boot 多模块工程创建 "idea 创建spring boot 多模块工程创建")
     - [idea 设置忽略svn 文件](?file=005-idea 零碎/02-idea 零散操作/05-idea 设置忽略svn 文件 "idea 设置忽略svn 文件")
+    - [idea下载qoder 插件](?file=005-idea 零碎/02-idea 零散操作/06-idea下载qoder 插件 "idea下载qoder 插件")
 - **idea jar包**
     - [idea jar 包](?file=005-idea 零碎/03-idea jar包/01-idea jar 包 "idea jar 包")
     - [class path](?file=005-idea 零碎/03-idea jar包/02-class path "class path")
