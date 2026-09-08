@@ -95,3 +95,7 @@ git config --global --unset https.proxy
 
 
 修改
+
+git config user.name liu39236244
+
+git config user.email 2268288783@qq.com
