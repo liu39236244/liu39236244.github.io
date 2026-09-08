@@ -29,6 +29,7 @@ Host github.com
 
 ## 2 关联远程仓库
 
+
 ### 2.1 远程github 创建空仓库 【设置私有/设置描述 等等】
 
 ### 2.2 本地创建空仓库【前提是本地需要有gith 】
@@ -91,3 +92,6 @@ git config --global https.proxy https://192.168.1.25:7890
 
 git config --global --unset http.proxy
 git config --global --unset https.proxy
+
+
+修改
