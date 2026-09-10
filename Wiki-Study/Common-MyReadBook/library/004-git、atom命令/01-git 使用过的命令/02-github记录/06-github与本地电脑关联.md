@@ -94,8 +94,28 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 
 
-修改
+## 修改本地项目配置
 
 git config user.name liu39236244
 
 git config user.email 2268288783@qq.com
+
+
+# 旧版git
+git checkout -b dev origin/dev
+
+# 新版git推荐
+git switch --track origin/dev
+
+
+## cursor 命令行读取环境变量
+
+
+
+## nvm
+
+nvm 安装最新版本v2以后 需要在用户变量中设置淘宝镜像
+
+## go
+
+新的go不需要设置很复杂的配置，代码随便放

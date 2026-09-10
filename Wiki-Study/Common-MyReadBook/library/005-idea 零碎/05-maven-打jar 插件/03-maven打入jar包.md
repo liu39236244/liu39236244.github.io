@@ -26,11 +26,12 @@ mvn install:install-file -Dfile=C:\Users\Administrator\Desktop\jar\nova.traffic-
 
 
 
-```
-nova.traffic
-```
 
 
-```
-nova.traffic
-```
+## 台式电脑
+
+mvn install:install-file -Dfile=C:\Users\pc\Desktop\gp_base-4.4.2RELEASE.jar -DgroupId=com.graphsafe -DartifactId=gp_base -Dversion=4.4.2RELEASE -Dpackaging=jar
+
+mvn install:install-file -Dfile=C:\Users\pc\Desktop\sources-1.2.0.jar -DgroupId=nova.traffic.sources -DartifactId=sources -Dversion=1.2.0 -Dpackaging=jar
+mvn install:install-file -Dfile=C:\Users\pc\Desktop\traffic-1.2.0.jar -DgroupId=nova.traffic -DartifactId=traffic -Dversion=1.2.0 -Dpackaging=jar
+
