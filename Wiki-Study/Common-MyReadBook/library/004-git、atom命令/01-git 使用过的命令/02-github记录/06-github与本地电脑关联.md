@@ -92,4 +92,144 @@ git config --global --unset https.proxy
 
 
 
+## 使用记录
 
+### 当前目录
+
+ssh-keygen -t rsa -b 4096 -C "2268288783@qq.com" -f id_rsa_shenyabo_github
+### 制定目录
+ssh-keygen -t rsa -b 4096 -C "2268288783@qq.com" -f ~/.ssh/id_rsa_shenyabo_github
+
+### 创建配置文件，应为多个git的话就是需要配置
+
+~/.ssh/config  文件
+
+
+Host github.com-shenyabo
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_shenyabo_github
+    IdentitiesOnly yes
+    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+
+### 原来用：
+git clone git@github.com:用户名/仓库名.git
+
+### 现在改成（注意 Host 别名）：
+git clone git@github.com-shenyabo:用户名/仓库名.git    
+
+#### 不设置别名
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_shenyabo_github
+    IdentitiesOnly yes
+
+** 注意配置git代理只对https生效ssh 不生效 ** 
+
+```sh
+# 全局代理（所有 github.com 连接都走代理）
+Host github.com
+    HostName github.com
+    User git
+    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+
+# 个人账号
+Host github.com-shenyabo
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_shenyabo_github
+    IdentitiesOnly yes
+    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+
+# 公司账号（如果有）
+Host github.com-work
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_work_github
+    IdentitiesOnly yes
+    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+```
+
+
+## git 拉去github上的代码最终解决方案
+
+ssh-keygen -t rsa -b 4096 -C "2268288783@qq.com" -f ~/.ssh/id_rsa_shenyabo_github
+
+
+~/.ssh/config  文件
+
+linux 有nc的情况 文件内容
+
+```
+# 全局代理（所有 github.com 连接都走代理）
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_shenyabo_github
+    IdentitiesOnly yes
+    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+
+# 个人账号
+Host github.com-shenyabo
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_shenyabo_github
+    IdentitiesOnly yes
+    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+
+```
+
+如果没有nc 就用下面connect（windows用户）
+
+```
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_shenyabo_github
+    IdentitiesOnly yes
+    # 用 connect 代替 nc（Git for Windows 自带）
+    ProxyCommand connect -S 127.0.0.1:7897 %h %p
+    # 或 HTTP 代理
+    # ProxyCommand connect -H 127.0.0.1:7897 %h %p
+
+# 你的多账号配置
+Host github.com-shenyabo
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_shenyabo_github
+    IdentitiesOnly yes
+    ProxyCommand connect -S 127.0.0.1:7897 %h %p
+```
+
+找个目录gitinit 然后设置这个目录的用户
+
+ git config user.email 2268288783@qq.com
+ git config user.name liu39236244
+
+
+ ## 项目
+
+ git clone git@github.com:liu39236244/desktopAudioVisualAlarmV1.git
+ git clone git@github.com:liu39236244/serialPortProject.git
+ git clone git@github.com:liu39236244/BaiChuan-Cloud.git
+ git clone git@github.com:liu39236244/liu39236244.github.io.git
+ git clone git@github.com:liu39236244/myGoExportBridgeData.git
+ git clone git@github.com:liu39236244/com.shuke.bridge-design-page-project.git
+ git clone git@github.com:liu39236244/pythonDataExport.git
+ git clone git@github.com:liu39236244/myGoSocketProject.git
+ git clone git@github.com:liu39236244/HikVideoDemoProject.git
+
+ ssh -T git@github.com
+ ssh -T github.com-shenyabo
+ 两个就会都ok 了
+
+### git切换分支
+
+ git branch -r
+
+git checkout dev/go_moke5753
+
+# 或完整方式：
+git checkout -b dev/go_moke5753 origin/dev/go_moke5753
