@@ -29,6 +29,7 @@ Host github.com
 
 ## 2 关联远程仓库
 
+
 ### 2.1 远程github 创建空仓库 【设置私有/设置描述 等等】
 
 ### 2.2 本地创建空仓库【前提是本地需要有gith 】
@@ -45,9 +46,11 @@ git config --global --list
 
 4. # 添加所有文件到仓库
 
-git add .
+
 
 4.1 git .ignore  ；设置忽略掉的一些文件以及一些文件夹 在 git add . 之前创建
+
+git add .
 
 5 # 提交更改
 git commit -m "Initial commit 初始化了项目"
@@ -233,3 +236,29 @@ git checkout dev/go_moke5753
 
 # 或完整方式：
 git checkout -b dev/go_moke5753 origin/dev/go_moke5753
+
+## 修改本地项目配置
+
+git config user.name liu39236244
+
+git config user.email 2268288783@qq.com
+
+
+# 旧版git
+git checkout -b dev origin/dev
+
+# 新版git推荐
+git switch --track origin/dev
+
+
+## cursor 命令行读取环境变量
+
+
+
+## nvm
+
+nvm 安装最新版本v2以后 需要在用户变量中设置淘宝镜像
+
+## go
+
+新的go不需要设置很复杂的配置，代码随便放
