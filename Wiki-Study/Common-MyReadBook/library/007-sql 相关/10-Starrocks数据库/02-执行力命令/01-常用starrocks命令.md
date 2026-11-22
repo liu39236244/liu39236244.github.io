@@ -26,3 +26,6 @@ ADMIN SHOW FRONTEND CONFIG LIKE 'catalog_trash_expire_second';
 DROP TABLE table_name FORCE;
 
 ```
+
+
+

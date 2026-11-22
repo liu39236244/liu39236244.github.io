@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "283ff43514b60dc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "8605196a87106484",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e95fc51417131c16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/030-linux时间.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "030-linux时间"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "69fbb7aa65d7c8fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "05c132245325f5a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3fc4068dfd05f90d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "b6b6bd4b15e27e09",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "linux",
+                "matchingCase": true,
+                "explainSearch": true,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "c34f0448e4441bcf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 370
+  },
+  "right": {
+    "id": "f8696c4bdf74e39e",
+    "type": "split",
+    "children": [
+      {
+        "id": "80898a9b6808e368",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e32c959c8a23a3e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "未命名 3.base",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "3266646ad06faeaf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "未命名 3.base",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "fe72e4e013097833",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "2c4fec16b4cfc7f7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "9881f9ec9dfcaef3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Wiki-Study/MyPlan_Company/library/000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/08-docker安装gitlab/00-docker安装gitlib.md",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "e95fc51417131c16",
+  "lastOpenFiles": [
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/031-服务器时间问题/04-整理.md",
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/031-服务器时间问题/03-时间服务器配置.md",
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/031-服务器时间问题/02-dns 服务器设置插曲-1.md",
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/031-服务器时间问题/01-dns 服务器问题.md",
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/031-服务器时间问题",
+    "Pasted image 20261114135723.png",
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/030-linux时间.md",
+    "Wiki-Study/Study-Wiki-Linux/library/001-linux系统了解/02-linux -权限用户/01-linux马哥用户权限专题/03-用户组-权限.md",
+    "Wiki-Study/Common-MyReadBook/library/013-新软件New/03-版本管理工具/01-版本管理git.md",
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/01-linux 命令参数/08-linux 环境变量相关.md",
+    "Wiki-Study/Common-MyReadBook/library/00-公用/10-工作代码命令等记录/01-工作命令记录.md",
+    "Wiki-Study/Study-Wiki-Linux/library/005-linux 知识点总结/00-linux公用/01- linux java服务分析.md",
+    "Wiki-Study/Study-Wiki-Linux/library/$navigation.md",
+    "Wiki-Study/MyPlan_Company/library/000-Common/01-EverythingRecord/02-视频学习记录/13-docker/00-公用/02-docker的安装/08-docker安装gitlab/00-docker安装gitlib.md",
+    "Wiki-Study/Study-Wiki-AI/library/002-AI-agent/01-AI-agent操作/001-DeepseekHarness/01-deepseekHarness使用.md",
+    "Wiki-Study/Study-Wiki-AI/library/002-AI-agent/01-AI-agent操作/001-DeepseekHarness",
+    "Wiki-Study/Study-Wiki-AI/library/002-AI-agent/01-AI-agent操作",
+    "Wiki-Study/Study-Wiki-AI/library/002-AI-agent",
+    "Wiki-Study/Study-Wiki-AI/library/02-AI-agent",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/01-学习AI",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/05-学习markdown/05-Atom对Markdown的原生支持.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/05-学习markdown/03-amWiki与流程图.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/05-学习markdown/02-amWiki与语法高亮.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/05-学习markdown/01-Markdown快速开始.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/04-如何编辑amWiki轻文库.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/07-amWiki转接到任意域名进行接口测试.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/06-使用测试模块测试接口.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/05-学习markdown",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/03-如何开始一个新amWiki轻文库.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/02-amWiki功能导图.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI/01-amWiki轻文库简介.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习AI",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习amWiki/05-学习markdown/05-Atom对Markdown的原生支持.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习amWiki/05-学习markdown/03-amWiki与流程图.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习amWiki/05-学习markdown/02-amWiki与语法高亮.md",
+    "Wiki-Study/Study-Wiki-AI/library/001-学习amWiki/05-学习markdown",
+    "Wiki-Study/Study-Wiki-AI/library/002-文档示范",
+    "Wiki-Study/Study-Wiki-AI/amWiki/images/menubar_bg.png",
+    "Wiki-Study/Study-Wiki-AI/amWiki/images/logo.png",
+    "Wiki-Study/Study-Wiki-AI/amWiki/images/icons.svg",
+    "未命名.canvas"
+  ]
+}

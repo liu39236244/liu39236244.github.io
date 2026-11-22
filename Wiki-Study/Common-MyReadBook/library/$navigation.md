@@ -39,6 +39,7 @@
         - [github本地推送代码无权限解决](?file=004-git、atom命令/01-git 使用过的命令/02-github记录/05-github本地推送代码无权限解决 "github本地推送代码无权限解决")
         - [github与本地电脑关联](?file=004-git、atom命令/01-git 使用过的命令/02-github记录/06-github与本地电脑关联 "github与本地电脑关联")
         - [idea中操作git分支](?file=004-git、atom命令/01-git 使用过的命令/02-github记录/07-idea中操作git分支 "idea中操作git分支")
+        - [cursor设置命令行](?file=004-git、atom命令/01-git 使用过的命令/02-github记录/08-cursor设置命令行 "cursor设置命令行")
 - **atom 命令**
     - [atom 快捷鍵](?file=004-git、atom命令/02-atom 命令/01-atom 快捷鍵 "atom 快捷鍵")
     - [atom问题解决](?file=004-git、atom命令/02-atom 命令/02-atom问题解决 "atom问题解决")
